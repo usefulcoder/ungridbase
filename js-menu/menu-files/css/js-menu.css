@@ -1,3 +1,28 @@
+    /* ubuntu-regular - latin */
+    
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../../../fonts/ubuntu-v20-latin/ubuntu-v20-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../../../fonts/ubuntu-v20-latin/ubuntu-v20-latin-regular.ttf') format('truetype');
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    }
+    /* ubuntu-700 - latin */
+    
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../../../fonts/ubuntu-v20-latin/ubuntu-v20-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../../../fonts/ubuntu-v20-latin/ubuntu-v20-latin-700.ttf') format('truetype');
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    }
+    
     html {
         font-size: 16px;
     }
@@ -19,7 +44,7 @@
     body {
         /* background-color: #CBFFAA; */
         font-size: 100%;
-        font-family: 'Open Sans', sans-serif;
+        /* font-family: 'Open Sans', sans-serif; */
         /* max-width: 1180px; */
         margin: auto;
         text-align: start;
@@ -28,7 +53,7 @@
     .wrapper {
         /* background-color: rgba(203, 255, 170, 0.99); */
         font-size: 100%;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Ubuntu';
         /* max-width: 1180px; */
         margin: auto;
         /*opacity: 0.99;*/

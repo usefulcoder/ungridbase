@@ -361,7 +361,7 @@ function getMenuDef(menuItem) {
             checkMenuDone();
         })
         .fail(function(jqXHR, textStatus, errorThrown) {
-            var menuHtml = '<div class="content-item" style="padding:10px; color: red; font-size: 1.5em">' + menuItem + ' - file not found or improperly formatted</div>';
+            var menuHtml = '<div class="content-item" style="color: red;"><div class="content-cell"><div class="content-item-title">' + menuItem + '</div><p> file not found or improperly formatted</p></div></div>';
             $("#" + menuId).html(menuHtml);
             checkMenuDone();
             jsonErrhandler(jqXHR, textStatus, errorThrown); // probably a json error
@@ -412,7 +412,7 @@ function procMenuItem(module) {
         menuHtml += calcDownloadLink(module);
 
     else
-        menuHtml += '<div class="content-item" style="padding:10px; color: red; font-size: 1.5em">' + module['menu_item_name'] + ' - unknown module type</div>';
+        menuHtml += '<div class="content-item" style="padding:10px; color: red;">' + module['menu_item_name'] + ' - unknown module type</div>';
 
     langClass = 'lang_' + module.lang;
     $(menuItemDivId).addClass(langClass);
@@ -589,12 +589,12 @@ function calcItemHtml(href, module) {
     }
     //var html = '<div style="display: table;"><div style="display: table-row;">';
     // icon
-    html += '<div class="content-icon">';
-    if (href != null)
-        html += '<a href="' + startPage + '"><img src="' + imageUrl + module.logo_url + '" alt="' + module.title + '"></div>';
-    else
-        html += '<img src="' + imageUrl + module.logo_url + '" alt="' + module.title + '"></div>';
-    // item right side
+    // html += '<div class="content-icon">';
+    // if (href != null)
+    //     html += '<a href="' + startPage + '"><img src="' + imageUrl + module.logo_url + '" alt="' + module.title + '"></div>';
+    // else
+    //     html += '<img src="' + imageUrl + module.logo_url + '" alt="' + module.title + '"></div>';
+    // // item right side
     html += '<div class="flex-col">';
     html += '<div class="content-cell">';
     // title

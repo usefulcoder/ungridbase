@@ -34,9 +34,14 @@
     font-weight: 800;
 }
 
+.content-item-title a {
+    color: black;
+}
+
 .content-item p {
     margin-top: 5px;
     margin-bottom: 2px;
+    font-size: .8em;
     /* margin-right: 1vw; wait for :dir() support */
 }
 
