@@ -1,0 +1,19 @@
+{
+  "name": "fr-wikiquote_fr_all_maxi",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikiquote_fr_all_maxi",
+  "start_url": "",
+  "title": "Wikiquote",
+  "logo_url": "Ncwikiquote2.png",
+  "description": "Une page de Wikiquote, le recueil des citations libres.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "669c28af09574c863743875bb29c11236523e844",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-powertyping",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-powertyping",
+  "start_url": "",
+  "title": "PowerTyping",
+  "logo_url": "PowerTyping.png",
+  "description": "Teaching kids and adults how to type on a computer keyboard.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "8ec376a79664d81703672453135fbc88ee9a4d2a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

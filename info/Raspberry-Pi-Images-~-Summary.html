@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Raspberry-Pi-Images-~-Summary</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="iiab-images-for-raspberry-pi">IIAB Images for Raspberry Pi</h1>
+<p><a href="https://www.raspberrypi.com/software/">Raspberry Pi
+Imager</a> (March 2020 <a
+href="https://www.raspberrypi.com/news/raspberry-pi-imager-imaging-utility/">blog
+post</a>) makes it incredibly easy to install <a
+href="https://internet-in-a-box.org/">Internet-in-a-Box (IIAB)</a> on a
+Raspberry Pi.</p>
+<p><em>Use it to download an IIAB image
+<!--([archive](https://archive.org/search.php?query=iiab%20.img&sort=-publicdate))-->
+directly to your microSD card — that you’ll later insert and run in your
+Raspberry Pi — <strong>It’s That Easy!</strong></em></p>
+<p>(Alternatively if you want the very latest IIAB software,
+<!--that's intensively QA'd for [CI/CD](https://en.wikipedia.org/wiki/CI/CD),-->
+please instead use the 1-line installer at <a
+href="https://download.iiab.io">download.iiab.io</a>, and check out
+IIAB’s <em>NEW</em> <a
+href="Technical-Contributors-Guide.html">Technical
+Contributors Guide</a>.)</p>
+<h2 id="install-an-iiab-image">Install an IIAB Image</h2>
+<p><em>FYI <a
+href="IIAB-8.2-Release-Notes.html">IIAB
+8.2</a> Preview 1 will be posted here soon, in Q2 2024:</em></p>
+<p>To install <a href="https://github.com/iiab/iiab/releases">IIAB 8.1
+Preview 3</a> from 2023-09-30:</p>
+<ol type="1">
+<li><p><a
+href="Raspberry-Pi-Images-~-Installation.html">Install
+Raspberry Pi Imager</a> onto your favorite Windows, macOS, or Linux
+computer.</p></li>
+<li><p><em>If your computer doesn’t have a slot for SD cards, put your
+microSD card in a <a
+href="https://www.amazon.com/Best-Sellers-Computers-Accessories-Computer-Memory-Card-Readers/zgbs/pc/516872">microSD
+card reader</a> (typically $10).</em></p></li>
+<li><p>Run
+<strong><code>rpi-imager --repo http://iiab.io/fast.json</code></strong>
+<!--(or use an equivalent shortcut, that works with your OS, per IIAB's [Install Raspberry Pi Imager](Raspberry-Pi-Images-~-Installation.html) doc) then:--></p>
+<ol type="1">
+<li><p>Click <strong>CHOOSE OS</strong> to pick an IIAB image.
+<!--2. Pick 1 of the 3 choices in the table below.--></p>
+<p>See <a href="#iiab-image-choices">IIAB Image Choices</a> (table
+below) if you want more details on each image.</p></li>
+<li><p>Click <strong>CHOOSE STORAGE</strong> to specify which microSD
+card it should write to.</p></li>
+<li><p>Click <strong>WRITE</strong> to begin!</p></li>
+</ol></li>
+<li><p>After the image has been written onto the microSD card — eject
+and remove the card from your Windows, macOS, or Linux
+computer.</p></li>
+<li><p>Insert the microSD card into any recent model Raspberry Pi and
+turn it on!</p>
+<p><em>If you chose <strong>Raspberry Pi OS with desktop</strong> and
+have a screen attached, a browser should open automatically in about two
+minutes, showing your IIAB home page: http://box.lan</em></p></li>
+</ol>
+<!--Additional tips below (Steps 5. to 8. especially) if this is your first time!-->
+<!--## Detailed Instructions <!--Steps to Install an Image on a Raspberry Pi-->
+<!--1. Download and install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on any laptop or desktop (that has many GB of free disk space, to unzip images!)  See also the [detailed installation instructions for each OS.](Raspberry-Pi-Images-~-Installation.html)-->
+<!--3. Run `rpi-imager --repo http://iiab.io/fast.json` or an equivalent shortcut, e.g. **iiab-imager** on a Mac.-->
+<!--(OPTIONAL: use your OS to create an equivalent shortcut, and name it **iiab-imager**).-->
+<!--This puts installable IIAB images into the **CHOOSE OS** selection list.-->
+<!--    1. Click **CHOOSE OS** (to select an installable IIAB image), then **CHOOSE SD CARD** (to select your microSD card), and finally **WRITE**.
+
+    2. Or, if you don't see the IIAB image you want, there's an option at the bottom of the **CHOOSE OS** menu to write a custom image:
+
+        1. First download the IIAB image zip file you want (there is a search function at Archive.org that can be extremely useful).
+
+        2. Click **CHOOSE OS**, then scroll down to **Use custom** at the bottom, to select the `.zip`, `.img` or similar ISO-like file that you downloaded.
+
+4. Put the completed microSD card in your Raspberry Pi, then turn it on.-->
+<ol start="6" type="1">
+<li><p>Use a laptop to connect to WiFi network <strong>Internet in a
+Box</strong>.</p></li>
+<li><p>Open your laptop’s browser to: http://box.lan</p>
+<p>If the above doesn’t work, try: http://10.10.10.10
+<!-- (or http://172.18.96.1, if image pre-dates July 2022) --></p></li>
+<li><p>If your laptop is a Mac or Linux, run the command
+<code>ssh iiab-admin@box.lan</code> to log in to the Raspberry Pi.</p>
+<ul>
+<li><p>The username is <code>iiab-admin</code> and the password is
+<code>g0adm1n</code></p></li>
+<li><p>If your laptop is Windows, install an ssh program (like <a
+href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">putty</a>)
+to do the same thing (log in to <code>box.lan</code>).</p></li>
+</ul></li>
+</ol>
+<!--8. Run `sudo su -` to become root.-->
+<ol start="9" type="1">
+<li>To change your iiab-admin password on the Raspberry Pi, run the
+command: <code>passwd</code></li>
+</ol>
+<!--9. If you also want a root password, run:
+
+   ```
+   sudo passwd root
+   ```-->
+<ol start="10" type="1">
+<li><p>The root filesystem will expand to use your full microSD card or
+HDD/SSD drive (this can take several minutes!) <em>but you may need to
+reboot Raspberry Pi OS to make this happen.</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3336">PR
+#3336</a></sub></sub></p></li>
+<li><p>Finally, use IIAB’s browser-based <strong>Admin Console</strong>
+to <a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">add
+content</a> for your school or community!</p></li>
+</ol>
+<h2 id="iiab-image-choices">IIAB Image Choices</h2>
+<p>Optional reading: <a
+href="Raspberry-Pi-Images-~-Features.html">Which
+OS should I use with IIAB, on my Raspberry Pi?</a>
+<!--Image Choices: [For more information — Which Image is for Me?]--></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">OS</th>
+<th style="text-align: left;"><a
+href="FAQ.html#What_services_%28IIAB_apps%29_are_suggested_during_installation%3F">IIAB
+Apps</a></th>
+<th style="text-align: left;">Size</th>
+<th style="text-align: left;">MAX WI-FI CLIENTS (<a
+href="https://github.com/iiab/iiab/issues/823#issuecomment-662285202">OS’s
+are changing</a> their <a
+href="https://github.com/raspberrypi/firmware/issues/1403">Wi-Fi
+firmwares</a>; see <a
+href="https://github.com/iiab/iiab/pull/3482">#3482</a> and <a
+href="https://github.com/raspberrypi/linux/issues/3010">raspberrypi/linux#3010</a>)</th>
+<th style="text-align: left;">Features</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Raspberry Pi OS with desktop (<a
+href="https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/">64-bit</a>)</td>
+<td style="text-align: left;">MEDIUM</td>
+<td style="text-align: left;">3.2G .xz (13G .img)</td>
+<td style="text-align: left;">32 on Raspberry Pi 5, 400<br>19-32 on
+Raspberry Pi 3 B+, 4<br>10-30 on Raspberry Pi Zero W, Zero 2 W &amp;
+3</td>
+<td style="text-align: left;">Graphical Desktop easier for beginners. <a
+href="https://www.phoronix.com/scan.php?page=article&amp;item=raspberrypi-32bit-64bit&amp;num=1">“48%
+faster”</a> than 32-bit OS. 64-bit OS also allows Calibre e-book tools
+{<a
+href="https://manual.calibre-ebook.com/generated/en/calibredb.html">calibredb</a>,
+<a
+href="https://manual.calibre-ebook.com/generated/en/ebook-convert.html">ebook-convert}</a>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Raspberry Pi OS Lite (<a
+href="https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/">64-bit</a>)</td>
+<td style="text-align: left;">SMALL</td>
+<td style="text-align: left;">1.4G .xz (7.2G .img)</td>
+<td style="text-align: left;">32 on Raspberry Pi 5, 400<br>19-32 on
+Raspberry Pi 3 B+, 4<br>10-30 on Raspberry Pi Zero W, Zero 2 W &amp;
+3</td>
+<td style="text-align: left;">Uses less RAM and SD card (headless). <a
+href="https://www.phoronix.com/scan.php?page=article&amp;item=raspberrypi-32bit-64bit&amp;num=1">“48%
+faster”</a> than 32-bit OS, e.g. for the new 64-bit Pi Zero 2 W (but
+monitor your 512MB RAM!)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Raspberry Pi OS Lite (32-bit)</td>
+<td style="text-align: left;">MEDICAL</td>
+<td style="text-align: left;">0.9G .xz (5.0G .img)</td>
+<td style="text-align: left;">32 on Raspberry Pi 5, 400<br>19-32 on
+Raspberry Pi 3 B+, 4<br>10-30 on Raspberry Pi Zero W, Zero 2 W &amp;
+3</td>
+<td style="text-align: left;">Medical Edition. 32-bit OS (headless) so
+it works in the original 32-bit Pi Zero W.</td>
+</tr>
+</tbody>
+</table>
+<!--| <strike>Experimental</strike> | <strike>Ubuntu 20.04</strike> | <strike>Server</strike> | <strike>64</strike> | <strike>SMALL</strike> | <strike>7.3 GB</strike> | <strike>15 (RPi 3 B+ & 4) or 28 (RPi Zero W & 3) <br><br> _Ubuntu 19.10.1 USED TO OFFER 32 (RPi 3 B+ & 4) or 28 (RPi Zero W & 3)_</strike> | <strike>No</strike> | <strike>USED TO BE ~10% Faster (64-bit)</strike> |-->
+</body>
+</html>

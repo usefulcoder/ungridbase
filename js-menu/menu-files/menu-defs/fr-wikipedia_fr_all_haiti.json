@@ -1,0 +1,18 @@
+{
+  "name": "fr-wikipedia_fr_all_haiti",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_fr_all",
+  "moddir": "fr-wikipedia",
+  "start_url": "A/Haïti.html",
+  "title": "Wikipédia en français",
+  "logo_url": "fr-wikipedia.png",
+  "description": "Le projet d’encyclopédie libre que vous pouvez améliorer.",
+  "extra_html": "fr-wikipedia_fr_all_haiti.html",
+  "edit_status": "repo",
+  "commit_sha": "1b40cc07aab7df833c4ba9920ac85f0bbc7970ad",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

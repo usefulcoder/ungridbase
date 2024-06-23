@@ -1,0 +1,19 @@
+{
+  "name": "en-wikem_en_all_nopic",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikem_en_all_nopic",
+  "start_url": "",
+  "title": "WikEM",
+  "logo_url": "WikEM-Logo-m.png",
+  "description": "kiwix.wikem_en_all",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "56d8c64c9c176b1cf5b5e12e43a238aa9ff12b4c",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

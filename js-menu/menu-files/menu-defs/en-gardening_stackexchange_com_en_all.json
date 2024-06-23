@@ -1,0 +1,19 @@
+{
+  "name": "en-gardening_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "gardening.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Gardening & Landscaping Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for gardeners and landscapers",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "d9ad9ec077772e4045f4f2aaa444f7776ca1e36a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

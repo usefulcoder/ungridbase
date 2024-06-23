@@ -1,0 +1,19 @@
+{
+  "name": "en-mustardseedbooks",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-mustardseedbooks",
+  "start_url": "MustardSeedBooks.html",
+  "title": "Mustard Seed Books",
+  "logo_url": "en-mustardseedbooks.png",
+  "description": "High quality low-cost books for beginning readers.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 39M, PDFs: 42, Date: August 2017",
+  "edit_status": "repo",
+  "commit_sha": "a5f50ab1bada8e34264e6c6005f88b039dc2ce2a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

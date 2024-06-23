@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Raspberry-Pi-Images-~-Installation</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="install-raspberry-pi-imager">Install Raspberry Pi Imager</h1>
+<p>If you want to quickly install <a
+href="https://internet-in-a-box.org/">Internet-in-a-Box (IIAB)</a> onto
+a Raspberry Pi, please start by reading <a
+href="Raspberry-Pi-Images-~-Summary.html">IIAB
+Images for Raspberry Pi</a>.</p>
+<p>(The instructions below supplement the above, if you need help
+installing Raspberry Pi Imager.)</p>
+<h2 id="instructions-windows-linux-or-macos">Instructions — Windows,
+Linux or macOS</h2>
+<!--Each of the three major Operating Systems has standard methods of adding programs.  The Raspberry Pi Foundation has developed a package they call **rpi-imager** for each of these Operating Systems.  This page explains the steps that are similar in some respects, but also particular to each OS.
+
+For each of the systems, after the normal install process, you can create a file, with the proper contents for your OS, placed in the correct place, which adds the IIAB images to the ones made available by the Raspberry Pi Foundation.-->
+<p>On Windows, Ubuntu for x86, or macOS:</p>
+<ol type="1">
+<li>Browse to: https://www.raspberrypi.com/software/</li>
+<li>Download <strong>Raspberry Pi Imager</strong> for your OS.</li>
+<li>Open the downloaded file and install it.
+<!--The downloads usually go into a predefined place.  But you don't usually need to know where it is, because most browsers offer a "Open in File Manager" (or "Finder") drop-down option.--></li>
+<li><em>Raspberry Pi Imager needs to be run in a special way — so that
+you can write IIAB onto a microSD card — please follow the precise
+instructions below for your OS!</em></li>
+</ol>
+<p>On <strong>Raspberry Pi OS with desktop</strong>, the above
+browser/downloading steps aren’t necessary: <em>proceed to the <a
+href="#Linux">Linux</a> section below.</em></p>
+<h3 id="windows">Windows</h3>
+<ol type="1">
+<li><p>In File Manager, double-click the downloaded file
+(e.g. <strong>imager_1.8.5.exe</strong>) to install it.</p></li>
+<li><p><strong>Raspberry Pi Imager</strong> should now be in your
+Windows Start menu. <em>However you need to launch it in a different way
+— so proceed to Step 3.</em>
+<!--On my Windows 10 machine, after doing the install process, there is a new--></p></li>
+<li><!--The easiest way to use the rpi-imager with IIAB images is to open a command prompt and paste the following into it and then press Enter-->
+<p>Run this command:</p>
+<pre><code>rpi-imager --repo http://iiab.io/fast.json</code></pre>
+<p>If the above fails, try this: (make sure to include the quotes!)</p>
+<pre><code>&quot;C:\Program Files (x86)\Raspberry Pi Imager\rpi-imager.exe&quot; --repo http://iiab.io/fast.json</code></pre>
+<!--4. This cut and paste to the command line is great for exploration, but it requires finding this page again to do the cut and paste whenever you want an IIAB image.  There are easier ways:
+
+ 1. Put the above command in an "iiab-imager.bat" or "iiab-imager.cmd" file, and you can navigate to it in File Explorer and double click it.
+ 2. Another approach is to pin rpi-imager to the task bar and then edit the icon adding the "--repo ..." clause.
+ 3. If you put your **iiab-imager.bat** or .cmd file in C:\Windows, which is always in your path, you only need to type "iiab-imager" at the command prompt (get a command prompt by clicking the Start menu > Run, then type "cmd" -- or click on Command / Command Prompt in your Start menu).
+ 4. Success is verified when you see the big red rpi-imager window appears: click on "OS", and you should see an "IIAB" menu at the top of the list.--></li>
+</ol>
+<h3 id="linux">Linux</h3>
+<ol type="1">
+<li><p>Open a command-line <strong>Terminal</strong>.
+<!--Depending on your flavor of Linux, try **Applications** -> **System** -> **Terminal**.--></p></li>
+<li><p>If your OS is <strong>Raspberry Pi OS with desktop</strong>, run
+<code>sudo apt install rpi-imager</code> (this will install or upgrade
+<strong>Raspberry Pi Imager</strong>). Proceed to Step 4.</p></li>
+<li><p>If your OS is Ubuntu for x86 (Desktop version), then run:</p>
+<pre><code>cd ~/Downloads
+sudo apt install ./imager_1.8.5_amd64.deb    # ADJUST VERSION NUMBER AS NECESSARY!</code></pre></li>
+<li><p>Check that it’s now installed at:
+<strong>/usr/bin/rpi-imager</strong></p></li>
+<li><p>Run this command:</p>
+<pre><code>sudo rpi-imager --repo http://iiab.io/fast.json</code></pre>
+<p>&lt;!– This directory is usually already in your path. That means
+that you can type <strong>rpi-imager</strong> located in any directory,
+and it will start up.</p></li>
+<li><p>But we are going to put a little shell script into
+/usr/local/sbin/ which calls <strong>rpi-imager</strong> with a
+parameter which adds the IIAB menu items to the ones supplied by the
+Raspberry Pi Foundation.</p></li>
+<li><p>Use the text editor that your are familiar with to create a
+/usr/local/sbin/iiab-imager with the following contents – (make the file
+executable “sudo chmod 755 /usr/local/sbin/iiab-imager”):</p>
+<pre><code>#!/bin/bash
+# start up the rpi-imager and specify a root repo
+
+/usr/bin/rpi-imager --repo http://iiab.io/fast.json</code></pre></li>
+<li><p>Test your script. Type <code>iiab-imager</code>, and click on
+<strong>OS</strong>. Success is indicated if the top menu item is an
+IIAB item.–&gt;</p></li>
+</ol>
+<h3 id="macos">macOS</h3>
+<ol type="1">
+<li><p>Open the downloaded file (e.g. <code>imager_1.8.5.dmg</code>) in
+<strong>Finder</strong> by double clicking on it.</p></li>
+<li><p>Drag <strong>rpi-imager</strong> into the
+<strong>Applications</strong> folder (macOS convention).</p></li>
+<li><p>Run these 2 commands in a <strong>Terminal</strong> window:
+(BACKGROUND: <strong>Terminal.app</strong> should be in
+<strong>Applications &gt; Utilities</strong> — if you want to use it
+often, drag Terminal.app to the menu bar at the top of your screen)</p>
+<pre><code>sudo echo &quot;open /Applications/Raspberry\ Pi\ Imager.app/ --args --repo http://iiab.io/fast.json&quot; &gt; /usr/local/bin/iiab-imager
+sudo chmod 755 /usr/local/bin/iiab-imager</code></pre></li>
+<li><p>Open a <strong>Terminal</strong> and run this command:
+<code>iiab-imager</code></p></li>
+</ol>
+<h2 id="how-it-works">How it Works</h2>
+<p><strong><em>[Obsolete explanation from mid-2020…explains how we got
+here:]</em></strong></p>
+<p>There are 3 .json files that make this work. They are…</p>
+<ul>
+<li><a href="http://iiab.me/images.json">images.json</a> (sourced from
+<a
+href="https://github.com/iiab/iiab-factory/blob/master/box/rpi/iiab-imager/os_list_imagingutility.json">os_list_imagingutility.json</a>)</li>
+</ul>
+<p>…and its 2 “child” .json files:</p>
+<ul>
+<li><a
+href="https://github.com/iiab/iiab-factory/blob/master/box/rpi/iiab-imager/os_list_imagingutility_iiab_subitems.json">os_list_imagingutility_iiab_subitems.json</a></li>
+<li><a
+href="https://github.com/iiab/iiab-factory/blob/master/box/rpi/iiab-imager/os_list_imagingutility_iiab_experimental.json">os_list_imagingutility_iiab_experimental.json</a></li>
+</ul>
+<p>The “parent” (images.json, sourced from os_list_imagingutility.json)
+only needs to be re-generated if the Raspberry Pi Foundation publishes
+new images.</p>
+<p>The two “child” .json files must be re-generated every time IIAB
+publishes a new image, using techniques outlined here: (e.g. this
+happens every few of months, typically soon after an IIAB release)</p>
+<ul>
+<li><a href="https://github.com/iiab/iiab/issues/2446">#2446</a></li>
+<li>PR <a
+href="https://github.com/iiab/iiab-factory/pull/113">iiab/iiab-factory#113</a></li>
+<li><a
+href="https://github.com/iiab/iiab-factory/tree/master/box/rpi/iiab-imager/">github.com/iiab/iiab-factory/tree/master/box/rpi/iiab-imager/</a></li>
+</ul>
+<p><strong><em>[Dec 2021 / Feb 2022…simplification:]</em></strong></p>
+<ul>
+<li><a href="https://github.com/iiab/iiab/issues/3060">#3060</a></li>
+<li>PR <a
+href="https://github.com/iiab/iiab-factory/pull/199">iiab/iiab-factory#199</a></li>
+<li>PR <a
+href="https://github.com/iiab/iiab-factory/pull/206">iiab/iiab-factory#206</a></li>
+<li><a
+href="https://github.com/iiab/iiab-factory/tree/master/box/rpi/">github.com/iiab/iiab-factory/tree/master/box/rpi/</a></li>
+<li><a
+href="https://downloads.raspberrypi.org/os_list_imagingutility.json">downloads.raspberrypi.org/os_list_imagingutility.json</a>
+[Last modified 2021-05-28]</li>
+<li><a
+href="https://downloads.raspberrypi.org/os_list_imagingutility_v2.json">downloads.raspberrypi.org/os_list_imagingutility_v2.json</a>
+[Last modified 2021-02-03]</li>
+<li><a
+href="https://downloads.raspberrypi.org/os_list_imagingutility_v3.json">downloads.raspberrypi.org/os_list_imagingutility_v3.json</a>
+[Last modified 2021-02-03]</li>
+</ul>
+</body>
+</html>

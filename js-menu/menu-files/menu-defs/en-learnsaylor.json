@@ -1,0 +1,18 @@
+{
+  "name": "en-learnsaylor",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-learnsaylor",
+  "start_url": "",
+  "title": "Learn Saylor",
+  "logo_url": "en-learnsaylor_logo.jpeg",
+  "description": "Free and open online courses for people everywhere",
+  "extra_description": "",
+  "footnote": "Size: 52.5G, Files: 11903, Age: adult",
+  "edit_status": "repo",
+  "commit_sha": "7f7263da6117c2a16d6e931e45aa88da1897a9df",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

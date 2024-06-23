@@ -1,0 +1,19 @@
+{
+  "name": "en-networkengineering_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "networkengineering.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Network Engineering Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for network engineers",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "74266ae821daa021aad8a059ddd6c6a97513661a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

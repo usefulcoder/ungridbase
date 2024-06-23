@@ -1,0 +1,19 @@
+{
+  "name": "en-philosophy_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "philosophy.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Philosophy Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for those interested in the study of the fundamental nature of knowledge, reality, and existence",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "54291e53ce7dcd0cdc995204e71660bd7436a921",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

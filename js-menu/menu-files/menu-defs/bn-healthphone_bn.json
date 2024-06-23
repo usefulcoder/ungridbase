@@ -1,0 +1,17 @@
+{
+  "name": "bn-healthphone_bn",
+  "lang": "bn",
+  "intended_use": "html",
+  "moddir": "bn-healthphone",
+  "start_url": "videos",
+  "title": "বাংলা (Bengali): স্বাস্থ্যফোন স্বাস্থ্য এবং পুষ্টি ভিডিও সংগ্রহ & অ্যাপ্লিকেশন",
+  "logo_url": "healthphone.jpg",
+  "description": "একটি ভিডিও রেফারেন্স গ্রন্থাগার; পরিবার এবং সম্প্রদায়ের জন্য মাতৃমৃত্য এবং শিশু স্বাস্থ্য এবং পুষ্টি চর্চা ভালভাবে নির্দেশিকা।",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "d4a4e60171bb468adfc763132eeb554f2710b98b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

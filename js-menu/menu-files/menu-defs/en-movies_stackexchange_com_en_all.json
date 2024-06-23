@@ -1,0 +1,19 @@
+{
+  "name": "en-movies_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "movies.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Movies & TV Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for movie and tv enthusiasts",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "9c13fa4220d529d8ec3404cfa74a0934dc43622a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-bicycles_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "bicycles.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Bicycles Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for people who build and repair bicycles, people who train cycling, or commute on bicycles",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "27f744131441a02a96b6a50a8f9859dd2edbd4fa",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

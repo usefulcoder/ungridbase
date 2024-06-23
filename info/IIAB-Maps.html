@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Maps</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="internet-in-a-box-iiab-maps">Internet-in-a-Box (IIAB) Maps</h1>
+<p><a href="https://Internet-in-a-Box.org">Internet-in-a-Box (IIAB)</a>
+Maps are like Google Maps but better, for schools especially, as they
+work offline (including satellite photos!) and avoid all the
+advertising.</p>
+<p>INVITATION: If you can help ongoing efforts to polish maps for
+children in offline schools in all countries, directly contributing to
+<a href="https://youtu.be/HJub6U_U7Mg">beautifying OpenStreetMap
+(VIDEO)</a> thereby bringing Earth to life for all, please get in touch
+below.</p>
+<ol type="1">
+<li><p>IIAB <strong>Map Packs</strong> use vector (not bitmap)
+techniques to display attractive, high-resolution maps for your
+continent — or similar regions: (most are 6-to-30 GB, older Map Packs at
+[<a href="http://iiab.me/osm-vector-maps/installer/">1</a>] [<a
+href="http://d.iiab.io/content/OSM/vector-tiles/maplist/">2</a>] [<a
+href="http://iiab.net/maps/maplist/">3</a>])</p>
+<ul>
+<li>7 Major “Continents”</li>
+<li>The Middle East</li>
+<li>Central America &amp; the Caribbean</li>
+<li>Spanish-speaking Regions</li>
+<li>World to Zoom 10 — 3.2 GB</li>
+<li>The Entire World — 85 GB (<a href="http://iiab.me/maps">Live
+Demo!</a>)</li>
+</ul>
+<p>Every IIAB Map Pack includes:</p>
+<ul>
+<li>Zoomable vector maps (15 levels of zoom from 0-14, scaling
+beautifully to level 18) with detailed resolution to about 1 m, in the
+bounding box focus area (typically a continent!) This <a
+href="https://www.openstreetmap.org/">OpenStreetMap</a> content is
+updated quasi-annually, in 2017 thanks to <a
+href="https://OpenMapTiles.org">OpenMapTiles.org</a> and then in <a
+href="https://archive.org/details/osm-vector-mbtiles">September 2019 and
+again in October/November 2020</a> thanks to <a
+href="https://archive.org/details/@quentar1">quentar1</a>.</li>
+<li>Worldwide vector maps (11 levels of zoom, from 0-10).</li>
+<li>Worldwide satellite photos (10 levels of zoom, from 0-9) from <a
+href="https://s2maps.eu/">Sentinel</a>, offering pixel resolution of
+approximately <a
+href="https://wiki.openstreetmap.org/wiki/Zoom_levels">305 x 305
+m</a>.</li>
+</ul></li>
+<li><p>IIAB Maps also offer <strong>High Resolution Satellite Photo
+Regions</strong>, letting you add 4 more levels of zoom (up to zoom
+level 13, offering pixel resolution of approximately <a
+href="https://wiki.openstreetmap.org/wiki/Zoom_levels">19 x 19 m</a>)
+within as many square regions (100x100 km, 300x300 km, or 1000x1000 km)
+as your community finds useful. Also from Sentinel.</p>
+<p>That’s a 16X improvement in linear resolution — which is a 256X
+improvement in photographic information density!</p></li>
+<li><p>IIAB Maps let you <strong>Search Worldwide</strong> for
+cities/towns/settlements that have more than 1000 people (127,654 are
+included).</p></li>
+</ol>
+<p>Please see the README just below for more on the state-of-the-art as
+of May 2022, for <a
+href="IIAB-8.0-Release-Notes.html">IIAB
+8.0</a>. For nuts &amp; bolts details as to how this came together, see
+these sections below: <a href="#how-do-i-upgrade-an-iiab-map-pack">How
+do I upgrade an IIAB Map Pack?</a>, <a
+href="#where-are-iiab-maps-stored">Where are IIAB Maps stored?</a>, <a
+href="#what-might-future-iiab-maps-bring">What might future IIAB Maps
+bring?</a>, <a href="#credits">Credits</a>, <a
+href="#software-source-code">Software (Source Code)</a> and <a
+href="#links--advanced-topics">Links &amp; Advanced Topics</a>.</p>
+<h2 id="whats-new-with-iiab-maps">What’s New with IIAB Maps?</h2>
+<p><em>Please see the new IIAB Maps <a
+href="https://github.com/iiab/iiab/blob/master/roles/osm-vector-maps/README.md">README</a>
+accompanying <a
+href="IIAB-8.0-Release-Notes.html">IIAB
+8.0</a>.</em></p>
+<h2
+id="how-do-i-install-map-packs-and-satellite-photo-regions-on-iiab-8.0">How
+do I install Map Pack(s) and Satellite Photo Region(s) on IIAB 8.0+
+?</h2>
+<ol type="1">
+<li><p>If you have not yet done so, install <a
+href="http://internet-in-a-box.org">Internet-in-a-Box (IIAB)</a> 8.0+ (a
+pre-release is fine!) from https://download.iiab.io</p>
+<ul>
+<li>Choose (1) SMALL-sized, (2) MEDIUM-sized, or (3) LARGE-sized — these
+will install the IIAB Maps software, including 7 levels of zoom (OSM
+vector maps) just to get things started.</li>
+<li>Proceed with your IIAB software install (you might need to run
+<code>sudo iiab</code> several times).</li>
+<li>You’ll know it’s complete when you see “INTERNET-IN-A-BOX (IIAB)
+SOFTWARE INSTALL IS COMPLETE” and “HIT [Enter] TO REBOOT”.</li>
+</ul></li>
+<li><p>OPTION A: <strong>Skip all details below, and just <a
+href="https://github.com/iiab/maps#how-do-i-add-detailed-zoomable-maps-for-my-region">install
+a continent/region!</a></strong></p>
+<p>OPTION B: Continue following all steps below — if you prefer a deeper
+understanding…</p></li>
+<li><p>Browse to your IIAB home page (typically http://box or
+http://box.lan) and click on <strong>Install IIAB Maps</strong>
+(typically that’s http://box/osm-vector-maps/installer/) to choose the
+Map Pack you want — and then later any Hi-Res Satellite Photos Region(s)
+needed by local communities.</p>
+<ul>
+<li>A Map Pack provides Hi-Res vector maps (zoom levels 0-14, overzoom
+to level 18) for an entire continent — or the Caribbean, or the Middle
+East, or Spanish-speaking regions — or the entire planet!
+<ul>
+<li>Each Map Pack also provides Lo-Res vectors maps worldwide (zoom
+levels 0-10).</li>
+<li>Each Map Pack also provides Lo-Res satellite photos worldwide (zoom
+levels 0-9).</li>
+</ul></li>
+<li><strong>You must install at least 1 Map Pack to begin!</strong>
+<ul>
+<li><em>Later (after your Map Pack is downloaded and installed) you can
+return to this page to…pick custom region(s) where you want Hi-Res
+Satellite Photos (which adds zoom levels 10-13, 4 more than above!) for
+any square regions (100x100 km, 300x300 km, or 1000x1000 km) of your
+choosing.</em></li>
+</ul></li>
+</ul></li>
+<li><p>Follow the visual instructions — example screenshot: <img
+src="https://user-images.githubusercontent.com/2458907/94740848-46c4eb00-0341-11eb-93ea-e3e4758dce48.png"
+alt="Screenshot" /></p>
+<ul>
+<li>When it asks you to copy and paste into an IIAB Terminal, you have 2
+choices: (to get to a Linux command-line, on your IIAB server)
+<ol type="1">
+<li>Attach a screen and keyboard to your IIAB.</li>
+<li>Run a command like <code>ssh iiab-admin@box.lan</code> to connect to
+your IIAB. If you’re running Windows, consider using <a
+href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">Putty</a>
+instead. Specify your IIAB Host Name (typically <code>box.lan</code>, or
+sometimes this is a number like 192.168.0.x as provided by your home
+router, so here are some tips for finding your IIAB IP Address thanks to
+<a
+href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ip-address">Raspberry
+Pi OS</a> and <a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server">Ubuntu</a>).</li>
+</ol></li>
+<li>Either way, log in as user: <code>iiab-admin</code></li>
+<li>The default password for <code>iiab-admin</code> is published at
+FAQ.html &gt; “What are the default passwords?”</li>
+</ul></li>
+<li><p><strong>Copy</strong> and <strong>Paste</strong> the gray line
+into your IIAB Terminal:</p>
+<ul>
+<li>Triple-clicking is an easy way to highlight the entire gray
+textfield before you copy it.</li>
+<li>After pasting that into your IIAB Terminal, hit [Enter].</li>
+<li>If necessary, enter <code>iiab-admin</code>’s password again (for
+sudo).</li>
+</ul></li>
+<li><p>Keep an eye on the downloading progress at the command-line
+there, every now and then, to make sure it’s moving along.</p>
+<ul>
+<li>Please be patient as this can sometimes take many hours, depending
+on your Internet connection etc.</li>
+<li>Very large Map Packs might need to download overnight.</li>
+</ul></li>
+<li><p>Here’s a working example of IIAB Maps in action, so you know
+roughly what to look forward to: http://iiab.me/maps</p>
+<ul>
+<li>Browse to http://box/maps on your own IIAB server to test out the
+IIAB Map Pack(s) and Hi-Res Satellite Photo Region(s) you’ve downloaded
+!</li>
+<li><a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page.3F">Beautify
+your IIAB home page</a> using Admin Console &gt; <strong>Content
+Menus</strong> so the local community knows how to begin, in their own
+language.</li>
+<li>Click on <strong>Content Item List</strong> to reorder the Content
+Packs and Apps on your IIAB home page, equivalent to:
+<code>/library/www/html/home/menu.json</code></li>
+</ul></li>
+<li><p>Help your local community, students and teachers put geographic
+literacy (http://box/maps) to work — for their environment and their
+lives:</p>
+<ol type="1">
+<li>Sit down with them to explore the Map Pack(s) and Hi-Res Satellite
+Photos Region(s) you’ve arranged.</li>
+<li>Learn together how to search for any city or town worldwide.</li>
+<li><strong>Drag-and-Drop Map Overlays</strong> (any relevant GeoJSON
+file) onto the map in your browser. For example download then try this
+GeoJSON file, to explore the shape of gerrymandered US Congressional
+districts:
+https://eric.clst.org/assets/wiki/uploads/Stuff/gz_2010_us_500_11_20m.json</li>
+<li>Ask students to take photos that matter to them in their community —
+then <em>Right-Click</em> on the map (http://box/maps) to <strong>add
+those photos and descriptions</strong> to the map. Choose “Add Data
+Point” after right-clicking, and then later “Export Points” to share
+with others.</li>
+</ol></li>
+</ol>
+<!--
+## How do I install Map Pack(s) on IIAB 7.0 and 7.1
+
+1. For IIAB 7.1 and earlier, regions were downloaded as a single zip file (including programs and data).
+
+2. Use IIAB's Admin Console (http://box.lan/admin, default passwords at FAQ.html) to click `Install Content` (on top) > `Get Map Regions` (on the left).
+
+3. Pick a checkbox on the left to download, unpack and install the Map Region (Map Pack) you want.  As you hover (mouse over) the choices on the left, colorful bounding boxes light up on the world map on the right &mdash; to help you choose the Map Pack most suitable for your region.
+-->
+<h2 id="how-do-i-upgrade-an-iiab-map-pack">How do I upgrade an IIAB Map
+Pack?</h2>
+<p><em>Upgrading is not supported — please install <a
+href="IIAB-8.0-Release-Notes.html">IIAB
+8.0+</a> if you want new maps!</em></p>
+<p>ADVANCED: if you want to understand how IIAB Maps are evolving in
+2022, keep an eye on:</p>
+<ul>
+<li>NEW CATALOG: <a
+href="https://github.com/iiab/iiab-admin-console/blob/master/roles/common/files/map/adm-map-catalog.json">/library/www/html/common/assets/adm-map-catalog.json</a></li>
+<li>LEGACY CATALOG: <a
+href="https://github.com/iiab/maps/blob/master/2020/map-catalog.json">/etc/iiab/map-catalog.json</a></li>
+<li>OLDER CATALOG:
+https://download.iiab.io/content/OSM/vector-tiles/map-catalog.json</li>
+<li><a
+href="https://github.com/iiab/iiab/blob/master/roles/osm-vector-maps/README.md#how-to-wipe-and-upgrade-iiab-maps">“How
+to (Wipe and) Upgrade IIAB Maps”</a></li>
+</ul>
+<p><em>Finally, if you can help contribute to this important community
+effort, please do <a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">contact
+us</a> so we can explain more!</em></p>
+<p><strike>In the weeks/months after installing your IIAB Map Pack, you
+might notice that a new Map Pack is published, e.g. if you monitor this
+“map catalog” link showing the latest available:</strike></p>
+<p><strike>-
+http://download.iiab.io/content/OSM/vector-tiles/map-catalog.json</strike></p>
+<p><strike>See also recent copies of our map catalog (map-catalog.son)
+within subdirectories like 2020-08-10 here:</strike></p>
+<p><strike>-
+https://github.com/iiab/maps/blob/master/public/</strike></p>
+<p><strike>IIAB Maps is beginning to move to “perma_ref” names (see
+<code>/etc/iiab/map-catalog.json</code> and
+<code>/etc/iiab/regions.json</code> on your IIAB, with symlinks in
+<code>/library/www/html/common/assets/</code>) to allow you to upgrade
+Map Packs more automagically in future.</strike></p>
+<p><strike>Note that IIAB Map Packs changed from the .zip format to the
+.mbtiles format in 2020, as part of the <a
+href="IIAB-7.2-Release-Notes.html">IIAB
+7.2</a> release, so we are in transition, please stay
+tuned!</strike></p>
+<p>_<strike>2020-10-12: For a preview of upcoming map catalog changes,
+see <a href="https://github.com/iiab/maps/pull/41">PR iiab/maps#41</a>
+and
+https://github.com/georgejhunt/maps/blob/addbase/public/2020-10-06/modify_catalog.py.</strike></p>
+<h2 id="where-are-iiab-maps-stored">Where are IIAB Maps stored?</h2>
+<p>IIAB Map Packs (.mbtiles files) are usually published in several
+places, as outlined here:</p>
+<ul>
+<li>http://timmoody.com/iiab-files/maps/</li>
+<li>https://github.com/iiab/iiab/issues/3111#issuecomment-1101975788</li>
+<li>https://archive.org/search.php?query=osm-vector&amp;sort=-publicdate
+<em>(incomplete as of 2022-05-01)</em></li>
+</ul>
+<p>After you’ve downloaded and installed a Map Pack (<a
+href="#how-do-i-install-map-packs-and-satellite-photo-regions-on-iiab-80-">How
+do I install Map Pack(s) and Satellite Photo Region(s) on IIAB 8.0+
+?</a>) its 3 files (hi-res vector maps for the “continent” in question,
+lo-res vector maps = 2.0 GB osm-planet_z0-z10_2020.mbtiles, lo-res
+satellite photos = 1.2 GB satellite_z0-z9_2020.mbtiles) will be stored
+in this directory:</p>
+<ul>
+<li><code>/library/www/osm-vector-maps/viewer/tiles</code></li>
+</ul>
+<p>In the past (i.e. up to IIAB 7.1) Map Packs contain both program and
+data, and were unzipped into a subdirectory of:</p>
+<ul>
+<li><code>/library/www/osm-vector-maps</code></li>
+</ul>
+<p>An example (generally containing many gigabytes!) would have
+been:</p>
+<ul>
+<li><code>/library/www/osm-vector-maps/en-osm-omt_africa_2017-07-03_v0.2</code></li>
+</ul>
+<p><em>If you too are a map hacker interested in contributing, please <a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">contact
+us</a>, so we can explain more.</em></p>
+<h2 id="customizations">Customizations</h2>
+<ol type="1">
+<li><p>Anyone who browses to http://box/maps generally sees the
+continent/region most recently installed — centered in their browser —
+at a zoom level suitable for that continent/region.</p>
+<p>If you want to re-center this initial viewport browser experience for
+all users (e.g. to a different latitude/longitude, and/or to a different
+zoom level) you can edit this file:</p>
+<pre><code>/library/www/osm-vector-maps/viewer/init.json</code></pre></li>
+<li><p>Installed continents/regions are outlined in 💚 green rectangles
+💚.</p>
+<p>Installed satellite photo regions are outlined in 💛 yellow/orange
+squares 💛.</p>
+<p>To brighten the yellow/orange squares, change Line 441 of <a
+href="https://github.com/iiab/maps/blob/master/osm-source/pages/viewer/build/viewer-bundle.js">/library/www/osm-vector-maps/viewer/viewer-bundle.js</a>
+from <code>color: 'rgba(250, 200, 20, .2)',</code> to:</p>
+<pre><code>color: &#39;rgba(250, 200, 20, 1)&#39;,</code></pre>
+<p>To de-emphasize the yellow/orange squares, change it to:</p>
+<pre><code>color: &#39;rgba(250, 200, 20, .05)&#39;,</code></pre>
+<p>Similarly — to adjust green rectangle appearances, change line 456
+from <code>color: 'rgba(67, 163, 46, 1)',</code> to any RGB color and
+opacity/transparency.</p></li>
+<li><p>You might also want to take a look at the 15 bounding boxes
+below: (used to display the above green rectangles)</p>
+<p><a
+href="https://github.com/iiab/maps/blob/master/osm-source/pages/viewer/assets/bboxes.geojson">/library/www/osm-vector-maps/viewer/assets/bboxes.geojson</a></p>
+<p>Example: 4 of these 15 bounding boxes make up the overall
+(non-contiguous!) region named “spanish_speaking_regions”.</p></li>
+</ol>
+<h2 id="known-issues">Known Issues</h2>
+<p>As of May 2022, recent issues included:</p>
+<!--
+- [#1791](https://github.com/iiab/iiab/issues/1791) "Estimated Space Required incorrect after first region is installed"
+- [#1793](https://github.com/iiab/iiab/issues/1793) "Admin Console reports OSM region as installed when it isn't" (no longer applicable?)
+- [#1800](https://github.com/iiab/iiab/issues/1800) "Remove confusing alert"
+-->
+<ul>
+<li>~Teachers want Accents to work when searching for cities in
+OpenStreetMap <a
+href="https://github.com/iiab/iiab/issues/662">#662</a>~ (Can
+multilingual folk confirm this is really/sufficiently fixed?)</li>
+<li><a href="https://github.com/iiab/iiab/issues/3077">#3077</a> (A)
+“size” erroneous in map-catalog.json (B) NEW OSM dataset from Oct/Nov
+2020 (C) Prep for future datasets incl Satellite Photos</li>
+<li>https://github.com/iiab/iiab/search?q=osm&amp;type=issues</li>
+</ul>
+<p>If you get completely stuck, don’t hesitate to <a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">contact
+us</a> !</p>
+<h2 id="what-might-future-iiab-maps-bring">What might future IIAB Maps
+bring?</h2>
+<p><em>INVITATION: If you can help ongoing efforts to polish maps for
+children in offline schools in all countries, directly contributing to
+<a href="https://youtu.be/HJub6U_U7Mg">beautifying OpenStreetMap
+(VIDEO)</a> thereby bringing Earth to life for all, Thank You! Read more
+at (<a
+href="https://github.com/iiab/iiab/issues/877#issuecomment-405935272">#877</a>)
+and please do <a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">get
+in touch</a> to learn more!</em></p>
+<p><em>Thanks for your help evolving this into a continuously more
+friendly community product, as Usability Engineering begins right here —
+thanks to all who can assist! Background: Internet-in-a-Box is a <a
+href="http://internet-in-a-box.org/pages/contributing.html">volunteer
+community</a> that greatly welcomes your suggestions and contributions
+!</em></p>
+<ul>
+<li>Map issues (and pull requests) currently being discussed or worked
+on: https://github.com/iiab/iiab/issues?q=is%3Aopen+OSM</li>
+<li><del>Higher-resolution satellite photos within localized area(s),
+that George Hunt is working on (mid-2020) to provide 4 more levels of
+zoom (for any 100x100 km, 300x300 km or 1000x1000 km regions of
+interest) as summarized under “July 9, 2020” at
+http://minutes.iiab.io</del> (DONE!)</li>
+<li>Thematic/Custom maps and/or overlays based on <a
+href="https://en.wikipedia.org/wiki/Wikidata">Wikidata</a> (Swapnil
+Sinha’s <a
+href="https://www.mediawiki.org/wiki/Google_Summer_of_Code/2020">GSoC</a>
+<a href="https://phabricator.wikimedia.org/T248800">project</a>).</li>
+<li>The extreme slowness of downloads from archive.org (most often as
+slow as 1-2 mbit/sec since early 2020, but briefly back up to 10-20
+mbit/sec in July 2020?) might be mitigated using torrents? As the
+Internet Archive already seeds. But these would need to be augmented and
+the endless maintenance hassles of hosting/seeding/monitoring would need
+to be brought firmly under control: <a
+href="https://github.com/iiab/iiab/issues/2553">#2553</a> <a
+href="https://github.com/iiab/iiab/issues/3111">#3111</a></li>
+<li>http://box/maps causes Chrome to crash rather often on Android, and
+the user experience could use improvement: <a
+href="https://github.com/iiab/iiab/issues/1728">#1728</a></li>
+<li>Individual .mbtiles Map Packs (e.g. smaller map regions, for cities,
+countries, etc) might in future be directly downloadable to your IIAB,
+as new ones are published here:
+https://openmaptiles.com/downloads/planet/</li>
+<li>Multiple Map Packs might be downloadable to your IIAB, all of them
+viewable thru the same http://box/maps URL, possibly by combining their
+.mbtiles files into a single unified .mbtiles file, e.g. using <a
+href="https://github.com/iiab/iiab-factory/blob/master/content/vector-tiles/append2region">append2region</a>,
+similar to what Jérôme Gagnon-Voyer proposed in his original design doc
+(listed at the bottom of this page).</li>
+<li>Descriptions of Map Packs (on your http://box IIAB Home Page) could
+offer more tips &amp; tricks for teachers and students, e.g. how to
+search for cities etc.</li>
+<li>http://box/maps/maplist/ -&gt; http://box/osm-vector-maps/installer/
+visual catalog might update itself, showing IIAB operator the very
+latest maps available?</li>
+<li><a href="http://magrit.cnrs.fr/">Magrit 0.8.14</a> for civic/local
+mapmaking, with URL <em>box/magrit</em> ? <sub><sub><a
+href="https://github.com/iiab/iiab/pull/1579">PR
+#1579</a></sub></sub></li>
+<li>Please <a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">suggest</a>
+the highest priority mapmaking needs and/or how you might help!</li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>Much of the original work on IIAB Maps was coordinated by Braddock
+Gaskill and Joel Steres in 2012-2015.</p>
+<p>More recently George Hunt refined city search, moved to vector-based
+Map Packs, and added satellite photos — leading to major advances in
+September 2018 (<a
+href="IIAB-6.6-Release-Notes.html">IIAB
+6.6</a>), July 2019 (for <a
+href="IIAB-7.0-Release-Notes.html">IIAB
+7.0</a>), June 2020 (<a
+href="IIAB-7.1-Release-Notes.html">IIAB
+7.1</a>), October 2020 (for <a
+href="IIAB-7.2-Release-Notes.html">IIAB
+7.2</a>) and April 2022 (for <a
+href="IIAB-8.0-Release-Notes.html">IIAB
+8.0</a>).</p>
+<p>Thank you also to Tim Moody, Jerry Vonau, Adam Holt, Anish Mangal,
+Avni Khatri, Mir Rodríguez Lombardo, Minh Nguyen, Paul Norman, Jérôme
+Gagnon-Voyer, Nick Doiron &amp; other volunteer professionals from the
+<a href="https://www.openstreetmap.org/">OpenStreetMap community</a> who
+are making this tremendous, ongoing progress possible!</p>
+<h2 id="repos-source-code">Repos &amp; Source Code</h2>
+<ul>
+<li>https://github.com/iiab/maps (<a
+href="https://github.com/iiab/maps#readme">README</a>)
+<ul>
+<li>Jupyter Notebook:
+https://github.com/iiab/maps/blob/master/osm-source/jupyter-code/maps.ipynb
+(<a
+href="https://github.com/georgejhunt/maps/blob/maps7.3/osm-source/jupyter-code/maps.ipynb">original</a>)</li>
+<li><a
+href="https://github.com/iiab/maps/blob/master/osm-source/pages/viewer/scripts/iiab-install-map-region">/usr/bin/iiab-install-map-region</a></li>
+<li><a
+href="https://github.com/iiab/maps/blob/master/osm-source/pages/viewer/scripts/iiab-extend-sat.py">/usr/bin/iiab-extend-sat.py</a></li>
+<li><a
+href="https://github.com/iiab/maps/blob/master/osm-source/pages/viewer/scripts/iiab-update-map">/usr/bin/iiab-update-map</a></li>
+</ul></li>
+<li>https://github.com/iiab/maptools (<a
+href="https://github.com/iiab/maptools#readme">README</a>, <a
+href="https://github.com/iiab/maps/tree/master/tools.unused#readme">original</a>)</li>
+<li>https://github.com/iiab/maps-assets (<a
+href="https://github.com/iiab/maps-assets#readme">README</a>)</li>
+<li>https://github.com/iiab/iiab/tree/master/roles/osm-vector-maps (<a
+href="https://github.com/iiab/iiab/tree/master/roles/osm-vector-maps#readme">README</a>)</li>
+<li>https://github.com/iiab/iiab-admin-console/search?q=osm
+<ul>
+<li>https://github.com/iiab/iiab-factory/search?q=osm (historical)</li>
+</ul></li>
+</ul>
+<h2 id="links-advanced-topics">Links &amp; Advanced Topics</h2>
+<p>In reverse chronological order:</p>
+<ul>
+<li><a href="FAQ.html">FAQ.IIAB.IO</a> &gt; <a
+href="FAQ.html#How_do_I_add_zoomable_maps_for_my_region.3F">“How
+do I add zoomable maps for my region?”</a></li>
+<li>What’s New with IIAB Maps?
+https://github.com/iiab/iiab/blob/master/roles/osm-vector-maps/README.md</li>
+<li>Jupyter Notebook — Overview of a Stand Alone Pipeline for Vector Map
+Regions, April 2022:
+https://github.com/iiab/maps/blob/master/osm-source/jupyter-code/maps.ipynb</li>
+<li>Recipe for Generating Map Regions, January 2021:
+https://github.com/iiab/maps/wiki</li>
+<li>Living Docs for IIAB 7.0 Maps, June 2019:
+https://github.com/iiab/iiab/issues/1710</li>
+<li>History And Architecture, June 2019:
+https://github.com/iiab/maps/blob/master/docs/README.md#history-and-architecture</li>
+<li>Design Notes, May 2019:
+https://github.com/iiab/maps/blob/ebcb43e54979023b33720f51dc3b07c6673c7e42/docs/readme.md</li>
+<li>“Make your own IIAB Map Pack” draft notes, May 2019:
+https://github.com/georgejhunt/maps/blob/simple/generate-regions/readme.md</li>
+<li>IIAB 6.6 Guide, September 2018:
+https://github.com/iiab/iiab-factory/blob/master/content/vector-tiles/README.md</li>
+<li>George Hunt Design Doc 2, July 2018:
+https://github.com/iiab/iiab-factory/blob/master/content/vector-tiles/Design-Decisions.md</li>
+<li>“Package up vector-based OSM maps” task list, July 2018 onwards:
+https://github.com/iiab/iiab/issues/877#issuecomment-405935272</li>
+<li>George Hunt Design Doc 1, April 2018:
+https://github.com/georgejhunt/iiab-factory/blob/vector-maps/content/vector-tiles/Design-Decisions.md</li>
+<li>Jérôme Gagnon-Voyer 2015 Design Doc 2, August 2015:
+https://jeromegagnonvoyer.wordpress.com/2015/08/21/offline-solution-for-openstreetmap-osm/</li>
+<li>Jérôme Gagnon-Voyer 2015 Design Doc 1, August 2015:
+https://jeromegagnonvoyer.wordpress.com/2015/08/06/merging-multiple-mbtiles-together/</li>
+</ul>
+</body>
+</html>

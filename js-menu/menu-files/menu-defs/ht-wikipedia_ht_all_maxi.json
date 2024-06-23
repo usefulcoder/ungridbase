@@ -1,0 +1,19 @@
+{
+  "name": "ht-wikipedia_ht_all_maxi",
+  "lang": "ht",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_ht_all_maxi",
+  "start_url": "",
+  "title": "Wikipedya",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "Offline vèsyon Wikipedia nan kreyòl ayisyen.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Gwosè: ##SIZE##, Atik: ##ARTICLE_COUNT##, Medya: ##MEDIA_COUNT##, Dat: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "252312ce972beb97c9b7b270398a9577bdf3619a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>3.Console</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="console">Console</h1>
+<p>The Console is the Graphical User Inferface that allows an
+administrator to manage various tasks that will become Commands sent to
+the CMDSRV. It requires authentication credentials of the user and then
+displays a number of menu tabs to panels that support the following
+functionality:</p>
+<ul>
+<li>Control of the Server such as poweroff and reboot</li>
+<li>Configuration - manage services installed and active and networking
+paramters</li>
+<li>Content Installation - menu driven selection of various types of
+content from third parties</li>
+<li>Content Menus - Manage the home page and the details of items on
+that menue</li>
+<li>Utilities - Change Password and display of various server parameters
+and status</li>
+</ul>
+<p>During installation the console role in the github repo gets
+installed to /opt/admin/console/.</p>
+<h2 id="architecture">Architecture</h2>
+<p>The Console is a single-page application (SPA) launched with
+/opt/admin/console/index.html. On startup it loads various javascript
+and css files and then invokes a main function in javascript that loads
+html files and the initial set of data in the form of json files. These
+are loaded via ajax calls.</p>
+<p>The application employs a number of javascript/css libraries includig
+jquery, bootstrap, and fonts. There are also several specialized
+libraries for things like maps, markdown, and message encryption.</p>
+<p>As is the case with most SPA applications, the complexity is in the
+javascript files all of which are in
+https://github.com/iiab/iiab-admin-console/tree/master/roles/console/files/js:</p>
+<ul>
+<li>admin_console.js is the top level and contains the function main().
+It handles initialization, the server api, and most panels except those
+dealing with content download and menuing. It also handles setting all
+the button event handlers.</li>
+<li>content_functions.js, map_functions.js, oer2go_functions.js, and
+zim_functions.js contain specialized javascript for downloading and
+otherwise managing IIAB content.</li>
+<li>js_menu_functions.js handles the creation and editing of the home
+page menu and menu items on that page.</li>
+</ul>
+<h2 id="panels">Panels</h2>
+<p>The best description of the panels and their dialog boxes is the help
+accessible via the top level Help menu tab. Those who wish to read these
+directly from the github repos should browse
+https://github.com/iiab/iiab-admin-console/tree/master/roles/console/files/help.</p>
+<h2 id="content-types">Content types</h2>
+<p>The main types of content supported by IIAB are: - Kiwix ZIMS -
+OER2Go Modules - OSM Maps</p>
+<p>Each of these has a Catalog, and the Admin Console downloads these
+catalogs during install and periodically thereafter on demand. These
+catalogs are used to display a pick list of content items that can be
+installed by checking a box beside those selected and then clicking an
+Install Selected button. When the button is clicked a command is sent to
+CMDSRV, which causes it to download and install the requested content.
+The progress mayb be viewed in the Display Job Status panel of the
+Utilities menu.</p>
+<p>They are also described further in the relevant help sections.</p>
+<h2 id="security">Security</h2>
+<p>Because Admin Console is intended for offline use it is not possible
+to have SSL support other than with a self-signed certificate. To
+ameliorate this problem the Console and CMDSRV exchange a set of tokens
+and nonces to defeat sniffing attacks. (Without SSL certs it is not
+possible to prevent ‘man-in-the-middle’ attacks.)</p>
+<p>Sensitive exchanges with the server, such as passwords and password
+management, are also encrypted.</p>
+<h2 id="known-problems">Known Problems</h2>
+<p>Wiki content comes in a growing list of languages. In order to
+translate language codes between those used by Kiwix and other
+representations Admin Console has its own set of language codes. The
+need to have new code added periodically.</p>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>The best way to see under the hood is to open the Javascript Console
+in your browser. Many functions write status to the console that can be
+examined.</p>
+<h2 id="document-version">Document Version</h2>
+<p>This document was last maintained on December 29, 2022.</p>
+</body>
+</html>

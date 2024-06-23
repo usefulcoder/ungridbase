@@ -1,0 +1,19 @@
+{
+  "name": "en-fantasticphonics-child",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-fantasticphonics-child",
+  "start_url": "content",
+  "title": "Fantastic Phonics - Child",
+  "logo_url": "en-fantasticphonics-child.png",
+  "description": "A Reading Program for the World<BR><BR>Children, Teenagers and Adults",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "213262e0351179e44dffd4eb087247e9421c071a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-retrocomputing_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "retrocomputing.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Retrocomputing Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for vintage-computer hobbyists interested in restoring, preserving, and using the classic computer and gaming systems of yesteryear",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "9969d3979ea2061bfe26595b5ed880decade41ea",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

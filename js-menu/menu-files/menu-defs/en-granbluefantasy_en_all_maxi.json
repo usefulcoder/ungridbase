@@ -1,0 +1,19 @@
+{
+  "name": "en-granbluefantasy_en_all_maxi",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "granbluefantasy_en_all_maxi",
+  "start_url": "",
+  "title": "Granblue Fantasy Wiki",
+  "logo_url": "",
+  "description": "Granblue Fantasy Wiki",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "6a03842ca07321f36d549a6870bb438f444b0b68",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

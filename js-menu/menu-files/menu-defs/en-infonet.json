@@ -1,0 +1,19 @@
+{
+  "name": "en-infonet",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-infonet",
+  "start_url": "export/default$home$-1$_.html",
+  "title": "Infonet-Biovision",
+  "logo_url": "en-infonet.png",
+  "description": "Scientific/practical info on sustainable agriculture, livestock, health and environmental conservation issues &mdash; especially for farmers and rural communities in Africa.",
+  "extra_description": "",
+  "extra_html": "en-infonet.html",
+  "footnote": "Size: 443M, Articles: 1491, Images: 2686, PDFs: 114, MP3s: 41, Date: August 2017",
+  "edit_status": "repo",
+  "commit_sha": "2eb97950160d77f5bde0c4f9ea3157fe1bcfe670",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

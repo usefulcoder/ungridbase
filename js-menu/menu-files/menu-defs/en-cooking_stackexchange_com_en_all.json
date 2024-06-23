@@ -1,0 +1,19 @@
+{
+  "name": "en-cooking_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "cooking.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Seasoned Advice",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for professional and amateur chefs",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "15173e6869f88dd3de048427cb1634d55a7b26f9",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

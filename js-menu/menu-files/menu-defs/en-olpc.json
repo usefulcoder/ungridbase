@@ -1,0 +1,16 @@
+{
+  "name": "en-olpc",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-olpc",
+  "title": "OLPC Educational Packages",
+  "logo_url": "en-olpc.jpg",
+  "description": "",
+  "extra_html": "en-olpc.html",
+  "edit_status": "repo",
+  "commit_sha": "82310d56b199d4604ef646fdf049bff4a48fb254",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

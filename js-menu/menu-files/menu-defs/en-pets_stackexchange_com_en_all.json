@@ -1,0 +1,19 @@
+{
+  "name": "en-pets_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "pets.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Pets Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for pet owners, caretakers, breeders, veterinarians, and trainers",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "f2bc515e280f4f705894b2e2da0393f521024a4c",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

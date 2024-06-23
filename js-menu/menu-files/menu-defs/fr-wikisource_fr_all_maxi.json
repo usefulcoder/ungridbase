@@ -1,0 +1,17 @@
+{
+  "name": "fr-wikisource_fr_all_maxi",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikisource_fr_all_maxi",
+  "moddir": "fr-wikisource",
+  "title": "Wikisource en français",
+  "logo_url": "fr-wikisource.png",
+  "description": "La bibliothèque gratuite que tout le monde peut améliorer.",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "6b8b8b1cf3fbea8c603b3ecd188f74d74dddb0c4",
+  "change_date": "2024-06-21",
+  "change_ref": "copy from repo",
+  "upload_flag": false,
+  "download_flag": true
+}

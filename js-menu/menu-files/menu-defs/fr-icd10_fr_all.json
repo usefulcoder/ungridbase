@@ -1,0 +1,19 @@
+{
+  "name": "fr-icd10_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "icd10_fr_all",
+  "start_url": "",
+  "title": "ICD-10",
+  "logo_url": "icd10.png",
+  "description": "Classification statistique internationale des maladies et des problème de santé connexes.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "40841afb7b81fda9c55bae739cb3c12d5a842e9f",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

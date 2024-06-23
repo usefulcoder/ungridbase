@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Platforms</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="internet-in-a-box-iiab-platforms">Internet-in-a-Box (IIAB)
+Platforms</h1>
+<h2 id="operating-systems">Operating Systems</h2>
+<p>Read the <a
+href="IIAB-Platforms.html#disk-partitioning">partition
+scheme</a> below.</p>
+<p>Install a <strong>minimal</strong> OS, as the <a
+href="https://download.iiab.io">Internet-in-a-Box (IIAB) installer</a>
+will add the packages you need.</p>
+<ol type="1">
+<li><p><strong>PLEASE CHOOSE ONE OF THESE 4 GNU/LINUX OS’s:</strong>
+<em>(summarized at <a href="FAQ.html">FAQ.IIAB.IO</a>
+&gt; <a href="FAQ.html#What_OS_should_I_use%3F">“What
+OS should I use?”</a>)</em></p>
+<ul>
+<li><strong>Raspberry Pi OS</strong></a>
+<ul>
+<li><a name="raspios-12"><a
+href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit">Raspberry
+Pi OS “Bookworm” (64-bit)</a></a>
+<!-- http://raspbian.raspberrypi.org/raspbian/dists/bookworm-staging/ -->
+was released 2023-10-11, based on Debian 12. IIAB testing began
+2023-04-04 (<a
+href="https://github.com/iiab/iiab/issues/3526">#3526</a>) and touch-ups
+were added 2023-10-14 (<a
+href="https://github.com/iiab/iiab/pull/3660">PR #3660</a> to resolve
+systemd-resolved issue <a
+href="https://github.com/iiab/iiab/issues/3657">#3657</a>) now that the
+OS is officially released! (As originally announced <a
+href="https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/">February
+2022</a>, their 64-bit OS now works on Raspberry Pi Zero 2 W, 3, 3 B+,
+4, 5 and 400.) It’s available in a <a
+href="https://downloads.raspberrypi.org/raspios_lite_arm64/images/">Lite
+(headless)</a> version or <a
+href="https://downloads.raspberrypi.org/raspios_arm64/images/">with
+desktop</a>, and has come a long way since its <a
+href="https://www.raspberrypi.org/forums/viewtopic.php?t=275370">2020-05-28
+beta</a>.
+<ul>
+<li>ADVANTAGES: <a
+href="https://www.phoronix.com/scan.php?page=article&amp;item=raspberrypi-32bit-64bit">“48%
+faster”</a> than 32-bit. Your IIAB microSD card will also work in newer
+$15 Zero 2 W computers (if you don’t overstress its 512MB RAM!) Also,
+Calibre e-book software can be installed, making essential commands like
+<a
+href="https://manual.calibre-ebook.com/generated/en/calibredb.html">calibredb</a>
+and <a
+href="https://manual.calibre-ebook.com/generated/en/ebook-convert.html">ebook-convert</a>
+available to schools building thoughtful e-book collections (whereas
+it’s <a
+href="https://www.mobileread.com/forums/showthread.php?t=343422">no
+longer possible</a> to run <code>sudo apt install calibre</code> on
+32-bit Raspberry Pi OS “Bullseye” and higher).</li>
+<li>DISADVANTAGE: 64-bit IIAB microSD cards won’t work in older 32-bit
+machines like the $10 Raspberry Pi Zero W.
+<!-- * Known Issue from 2020, that seems to be resolved as of April 2021: the Raspberry Pi's internal Wi-Fi hotspot may work initially, but later on web pages may load 10X or 100X more slowly (if at all) e.g. when using [firmware 7.45.18.0](https://github.com/iiab/iiab/issues/823#issuecomment-662285202) for 32 Wi-Fi client devices.  If you do not need more than ~6 Wi-Fi client devices, one possible workaround is to set `wifi_hotspot_capacity_rpi_fix: False` in [/etc/iiab/local_vars.yml](http://wiki.laptop.orgFAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F), to instead use firmware 7.45.206 -> 7.45.229  _[#2422 (comment)](https://github.com/iiab/iiab/issues/2422#issuecomment-723350403)_ --></li>
+<li>HEADLESS OPTION: If you choose Raspberry Pi OS “Lite” (instead of
+“with desktop”) and want to install IIAB using a WiFi connection to the
+Internet (instead of using an Ethernet cable to the Internet) here are
+instructions to <a
+href="https://www.raspberrypi.org/documentation/computers/configuration.html#wireless-networking-command-line">set
+up Wi-Fi up via the command-line</a> — which expands on the <a
+href="https://www.raspberrypi.org/documentation/computers/configuration.html#setting-up-a-headless-raspberry-pi">basic
+headless instructions</a>.</li>
+<li>HISTORICAL: Consider the <a
+href="https://forums.raspberrypi.com/viewtopic.php?t=275372&amp;sd=d">64-bit
+forum discussion</a> and IIAB install tips at <a
+href="https://github.com/iiab/iiab/issues/2422">#2422</a>.</li>
+</ul></li>
+<li><a
+href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-32-bit">Raspberry
+Pi OS “Bookworm” (32-bit)</a> if you really want the original (slower!)
+Raspberry Pi OS:
+<ul>
+<li>ADVANTAGE: Your IIAB microSD card can work in older $10 Zero W
+computers (if you don’t overstress its 512MB RAM!)</li>
+<li>DISADVANTAGES: <a
+href="IIAB-8.0-Release-Notes.html#known-issues">JupyterHub
+and Calibre-Web</a> cannot be installed as of November 2022. Also,
+Calibre e-book utilities cannot be installed. In addition, Node.js
+applications like Internet Archive, JupyterHub, Node-RED, PBX
+(Asterisk/FreePBX) and Sugarizer won’t work on Raspberry Pi Zero W
+(ARMv6) if you installed Node.js while on RPi 3, 3 B+ (ARMv7) or RPi 4
+(ARMv8). Read IIAB’s <a
+href="https://github.com/iiab/iiab/tree/master/roles/nodejs#raspberry-pi-zero-w-warning">Node.js
+tips</a> if you want to try to make one of the apps work on Zero W.</li>
+</ul></li>
+<li>WARNING: The Raspberry Pi’s older NOOBS OS IS NOT SUPPORTED.</li>
+</ul></li>
+<li><a name="ubuntu-2204"><a
+href="https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668">Ubuntu
+22.04.4+</a></a> LTS (Jammy Jellyfish) works well on <a
+href="https://releases.ubuntu.com/22.04/">PC (amd64)</a>, or more
+experimentally on <a
+href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi</a> (<a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi">tutorial</a>,
+<a
+href="https://discourse.ubuntu.com/t/how-to-install-ubuntu-on-your-raspberry-pi/14660">install
+guide</a>).
+<ul>
+<li>If you absolutely must install IIAB using a Wi-Fi connection to the
+Internet (instead of an Ethernet cable to the Internet) then before you
+first boot Ubuntu on Raspberry Pi, you should: (A) Enter your building’s
+Wi-Fi SSID and password using <a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-using-advanced-options">Raspberry
+Pi Imager’s Advanced Options</a> (in the past they recommended editing
+the pre-existing network-config file, at the top-level of the microSD
+card). (B) Boot the microSD card in your Raspberry Pi, <a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server">log
+in</a>, and run
+<code>sudo mv /etc/netplan/50-cloud-init.yaml /etc/netplan/02-iiab-config.yaml</code>.
+(C) Finally, your IIAB should contain just these 2 files in /etc/netplan
+(ideally!) if you choose to abide by recommended norms — if so
+create/edit them (with your building’s actual SSID and password) to
+appear as in these 2 examples:
+<ul>
+<li><p><code>/etc/netplan/00-installer-config.yaml</code> or
+<code>/etc/netplan/01-iiab-config.yaml</code> should contain the
+“ethernets:” section:</p>
+<pre><code>network:
+  ethernets:
+    eth0:
+      dhcp4: yes
+      optional: true</code></pre>
+<p>(You might need to change <code>eth0</code> above, to the actual
+Ethernet interface name shown by the <code>ip addr</code> command. ALSO
+PLEASE READ <a
+href="https://github.com/iiab/iiab/issues/3385#issuecomment-1263791330">#3385</a>
+CAREFULLY, IF ATTACHING AN EXTERNAL WIFI DEVICE!)</p></li>
+<li><p><code>/etc/netplan/02-iiab-config.yaml</code> should contain the
+“wifis:” section — populated with your building’s actual
+WiFi-to-Internet SSID and password:</p>
+<pre><code>network:
+  wifis:
+    wlan0:
+      dhcp4: true
+      optional: true
+      access-points:
+        ACTUAL-SSID:
+          password: ACTUAL-PASSWORD</code></pre>
+<p>(You might need to change <code>wlan0</code> above, to the actual
+Wi-Fi interface name shown by the <code>ip addr</code>
+command.)</p></li>
+<li><p>Learn more at: <a
+href="IIAB-Networking.html#10-netplan">IIAB
+Networking &gt; Netplan</a></p></li>
+</ul></li>
+</ul></li>
+<li><a name="linuxmint-21"><a href="https://linuxmint.com/">Linux Mint
+21.3+</a></a> <!--https://linuxmint.com/rel_ulyana_cinnamon.php--> works
+very well too (OS is built from Ubuntu 22.04) if your community needs a
+graphical desktop on the very same machine as Internet-in-a-Box: <em><a
+href="https://github.com/iiab/iiab/pull/2483">PR #2483</a>, <a
+href="https://github.com/iiab/iiab/pull/2501">PR #2501</a></em>. IIAB’s
+Admin Console too, thanks to: <em><a
+href="https://github.com/iiab/iiab-admin-console/pull/336">PR
+iiab/iiab-admin-console#336</a></em></li>
+<li><a name="debian-12"><a
+href="https://www.debian.org/releases/bookworm/">Debian 12
+(Bookworm)</a></a> was released <a
+href="https://www.debian.org/News/2023/20230610">2023-06-10</a> and
+works well (<a href="https://www.debian.org/download">download</a>, <a
+href="https://www.debian.org/distrib/">other</a> <a
+href="https://www.debian.org/devel/debian-installer/">options</a>, <a
+href="https://www.debian.org/releases/bookworm/amd64/release-notes/">release
+notes</a>, <a href="https://wiki.debian.org/NewInBookworm">what’s
+new</a>, <a href="https://micronews.debian.org/">micronews</a>).
+<!-- [release notes](https://www.debian.org/releases/stable/releasenotes), [release timeline](https://release.debian.org/bookworm/freeze_policy.html), [draft release notes](https://www.debian.org/releases/testing/releasenotes)) -->
+<!-- is Debian's testing branch.  Its final release is expected mid-2023.  [Daily builds](http://cdimage.debian.org/cdimage/daily-builds/daily/arch-latest/amd64/) are available for amd64. -->
+<em>CAUTION: Debian Edu (Skolelinux, <a
+href="https://github.com/iiab/iiab/issues/2831">#2831</a>) is not
+supported at this time.</em> <a
+href="https://github.com/iiab/iiab/issues/3399">#3399</a>
+<!-- ~In any case, you will need to add the line `VERSION_ID="12"` to `/etc/os-release` before trying to install IIAB.~
+  * 2022-10-12 IMPORTANT INSTALL TIPS: [#3399](https://github.com/iiab/iiab/issues/3399) (e.g. using Multipass for "instant" Debian VM's)
+    * ~2022-11-28: KA Lite might no longer be possible ([#3289](https://github.com/iiab/iiab/issues/3289)) given Bookworm has removed the Python2 version of package [python-setuptools](https://packages.debian.org/bookworm/python-setuptools)~
+    * ~2023-01-31: PHP 8.2 requires a Nextcloud 26 pre-release?~
+    * ~Similar to Ubuntu 23.04, beware Munin might not start until reboot, complicating your IIAB install: [#3434](https://github.com/iiab/iiab/issues/3434)~
+    * Optional/FYI: See `apt-key list` and `apt-key del` tips (above) for more about legacy/deprecated keyring /etc/apt/trusted.gpg warnings. --></li>
+</ul></li>
+<li><p><strong>The following OS’s are THEORETICALLY POSSIBLE, but may
+require extensive babysitting to get right:</strong> <em>(modify <a
+href="https://github.com/iiab/iiab/blob/master/scripts/local_facts.fact#L82-L98">/opt/iiab/iiab/scripts/local_facts.fact</a>
+Lines 82-98 if necessary)</em></p>
+<ul>
+<li><a name="ubuntu-2404"><a
+href="https://releases.ubuntu.com/24.04/">Ubuntu 24.04 LTS</a></a>
+“Noble Numbat” released 2024-04-25 (<a
+href="https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890">release
+notes</a>) pre-releases generally work well with IIAB, as was first
+confirmed 2023-10-27: <a
+href="https://github.com/iiab/iiab/issues/3662">#3662</a>
+<ul>
+<li>A <a
+href="https://github.com/learningequality/kolibri/releases">pre-release
+of Kolibri 0.17</a> is REQUIRED to work with Ubuntu 24.04’s Python 3.12:
+<a
+href="https://github.com/iiab/iiab/issues/3709#issuecomment-1962517952">#3709</a>
+<a
+href="https://github.com/learningequality/kolibri/issues/11316">learningequality/kolibri#11316</a>
+<a
+href="https://github.com/learningequality/kolibri/issues/11892#issuecomment-1956642320">learningequality/kolibri#11892</a>
+<a
+href="https://github.com/learningequality/kolibri/issues/11895#issuecomment-1962770762">learningequality/kolibri#11895</a></li>
+<li>KA Lite might not work, as a Python 2 virtualenv appears no longer
+practical: <a
+href="https://github.com/iiab/iiab/issues/3733">#3733</a></li>
+<li>Beware Munin might not start until reboot on Raspberry Pi’s
+especially, complicating your IIAB install. Similar to what was first
+observed on Debian 12 and Ubuntu 23.04: <a
+href="https://github.com/iiab/iiab/issues/3434">#3434</a></li>
+</ul></li>
+<li><a name="ubuntu-2410"><a
+href="https://launchpad.net/ubuntu/oracular">Ubuntu 24.10</a></a>
+“Oracular Oriole” is expected in October 2024 (<a
+href="https://bugs.launchpad.net/ubuntu/oracular">bugs</a>) and should
+work well with IIAB on PCs and VMs especially:
+<ul>
+<li>Starting later in May 2024, pre-release “daily” builds will quickly
+be installable as <a href="https://multipass.run/install">Multipass
+VM’s</a> — or download an ISO-or-similar to install onto a regular PC
+(<a
+href="https://cdimage.ubuntu.com/ubuntu-server/daily-live/current/">server
+live</a>, <a
+href="https://cdimage.ubuntu.com/ubuntu-server/daily-preinstalled/current/">server
+preinstalled</a>, <a
+href="https://cdimage.ubuntu.com/daily-live/current/">desktop live</a>,
+<a href="https://cdimage.ubuntu.com/daily-preinstalled/current/">desktop
+preinstalled</a>).</li>
+<li>More experimentally, IIAB can also be installed on Ubuntu 24.10 on
+<a href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi</a>
+pre-releases, especially if your Raspberry Pi has 4+ GB RAM (<a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi">tutorial</a>,
+<a
+href="https://discourse.ubuntu.com/t/how-to-install-ubuntu-server-on-your-raspberry-pi/14660">install
+guide</a>).</li>
+</ul></li>
+<li><a name="debian-13"><a
+href="https://www.debian.org/releases/trixie/">Debian 13
+(Trixie)</a></a> should work even prior to its final release expected
+mid-2025 (<a
+href="https://www.debian.org/devel/debian-installer/">pre-release
+download options</a>, <a
+href="https://www.debian.org/releases/trixie/release-notes/">release
+notes</a>, <a href="https://micronews.debian.org/">micronews</a>).
+<!-- [download](https://www.debian.org/download), [other](https://www.debian.org/distrib/) [release notes](https://www.debian.org/releases/stable/releasenotes), [what's new](https://wiki.debian.org/NewInBookworm), [release timeline](https://release.debian.org/bookworm/freeze_policy.html), [draft release notes](https://www.debian.org/releases/testing/releasenotes)) -->
+<!-- is Debian's testing branch.  Its final release is expected mid-2023.  [Daily builds](http://cdimage.debian.org/cdimage/daily-builds/daily/arch-latest/amd64/) are available for amd64. -->
+<em>CAUTION: Debian Edu (Skolelinux, <a
+href="https://github.com/iiab/iiab/issues/2831">#2831</a>) is not
+supported at this time.</em> <a
+href="https://github.com/iiab/iiab/issues/3399">#3399</a>
+<ul>
+<li>Add the line <code>VERSION_ID="13"</code> to
+<code>/etc/os-release</code> before installing IIAB!</li>
+</ul></li>
+<li>“Pure Debian” for Raspberry Pi: https://raspi.debian.net <em>(At
+Your Own Risk!)</em></li>
+<li><a href="https://wiki.debian.org/DebianUnstable">Debian “Sid”</a>
+for developers <em>(At Your Own Risk!)</em></li>
+</ul></li>
+<li><p><strong>The following OS’s are NO LONGER RECOMMENDED at this
+time:</strong> <em>(modify <a
+href="https://github.com/iiab/iiab/blob/master/scripts/local_facts.fact#L82-L98">/opt/iiab/iiab/scripts/local_facts.fact</a>
+Lines 82-98 if necessary)</em></p>
+<ul>
+<li><a name="ubuntu-2310"><a
+href="https://www.omgubuntu.co.uk/2023/10/ubuntu-23-10-new-features-download-link">Ubuntu
+23.10</a></a> “Mantic Minotaur” (<a
+href="https://discourse.ubuntu.com/t/mantic-minotaur-release-notes/35534">release
+notes</a>) was released 2023-10-12 and works well with IIAB on PCs and
+VMs especially, if you avoid Lokole (<a
+href="https://github.com/iiab/iiab/issues/3528">#3528</a>).
+<ul>
+<li>More experimentally, IIAB can also be installed on Ubuntu 23.10 on
+<a href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi</a>,
+especially if your Raspberry Pi has 4+ GB RAM (<a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi">tutorial</a>,
+<a
+href="https://discourse.ubuntu.com/t/how-to-install-ubuntu-on-your-raspberry-pi/14660">install
+guide</a>, <a
+href="https://wiki.ubuntu.com/ARM/RaspberryPi">wiki</a>).</li>
+<li>Beware Munin might not start until reboot on Raspberry Pi’s
+especially, complicating your IIAB install. Similar to what was first
+observed on Debian 12 and Ubuntu 23.04: <a
+href="https://github.com/iiab/iiab/issues/3434">#3434</a></li>
+</ul></li>
+<li><a name="raspios-11">Raspberry Pi OS “Bullseye” (based on Debian
+11)</a> e.g. <a
+href="https://downloads.raspberrypi.com/raspios_arm64/images/">64-bit
+with desktop</a> or <a
+href="https://downloads.raspberrypi.com/raspios_lite_armhf/images/">32-bit
+Lite</a> if absolutely necessary.</li>
+<li><a
+href="https://www.raspberrypi.com/software/raspberry-pi-desktop/">Raspberry
+Pi Desktop</a> for PC a.k.a. <a
+href="https://downloads.raspberrypi.org/rpd_x86/images/">Debian Bullseye
+with Raspberry Pi Desktop</a> <em>(for PC, x86_64 VM, or Mac)</em> will
+NOT work with modern Node.js apps — as a result of this distro’s hybrid
+32-bit and 64-bit CPU arch legacy (specifically, i386-instead-of-amd64
+versions of python3 packages) which lead to serious Node.js 10.x
+problems across the board. Sugarizer can be made to work if absolutely
+necessary. But this is ENTIRELY AT YOUR OWN RISK. Extensive details
+written up on 2021-07-21: <a
+href="https://github.com/iiab/iiab/issues/2873">#2873</a>
+<ul>
+<li>Manually install Node.js and npm, running these 2 lines as root:
+(for roles/internetarchive, roles/jupyterhub, roles/nodered, roles/pbx
+i.e. Asterisk/FreePBX and/or roles/sugarizer)
+<ul>
+<li>sudo apt install nodejs npm    # Installs Node.js 10.x.y (for now —
+12.x.y, 14.x.y, 16.x.y, 18.x.y or 20.x.y later?) and npm 7.x.y (for
+now)</li>
+<li>sudo echo ‘nodejs_installed: True’ &gt;&gt;
+/etc/iiab/iiab_state.yml</li>
+</ul></li>
+</ul></li>
+<li><a name="debian-11"><a
+href="https://www.debian.org/releases/bullseye/">Debian 11
+(Bullseye)</a></a>, as was released <a
+href="https://www.debian.org/News/2021/20210814">2021-08-14</a> (<a
+href="https://www.debian.org/download">download</a>,
+<!-- (https://www.debian.org/releases/bullseye/debian-installer/) --> <a
+href="https://www.debian.org/releases/bullseye/amd64/release-notes/">release
+notes</a>).
+<!--is "fully frozen" since [2021-07-17](https://lists.debian.org/debian-devel-announce/2021/07/msg00002.html) and its final release is scheduled for [2021-08-14](https://release.debian.org/).  Please try a [daily build](http://cdimage.debian.org/cdimage/daily-builds/daily/arch-latest/amd64/) for amd64:-->
+<!--(1) Prior to the OS's final release, you might need to add the line `VERSION_ID="11"` to `/etc/os-release` (2) That should do it, but additional-->
+Install tips are at <a href="https://github.com/iiab/iiab/pull/2582">PR
+#2582</a> (since Oct 2020) and <a
+href="https://github.com/iiab/iiab/issues/2749">#2749</a> (since Apr
+2021).
+<ul>
+<li><em>CAUTION: Support for this OS’s PHP 7.4 <a
+href="https://www.php.net/eol.php">ended</a> on <a
+href="https://www.php.net/releases/">2022-11-03</a>. <a
+href="https://github.com/iiab/iiab/issues/3467">#3467</a></em></li>
+<li><em>CAUTION: Debian Edu (Skolelinux, <a
+href="https://github.com/iiab/iiab/issues/2831">#2831</a>) is not
+supported at this time.</em></li>
+</ul></li>
+<li><a name="ubuntu-2304"><a
+href="https://www.omgubuntu.co.uk/2022/11/download-ubuntu-23-04-daily-builds">Ubuntu
+23.04</a></a> (<a
+href="https://discourse.ubuntu.com/t/lunar-lobster-release-schedule/27284">Lunar</a>
+<a
+href="https://www.phoronix.com/news/Ubuntu-23.04-Lunar-Lobster">Lobster</a>)
+(<a
+href="https://discourse.ubuntu.com/t/lunar-lobster-release-notes/31910">release
+notes</a>) was released <a
+href="https://wiki.ubuntu.com/Releases#Future">2023-04-20</a> for <a
+href="https://releases.ubuntu.com/23.04/">PC (amd64)</a>, and more
+experimentally for <a
+href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi</a> (<a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi">tutorial</a>,
+<a
+href="https://discourse.ubuntu.com/t/how-to-install-ubuntu-on-your-raspberry-pi/14660">install
+guide</a>, <a href="https://wiki.ubuntu.com/ARM/RaspberryPi">wiki</a>).
+<ul>
+<li>INSTALL TIPS, very similar to Debian 12: <a
+href="https://github.com/iiab/iiab/issues/3399">#3399</a></li>
+</ul></li>
+<li><a
+href="https://www.omgubuntu.co.uk/2022/08/ubuntu-22-10-release-new-features">Ubuntu
+22.10 (Kinetic Kudu)</a> (<a
+href="https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976">release
+notes</a>) was released <a
+href="https://wiki.ubuntu.com/Releases#Current">2022-10-20</a> for <a
+href="https://releases.ubuntu.com/22.10/">PC (amd64)</a>, and more
+experimentally for <a
+href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi</a> (<a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi">tutorial</a>,
+<a
+href="https://discourse.ubuntu.com/t/how-to-install-ubuntu-on-your-raspberry-pi/14660">install
+guide</a>, <a href="https://wiki.ubuntu.com/ARM/RaspberryPi">wiki</a>).
+<ul>
+<li>2022-10-24 INSTALL TIPS: <a
+href="https://github.com/iiab/iiab/issues/3343">#3343</a> <a
+href="https://github.com/iiab/iiab/issues/3408">#3408</a></li>
+</ul></li>
+<li><a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes">Ubuntu
+20.04.5+</a> LTS (Focal Fossa) on <a
+href="https://releases.ubuntu.com/20.04/">PC (amd64)</a>, or more
+experimentally on <a
+href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi</a> (<a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi">tutorial</a>,
+<a
+href="https://discourse.ubuntu.com/t/how-to-install-ubuntu-on-your-raspberry-pi/14660">install
+guide</a>, <a href="https://wiki.ubuntu.com/ARM/RaspberryPi">wiki</a>).
+<ul>
+<li>REQUIRED: Manually revert <code>plocate</code> to
+<code>mlocate</code> in
+<code>/opt/iiab/iiab/roles/2-common/tasks/packages.yml</code> <a
+href="https://github.com/iiab/iiab/pull/3365">#3365</a> <a
+href="https://github.com/iiab/iiab/pull/3377">#3377</a></li>
+</ul></li>
+<li><a href="https://linuxmint.com/edition.php?id=281">Linux Mint 20</a>
+<ul>
+<li>REQUIRED: Manually revert <code>plocate</code> to
+<code>mlocate</code> in
+<code>/opt/iiab/iiab/roles/2-common/tasks/packages.yml</code> <a
+href="https://github.com/iiab/iiab/pull/3365">#3365</a> <a
+href="https://github.com/iiab/iiab/pull/3377">#3377</a></li>
+</ul></li>
+<li><a
+href="https://discourse.ubuntu.com/t/impish-indri-release-notes/21951">Ubuntu
+21.10 (Impish Indri)</a> was released 2021-10-14 (<a
+href="https://releases.ubuntu.com/21.10/">download</a>). Ubuntu
+End-of-Life for this non-LTS OS is July 2022. Install tips: <a
+href="https://github.com/iiab/iiab/issues/2818">#2818</a></li>
+<li><a
+href="https://www.raspberrypi.com/news/buster-the-new-version-of-raspbian/">Raspberry
+Pi OS “Buster”</a> was released 2019-06-25.</li>
+<li><a href="https://releases.ubuntu.com/21.04/">Ubuntu 21.04 (Hirsute
+Hippo)</a> also includes <a
+href="https://ubuntu.com/download/raspberry-pi">Raspberry Pi
+installers</a>. Ubuntu End-of-Life for this non-LTS OS is January 2022.
+Install tips may be found at <a
+href="https://github.com/iiab/iiab/pull/2635">PR #2635</a> and <a
+href="https://github.com/iiab/iiab/issues/2744">#2744</a>.</li>
+<li><a href="https://www.debian.org/releases/buster/">Debian 10</a>
+“Buster” LTS on AMD64 (<a
+href="https://www.debian.org/releases/buster/debian-installer/">installer</a>,
+<a href="https://github.com/iiab/iiab/issues/1387">#1387 install
+tips</a>)</li>
+<li><a
+href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-legacy">Raspberry
+Pi OS (Legacy)</a>, based on Debian 10 “Buster”.</li>
+<li><a href="https://releases.ubuntu.com/20.10/">Ubuntu 20.10 (Groovy
+Gorilla)</a> (64-bit, Server or Desktop) <a
+href="https://ubuntu.com/download/raspberry-pi">for Raspberry Pi</a>:
+<ul>
+<li>Ubuntu End-of-Life for this non-LTS OS was July 2021.</li>
+<li>Known Issue: Ubuntu Desktop 20.10 will fail to allow client devices
+to connect to (e.g. Raspberry Pi’s) internal hotspot. As of 2020-11-13,
+a temporary workaround is to edit
+<code>/etc/default/networkd-dispatcher</code> to read just
+<code>networkd_dispatcher_args=""</code> and run
+<code>sudo ip link set ap0 up</code> <em><a
+href="https://github.com/iiab/iiab/issues/2585">#2585</a></em></li>
+<li>64-bit Ubuntu MATE 20.10 (graphical desktop) appears to work
+surprisingly well: <em><a
+href="https://github.com/iiab/iiab/issues/2585#issuecomment-729768755">#2585
+(comment)</a></em></li>
+<li>See possible residual issue(s) with Bluetooth, MongoDB and
+NetworkManager: <em><a
+href="https://github.com/iiab/iiab/issues/2585">#2585</a></em></li>
+</ul></li>
+<li><a href="http://releases.ubuntu.com/18.04/">Ubuntu 18.04</a> LTS on
+AMD64. <em>WARNINGS: (A) IIAB’s <a
+href="https://download.iiab.io">1-line installer</a> must be run as
+root! (B) Packages like MediaWiki 1.35 LTS will fail, as Ubuntu 18.04’s
+PHP 7.2 is too old.</em></li>
+<li><a name="ubermix-4"><a
+href="https://wiki.ubermix.org/index.php?title=Ubermix_Changelog">Ubermix
+4.x</a></a> based on Ubuntu 18.04
+<ul>
+<li>Create a USB stick (USB drive &gt;= 4GB will suffice initially) to
+install Ubermix 4.x. Download the latest from
+http://ubermix.org/files.html and follow the instructions at
+http://ubermix.org/download.html</li>
+<li>Read the “Customization Overview” section here:
+http://ubermix.org/customization.html. This is important information to
+understand.</li>
+<li>Use your Ubermix USB install stick to do an ADVANCED install of
+Ubermix 4.x on your designated computer (turn off UEFI in its BIOS if
+possible) following the instructions under “Installing on your System”
+here: http://ubermix.org/download.html
+<ul>
+<li>You need to shrink the /home partition to make room for content to
+be stored in /library. Change partition sizes by selecting Option 2
+(“Advanced image”) to set a larger size for the Default System partition
+(/dev/ext2) and/or larger size for the User Changes partition
+(/dev/ext3). You will be prompted to manually enter in partition sizes.
+<ul>
+<li>e.g. for an 80GB hard drive, consider 12GB (default) for the Default
+System partition and 50GB for the User Changes partition (IF /library
+IIAB content will be stored in the User Changes partition, wiped during
+factory reset reverts). You can adjust the partition sizes as necessary
+based on your hard drive size and content size needs.</li>
+<li>e.g. consider reversing this: 50GB for the Default System partition
+and 12GB for the User Changes partition (IF /library IIAB content will
+be stored in the Default System partition, to protect it from factory
+reset reverts)</li>
+</ul></li>
+<li>Ubermix will install in ~5 or so minutes.</li>
+</ul></li>
+<li>Once Ubermix is installed and you are logged in, confirm the
+partitions are as you expect by opening up the Terminal and entering “df
+-h”. Proceed if all is as expected.</li>
+<li>Turn off aufs (UnionFS). Follow steps #2-6 under the “Rebuilding the
+Base Image” section here: http://ubermix.org/customization.html</li>
+<li>Congratulations, you are now ready to install IIAB.</li>
+<li>Install curl, by manually running: sudo apt install curl</li>
+<li>Run IIAB’s 1-line installer: https://download.iiab.io</li>
+<li>Turn aufs (UnionFS) back on.</li>
+<li>Consider building a USB stick to install everything at once onto
+other laptops/desktops, reading “Rebuilding the Base Image” in
+http://www.ubermix.org/customization.html (“5. Expert Options”, then “1.
+Update the image on the key using this machine as a model”)</li>
+</ul></li>
+<li><a href="https://ubuntu.com/download/raspberry-pi">Ubuntu Server
+19.10.1 for Raspberry Pi</a> released 2019-12-05 (<a
+href="https://wiki.ubuntu.com/ARM/RaspberryPi">docs</a>, <a
+href="http://cdimage.ubuntu.com/releases/19.10.1/release/">downloads</a>).
+Stick with the 32-bit version for now, until 64-bit Kiwix support
+appears (<a
+href="https://github.com/kiwix/kiwix-build/issues/396">kiwix/kiwix-build#396</a>).
+Please do not install or enable Sugarizer in /etc/iiab/local_vars.yml as
+this OS lacks MongoDB.</li>
+<li><a href="http://releases.ubuntu.com/19.10/">Ubuntu 19.10</a> Eoan
+Ermine:
+<ul>
+<li><a href="http://cdimage.ubuntu.com/releases/19.10/release/">Server
+&amp; Desktop editions for AMD64</a>, released 2019-10-17
+<!--([server](http://cdimage.ubuntu.com/ubuntu-server/daily/current/) or [desktop](http://cdimage.ubuntu.com/daily-live/current/))-->
+<ul>
+<li>Install Tips: <em><a
+href="https://github.com/iiab/iiab/issues/2003">#2003</a></em></li>
+</ul></li>
+</ul></li>
+<li><a href="https://www.debian.org/releases/stretch/">Debian 9.x</a>
+“Stretch” LTS</li>
+<li><a href="https://www.centos.org/download/">CentOS 7.x</a> LTS</li>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a>
+LTS</li>
+<li><a
+href="https://www.debian.org/releases/jessie/debian-installer/">Debian
+8.x</a> “Jessie” LTS</li>
+<li><a href="http://wiki.laptop.org/go/Releases">Fedora 18 (32-bit)</a>
+for legacy support of One Laptop per Child’s (OLPC) XO laptops</li>
+</ul></li>
+</ol>
+<p><em><strong><a
+href="FAQ.html#What_are_the_best_places_for_community_support%3F">Contact
+us</a> if you can help, as <a
+href="https://internet-in-a-box.org/contributing.html">user-driven
+testing &amp; co-design are greatly appreciated,</a> strengthening
+everyone’s community product!</strong></em></p>
+<h3 id="etcapttrusted.gpg-legacy-keyring-warnings">/etc/apt/trusted.gpg
+Legacy Keyring Warnings</h3>
+<p>These warnings are harmless, but FYI if you’ve installed IIAB Apps
+like Sugarizer or Internet Archive, then commands like
+<code>apt update</code> will warn you every time: “Key is stored in
+legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION
+section in apt-key(8) for details.”</p>
+<ul>
+<li><p>Subsequent runs of <code>sudo iiab</code> are no longer blocked
+(by <code>apt update</code> warnings about
+<code>/etc/apt/trusted.gpg</code>) as of November 2022, thanks to <a
+href="https://github.com/iiab/iiab-factory/pull/236">PR
+iiab/iiab-factory#236</a>.</p></li>
+<li><p>Still, if you want to eliminate these apt warnings after
+installing Sugarizer (and hence MongoDB), run:</p>
+<pre><code>apt-key list
+rm /etc/apt/sources.list.d/mongodb-org.list
+apt-key del 90CF B1F5</code></pre>
+<p>It will delete the key and warn you:</p>
+<pre><code>Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).</code></pre></li>
+<li><p>Likewise if you installed <a
+href="https://github.com/iiab/iiab/tree/master/roles/internetarchive">roles/internetarchive</a>
+and hence yarn (e.g. as part of a <a
+href="FAQ.html#What_services_(IIAB_apps)_are_suggested_during_installation%3F">LARGE-sized</a>
+IIAB install), you can run:</p>
+<pre><code>rm /etc/apt/sources.list.d/yarn.list
+apt-key del 86E5 0310</code></pre>
+<!-- * As of 2021-11-25, http://box.lan/lokole showed "502 Bad Gateway" : [#3047](https://github.com/iiab/iiab/issues/3047) --></li>
+</ul>
+<h2 id="hardware-platforms">Hardware Platforms</h2>
+<p>Theoretically <a
+href="https://internet-in-a-box.org">Internet-in-a-Box (IIAB)</a> should
+run on any machine that can run Ubuntu, Debian or close derivatives
+(like Raspberry Pi OS, Linux Mint, Ubermix,
+etc).<!--  CentOS 7 and Fedora are not nearly as well supported, as of February 2019 ([#1434](https://github.com/iiab/iiab/issues/1434)).--></p>
+<p>In practice, IIAB has been tested on the platforms and configurations
+below. For more detail, see <a
+href="FAQ.html#What_hardware_should_I_use%3F">“What
+hardware should I use?”</a> within <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<h4 id="raspberry-pi-3-3-b-4-or-400">Raspberry Pi 3, 3 B+, 4 or 400</h4>
+<p>2GB RAM (or higher) is preferred, but 1 GB RAM (or even 512 MB RAM)
+can still work on a Raspberry Pi if you carefully build your IIAB
+without too many apps/services, right-sized for a small community’s
+needs.</p>
+<p>Typically a microSD card of 32, 64, 128 or 256 GB will be used,
+though SSD’s have been tested experimentally. Also the Raspberry Pi’s 4
+USB ports can allow for Ethernet dongles, external Wi-Fi, and possibly
+additional storage.</p>
+<p>(And after building your Internet-in-a-Box microSD in a Raspberry Pi
+3, 3 B+, 4 or 400, also consider testing it within the amazing/tiny
+512MB Raspberry Pi Zero W, sometimes available for <a
+href="http://www.microcenter.com/product/486575/zero_w">as little as
+$3.14 at Micro Center</a> stores in the USA. Likewise consider the much
+faster <a
+href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/">$15
+Raspberry Pi Zero 2 W</a> released on 2021-10-28.)</p>
+<h4 id="intel-nuc-and-gigabyte-brix">Intel NUC and Gigabyte BRIX</h4>
+<p>Mini PC’s also include MSI and Zotac etc, typically configured with 4
+to 8 GB RAM and a 1TB internal hard disk, or 200+ GB SSD. Most models
+have a minimum of four USB ports and some have an internal Wi-Fi
+adapter.</p>
+<h4 id="other-recent-intelamd-computers">Other Recent Intel/AMD
+Computers</h4>
+<p>A number of implementers have successfully deployed IIAB on late
+model desktop and laptop computers.</p>
+<h4 id="virtualbox-vm">VirtualBox VM</h4>
+<p>Virtual machines (VM’s) with varying configurations, especially
+Ubuntu and Debian, are often used for testing and proofs-of-concept.</p>
+<h4 id="olpc-xo-1.5-xo-1.75-xo-4">OLPC XO-1.5, XO-1.75, XO-4</h4>
+<p>In the past, IIAB was run on One Laptop Per Child (OLPC) laptops,
+typically with an SD card of 32, 64, or 128 GB, e.g. with a subset of
+the content found on machines with more storage, or with an external
+hard drive.</p>
+<p>FYI this used Fedora 18, building on the <a
+href="http://wiki.laptop.org/go/Releases">OLPC OS</a>.</p>
+<h2 id="disk-partitioning">Disk Partitioning</h2>
+<p>Disable UEFI in your computer’s BIOS if possible!</p>
+<p>It’s critical to avoid a large /home partition, so there’s room to
+add content (in /library). Pay close attention while installing your OS
+(Ubuntu, Debian etc). You should remove (or dramatically shrink) this
+/home partition, if your Linux distro insists on creating one.</p>
+<p>On a 1+ TB disk, we recommend the following 2-to-4 partitions, such
+as: (traditionally we use standard partitioning, but now increasingly
+LVM partitioning is also possible) * /boot - 500 MB * swap - 2 GB
+(optional partition, set this to your RAM size, or create a swap file if
+you prefer) * / - 50 GB * /library - the remainder (optional partition,
+can protect your content during major upgrades)</p>
+<p>On smaller disks and SD cards, also consider: 1) reducing (or
+altogether eliminating) the swap partition — see variable
+<code>pi_swap_file_size</code> in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+2) avoiding a separate partition for /library — far better to keep your
+content directory (/library) within the main partition!</p>
+<h2 id="network-adapters">Network Adapters</h2>
+<p>Each of the above devices may have one or more network adapters.
+These may be internal Ethernet, internal or external Wi-Fi, or Ethernet
+dongles. The role the server is able to play in the <a
+href="IIAB-Networking.html">network</a>
+will depend on what adapters and connections it has.</p>
+<h4 id="sample-gateway-configurations">Sample Gateway
+Configurations</h4>
+<ul>
+<li>WAN on internal Wi-Fi and LAN on internal Ethernet</li>
+<li>WAN on internal Ethernet and LAN on internal or external Wi-Fi as
+Access Point</li>
+<li>WAN on Ethernet dongle and LAN on internal Ethernet with optional
+bridged internal/external Wi-Fi as Access Point</li>
+</ul>
+<h4 id="sample-appliance-configurations">Sample Appliance
+Configurations</h4>
+<ul>
+<li>Internal Wi-Fi connected to an existing LAN</li>
+<li>Internal Ethernet connected to an existing LAN</li>
+<li>Ethernet dongle connected to an existing LAN</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "en-musictheory",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-musictheory",
+  "start_url": "",
+  "title": "Music Theory",
+  "logo_url": "en-musictheory.jpg",
+  "description": "Begin your journey into the realm of music.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 9.0M, Lessons: 35, Trainers: 10, Utilities: 3, August 2017",
+  "edit_status": "repo",
+  "commit_sha": "c79e98674b7bf0431aaec234cc8bf9a5e9953290",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

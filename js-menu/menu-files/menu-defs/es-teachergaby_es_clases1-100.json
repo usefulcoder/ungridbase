@@ -1,0 +1,19 @@
+{
+  "name": "es-teachergaby_es_clases1-100",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "teachergaby_es_clases1-100",
+  "start_url": "",
+  "title": "100 Clases de Inglés: Teacher Gaby",
+  "logo_url": "teachergaby.jpg",
+  "description": "Hola mi nombre es Gabriela Manzano y soy la Teacher Gaby, tengo 29 años de experiencia en la enseñanza del idioma inglés. ¡Acompáñame en esta aventura y juntos aprendamos lo sencillo que es el inglés!",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Tamaño: ##SIZE##, Artículos: ##ARTICLE_COUNT##, Medios: ##MEDIA_COUNT##, Fecha: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "9cae38f2ffe4627f9c781fd22a0e162684055f53",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-educate",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-educate",
+  "start_url": "",
+  "title": "Educate!",
+  "logo_url": "en-educate_logo.png",
+  "description": "Developing Young Leaders & Entrepreneurs in Africa",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 43.9M, Files: 29, Age: children,young adult",
+  "edit_status": "repo",
+  "commit_sha": "d04f5c84ac0899a436325d3e1b35b9c0019189ff",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

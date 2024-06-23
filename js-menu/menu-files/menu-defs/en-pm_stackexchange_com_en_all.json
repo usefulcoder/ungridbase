@@ -1,0 +1,19 @@
+{
+  "name": "en-pm_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "pm.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Project Management Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for project managers",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "6602bd547617a4a7d753bb3fd6b449e34cbb360d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

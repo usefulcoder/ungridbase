@@ -1,0 +1,19 @@
+{
+  "name": "en-worldbuilding_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "worldbuilding.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Worldbuilding Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for writers/artists using science, geography and culture to construct imaginary worlds and settings",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "1b133929baee2c2574f38de6c20738a623842dc5",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

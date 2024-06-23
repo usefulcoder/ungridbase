@@ -1,0 +1,17 @@
+{
+  "name": "kn-healthphone_kn",
+  "lang": "kn",
+  "intended_use": "html",
+  "moddir": "kn-healthphone",
+  "start_url": "videos",
+  "title": "ಕನ್ನಡ ಲಿಪಿ (Kannada): ಹೆಲ್ತ್ಫೋನ್ ಆರೋಗ್ಯ ಮತ್ತು ನ್ಯೂಟ್ರಿಷನ್ ವೀಡಿಯೋ ಸಂಗ್ರಹ & ಅಪ್ಲಿಕೇಶನ್ಗಳು",
+  "logo_url": "healthphone.jpg",
+  "description": "ವೀಡಿಯೊ ಉಲ್ಲೇಖ ಗ್ರಂಥಾಲಯ; ಕುಟುಂಬಗಳು ಮತ್ತು ಸಮುದಾಯಗಳಿಗೆ ಉತ್ತಮ ತಾಯಿಯ ಮತ್ತು ಮಕ್ಕಳ ಆರೋಗ್ಯ ಮತ್ತು ಪೌಷ್ಟಿಕ ಅಭ್ಯಾಸಗಳಿಗೆ ಮಾರ್ಗದರ್ಶನ.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "a56d6875ea142d4d4a82167d4b5375a84807489f",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

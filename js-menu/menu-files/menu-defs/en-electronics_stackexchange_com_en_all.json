@@ -1,0 +1,19 @@
+{
+  "name": "en-electronics_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "electronics.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Electrical Engineering Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for electronics and electrical engineering professionals, students, and enthusiasts",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "47ab8d8fac50f7ef1b23b50be66219e390cff0d2",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

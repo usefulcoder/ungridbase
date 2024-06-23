@@ -1,0 +1,18 @@
+{
+  "name": "sw-kalite",
+  "lang": "fr",
+  "intended_use": "kalite",
+  "moddir": "sw-kalite",
+  "title": "Khan Academy in Swahili",
+  "logo_url": "es-kalite.png",
+  "description": "KA Lite videos and lessons in Swahili.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 3.2G, Videos: 698, Quizzes: 4,101, Subtitles: 80, August 2017",
+  "edit_status": "repo",
+  "commit_sha": "5bb76e08eeaab73dbca5b34b6220b725b11308b4",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

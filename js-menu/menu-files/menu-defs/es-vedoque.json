@@ -1,0 +1,18 @@
+{
+  "name": "es-vedoque",
+  "lang": "es",
+  "intended_use": "html",
+  "moddir": "es-vedoque",
+  "title": "Vedoque - Juega y aprende con los Vedoques",
+  "logo_url": "es-vedoque.png",
+  "description": "Juegos y animaciones interactivas y entretenidas para aprender divirtiéndose sobre numerosos tópicos.\r\n",
+  "extra_description": "",
+  "extra_html": "es-vedoque.html",
+  "footnote": "Tamaño: 24M, Fecha: enero 2017",
+  "edit_status": "repo",
+  "commit_sha": "21989107c57a765e92b4fabb6f3ceeed11b79ed4",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

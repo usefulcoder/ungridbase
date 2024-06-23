@@ -1,0 +1,19 @@
+{
+  "name": "en-mindfield_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "mindfield_en_all",
+  "start_url": "",
+  "title": "Mind Field",
+  "logo_url": "content.jpg",
+  "description": "Our World is Amazing.   Questions? Ideas? Tweet me: http://www.twitter.com/tweetsauce  Vsauce was created by Michael Stevens in the summer of 2010.  Vsauce is...  Michael Stevens: Producer/Host of Vsauce1 Kevin Lieber: Producer/Host of Vsauce2 Jake Roper: Producer/Host of Vsauce3 Eric Langlay: VFX for Vsauce1/2/3 You: Thanks for watching!!!",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "e13939c8917fb2405885c62d4476dd67dd09389d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-kolibri-jamaica",
+  "lang": "en",
+  "intended_use": "kolibri",
+  "kolibri_channel_id": "",
+  "start_url": "/",
+  "title": "Kolibri",
+  "logo_url": "kolibri.png",
+  "description": "Kolibri (might replace KA Lite in future!) provides offline access to a wide range of quality, openly licensed educational content.",
+  "extra_description": "Pick one of 25+ languages. Supports <a href='https://kolibri-studio.readthedocs.io/'>Kolibri Studio</a> so online teachers can quickly remix and redistribute innovative lesson plans.",
+  "extra_html": "",
+  "footnote": "Size: 9.8G, Channels: 8, Date: 2020-11-08",
+  "edit_status": "repo",
+  "commit_sha": "001ad1c78b2f498c4b522c0088ed5f5329a0483b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

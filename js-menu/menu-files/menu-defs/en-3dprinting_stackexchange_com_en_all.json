@@ -1,0 +1,19 @@
+{
+  "name": "en-3dprinting_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "3dprinting.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "3D Printing Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for 3D printing enthusiasts",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "396120f716c937da482c5d72d145d882abdbfe13",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

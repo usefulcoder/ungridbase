@@ -1,0 +1,16 @@
+{
+  "name": "fr-moodle",
+  "lang": "fr",
+  "intended_use": "webroot",
+  "moddir": "",
+  "start_url": "moodle",
+  "title": "Moodle",
+  "logo_url": "moodle-logo.png",
+  "description": "Moodle est une plateforme d'apprentissage conçue pour fournir aux éducateurs, aux administrateurs et aux apprenants un système unique robuste, sécurisé et intégré pour créer des environnements d'apprentissage personnalisés.",
+  "edit_status": "repo",
+  "commit_sha": "22e994ac59b8139c20d7a37ebd6b0b89d6f5a3f9",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "en-healthphone_gon",
+  "lang": "gon",
+  "intended_use": "html",
+  "moddir": "gon-healthphone",
+  "start_url": "videos",
+  "title": "Gondi: HealthPhone Health and Nutrition Video Collection & Apps",
+  "logo_url": "healthphone.jpg",
+  "description": "A video reference library; guide to better maternal and child health and nutrition practices, for families and communities.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "608793ac1ed60e82e262590e18a6c70a437b3eea",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

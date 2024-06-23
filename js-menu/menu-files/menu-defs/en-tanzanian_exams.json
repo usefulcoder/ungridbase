@@ -1,0 +1,18 @@
+{
+  "name": "en-tanzanian_exams",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-tanzanian_exams",
+  "title": "Tanzanian Exams",
+  "logo_url": "en-tanzanian_exams.png",
+  "description": "PDF example tests from the National Examinations Council of Tanzania, that are a useful guide for study and preparation.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 41.4M, PDFs: 11, Date: August 2017",
+  "edit_status": "repo",
+  "commit_sha": "1c2767b2aec679a6c104dbacfc04c45c2206674d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

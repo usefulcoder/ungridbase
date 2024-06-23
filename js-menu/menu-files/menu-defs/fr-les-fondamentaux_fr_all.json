@@ -1,0 +1,19 @@
+{
+  "name": "fr-les-fondamentaux_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "les-fondamentaux_fr_all",
+  "start_url": "",
+  "title": "Les fondamentaux",
+  "logo_url": "les-fondamentaux.jpg",
+  "description": "Découvrez une sélection de films d’animation courts et ludiques pour apprendre les notions fondamentales de l'école élémentaire en français, mathématiques, sciences, technologie et instruction civique.",
+  "extra_description": "Plus de vidéos sur http://www.reseau-canope.fr/lesfondamentaux/",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "11be9e3d7863005b6e9ff80948bafc402fda6099",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

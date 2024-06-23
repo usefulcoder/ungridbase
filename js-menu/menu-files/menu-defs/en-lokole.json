@@ -1,0 +1,18 @@
+{
+  "name": "en-lokole",
+  "lang": "en",
+  "intended_use": "webroot",
+  "start_url": "lokole",
+  "title": "Lokole Email<!--for All--><!--for the Developing World-->",
+  "logo_url": "lokole-logo-200x105.png",
+  "description": "L'objectif principal de l'application Lokole Email est de minimiser la quantité de données qui doit être transférée via une connexion Internet disponible, ce qui réduit ainsi le coût de la bande passante pour les utilisateurs et leur permet de combiner des ressources monétaires pour réaliser de meilleures économies d'échelle lors de l'achat de bande passante",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "674bb96dc2346fa17587a6432eae91c0260ef362",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

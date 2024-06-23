@@ -1,0 +1,15 @@
+{
+  "name": "pt-wikipedia_pt_all_nopic",
+  "lang": "pt",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_pt_all_nopic",
+  "title": "Wikipédia em Português sem imagens",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "Enciclopédia pesquisável com mais de um milhão de artigos. A Wikipédia é a maior enciclopédia em todo o mundo, sendo criada, moderada e editada por utilizadores e para utilizadores.",
+  "edit_status": "repo",
+  "commit_sha": "3356540d48bd30db2cfe037059bf1d52a9516b15",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

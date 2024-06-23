@@ -1,0 +1,19 @@
+{
+  "name": "en-map_test",
+  "lang": "en",
+  "intended_use": "map",
+  "map_name": "",
+  "start_url": "installer",
+  "title": "OpenStreetMap Test Page",
+  "logo_url": "osm.jpg",
+  "description": "Follow this link to add maps for various regions.",
+  "extra_description": "You can remove this stub from your IIAB home page using <a href=http://box.lan/admin>Admin Console</a> > <b>Manage Content</b> > <b>Content Item List</b>.<p>See also the <a href='https://github.com/iiab/iiab/wiki/IIAB-Maps'>full instructions</a> for IIAB Maps.",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "721e1009d07e5c7bc585428d058982c54c00fb5a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

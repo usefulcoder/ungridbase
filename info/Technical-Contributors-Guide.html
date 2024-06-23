@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Technical-Contributors-Guide</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<!--# Technical Contributors Guide-->
+<p>This document is a step-by-step guide on how to install and get to
+know <a href="https://internet-in-a-box.org">Internet-in-a-Box
+(IIAB)</a> software.
+<!--The guide describes how to download packages, install software, and so on.-->
+We encourage all potential contributors to use this guide to try out
+IIAB!</p>
+<p><img src="https://download.iiab.io/content/axim-ghana-2015m.jpg"></p>
+<h3
+id="a-small-compassionate-act-enlarges-the-scope-of-community-mary-anne-radmacher"><strong><em>A
+small compassionate act enlarges the scope of community ~ Mary Anne
+Radmacher</em></strong></h3>
+<!--## **_Tolerance is the first principle of community; it is the spirit which conserves the best that all men think. - Helen Keller_**-->
+<h1 id="bookmark_tabs-table-of-contents">:bookmark_tabs: Table of
+Contents</h1>
+<ol type="1">
+<li><a href="#goggles-before-you-begin">Before You Begin</a></li>
+<li><a href="#hammer-requirements">Requirements</a></li>
+<li><a href="#construction_worker-getting-started-examples">Getting
+Started Examples</a>
+<ol type="1">
+<li><a href="#install-iiab-on-raspberry-pi">Install IIAB on Raspberry
+Pi</a></li>
+<li><a href="#install-iiab-on-an-old-laptoppc">Install IIAB on an old
+laptop/PC</a></li>
+<li><a href="#install-iiab-on-a-virtual-machine">Install IIAB on a
+Virtual Machine</a></li>
+</ol></li>
+<li><a href="#female_detective-understanding-ansible">Understanding
+Ansible</a></li>
+<li><a href="#technologist-low-bandwidth-screen-sharing">Low-Bandwidth
+Screen Sharing</a></li>
+<li><a href="#bowtie-report-a-bug">Report a Bug</a></li>
+<li><a href="#mechanic-contributing">Contributing</a></li>
+<li><a href="#open_hands-show-your-support">Show Your Support</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+</ol>
+<h2 id="goggles-before-you-begin">:goggles: Before You Begin</h2>
+<p>IIAB (<a href="https://youtu.be/S79H7vYRMuM">video introduction</a>)
+runs on various GNU/Linux operating systems such as Raspberry Pi OS,
+Ubuntu, Debian, Linux Mint — and possibly also other Linux distros if
+you <a
+href="IIAB-Platforms.html#operating-systems">invest
+the effort!</a></p>
+<p>You can install IIAB on Raspberry Pi 3, 3 B+, 4, 400, 5 or an x86_64
+PC/laptop. Running IIAB on the <a
+href="https://www.raspberrypi.com/products/raspberry-pi-zero-w/">$10
+Raspberry Pi Zero W</a> or the <a
+href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/">$15
+Raspberry Pi Zero 2 W</a> is also possible, if you insert a working IIAB
+microSD card.</p>
+<p>On PC-like hardware (x86_64) refer to the <a
+href="FAQ.html#What_hardware_should_I_use%3F">hardware
+section of our FAQ</a> for memory, storage, and network requirements.
+Also consider installing IIAB on a VM (Virtual Machine), e.g. for
+testing purposes.</p>
+<p>Please avoid Docker, as our <a
+href="#female_detective-understanding-ansible">Ansible</a> provisioning
+requires low-level access to the operating system.</p>
+<p>In all cases, check out <a
+href="FAQ.html">FAQ.IIAB.IO</a> and the HOW-TO videos
+on Internet-in-a-Box’s <a
+href="https://www.youtube.com/channel/UC0cBGCxr_WPBPa3IqPVEe3g">YouTube
+channel</a>. Also consider our <a
+href="https://github.com/iiab/iiab/milestones">upcoming milestones</a>
+on GitHub.</p>
+<p><em>To begin, most people should use IIAB’s 1-line installer to get
+the very latest, from: https://download.iiab.io</em></p>
+<p>Or if you’re impatient, have a Raspberry Pi handy, and don’t mind
+older software, <a
+href="Raspberry-Pi-Images-~-Summary.html#iiab-images-for-raspberry-pi">install
+an IIAB image</a> direct to a microSD card (that is immediately
+insertable into almost any Raspberry Pi).</p>
+<p>Conversely if you’re a traditionalist, you can install IIAB <a
+href="IIAB-Installation.html#do-everything-from-scratch">step-by-step
+from scratch</a>.</p>
+<p><em>Regardless:</em> after IIAB software is installed, please be
+patient when downloading content over a slow Internet connection, which
+can sometimes take many hours indeed!</p>
+<h2 id="hammer-requirements">:hammer: Requirements</h2>
+<ul>
+<li>Hardware: A $35+ Raspberry Pi, or a fresh x86_64 laptop/PC/VM</li>
+<li>OS: A <a
+href="IIAB-Platforms.html#operating-systems">very
+recent</a> version of <a
+href="FAQ.html#What_OS_should_I_use%3F">Raspberry Pi
+OS, Ubuntu, Debian or Linux Mint</a></li>
+<li>A <a
+href="https://www.linuxjournal.com/content/linux-command-line-interface-introduction-guide">basic
+understanding of Linux</a> will help!
+<!--* A Text Editor like [nano](https://www.nano-editor.org/docs.php)-->
+<!--* Linux Terminal--></li>
+</ul>
+<h2
+id="construction_worker-getting-started-examples">:construction_worker:
+Getting Started Examples</h2>
+<p>To help new contributors get started with IIAB, we provide 3 example
+install paths below.</p>
+<p>(If necessary, <a
+href="IIAB-Platforms.html">other
+platforms</a> are also possible.)</p>
+<h3 id="install-iiab-on-raspberry-pi">Install IIAB on Raspberry Pi</h3>
+<!--      - Manual steps that are NO LONGER NECESSARY:
+        - Instead of (1) above: If your Raspberry Pi is ["headless"](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-headless-raspberry-pi) (i.e. doesn't have an attached screen) pre-enable SSH by placing a [file named `ssh` without any extension](https://www.raspberrypi.com/documentation/computers/remote-access.html#enabling-the-server) onto the boot partition of the microSD card.
+        - Instead of (2) above: If your Raspberry Pi is "headless", you also need to [set up its username and password in advance](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-a-user), within `userconf.txt` on the boot partition of the microSD card.
+        - Instead of (3) above: If necessary, you can set up [wpa_supplicant.conf for headless Wi-Fi](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-networking-2) in advance. -->
+<ol type="1">
+<li>Install <a
+href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit">64-bit
+Raspberry Pi OS</a> onto a microSD card:
+<!-- using the [most recent 64-bit image](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit): -->
+<ol type="1">
+<li><strong><em>IF YOU HAVE A PC, LAPTOP OR MAC:</em></strong>
+<ul>
+<li>Your PC, laptop or Mac must have a slot for built-in slot for SD
+cards — or an external <a
+href="https://www.amazon.com/Best-Sellers-Computer-Memory-Card-Readers/zgbs/pc/516872">USB
+card reader</a> (typically $10).
+<ul>
+<li>Insert a blank/new microSD card.</li>
+</ul></li>
+<li>Install <a href="https://www.raspberrypi.com/software/">Raspberry Pi
+Imager 1.8.1+</a> onto your computer, then run the program.</li>
+<li>Use Raspberry Pi Imager’s <strong>Advanced Options (gear button ⚙️
+in the bottom-right, or equivalently Ctrl-Shift-X)</strong> to
+pre-configure your microSD card:
+<ol type="1">
+<li>Enable <a href="https://www.baeldung.com/cs/ssh-intro">SSH</a></li>
+<li>Set username and password</li>
+<li>IF AN ETHERNET CABLE (to the Internet) IS ABSOLUTELY NOT AVAILABLE
+FOR YOUR Raspberry Pi, then “Configure wireless LAN” (enter a valid
+Wi-Fi SSID and password).</li>
+</ol></li>
+<li>Install <em>64-bit Raspberry Pi OS</em> onto your microSD card:
+<ol type="1">
+<li>Click <strong>CHOOSE OS</strong> to pick any version of 64-bit
+Raspberry Pi OS.</li>
+<li>Click <strong>CHOOSE STORAGE</strong> to specify which microSD card
+it should write to.</li>
+<li>Click <strong>WRITE</strong> and wait for it to complete!</li>
+</ol></li>
+</ul></li>
+<li><strong><em>OR USE A RASPBERRY PI:</em></strong>
+<ul>
+<li>Your Raspberry Pi MUST have an attached keyboard, mouse, screen AND
+Ethernet cable connected to live Internet.
+<ul>
+<li>Insert a blank/new microSD card into your Raspberry Pi.</li>
+</ul></li>
+<li><a
+href="https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-over-the-network">Hold
+down the <em>SHIFT</em> key</a> as you turn it on. Within about 4
+minutes, <a href="https://www.raspberrypi.com/software/">Raspberry Pi
+Imager 1.8.1+</a> should appear on screen.
+<ul>
+<li>OPTIONALLY use <strong>Advanced Options (gear button ⚙️ in the
+bottom-right, or equivalently Ctrl-Shift-X)</strong> to pre-configure
+your microSD card: (1) Enable <a
+href="https://www.baeldung.com/cs/ssh-intro">SSH</a> (2) Set username
+and password.</li>
+</ul></li>
+<li>Install <em>64-bit Raspberry Pi OS</em> onto your microSD card:
+<ol type="1">
+<li>Click <strong>CHOOSE OS</strong> to pick any version of 64-bit
+Raspberry Pi OS.</li>
+<li>Click <strong>CHOOSE STORAGE</strong> to specify which microSD card
+it should write to.</li>
+<li>Click <strong>WRITE</strong> and wait for it to complete!</li>
+</ol></li>
+<li>Reboot to launch the OS, and skip ahead to Step 4.</li>
+</ul></li>
+</ol></li>
+<li>Insert the microSD card into the Raspberry Pi and turn it on.</li>
+<li>Connect your Raspberry Pi to the Internet — using an Ethernet cable
+if possible — as this allows an internal IIAB hotspot to be set up
+without confusion!
+<ul>
+<li>If Ethernet is impossible in your situation, use Wi-Fi instead (to
+connect your Raspberry Pi to the Internet).</li>
+<li>If your Raspberry Pi is “headless”, figure out its IP Address
+(e.g. on your home’s network) so you can ssh into it. Typically this is
+192.168.0.x — use Raspberry Pi’s official <a
+href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ip-address">“How
+to Find your [IIAB’s] IP Address”</a> instructions or these <a
+href="https://www.raspberrypistarterkits.com/how-to/find-raspberry-pi-ip-address/">additional
+tips</a>. (Ubuntu’s own instructions for <a
+href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server">determining
+the Pi’s IP address</a> are also excellent!)</li>
+</ul></li>
+<li>Open a Terminal on the Raspberry Pi, using an attached screen or a
+remote connection (e.g. <code>ssh username@192.168.0.x</code>). Then run
+these commands:
+<ol type="1">
+<li>Make sure you’re online. To verify, run:
+<code>ping mit.edu</code></li>
+<li>Run this to install IIAB:
+<code>curl iiab.io/install.txt | bash</code></li>
+<li>Follow the on-screen instructions carefully! Read <a
+href="FAQ.html#What_services_.28IIAB_apps.29_are_suggested_during_installation%3F">“What
+services (IIAB apps) are suggested during installation?”</a> if you want
+to know more about (1) SMALL, (2) MEDIUM and (3) LARGE-sized IIAB
+installs.</li>
+<li>You might need to run <code>sudo iiab</code> several times, until it
+completes. It might take 15 minutes, or it might take an hour or more —
+depending on CPU/bandwidth/disk/temperature and how you configured <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a></li>
+<li>Finally, when you see “INTERNET-IN-A-BOX (IIAB) SOFTWARE INSTALL IS
+COMPLETE”, photograph the <a
+href="https://github.com/iiab/iiab-factory/blob/9c9af77f1d5353ababcf443771ee0028170124c4/iiab#L579-L605">instructions</a>.
+See also: <a
+href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ip-address">How
+to Find your [IIAB’s] IP Address.</a></li>
+<li>Reboot by running: <code>sudo reboot</code></li>
+</ol></li>
+<li>Browse to your IIAB’s above-mentioned IP address (or try
+<code>http://box.lan</code>). Explore and <a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">install
+content</a> onto your IIAB!</li>
+</ol>
+<h3 id="install-iiab-on-an-old-laptoppc">Install IIAB on an old
+laptop/PC</h3>
+<!--(or another Linux OS with a graphical desktop)-->
+<ol type="1">
+<li>Most any laptop or PC from the past decade should work (verify that
+its CPU is x86_64, also known as amd64).</li>
+<li>Install the latest <a
+href="https://ubuntu.com/tutorials/install-ubuntu-desktop">Ubuntu
+Desktop</a>, <a
+href="https://ubuntu.com/tutorials/install-ubuntu-server">Ubuntu
+Server</a>, <a href="https://linuxmint.com/download.php">Linux Mint</a>
+or <a href="https://www.debian.org/download">Debian (amd64)</a>
+<!-- https://www.debian.org/distrib/netinst --> onto the laptop/PC.</li>
+<li>Open a Terminal on the laptop/PC, to run these commands:
+<ol type="1">
+<li>Make sure you’re online. To verify, run:
+<code>ping mit.edu</code></li>
+<li>Run this to install IIAB:
+<code>curl iiab.io/install.txt | bash</code></li>
+<li>Follow the on-screen instructions carefully! Read <a
+href="FAQ.html#What_services_.28IIAB_apps.29_are_suggested_during_installation%3F">“What
+services (IIAB apps) are suggested during installation?”</a> if you want
+to know more about (1) SMALL, (2) MEDIUM and (3) LARGE-sized IIAB
+installs.</li>
+<li>You might need to run <code>sudo iiab</code> several times, until it
+completes. It might take 15 minutes, or it might take an hour or more —
+depending on CPU/bandwidth/disk and how you configured <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a></li>
+<li>Finally, when you see “INTERNET-IN-A-BOX (IIAB) SOFTWARE INSTALL IS
+COMPLETE”, photograph the <a
+href="https://github.com/iiab/iiab-factory/blob/9c9af77f1d5353ababcf443771ee0028170124c4/iiab#L579-L605">instructions</a>.
+See also: <a
+href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ip-address">How
+to Find your [IIAB’s] IP Address</a> (even if your IIAB is not a
+Raspberry Pi!)</li>
+<li>Reboot by running: <code>sudo reboot</code></li>
+</ol></li>
+<li>Browse to your IIAB’s above-mentioned IP address (or try
+<code>http://box.lan</code>). Explore and <a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">install
+content</a> onto your IIAB!</li>
+</ol>
+<h3 id="install-iiab-on-a-virtual-machine">Install IIAB on a Virtual
+Machine</h3>
+<ol type="1">
+<li>Both these VM methods work on Linux, Windows and (some!) Macs:
+<ul>
+<li><strong><a href="https://multipass.run/install">Install
+Multipass</a> to get moving quickly:</strong>
+<ul>
+<li>Set up a basic Ubuntu Server 22.04 VM, by running
+<code>multipass launch -n primary -c 2 -m 2G -d 25G</code> then
+<code>multipass shell</code></li>
+<li>Or, if you want your VM to also have an IP Address like 192.168.0.x,
+instead run these commands (as root) per <a
+href="https://github.com/canonical/multipass/issues/2537#issuecomment-1112142981">canonical/multipass#2537</a>:
+<code>snap install lxd</code> then
+<code>multipass set local.driver=lxd</code> then
+<code>multipass launch -n primary -c 2 -m 2G -d 25G --network enp1s0</code>
+(e.g. if your gateway interface is enp1s0) then
+<code>multipass shell</code></li>
+<li><em>Either way, jump to Step 4. below!</em></li>
+</ul></li>
+<li><strong>Or download and install <a
+href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> — noting
+its <a href="https://apple.stackexchange.com/a/422566">M1/M2 Mac
+Warning</a>:</strong> <!-- and Alternative Option:** -->
+<ul>
+<li>Prior to October 2022, VirtualBox did not run on Macs with M1 or M2
+chips. As of 2023, the VirtualBox M1/M2 warning (above) still applies
+(but can possibly be ignored?!)</li>
+<li>CAUTION: Content such as Wikipedia (all ZIM files) does not yet work
+on M1/M2 Macs, no matter what virtualization product you use (Multipass,
+VirtualBox, Parallels or UTM). See <a
+href="https://github.com/iiab/iiab/issues/3039">#3039</a> for more
+details.</li>
+<li><em>Finally if you also have a Raspberry Pi,</em> one alternative
+(bypassing all other steps below) is to very directly install a <a
+href="Raspberry-Pi-Images-~-Summary.html#iiab-images-for-raspberry-pi">pre-built
+IIAB image</a> onto any microSD card (instead of a VM, done!)</li>
+<li>CAUTION: The catch (similar to above!) is that <a
+href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> may
+not run well on M1/M2 Macs. See <a
+href="https://github.com/raspberrypi/rpi-imager/issues/235">raspberrypi/rpi-imager#235</a>
+for details, e.g. if necessary Macs with M1/M2 chips can run the <a
+href="https://en.wikipedia.org/wiki/Rosetta_(software)#Rosetta_2">Rosetta
+2</a> emulator. (If so you can install this by running
+<code>softwareupdate --install-rosetta</code> at the macOS Terminal
+command-line, and then try running Raspberry Pi Imager via emulation.)
+<!--     * Then [run Raspberry Pi Imager](Raspberry-Pi-Images-~-Installation.html#macos), as outlined in [IIAB Docs](Raspberry-Pi-Images-~-Summary.html#iiab-images-for-raspberry-pi).  See [raspberrypi/rpi-imager#235](https://github.com/raspberrypi/rpi-imager/issues/235) for more details. --></li>
+</ul></li>
+</ul></li>
+<li>Download and install a Virtual Machine (VM) that contains a <a
+href="IIAB-Platforms.html">very recent
+version of Ubuntu, Debian, or Mint</a>, e.g. from the <a
+href="https://www.linuxvmimages.com/">Linux Images website</a>. Or
+create your own VM by freshly installing an appropriate OS, remembering
+to:
+<ul>
+<li>Use VirtualBox to set the VM’s Network &gt; Adapter 1 &gt; Enabled
+Network Adapter &gt; <strong>Attached to: Bridged Adapter</strong>, so
+that other devices in your home/office will be able to browse this IIAB
+(as the final step below).</li>
+<li>Use VirtualBox to set the VM’s System &gt; Processor &gt;
+<strong>Processor(s): 2</strong> if you want your VM to reboot more
+reliably.</li>
+<li>Mac: You may have to open System Preferences &gt; Security &amp;
+Privacy &gt; click on the padlock to allow VirtualBox to be installed.
+Follow the on-screen instructions to update the app privileges while
+installing.</li>
+</ul></li>
+<li>Use VirtualBox to turn on (boot up) the VM.</li>
+<li>Open a Terminal in the running VM, to run these commands:
+<ol type="1">
+<li>Make sure you’re online. To verify, run:
+<code>ping mit.edu</code></li>
+<li>Run this to install IIAB:
+<code>curl iiab.io/install.txt | bash</code></li>
+<li>Follow the on-screen instructions carefully! Read <a
+href="FAQ.html#What_services_.28IIAB_apps.29_are_suggested_during_installation%3F">“What
+services (IIAB apps) are suggested during installation?”</a> if you want
+to know more about (1) SMALL, (2) MEDIUM and (3) LARGE-sized IIAB
+installs.</li>
+<li>You might need to run <code>sudo iiab</code> several times, until it
+completes. It might take 15 minutes, or it might take an hour or more —
+depending on CPU/bandwidth/disk and how you configured <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a></li>
+<li>Finally, when you see “INTERNET-IN-A-BOX (IIAB) SOFTWARE INSTALL IS
+COMPLETE”, photograph the <a
+href="https://github.com/iiab/iiab-factory/blob/9c9af77f1d5353ababcf443771ee0028170124c4/iiab#L579-L605">instructions</a>.
+See also: <a
+href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ip-address">How
+to Find your [IIAB’s] IP Address</a> (even if your IIAB is not a
+Raspberry Pi!)</li>
+<li>Reboot by running: <code>sudo reboot</code></li>
+</ol></li>
+<li>Browse to your IIAB’s above-mentioned IP address (or try
+<code>http://box.lan</code>). Explore and <a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">install
+content</a> onto your IIAB!</li>
+</ol>
+<h2 id="female_detective-understanding-ansible">:female_detective:
+Understanding Ansible</h2>
+<p>IIAB uses <a
+href="FAQ.html#What_is_Ansible_and_what_version_should_I_use%3F">Ansible</a>
+to install and configure all software packages. Ansible uses <a
+href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks.html">playbooks</a>
+(let’s call them <a
+href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html">roles</a>
+from here onwards) as human-readable instruction files, in the <a
+href="https://yaml.org/">YAML</a> format. An example IIAB role is
+<code>1-prep</code> (Stage 1) here:</p>
+<pre><code>├── roles
+│   ├── 1-prep
+│   │   ├── defaults
+│   │   │   └── main.yml (role variables, can also be defined in /opt/iiab/iiab/vars/default_vars.yml, and overridden by /etc/iiab/local_vars.yml)
+│   │   ├── README.adoc
+│   │   ├── tasks
+│   │   │   ├── main.yml (actions [Ansible modules] that install this role)
+│   │   │   └── ...
+│   │   └── templates
+│   │       ├── iiab.env.j2 (or any text file, that uses Jinja2 templating e.g. {% &lt;variable&gt; %}, to substitute in Ansible variable values)
+│   │       └── ...
+│   ├── 2-common
+│   │   ├── README.adoc
+│   │   ├── tasks
+│   │   └── templates</code></pre>
+<p>Specifically, Ansible installs IIAB starting with 0-init, followed by
+Stages 1 to 9, and finally runs the network role:</p>
+<ul>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/0-init">0-init</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/1-prep">1-prep</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/2-common">2-common</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/3-base-server">3-base-server</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/4-server-options">4-server-options</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/5-xo-services">5-xo-services</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/6-generic-apps">6-generic-apps</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/7-edu-apps">7-edu-apps</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/8-mgmt-tools">8-mgmt-tools</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/9-local-addons">9-local-addons</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/network">network</a></li>
+</ul>
+<p>Click on Stages 1 to 9 above for descriptions of their specific
+purposes.</p>
+<p>In summary, Ansible <a
+href="https://github.com/iiab/iiab/blob/master/scripts/local_facts.fact">gathers
+system info</a> (using Ansible <a
+href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html">facts</a>)
+to set Ansible variables, which guide IIAB’s software installation
+process. Execution follows a sequence of cascading steps:</p>
+<ol type="1">
+<li><p>The bash script <a
+href="https://github.com/iiab/iiab/blob/master/iiab-install">./iiab-install</a>
+(in /opt/iiab/iiab) uses Ansible to run <a
+href="https://github.com/iiab/iiab/blob/master/iiab-stages.yml">/opt/iiab/iiab/iiab-stages.yml</a></p></li>
+<li><p><code>iiab-stages.yml</code> calls 9+ stages (these are the
+numbered directories above, in <a
+href="https://github.com/iiab/iiab/tree/master/roles">/opt/iiab/iiab/roles</a>)
+and then the network role. It avoids repeating any of these 9 core
+install stages (in case of Internet glitches etc) by keeping a counter
+(“STAGE”) in <code>/etc/iiab/iiab.env</code> (Aside: the <a
+href="https://github.com/iiab/iiab/tree/master/roles/network">network</a>
+role can also later be run using <a
+href="https://github.com/iiab/iiab/blob/master/iiab-network">./iiab-network</a>)</p></li>
+<li><p>Each stage has a <code>&lt;role&gt;/tasks/main.yml</code>
+<!--(formerly &lt;role&gt;/meta/main.yml)--> to invoke all needed roles
+and tasks.</p></li>
+</ol>
+<p>Please refer to the <a
+href="IIAB-Architecture.html">IIAB
+Architecture</a> and <a
+href="IIAB-Variables.html">IIAB
+Variables</a> pages for more detail.</p>
+<p>Please also review “What is Ansible and what version should I use?”
+at <a href="FAQ.html">FAQ.IIAB.IO</a></p>
+<p>For details on how IIAB installs the very latest Ansible, see: <a
+href="https://github.com/iiab/iiab/blob/master/scripts/ansible">/opt/iiab/iiab/scripts/ansible</a></p>
+<h2 id="technologist-low-bandwidth-screen-sharing">:technologist:
+Low-Bandwidth Screen Sharing</h2>
+<p>Live collaboration with developing countries over low-bandwidth
+connections is possible!</p>
+<p>Everyone will be able to type simultaneously in the same <a
+href="https://www.linuxjournal.com/content/linux-command-line-interface-introduction-guide">Linux
+Terminal (command-line interface)</a>.</p>
+<p>Instructions:</p>
+<ol type="1">
+<li>Invite people to <a
+href="https://www.baeldung.com/cs/ssh-intro">ssh</a> to your
+Internet-in-a-Box (IIAB).
+<ol type="1">
+<li>To simplify, ask each person to log into the same account,
+e.g. username <a
+href="https://github.com/iiab/iiab/tree/master/roles/iiab-admin#readme">iiab-admin</a>.</li>
+<li>You can remind everyone who’s already logged into your IIAB, by
+running:<br><code>sudo wall "Hi everyone! Remember to log in as username iiab-admin"</code></li>
+</ol></li>
+<li>The <a
+href="https://linuxize.com/post/how-to-use-linux-screen/">screen
+command</a> should already be installed. But if not, run:
+<code>sudo apt install screen</code>
+<ul>
+<li>Later you might consider the more advanced features of <a
+href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">tmux</a>
+and/or <a
+href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-byobu-for-terminal-management-on-ubuntu-16-04.amp">byobu</a>.</li>
+</ul></li>
+<li>Run <code>screen -ls</code> to see if somebody else has already
+started a screen session:
+<ul>
+<li>If you DO see “There is a screen on:” then run
+<code>screen -x</code> to join a pre-existing screen session.</li>
+<li>If you DON’T see “There is a screen on:” then you are the 1st person
+to arrive — so run <code>screen</code> to start a screen session for
+everyone.</li>
+</ul></li>
+<li><em>Everybody who’s connected can now type and run commands
+together!</em></li>
+<li>Type <strong>Ctrl-a ?</strong> for help.
+<ul>
+<li>If you want <a
+href="https://en.wikipedia.org/wiki/Command-line_completion">tab
+completion</a> during future screen sessions, run:
+<code>echo "defshell -bash" &gt;&gt; ~/.screenrc</code></li>
+</ul></li>
+<li>If you want to end the screen sharing session for everyone, run:
+<code>exit</code></li>
+<li>Optional: <a
+href="https://gist.github.com/jctosta/af918e1618682638aa82">advanced
+tips</a>.</li>
+</ol>
+<h2 id="bowtie-report-a-bug">:bowtie: Report a Bug</h2>
+<p>Please post bug reports and feature requests to GitHub here:</p>
+<p>https://github.com/iiab/iiab/issues <em>(click <strong>New
+issue</strong>)</em></p>
+<h2 id="mechanic-contributing">:mechanic: Contributing</h2>
+<p>Contributions, field reports, and feature requests are WELCOME !</p>
+<p><strong><em>Please also see <a
+href="FAQ.html#How_can_I_help%3F">“How can I
+help?”</a> at <a href="FAQ.html">FAQ.IIAB.IO</a> and
+consider <a
+href="FAQ.html#What_are_the_best_places_for_community_support%3F">contacting
+us</a> directly, Thanks!</em></strong></p>
+<h2 id="open_hands-show-your-support">:open_hands: Show Your
+Support</h2>
+<p>Give a ⭐️ (top of https://github.com/iiab/iiab) if you like this
+project!</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Profound thanks to <a href="https://github.com/arky">Arky</a> who
+inspired and wrote the original <a
+href="IIAB-Contributors-Guide.html">IIAB
+Contributors Guide</a> in 2017.</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "en-wikiwel_en_all_maxi",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikiwel_en_all_maxi",
+  "start_url": "",
+  "title": "Wikiwel",
+  "logo_url": "",
+  "description": "From Wikiwel",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "9a8f8074ee67925dee7269eb5d531663746af9ae",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

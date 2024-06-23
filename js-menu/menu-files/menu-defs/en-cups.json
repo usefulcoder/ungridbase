@@ -1,0 +1,18 @@
+{
+  "name": "en-cups",
+  "lang": "en",
+  "intended_use": "webroot",
+  "start_url": "print",
+  "title": "CUPS Printing",
+  "logo_url": "CUPS.svg",
+  "description": "CUPS (the &quot;Common UNIX Printing System&quot;) allows your Internet-in-a-Box (IIAB) to act as a print server, if you want students and teachers to be able to print.",
+  "extra_description": "Click &quot;Help&quot; at the top of <a href=/print>CUPS Printing</a> to learn more.  If you're online, please see IIAB's <a href=https://github.com/iiab/iiab/blob/master/roles/cups/README.md#cups-printing-readme target=_blank>README</a>.</i>",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "b22410917068b83f3426455d9f7aa6240bd39549",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

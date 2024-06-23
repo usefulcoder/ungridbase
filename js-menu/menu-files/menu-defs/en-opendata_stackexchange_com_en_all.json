@@ -1,0 +1,19 @@
+{
+  "name": "en-opendata_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "opendata.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Open Data Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for developers and researchers interested in open data.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "9cb558ce9a7c028f1341251f8c7e7434712defef",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

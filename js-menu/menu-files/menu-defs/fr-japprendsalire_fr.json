@@ -1,0 +1,19 @@
+{
+  "name": "fr-japprendsalire_fr",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "japprendsalire_fr",
+  "start_url": "",
+  "title": "J'apprends à lire (Bayard)",
+  "logo_url": "content.jpg",
+  "description": "10 histoires avec leurs versions audio pour apprendre à lire.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "90660fe37c711777f8b42ab222808b84558acd6a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

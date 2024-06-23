@@ -1,0 +1,19 @@
+{
+  "name": "en-workplace_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "workplace.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "The Workplace Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for members of the workforce navigating the professional setting",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "f29a79a6073cf0fc80568630018c7d8dccc02155",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

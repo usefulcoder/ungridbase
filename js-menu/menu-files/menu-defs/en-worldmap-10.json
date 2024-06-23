@@ -1,0 +1,16 @@
+{
+  "name": "en-worldmap-10",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-worldmap-10",
+  "start_url": "map.html",
+  "title": "OpenStreetMap: 10 Levels of Zoom",
+  "logo_url": "osm.jpg",
+  "description": "Maps of the entire world, with 10 levels of zoom.",
+  "edit_status": "repo",
+  "commit_sha": "c062bcd6ad64d4c74bc7c45d4d96f0764f849bf6",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

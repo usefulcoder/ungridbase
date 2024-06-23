@@ -1,0 +1,16 @@
+{
+  "name": "es-wikivoyage_es_all",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikivoyage_es_all",
+  "title": "Wikiviajes",
+  "logo_url": "es-wikivoyage.png",
+  "description": "Guía de viaje de todo el mundo con una gran cantidad de información sobre los destinos de todo el mundo. Hacer la geografía cobran vida! Este módulo es proporcionado por Kiwix.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "0d8d2b834f1b026edb6bc7cbed8ed30fe45442dc",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

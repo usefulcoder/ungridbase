@@ -1,0 +1,19 @@
+{
+  "name": "en-wikipedia_en_molcell_maxi",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_en_molcell_maxi",
+  "start_url": "",
+  "title": "Wikipedia Molecular and Cell Biology",
+  "logo_url": "en-wikipedia.png",
+  "description": "30,000 Molecular and Cell Biology articles from Wikipedia",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "689d802b727db0b85133ce65a5a3c6650b442dd2",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

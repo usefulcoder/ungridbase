@@ -1,0 +1,16 @@
+{
+  "name": "bh-wikipedia_bh_all_maxi",
+  "lang": "bh",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_bho_all_maxi",
+  "title": "भोजपुरी में विकिपीडिया",
+  "logo_url": "Wikipedia-logo-v2-bh.png",
+  "description": "ऑफलाइन आ सर्च करे जोग फारमेट में भोजपुरी विकिपीडिया के एगो पूरा सेट। सामग्री खुला पहुँच के अंतर्गत बा, मने कि ई डाउनलोड, दोबारा इस्तेमाल, शेयर करे आ आधार बना के बढ़ती करे खाती फ्री बा। हमनी के साथे जुड़ीं आ अगिला वर्शन के अउरी बेहतर बनाईं।",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "4fea01adfe9377d2c0a5cc5da86b2722bde72255",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

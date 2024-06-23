@@ -1,0 +1,17 @@
+{
+  "name": "en-healthphone_kha",
+  "lang": "kha",
+  "intended_use": "html",
+  "moddir": "kha-healthphone",
+  "start_url": "videos",
+  "title": "খাশি (Khasi): HealthPhone Health and Nutrition Video Collection & Apps",
+  "logo_url": "healthphone.jpg",
+  "description": "A video reference library; guide to better maternal and child health and nutrition practices, for families and communities.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "0469897be0e8f78605c5d19ba7852ca5d8507855",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

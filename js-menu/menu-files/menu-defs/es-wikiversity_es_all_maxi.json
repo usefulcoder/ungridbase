@@ -1,0 +1,18 @@
+{
+  "name": "es-wikiversity_es_all_maxi",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikiversity_es_all_maxi",
+  "title": "Wikiversidad",
+  "logo_url": "es-wikiversity.png",
+  "description": "Dedicado a recursos de aprendizaje, proyectos de aprendizaje e investigación para su uso en todos los niveles, tipos y estilos de educación, desde preescolar hasta la universidad, incluida la formación profesional y el aprendizaje informal.",
+  "extra_description": "Busca apoyar los REA (recursos educativos abiertos) más que el contenido tradicional/formal.",
+  "extra_html": "",
+  "footnote": "Tamaño: ##SIZE##, Artículos: ##ARTICLE_COUNT##, Medios: ##MEDIA_COUNT##, Fecha: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "121c3be73e83b4972f0657ab309e11c1d633970e",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

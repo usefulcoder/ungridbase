@@ -1,0 +1,16 @@
+{
+  "name": "en-test_mod",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-test_mod",
+  "title": "Test OER2Go/RACHEL Module",
+  "logo_url": "200px-Icon-round-Question_mark.svg.png",
+  "description": "Can be used to verify that the Web Server is working.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "847d5acba98e76035a34cafd6e42594e46ffc423",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

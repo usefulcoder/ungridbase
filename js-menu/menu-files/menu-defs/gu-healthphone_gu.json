@@ -1,0 +1,17 @@
+{
+  "name": "gu-healthphone_gu",
+  "lang": "gu",
+  "intended_use": "html",
+  "moddir": "gu-healthphone",
+  "start_url": "videos",
+  "title": "ગુજરાતી (Gujarati) : હેલ્થફોન આરોગ્ય અને પોષણ વિડિઓ સંગ્રહ અને એપ્લિકેશન્સ",
+  "logo_url": "healthphone.jpg",
+  "description": "વિડિઓ સંદર્ભ પુસ્તકાલય; પરિવારો અને સમુદાયો માટે બહેતર માતૃત્વ અને બાળ આરોગ્ય અને પોષણ પ્રણાલીઓ માટે માર્ગદર્શન.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "da5e1e38b0842f9266e75a263eb4ea534b5e11f6",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

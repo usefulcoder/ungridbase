@@ -1,0 +1,15 @@
+{
+  "name": "es-calibre",
+  "lang": "es",
+  "intended_use": "calibre",
+  "title": "Calibre",
+  "logo_url": "calibre2.png",
+  "description": "Libros Electrónicos para su comunidad local.<br><br>&nbsp; &nbsp; Usuario: <b>box</b><br>&nbsp; &nbsp; Contraseña: <b>box</b><br><br>Los bibliotecarios pueden usar Calibre para agregar libros nuevos &mdash; y eliminar libros si su Internet-in-a-Box está lleno.",
+  "extra_html": "es-calibre.html",
+  "edit_status": "repo",
+  "commit_sha": "4d8d5348c89a50351e8155a84d369434dc5a2daa",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

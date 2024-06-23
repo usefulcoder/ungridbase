@@ -1,0 +1,16 @@
+{
+  "name": "en-kalite-india",
+  "lang": "en",
+  "intended_use": "kalite",
+  "start_url": "learn/khan/math/",
+  "title": "Khan Academy Lite for India",
+  "logo_url": "khan-logo-vertical-transparent.png",
+  "description": "",
+  "extra_html": "en-kalite-india.html",
+  "edit_status": "repo",
+  "commit_sha": "a97de4c3b5463ca58582b3ed4898b5d348af4e15",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

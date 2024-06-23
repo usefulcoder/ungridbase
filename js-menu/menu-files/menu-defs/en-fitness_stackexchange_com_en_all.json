@@ -1,0 +1,19 @@
+{
+  "name": "en-fitness_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "fitness.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Physical Fitness Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for physical fitness professionals, athletes, trainers, and those providing health-related needs",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "4621421b127efa238e96e3f38dc580a4a5806916",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

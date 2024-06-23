@@ -1,0 +1,19 @@
+{
+  "name": "fr-wiktionary_fr_all_maxi",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wiktionary_fr_all_maxi",
+  "start_url": "",
+  "title": "Wiktionary en français",
+  "logo_url": "fr-wiktionary.png",
+  "description": "Dictionnaire de langue française.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "f0ccf332789265450a84e2e0d478ca92a1b1d3f8",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

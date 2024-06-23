@@ -1,0 +1,18 @@
+{
+  "name": "en-starter_info",
+  "lang": "en",
+  "intended_use": "info",
+  "start_url": "",
+  "title": "This is the Starter Edition of Internet in a Box.",
+  "logo_url": "240px-Info_icon_002.svg.png",
+  "description": "Head to the Admin Console to add more content and services for your audience.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "04567f0d4a056f91cafc2140950002c4f98e091b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

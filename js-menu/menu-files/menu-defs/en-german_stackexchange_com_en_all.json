@@ -1,0 +1,19 @@
+{
+  "name": "en-german_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "german.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "German Language Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for speakers of German wanting to discuss the finer points of the language and translation.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "cc91b0cbefc187247ab9ce37d983b4dad4d1ffdc",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

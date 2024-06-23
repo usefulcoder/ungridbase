@@ -1,0 +1,17 @@
+{
+  "name": "ur-healthphone_ur",
+  "lang": "ur",
+  "intended_use": "html",
+  "moddir": "ur-healthphone",
+  "start_url": "videos",
+  "title": "ہیلتھ فون ہیلتھ اور غذائیت ویڈیو مجموعہ اور اطلاقات",
+  "logo_url": "healthphone.jpg",
+  "description": "ویڈیو ریفرنس لائبریری؛ خاندانوں اور کمیونٹیوں کے لئے ماؤں اور بچے کی صحت اور غذائیت کے طریقوں کو بہتر بنانا",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "6c59aa5317bf95385cbffcea75727e1776214237",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

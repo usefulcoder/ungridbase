@@ -1,0 +1,16 @@
+{
+  "name": "fr-wikisource_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikisource_fr_all",
+  "moddir": "fr-wikisource",
+  "title": "Wikisource en français",
+  "logo_url": "fr-wikisource.png",
+  "description": "La bibliothèque gratuite que tout le monde peut améliorer.",
+  "edit_status": "repo",
+  "commit_sha": "ae15c5fde9336b21dcf2d69b27a33f32c1cce80d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

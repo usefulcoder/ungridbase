@@ -1,0 +1,19 @@
+{
+  "name": "en-scratch",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-scratch",
+  "start_url": "",
+  "title": "MIT Scratch",
+  "logo_url": "en-scratch.jpg",
+  "description": "Scratch installers for common OS's.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 254M, September 2013",
+  "edit_status": "repo",
+  "commit_sha": "10d9cd6eab04c7b3aabe38c6efdb248ee7f9bced",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,16 @@
+{
+  "name": "en-iicba",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-iicba",
+  "title": "UNESCO's IICBA Electronic Library",
+  "logo_url": "en-iicba.jpg",
+  "description": "",
+  "extra_html": "en-iicba.html",
+  "edit_status": "repo",
+  "commit_sha": "b836155d9e018cc3281b8ee154eef39e78aebb8b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

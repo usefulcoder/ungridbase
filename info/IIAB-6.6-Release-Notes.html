@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-6.6-Release-Notes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>Internet-in-a-Box (IIAB) 6.6 was released September 12, 2018,
+incorporating an extensive amount of teacher feedback from <a
+href="IIAB-6.5-Release-Notes.html">IIAB
+6.5</a> — a knowledge hotspot in service of DIY digital libraries
+eveywhere — for schools, libraries, medical clinics, and families too
+(<a href="http://wiki.laptop.org/go/IIAB/6.6">Wiki</a>, <a
+href="https://github.com/iiab/iiab/milestone/3?closed=1">GitHub</a>).</p>
+<p><em>Consider installing <a href=http://download.iiab.io/6.6>IIAB
+6.6</a> today!</em></p>
+<h3 id="whats-new">What’s New?</h3>
+<ul>
+<li>Experimental support for <a
+href="https://blog.learningequality.org/kolibri-v0-10-is-released-4e673398f116">Kolibri
+0.10.2+</a> (<a
+href="https://blog.learningequality.org/startwithkolibri-58227e98dde">background</a>,
+<a
+href="https://github.com/learningequality/kolibri/blob/develop/CHANGELOG.rst">changelog</a>)
+which is similar to <a href="https://learningequality.org/ka-lite/">KA
+Lite</a> but offers many more curriculum design tools beyond Khan
+Academy, to create, remix and refine offline content packs. Runs in a
+Python Virtual Environment for safety: <a
+href="https://github.com/iiab/iiab/issues/841#issuecomment-405767755">#841</a></li>
+<li><a href="http://sugarizer.org">Sugarizer 1.0.1</a> is a “kids
+construct” learning environment originally from One Laptop Per Child,
+with easy accounts for kids to save their work. Sugarizer 1.x is a major
+change from earlier versions: <a
+href="https://github.com/iiab/iiab/issues/798#issuecomment-405609004">#798</a>,
+PR <a
+href="https://github.com/iiab/iiab/pull/888#issuecomment-404370082">#888</a>,
+<a href="https://github.com/iiab/iiab/issues/974">#974</a></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/calibre-web#calibre-web-readme">Calibre-Web</a>
+is an E-Book Library like Calibre, but with a more modern web interface.
+Teachers can upload E-Books, arrange them onto different bookshelves,
+edit E-Book metadata, and convert them into different formats (at
+http://box/books). Calibre-Web saves students the hassle of logging in
+with a password (as Calibre requires below) making it much easier to
+read and download e-books! Bonus, it runs in a Python Virtual
+Environment for safety: <a
+href="https://github.com/iiab/iiab/issues/816">#816</a>
+<ul>
+<li>Those who want to stick with Calibre’s original E-Book server (now
+upgraded to version <a
+href="https://calibre-ebook.com/whats-new">3.31+</a>) can still do so.
+Calibre’s installation procedure is significantly ruggedized, and
+Calibre itself remains at http://box:8080 — where teachers can now add
+and delete E-Books, edit E-Book metadata, and convert E-Books to other
+formats like PDF and EPUB. (IIAB’s installer now creates the default
+Calibre usernames and passwords listed in FAQ.html so students
+can immediately explore E-Books that their teachers upload for them.) PR
+<a href="https://github.com/iiab/iiab/pull/1057">#1057</a></li>
+</ul></li>
+<li>OpenStreetMap regional maps packs are now almost 10X smaller, offer
+far more local detail, are more up-to-date, and are <a
+href="http://download.iiab.io/content/OSM/vector-tiles/">easier to
+install</a> — thanks to regularly published vector-based tilesets —
+instead of the older bitmap tiles:
+<ul>
+<li>10 levels of zoom are included for the entire world, including ocean
+floors.</li>
+<li>Search for and map 127,654 cities/settlements worldwide, whose
+populations are 1000 or higher.</li>
+<li>Other regions can easily be installed from <a
+href="https://openmaptiles.com/downloads/planet/">OpenMapTiles.com</a>
+if you want 14 levels of zoom, with overzoom to level 18+ (including
+building outlines in many cases!) See <a
+href="FAQ.html#How_do_I_add_zoomable_maps_for_my_region.3F">“How
+do I add zoomable maps for my region?”</a> in FAQ.html and our
+detailed <a
+href="https://github.com/iiab/iiab-factory/blob/master/content/vector-tiles/README.md">README</a>.</li>
+<li>Online samples are viewable for the <a
+href="http://medbox.iiab.me/modules/en-osm-omt-min/">San Francisco Bay
+Area</a> (includes this <a
+href="https://openmaptiles.com/downloads/north-america/us/california/san-francisco-bay/">109
+MB regional dataset</a>) or choose <a
+href="http://medbox.iiab.me/modules/en-osm-omt-central-am/">Central
+America &amp; the Caribbean</a> (includes this <a
+href="https://openmaptiles.com/downloads/central-america/">1.1-1.8 GB
+regional dataset</a>). <a
+href="https://github.com/iiab/iiab/issues/877#issuecomment-405935272">#877</a></li>
+</ul></li>
+<li>BitTorrent tool <a
+href="https://github.com/iiab/iiab/tree/master/roles/transmission#transmission-readme">“Transmission”</a>
+can download thousands of compressed KA Lite videos/thumbnails: just
+pick among 7 languages within <a
+href="http://wiki.laptop.orglocal_vars.yml">/etc/iiab/local_vars.yml</a>
+prior to installing, then watch your download(s) progress at
+http://box:9091 ! Also use Transmission to download any other
+torrentable Content Pack. Instructions within FAQ.html at <a
+href="FAQ.html#KA_Lite_Administration:_What_tips_.26_tricks_exist.3F">“KA
+Lite Administration: What tips &amp; tricks exist?”</a> <a
+href="https://github.com/iiab/iiab/issues/884">#884</a></li>
+<li>PREVIEW: Backup, shrink &amp; duplicate Internet-in-a-Box (IIAB)
+microSD cards using <a
+href="http://download.iiab.io/packages/imager/">IMAGER 0.2</a>. Allows
+teachers in the field to copy from any microSD to any other microSD
+that’s big enough. These are teachers who cannot realistically use Linux
+command-line tools to <a
+href="https://github.com/iiab/iiab-factory/tree/master/box/rpi">truncate
+(AKA shrink, or minify)</a> and then <a
+href="https://www.linuxnix.com/what-you-should-know-about-linux-dd-command/">dd</a>.
+Please see IMAGER screen shots in the <a
+href="https://github.com/iiab/iiab-factory/blob/master/box/rpi/imager/docs/GET-STARTED-GUIDE.md">GET
+STARTED GUIDE</a>. Non-technical teachers can expect significant
+improvements to the UI/UX in coming months: <a
+href="https://github.com/iiab/iiab/issues/827">#827</a></li>
+</ul>
+<h3 id="whats-upgraded">What’s Upgraded?</h3>
+<ul>
+<li>Internet-in-a-Box’s <a href="http://download.iiab.io/6.6/">1-line
+installer</a> for Raspbian Stretch, Ubuntu 18.04 LTS and Debian 9 is
+ruggedized and more efficient (and can quickly recover if Internet is
+interrupted during your IIAB installation). Pick your favorite suite of
+Internet-in-a-Box apps the very moment you begin: whether you want ~6,
+~12 or ~20 apps! Implementers please read FAQ.html to get to
+know <a
+href="http://wiki.laptop.orglocal_vars.yml">/etc/iiab/local_vars.yml</a>
+— as well as the commands “<a
+href="https://github.com/iiab/iiab/blob/master/iiab-install">./iiab-install</a>”
+and “<a
+href="https://github.com/iiab/iiab/blob/master/runrole">./runrole</a>”
+within IIAB’s main directory (/opt/iiab/iiab).
+<ul>
+<li>New, more convenient location for your IIAB installation settings:
+<a
+href="http://wiki.laptop.orglocal_vars.yml">/etc/iiab/local_vars.yml</a>.
+Regional communities can now instantly re-use their favorite/custom IIAB
+configurations (much like IIAB microSD card cloning, also coming soon!)
+It’s as easy as taking the installation settings
+(<code>/etc/iiab/local_vars.yml</code>) from another machine, dropping
+that file into place on a fresh/new machine, and then starting your IIAB
+install! How does this work? With our 1-line installer:
+<code>curl download.iiab.io/6.6/install.txt | sudo bash</code></li>
+<li>Internet glitches? Same instructions! Simply RE-run
+<code>curl download.iiab.io/6.6/install.txt | sudo bash</code> thanks to
+IIAB’s new unified installer!</li>
+<li>Now with explanations in context as IIAB is installing, and major
+improvements in Ansible code readability (IIAB’s <a
+href="https://github.com/iiab/iiab/tree/master/roles">Ansible
+playbooks</a> are far more readable, with modern indentation, instead of
+cramming too many things into 1 line). Our move to <a
+href="https://docs.ansible.com/ansible/2.6/porting_guides/porting_guide_2.6.html">Ansible
+2.6</a> helps future-proof Internet-in-a-Box configuration management.
+Bonus: upgrading Ansible itself is now far easier, with the new <a
+href="FAQ.html#What_is_Ansible_and_what_version_should_I_use.3F">scripts/ansible</a>
+and scripts/ansible-2.6.x commands.</li>
+<li>OpenVPN remote support is beefed up: your openvpn_handle can now be
+pre-specified in <a
+href="http://wiki.laptop.orglocal_vars.yml">local_vars.yml</a>,
+before it’s auto-saved to /etc/iiab/openvpn_handle. Commands like
+<code>./install-support</code>, <code>iiab-remote-on</code> and
+<code>iiab-remote-off</code> help clarify, when remote support is
+needed: <a href="https://github.com/iiab/iiab/issues/995">#995</a>, PR
+<a href="https://github.com/iiab/iiab/pull/1000">#1000</a>, PR <a
+href="https://github.com/iiab/iiab/pull/1081">#1081</a>, PR <a
+href="https://github.com/iiab/iiab/pull/1090">#1090</a></li>
+<li>Experimental support for <a
+href="https://www.debian.org/devel/debian-installer/">Debian 10
+“Buster”</a> is included, in advance of Debian 10’s release in 2019.
+Daily builds of <a
+href="http://cdimage.debian.org/cdimage/daily-builds/sid_d-i/current/amd64/iso-cd/">Debian
+“Sid”</a> (Debian’s “unstable” bleeding-edge branch) may also work.</li>
+</ul></li>
+<li>Media-rich and searchable offline (ZIM) content thanks to an even
+far better and far more compact <a
+href="http://www.kiwix.org/">Kiwix</a> engine 0.6.1 (2018-08-30) under
+the hood, with the “iiab-make-kiwix-lib” command now far more efficient
+(handles incremental additions and deletions of ZIM files). <em>Watch
+out Google here we come :-)</em> PR <a
+href="https://github.com/iiab/iiab/pull/1089">#1089</a></li>
+<li><a
+href="http://ka-lite.readthedocs.io/en/latest/installguide/release_notes.html">KA
+Lite</a> (LMS for Khan Academy videos &amp; exercises) is upgraded to <a
+href="https://github.com/learningequality/ka-lite/releases/tag/v0.17.5">0.17.5</a>
+with installation greatly streamlined, thanks to “Transmission” the
+content-downloading tool, described above.</li>
+<li>Wikipedia’s own MediaWiki <a
+href="https://www.mediawiki.org/wiki/MediaWiki_1.31">1.31.0 LTS</a> is
+now part of <a
+href="http://wiki.laptop.org/go/IIAB/local_vars_big.yml">BIG-sized</a>
+installs of IIAB, for doc collaboration. You can also install and enable
+it from <a
+href="http://wiki.laptop.orglocal_vars.yml">local_vars.yml</a>
+(typically on Lines 143 and 144).</li>
+<li>Nextcloud (for student “dropboxes”) is upgraded to <a
+href="https://nextcloud.com/blog/nextcloud-14-focus-on-security-and-compliance/">Nextcloud
+14</a> (<a
+href="https://nextcloud.com/changelog/#latest14">changelog</a>) with a
+focus on security e.g. video verification, and Signal/Telegram/SMS 2FA
+support.</li>
+<li>WordPress is upgraded to <a
+href="https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/">4.9.8</a>
+including <a
+href="https://make.wordpress.org/core/2018/08/31/whats-new-in-gutenberg-31st-august/">“Try
+Gutenberg”</a> visual/block editor preview. Reinforces <a
+href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a>
+privacy compliance, based on WordPress <a
+href="https://wordpress.org/news/2017/11/tipton/">4.9</a>.</li>
+<li>Moodle is upgraded to <a
+href="https://docs.moodle.org/dev/Moodle_3.5.2_release_notes">3.5.2+
+LTS</a> based on <a
+href="https://docs.moodle.org/dev/Moodle_3.5_release_notes">3.5 LTS</a>
+for privacy, better quizzes, speed, messaging integration and modern
+usability (<a
+href="https://www.moodlenews.com/2018/privacy-better-quizzes-faster-and-modern-the-latest-scoop-on-moodle-3-5/">preview</a>,
+<a href="https://docs.moodle.org/35/en/New_features">new
+features</a>).</li>
+<li>Offline Social Network <a
+href="http://learn.elgg.org/en/2.3/">Elgg</a> is upgraded to <a
+href="https://github.com/Elgg/Elgg/blob/2.3.8/CHANGELOG.md">2.3.8</a>.</li>
+<li>phpMyAdmin is upgraded to <a
+href="https://www.phpmyadmin.net/news/">4.8.3</a>.</li>
+<li>More comprehensive Offline Docs, onboard your Internet-in-a-Box and
+available to all in the field, at <a
+href="http://box/info">http://box/info</a> — including instructions on
+<a
+href="FAQ.html#Can_I_upgrade_or_reinstall_server_apps.3F">how
+to upgrade (or reinstall while offline) your IIAB server apps</a> a.k.a.
+IIAB services.</li>
+<li>Extensive Fixes. See our <a
+href="https://github.com/iiab/iiab/milestone/3?closed=1">changelog</a>
+of accomplishments!</li>
+</ul>
+<h3 id="how-do-i-try-it">How do I try it?</h3>
+<p>TL;DR! Try our 1-line installer for Raspberry Pi 3 (or 3 B+), Ubuntu
+18.04 LTS or Debian 9:</p>
+<pre><code> curl download.iiab.io/6.6/install.txt | sudo bash</code></pre>
+<p>On Raspberry Pi, you’ll want the latest <a
+href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian
+Stretch</a> OS (2018-06-27 or higher) installed onto a microSD card
+large enough for all your content. Installation usually completes within
+two hours, if your Internet speed is very fast. An actual Ethernet cable
+greatly helps avoid Wi-Fi glitches! See <a
+href="http://download.iiab.io/6.6/">download.iiab.io/6.6</a> for speed
+and security tips to hit the ground running.</p>
+<p>Finally if you’re adventurous, try installing onto <a
+href="IIAB-Platforms.html">another
+Linux</a>, using our <a
+href="IIAB-Installation.html#do-everything-from-scratch">Do
+Everything from Scratch</a> install instructions — getting you to the
+most important step — <em>where you can <a
+href="IIAB-Installation.html#add-content">add
+content!</a></em></p>
+<h3 id="credits">Credits</h3>
+<p>Thank you e-v-e-r-y-o-n-e for building your own DIY Library of
+Alexandria. To serve One &amp; All. Building on this software and
+designs contributed by Joshua Kanani, Josh Dennis, Arky R., Matt
+Johnson, James Heilman, Reno McKenzie, César López-Natarén, Anish
+Mangal, Avni Khatri, Blondel Mondésir, George Hunt, Tim Moody, Jerry
+Vonau, Adam Holt — among many others!</p>
+<p><em>Not just in your own community — but by keeping in touch with our
+global volunteer community network (<a
+href="http://OFF.NETWORK">http://OFF.NETWORK</a>) each of you are
+providing the lifeblood “fieldback” — that keeps us motivated enabling
+Internet-in-a-Box’s quality content collaborations across ALL
+communities!</em></p>
+<p>Join our Monday/Thursday calls if you too can help: <a
+href="http://MINUTES.IIAB.IO">MINUTES.IIAB.IO</a></p>
+<p>Frequently Asked Questions: <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<h3 id="known-issues">Known Issues</h3>
+<ul>
+<li>RACHEL’s OER2GO catalog does not show sample modules and cannot be
+refreshed due to regression(s) on their server. This should not stop you
+from downloading RACHEL/OER2GO modules using the built in (older)
+catalog however: <a
+href="https://github.com/iiab/iiab/issues/853#issuecomment-412202168">#853</a></li>
+<li>Admin Console (http://box/admin) -&gt; Configure -&gt; Services
+Enabled includes several obsolete options, and is missing a few others.
+If you need the latest IIAB apps, please install and enable them by
+running (as root) “nano /etc/iiab/local_vars.yml” then “cd
+/opt/iiab/iiab” then “./iiab-install –reinstall”</li>
+<li><a href="https://www.ubuntu.com/download/server">Ubuntu Server
+18.04.1</a> may neglect to populate /etc/apt/sources.list since
+2018-07-25, preventing sshpass and hence <a
+href="https://github.com/iiab/iiab/blob/master/scripts/ansible#L44-L89">Ansible</a>
+from being installed. Here is a <a
+href="https://askubuntu.com/questions/1065093/different-sources-list-entries-between-18-04-server-and-18-04-1-server-isos">bug
+description and manual workaround</a>, if you’ve already installed
+Ubuntu and fell in this trap. Or install Ubuntu Server 18.04.1 using
+their 65 MB netboot <a
+href="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso">mini.iso</a>
+installer, which does not have the bug! Avoid their 2018-07-25 23:39 <a
+href="http://releases.ubuntu.com/18.04/ubuntu-18.04.1-live-server-amd64.iso">812
+MB “live” installer</a>. It’s not yet known if their 2018-07-25 03:00 <a
+href="http://cdimage.ubuntu.com/releases/18.04.1/release/ubuntu-18.04.1-server-amd64.iso">715
+MB installer</a> is any better?</li>
+<li>IIAB can be slow to power off, if you include many/most of the apps:
+<a href="https://github.com/iiab/iiab/issues/822">#822</a></li>
+<li>Nextcloud 14 can lock you out completely when upgrading on Ubuntu
+18.04 with “weak” passwords. Workaround is off of: <a
+href="https://github.com/iiab/iiab/issues/1098">#1098</a>
+<ul>
+<li>Nextcloud (<a href="http://box/nextcloud">http://box/nextcloud</a>)
+logins/logouts are much faster but remain slow: <a
+href="https://github.com/iiab/iiab/issues/401">#401</a></li>
+</ul></li>
+<li>Some short/memorizable URL’s like http://box/kolibri do not yet
+work. Use <a href="http://box:8009">http://box:8009</a> in the interim:
+<a href="https://github.com/iiab/iiab/issues/923">#923</a></li>
+<li>Raspberry Pi’s internal Wi-Fi hotspot very occasionally fails to
+provide IP addresses, when Ethernet ISN’T plugged in? <a
+href="https://github.com/iiab/iiab/issues/989">#989</a>
+<ul>
+<li>Raspberry Pi’s internal Wi-Fi hotspot very occasionally fails within
+an hour of booting, when Ethernet IS plugged in? <a
+href="https://github.com/iiab/iiab/issues/926">#926</a></li>
+</ul></li>
+<li>~Calibre 3.29 (like 3.27.1, 3.24.x and 3.25) prevent IIAB microSD’s
+from booting in Raspberry Pi Zero W.~ This is fixed since 3.30+. Still,
+if you don’t need it, turn off Calibre in /etc/iiab/local_vars.yml prior
+to installing IIAB: <a
+href="https://github.com/iiab/iiab/issues/952">#952</a>, PR <a
+href="https://github.com/iiab/iiab/pull/1057">#1057</a></li>
+<li>USB memory sticks may need to be <a
+href="https://github.com/iiab/iiab/issues/329#issuecomment-333330362">removed
+and re-inserted</a> into your Internet-in-a-Box before <a
+href="FAQ.html#Can_teachers_display_their_own_content.3F">Teacher
+Content</a> appears at http://box/usb e.g. if stick was inserted just
+prior to a cold boot: <a
+href="https://github.com/iiab/iiab/issues/329">#329</a></li>
+<li>Set a default locale in your OS in /etc/default/locale (also the
+“locale” command and $LANG environment variable should show the same,
+e.g. “C.UTF-8” or “en_US.UTF-8”) to avoid language restrictions upon
+re-installing WordPress.</li>
+</ul>
+</body>
+</html>

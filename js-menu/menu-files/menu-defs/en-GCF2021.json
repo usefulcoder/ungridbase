@@ -1,0 +1,19 @@
+{
+  "name": "en-GCF2021",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-GCF2021",
+  "start_url": "data/",
+  "title": "Digital & Career Skills",
+  "logo_url": "en-GCF2015.png",
+  "description": "Illustrated articles and videos focusing on technology, job training, reading, and math skills.",
+  "extra_description": "",
+  "extra_html": "en-GCF2021.html",
+  "footnote": "Size: 15G, Topics: 44, PDFs: 100, Docs: 140, Tutorials: 172, Videos: 917, Pages: 2338, Date: April 2021",
+  "edit_status": "repo",
+  "commit_sha": "9ace1906fb460af902c77be637720e7f6bf37da2",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

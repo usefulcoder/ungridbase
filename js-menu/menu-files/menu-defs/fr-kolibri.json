@@ -1,0 +1,19 @@
+{
+  "name": "fr-kolibri",
+  "lang": "fr",
+  "intended_use": "kolibri",
+  "kolibri_channel_id": "",
+  "start_url": "/",
+  "title": "Kolibri",
+  "logo_url": "kolibri.png",
+  "description": "Kolibri est une nouvelle façon d'accéder aux vidéos et aux quiz de Khan Academy — et à toute autre Chaîne Kolibri.",
+  "extra_description": "Choisissez l'une des 32+ langues. Prend en charge <a href='https://kolibri-studio.readthedocs.io/'>Kolibri Studio</a> afin que les enseignants en ligne puissent rapidement remixer et redistribuer des plans de cours innovants.",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "9675e1a0abfa6af8d7d69434644e1ce43dac6a96",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

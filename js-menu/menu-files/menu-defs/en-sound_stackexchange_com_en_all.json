@@ -1,0 +1,19 @@
+{
+  "name": "en-sound_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "sound.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Sound Design Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for sound engineers, producers, editors, and enthusiasts",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "b730079bbbb4172a5d749d64f1049db9f91b4a56",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

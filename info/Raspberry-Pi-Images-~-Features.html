@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Raspberry-Pi-Images-~-Features</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="which-os-should-i-use-with-iiab-on-my-raspberry-pi">Which OS
+should I use with IIAB, on my Raspberry Pi?</h1>
+<!--**_APOLOGIES THIS PAGE IS A BIT STALE AS [OS'S ARE CHANGING](https://github.com/iiab/iiab/issues/823) THEIR [WIFI FIRMWARES](https://github.com/raspberrypi/firmware/issues/1403) RECENTLY!_**
+
+**_UPDATES EMERGING @ Raspberry-Pi-Images-~-Summary.html_**
+
+**_THIS PAGE SHOULD BE REFINED FOR 2022!_**-->
+<p>If you want to quickly install <a
+href="https://internet-in-a-box.org/">Internet-in-a-Box (IIAB)</a> onto
+a Raspberry Pi, please start by reading <a
+href="Raspberry-Pi-Images-~-Summary.html">IIAB
+Images for Raspberry Pi</a>.</p>
+<p>The pros and cons of different OS’s (below) serve as a supplement to
+the above.</p>
+<p>Finally, see also <a
+href="FAQ.html#What_OS_should_I_use?">What OS should
+I use?</a> within <a href="FAQ.html">FAQ.IIAB.IO</a>, and the
+longer <a href="IIAB-Platforms.html">IIAB
+Platforms</a> document.</p>
+<h2 id="raspberry-pi-os-with-desktop">Raspberry Pi OS with desktop</h2>
+<h3 id="pros">Pros</h3>
+<ol type="1">
+<li>The Graphical Desktop showcases the services and functions of the
+Raspberry Pi and its most used OS.</li>
+<li>Skills learned on other OS’s transfer more easily during IIAB
+setup.</li>
+<li>There is a wide selection of programs which permit using this image
+as a stand alone computer. The image is dual-purpose — as both a client
+and server.</li>
+<li>RealVNC has apparently licensed their remote desktop server to
+Raspberry Pi Foundation. This version of the VNC server provides a WiFi
+remote GUI connection. It lets clients authenticate via regular Linux
+user/password credentials which greatly simplifies server security.</li>
+<li>As a first trial run, this image greatly simplifies setting up a
+Raspberry Pi, and trying IIAB. It eliminates the need for separate
+purchase of a monitor, keyboard, mouse, and miscellaneous video cables —
+assuming that a VNC viewer can be installed on the laptop or desktop
+used to download images and copy them to the microSD card.</li>
+</ol>
+<h3 id="cons">Cons</h3>
+<ol type="1">
+<li><strong>Raspberry Pi OS with desktop</strong> uses several more GB
+of disk space, as compared to <strong>Raspberry Pi OS
+Lite</strong>.</li>
+<li>The Graphical Desktop uses about 200KB of memory. This was more of
+an issue with early Raspberry Pi’s that had just 256MB or 512MB of
+memory — whereas recent Raspberry Pi 4’s come with 1GB, 2GB, 4GB or
+8GB.</li>
+<li>If used as a teacher’s computer at the front of the classroom, it’s
+use as a regular computer might unintentionally contribute to less
+reliable server performance for the rest of the class.
+<!--4. The Raspberry Pi 3 has been verified to function with 24 WiFi clients, but on Raspberry Pi 3 B+ and Raspberry Pi 4 the limit appears to be 18 connections.--></li>
+</ol>
+<h2 id="raspberry-pi-os-lite">Raspberry Pi OS Lite</h2>
+<h3 id="pros-1">Pros</h3>
+<ol type="1">
+<li>Best for low-powered hardware like the Raspberry Pi Zero W or
+Raspberry Pi Zero 2 W.</li>
+<li>Small disk footprint. Allows a few more GB of content to be
+installed on your microSD card.</li>
+<li>IIAB does not compete for memory that might otherwise be used by a
+Graphical Desktop.</li>
+<li>Raspberry Pi OS supplies a text mode configuration utility
+(raspi-config) which simplifies many tasks.</li>
+</ol>
+<h3 id="cons-1">Cons</h3>
+<ol type="1">
+<li>Configuration of the OS requires more knowledge, and more text
+editing.</li>
+<li>No Graphical Desktop. Most computer users are familiar with the
+Desktop supplied by Windows, Mac, or Linux OS’s.</li>
+<li>New users will find it more difficult to explore what Raspberry Pi
+OS offers without a Graphical Desktop.</li>
+<li>If used on a Raspberry Pi Zero W or Zero 2 W, the lower hardware
+performance might limit the number of clients.</li>
+</ol>
+<h2 id="ubuntu-on-raspberry-pi">Ubuntu on Raspberry Pi</h2>
+<h3 id="pros-2">Pros</h3>
+<!--1. More clients -- Ubuntu has been verified to support 32 simultaneous WiFi clients.  _[at least that was true with Ubuntu 19.10; BEWARE this is likely no longer true with Ubuntu 20.04 !]_-->
+<ol type="1">
+<li>In 2020, this 64-bit OS was measured to be about 15% faster than
+32-bit RasPiOS. <em>(However in 2022, <a
+href="https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/">64-bit
+RasPiOS</a> was measured to be <a
+href="https://www.phoronix.com/scan.php?page=article&amp;item=raspberrypi-32bit-64bit&amp;num=1">“48%
+faster”</a> than 32-bit RasPiOS…)</em></li>
+</ol>
+<h3 id="cons-2">Cons</h3>
+<ol type="1">
+<li>The ease of use of Raspberry Pi OS, advanced by the continuous
+refinement and feedback from “11 million users” is not available. The
+best example of this is the lack of <code>raspi-config</code> which
+permits easy refinement of a downloaded image in a Terminal, or using
+the very similar graphical menus of Raspberry Pi OS with desktop.</li>
+</ol>
+</body>
+</html>

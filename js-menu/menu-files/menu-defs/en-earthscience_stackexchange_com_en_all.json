@@ -1,0 +1,19 @@
+{
+  "name": "en-earthscience_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "earthscience.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Earth Science Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for those interested in the geology, meteorology, oceanography, and environmental sciences.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "71a33a152cf0a260cf63fa3a3917e13bd14e3ebe",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

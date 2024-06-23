@@ -1,0 +1,19 @@
+{
+  "name": "en-mdwiki_en_all_maxi",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "mdwiki_en_all_maxi",
+  "start_url": "",
+  "title": "MDWiki Medical Encyclopedia without Videos",
+  "logo_url": "medwiki.png",
+  "description": "50,000+ healthcare articles from Wikipedia and the Wiki Project Med Foundation.",
+  "extra_description": "A complete collection of all health care, anatomy, and medication related topics from Wikipedia in an offline format.<BR>Like Wikipedia all content is open access, meaning that it is free to download, reuse, share, and build upon.",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "8f1276c94660896d0f07187a759629cdab9ba5be",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

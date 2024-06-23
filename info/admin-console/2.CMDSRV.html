@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2.CMDSRV</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="cmdsrv">CMDSRV</h1>
+<p>The Command Server (CMDSRV) is the heart of the Admin Console and
+provides the following functions,: - Escalation of user privilege to
+root for a predetermined list of operations - Management of long-running
+Jobs in service of those operations - Status Reporting</p>
+<p>As mentioned in the Overview, the code can be found in the git repo
+https://github.com/iiab/iiab-admin-console and it is deployed to
+/opt/admin/cmdsrv.</p>
+<h2 id="architecture">Architecture</h2>
+<p>CMDSRV is written principally in Python3 and has the following
+components:</p>
+<ul>
+<li>iiab-cmdsrv3.py - This is the main executable that runs as a systemd
+service.</li>
+<li>/etc/systemd/system/iiab-cmdsrv.service - the unit file for that
+service.</li>
+<li>/opt/admin/console/cmd-service3.wsgi - a wrapper that provides a
+security gateway and supports proxying by the web server.</li>
+<li>/etc/uwsgi/apps-enabled/admin-console.ini - the definition of the
+previous.</li>
+<li>/opt/admin/console/server-info.php - a script to test whether the
+CMDSRV is running.</li>
+<li>/usr/lib/python3/dist-packages/iiab/ - a directory containing python
+library modules.</li>
+</ul>
+<p>At the top level CMDSRV listens on a ZeroMQ message queue over a unix
+IPC socket at /run/cmdsrv_sock. This socket is owned by the web server
+user www-data and may also be accessed by root.</p>
+<p>In most cases the Command string is sent by the Console app via ajax
+to the web server, which passes it on the uswgi wrapper module, which
+performs authentication and then writes it to the socket.</p>
+<p>During initialization CMDSRV starts a pool of Worker threads to
+handle processing of Command strings and starts the Job Minder thread
+that manages the job queue.</p>
+<p>After initialization, any thread in the processing pool that is not
+busy will poll the message queue for a Command and when it finds one it
+removes it from the message queue, validates it and looks up the
+function that processes it. That function either runs the job
+immediately if the Command is a short running task or defines one or
+more Jobs and puts them into a queue to be started by the Job Minder
+thread. In either case a response is sent to the caller with the results
+of a short running Command or a report of a Job having been created.</p>
+<p>The Job Minder thread watches for running Jobs to terminate due to
+success, failure, or cancellation, and starts Jobs from the queue up to
+the maximum number of concurrent Jobs.</p>
+<p>Incoming Command strings and Jobs are stored in a sqlite3 database
+/opt/admin/cmdsrv/cmdsrv.0.3.db in its present version.</p>
+<p>Unprocessed messages remain in the ZeroMQ message queue until a
+Worker thread is available to remove and process them.</p>
+<h2 id="commands">Commands</h2>
+<p>Some Commands take a relatively short amount of time to complete and
+return results directly. Many of these report status. Other Commands are
+intended to be long running and are put onto a job queue. Downloads fall
+into this category.</p>
+<p>The list of Commands and the functions that implement them may be
+found by opening
+https://github.com/iiab/iiab-admin-console/blob/master/roles/cmdsrv/files/iiab-cmdsrv3.py
+and searching for ‘List of all Commands is Here’.</p>
+<p>Commands are issued in the form of XXX-XXX {“key”: “value”}; the
+Command verb is always uppercase and separated by dashes, and Command
+parameters must be properly formed json.</p>
+<p>Such a Command string may be sent from the Console app or from the
+iiab-cmdsrv-ctl utility for testing.</p>
+<p>There is a special Command STOP that is evaluated before any other
+and simply causes the CMDSRV to close threads and stop execution.</p>
+<p>Commands are checked for duplication and for the presence of an
+internet connection if the Command requires one. It looks for duplicate
+Commands and rejects them.</p>
+<h2 id="config">Config</h2>
+<p>/opt/admin/cmdsrv/cmdsrv.conf contains runtime configuration
+parameters, mostly set by ansible variables at install time. The
+majority are paths and urls, the names of which should indicate their
+use.</p>
+<p>The following parameters and default values need more
+explanation:</p>
+<ul>
+<li>“cmdsrv_no_workers” : 5 - the number of Worker threads to start</li>
+<li>“cmdsrv_job_poll_sleep_interval” : 1 - time in seconds to wait until
+next cycle of polling job queue</li>
+<li>“cmdsrv_max_concurrent_jobs” : 7 - maximum number of Jobs that can
+be running at a given time</li>
+<li>“cmdsrv_max_rpi_jobs” : 4 - maximum number of Jobs that can be
+running at a given time if the server is a Raspberry Pi</li>
+<li>“cmdsrv_lower_job_priority_flag” : true, - can CMDSRV lower the
+priority of some Jobs so as not to overrun the server</li>
+<li>“cmdsrv_lower_job_priority_str” : “/usr/bin/nice -n19
+/usr/bin/ionice -c2 -n7” - OS command string to lower priority</li>
+</ul>
+<p>There are also constants in
+/usr/lib/python3/dist-packages/iiab/adm_const.py (and iiab_lib.py set
+during IIAB install) that are used by the python libraries.</p>
+<h2 id="jobs">Jobs</h2>
+<p>For longer running Commands, Worker threads add Jobs to a python
+dictionary for future processing. The Job Minder thread removes a Job
+from that dictionary, adds it to the running dictionary and starts the
+Job, whenever there are less than cmdsrv_max_concurrent_jobs
+running.</p>
+<p>A Job’s Status may have one of the following values:</p>
+<ul>
+<li>SCHEDULED - in the Job queue but not started</li>
+<li>STARTED - a running Job</li>
+<li>RESTARTED - a Job that was running when the server was shut down and
+has been restarted</li>
+<li>SUCCEEDED - a Job that terminated with success</li>
+<li>FAILED - a Job that terminated with failure</li>
+<li>CANCELLED - a Job that was terminated with a cancel Command</li>
+</ul>
+<p>The output from a running Job is written to /tmp/job-<job_id></p>
+<p>The state of a Job is updated in the sqlite3 database whenever the
+status changes.</p>
+<h2 id="security">Security</h2>
+<p>The principal security mechanism is the unix IPC socket at
+/run/cmdsrv_sock to which no user has access except www-data and root.
+Since www-data has no shell permitted no other user can issue Commands;
+this is also the basis of web server security. The uwsgi wrapper acts as
+a security gateway in that it authenticates the user submitting a
+Command from the Console against the /etc/shadow file and only passes
+the Command to the CMDSRV if authentication succeeds.</p>
+<h2 id="logging">Logging</h2>
+<p>CMDSRV logs to the system log, and these messages are most easily
+viewed by issuing the OS command:</p>
+<p>journalctl -t IIAB-CMDSRV</p>
+<h2 id="troubleshooting-and-debugging">Troubleshooting and
+Debugging</h2>
+<p>When running as a service CMDSRV traps all error, and this can mask
+problems that need troubleshooting. The best way to troubleshoot is to
+issue the following as root:</p>
+<ul>
+<li>cd /opt/admin/cmdsrv</li>
+<li>systemctl stop iiab-cmdsrv</li>
+<li>./iiab-cmdsrv3.py</li>
+</ul>
+<p>This will start CMDSRV from the command line and allow python errors
+not to be trapped.</p>
+<p>iiab-cmdsrv-ctl ‘COMMAND {“key”: “value”}’ can be used to test a
+particular Command. (Note use of single quotes to make the Command and
+parameters a single argument.)</p>
+<h2 id="document-version">Document Version</h2>
+<p>This document was last maintained on December 29, 2022.</p>
+</body>
+</html>

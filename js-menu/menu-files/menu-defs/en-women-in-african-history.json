@@ -1,0 +1,18 @@
+{
+  "name": "en-women-in-african-history",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-women-in-african-history",
+  "title": "Women in African History",
+  "logo_url": "en-women-in-african-history_logo.jpg",
+  "description": "A collection of comics, biographies, and audio clips on prominent women from African history.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 91M, PDF comic strips: 11, PDF biographies: 11, MP3 audio: 11, Date: January 2018",
+  "edit_status": "repo",
+  "commit_sha": "00981a719f191dca14823a000bf366286258927f",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-cs_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "cs.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Computer Science Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for students, researchers and practitioners of computer science.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "0a27bae51d31d55bd25a1d1b88c598724241de13",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

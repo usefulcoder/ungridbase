@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-6.3-Release-Notes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>Internet-in-a-Box (IIAB) 6.3 was released July 13, 2017, including
+dramatic improvements for educator/implementer communities — like an
+entirely new Kiwix engine, fixing the notorious <a
+href="https://github.com/kiwix/tools/issues/1">Chrome bug</a> — while
+also better supporting full-text searching across old ZIM files
+<em>and</em> new ZIM files both.</p>
+<p>Pre-release versions of IIAB 6.3 have already been brought to Ghana,
+Dominican Republic, Haiti, Nicaragua and Malaysia — while implementation
+work is currently ongoing for Lebanon and Guatemala. We’re very honored
+that IIAB 6.3 is increasingly used in medical education (post-secondary
+and clinical contexts) as well as for children’s primary and secondary
+education!</p>
+<p>IIAB 6.3 now runs on Ubuntu, as well as Raspbian (on Raspberry Pi)
+and several other Linux distributions like CentOS and Debian. Read <a
+href="IIAB-Platforms.html">IIAB
+Platforms</a> and <a href="FAQ.html">FAQ.IIAB.IO</a> as our
+community documentation is beefed up for educators and
+implementers/operators, now accessible offline (http://box/info) and
+online (https://github.com/iiab/iiab/wiki) both! Internally,
+Internet-in-a-Box Tech Docs underwent significant revision as they moved
+from github.com/xsce to github.com/iiab.</p>
+<p>Likewise our code (software) made the big move from <a
+href="https://github.com/xsce">github.com/xsce</a> to <a
+href="http://github.com/iiab">github.com/iiab</a> honoring our new name
+(Internet in a Box) with extensive internal “iiab” naming changes put in
+place (to avoid confusion with legacy “xsce” and “xs” naming
+conventions). In support of a new generation of contributors jumping in
+to engage, as we’re about to enter our 2nd decade!</p>
+<p>Among the suite of server apps you can choose from, a new version of
+WordPress (4.8) is offered. IIAB 6.3 also brings a much-anticipated
+transition from ownCloud to <a
+href="https://nextcloud.com/">Nextcloud</a>, as strongly backed by free
+and open-source communities. For medical and low-electricity
+environments, IIAB 6.3 greatly accelerates boot and shutdown times —
+while also providing a friendlier <a
+href="https://github.com/iiab/iiab/pull/105">“single-click to power
+off”</a> button for those requiring that.</p>
+<p>IIAB 6.3 dramatically steps up DIY implementers’ ability to quickly
+arrange their own portal/menus of popular Content Packs, thanks to
+enhanced <a
+href="IIAB-Menuing.html">Dynamic
+Menuing</a> (instead of hand-coding index.html). Also OpenStreetMap has
+been made customizable to essentially every educational context, thanks
+to a <a
+href="https://github.com/georgejhunt/iiab-factory/blob/subset-osm/content/subset-osm/README.md">new
+utility</a> that arranges zoomable offline map data for those
+latitude/longitude regions that are truly relevant and required.</p>
+<p>Give it a shot! Installing onto <a
+href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a> on
+Raspberry Pi 3 is as easy as running this 1-line command, which
+completes in (about) an hour:</p>
+<pre><code> curl download.iiab.io/6.3/rpi/load.txt | sudo bash</code></pre>
+<p>For more details, see <a
+href="http://wiki.laptop.org/go/IIAB/6.3">IIAB 6.3</a> and <a
+href="FAQ.html">FAQ.IIAB.IO</a>. To install onto laptops or
+larger servers, please also explore <a
+href="http://download.iiab.io/6.3">download.iiab.io/6.3</a>.</p>
+<p><em>We’re thrilled that new countries and communities keep getting
+involved — supporting each other along the way — many of which are
+joining us at the http://OFF.NETWORK Hackathon August 13-18, 2017 in
+Potsdam, NY. Please don’t hesitate to <a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">get
+in touch</a> as you too build your very own community digital
+library!</em></p>
+<p>IIAB Development Team<br> http://IIAB.io</p>
+<h3 id="known-issues">Known Issues</h3>
+<ul>
+<li>IIAB 6.3 fails to install when <a
+href="http://wiki.laptop.orglocal_vars.yml">local_vars.yml</a>
+contains “osm_install: False”. This is <a
+href="https://github.com/iiab/iiab/commit/e426b10ec394a92132af552a8246f2c467c12f07">fixed</a>
+in <a href="http://wiki.laptop.org/go/IIAB/6.4">IIAB 6.4</a>
+pre-releases. Interim Workaround: please use “osm_install: True” for
+now, until this is resolved.</li>
+<li>When <a
+href="FAQ.html#Is_a_.22Rapid_Power_Off.22_button_possible_for_low-electricity_environments.3F">enabling
+a “Rapid Power Off” button</a> for low-electricity environments, you
+need to run “cp
+/opt/iiab/iiab/roles/httpd/files/html/services/power_off.php
+/library/www/html/common/services”. This is fixed in <a
+href="http://download.iiab.io/6.4">IIAB 6.4 pre-releases</a>.</li>
+</ul>
+</body>
+</html>

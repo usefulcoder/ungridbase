@@ -1,0 +1,19 @@
+{
+  "name": "fr-dirtybiology_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "dirtybiology_fr_all",
+  "start_url": "",
+  "title": "DirtyBiology",
+  "logo_url": "dirtybiology.jpg",
+  "description": "&quot;Tu ne voulais pas le savoir, mais maintenant c'est trop tard !&quot;  Des vidéos de science sur des sujets vulgarisations, crades, ou juste rigolos. Parfois on parle de biologie aussi.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "865b0e52f5461716541b465f1d648076a57f086b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,20 @@
+{
+  "name": "en-wikipedia_en_simple_all_maxi",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_en_simple_all_maxi",
+  "start_url": "",
+  "title": "Simple English Wikipedia",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "200,000+ Wikipedia articles in simplified English, for children and non-native speakers.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "5193b0a93e27ebba2f47907387f7da954c21de55",
+  "previous_commit_sha": "0ca1c08b6a7b1323acbb4f9d7771f254e1c1c7c1",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

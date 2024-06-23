@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Menuing</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="internet-in-a-box-iiab-menuing">Internet-in-a-Box (IIAB)
+Menuing</h1>
+<p>Please see “<a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">How
+do I customize my Internet-in-a-Box home page?</a>” within <a
+href="https://wiki.iiab.io">FAQ.IIAB.IO</a> which links to several
+videos, to help you quickly arrange the content and apps/services on
+your community’s IIAB home page, using our new drag-and-drop
+interface.</p>
+<p>For a technical overview of JS-Menu (<a
+href="https://github.com/iiab/iiab-admin-console/blob/master/roles/js-menu/files/menu-files/js/js-menu.js">js-menu.js</a>)
+see also <a
+href="admin-console">IIAB
+Admin Console’s own docs</a> (NEW, as of 2022!)</p>
+<p>While using IIAB’s Admin Console (http://box.lan/admin) please also
+click on “Help” in the top-right, a copy of which is here:<br />
+https://github.com/iiab/iiab-admin-console/blob/master/roles/console/files/help/ContentMenus.rst</p>
+<h2 id="overview">Overview</h2>
+<p>IIAB has several different approaches to the home page or portal,
+accessed via the following URLs:</p>
+<ul>
+<li><p>http://&lt;host&gt;/home/index.html - dynamically generates a
+menu of your Content Packs (see <em>Dynamic Menuing</em> below)</p></li>
+<li><p>http://&lt;host&gt;/wordpress - if installed and enabled
+WordPress can be used as the home page.</p></li>
+<li><p>http://&lt;host&gt;/wiki - if installed and enabled a wiki,
+currently MediaWiki, can be used as the home page.</p></li>
+</ul>
+<p>Any one of these can be selected by setting
+<code>iiab_home_url</code> in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it?">/etc/iiab/local_vars.yml</a>
+prior to installing IIAB.
+<!-- 2023-04-21: **Admin Console > Configure > Server Portal** seems to no longer exist. -->
+A redirect from http://&lt;host&gt;/ should then be auto-created, to the
+URL selected.</p>
+<h2 id="dynamic-menuing-instead-of-hand-coding-index.html">Dynamic
+Menuing instead of hand coding index.html</h2>
+<p>Dynamic Menuing (introduced with IIAB/XSCE 6.1, improved with
+IIAB/XSCE 6.2) allows you to rapidly rearrange the presentation of all
+your Content Packs — so they appear as your school/library/clinic
+community wants — when users browse <a href="http://box">http://box</a>.
+Dynamic Menuing uses JavaScript to auto-generate this menu of Content
+Packs, based on an array of menu items and other properties.</p>
+<p>As of 2019 the menu is defined by a file <code>menu.json</code>
+located in the same directory as <code>index.html</code>. The menu.json
+file contains properties for the menu as a whole and a list of menu
+items to be included as links on the menu. For most installations these
+files are in <code>/library/www/html/home</code>, but they can be
+anywhere and the index.html file can be named anything
+(e.g. /test/medlib.html). When using IIAB’s Admin Console
+(http://box.lan/admin) you can click on <a
+href="https://github.com/iiab/iiab-admin-console/blob/master/roles/console/files/help/ContentMenus.rst#edit-content-menus">Help
+(top-right) &gt; Content Menus &gt; Edit Content Menus</a> to learn more
+about the menu.json fields.</p>
+<p>Bonus: if users prefer http://box.lan, http://10.10.10.10,
+http://box.local or <a href="http://hogwarts">http://hogwarts</a> (or
+any other base URL that works, as your network topology evolves) then
+important ports like kiwix-serve’s 3000 and KA Lite’s 8008 continue to
+work, as they are updated live by JavaScript inside the HTML, e.g. to <a
+href="http://hogwarts:3000">http://hogwarts:3000</a> and <a
+href="http://hogwarts:8008">http://hogwarts:8008</a></p>
+<p>As of 2019 the source for the menuing system is part of the git repo
+for the Admin Console, named <a
+href="https://github.com/iiab/iiab-admin-console">iiab-admin-console</a>
+and is installed when the install script for Admin Console is run. There
+are several sample menus that can be copied as is to
+/library/www/html/home if you are using the /home home page redirect
+selection.</p>
+<h2 id="nested-menus">Nested Menus</h2>
+<p>Because a menu only requires a copy of the standard index.html and
+menu.json that holds a list of the menu definitions that constitute the
+menu you can create multiple directories in the web root that have these
+files. This allows you to nest menus by using a menu item with type
+(intended_use) <strong>info</strong> to point to other menus. You could
+also add a home link to go back to the top menu. These submenus can be
+edited with the Admin Console by entering the name of the directory,
+loading the menu, editing, and saving it.</p>
+<p>See Also: <a
+href="https://github.com/iiab/iiab/issues/2110">#2110</a></p>
+<h2 id="menu-item-definitions">Menu Item Definitions</h2>
+<p>A menu item definition consists of a json and an optional html
+fragment file, which more or less follow the RACHEL conventions on
+naming modules:</p>
+<p>&lt;2 char lang code of menu item (may be different from
+content)&gt;-&lt;generic zim or module name which may have inherent
+language embedded in it; must separate parts with
+underscores&gt;.json</p>
+<p>e.g. kn-wikipedia_kn_medicine.json is a menu item for the medical
+wiki in the Kannada language, where the title and description are
+(theoretically) in Kannada, whereas en-wikipedia_kn_medicine.json would
+be an English menu item for the Kannada medical wiki. In future we may
+have a CMS that allows these to be selected visually and edited, but for
+now the easiest method is to browse index-dynamic.html and get the name
+from the generated html. <strong>More or less all names are in
+content-ready-index.html, though they have been commented out to reduce
+clutter.</strong></p>
+<p>After installation these files will be in
+<code>/library/www/html/js-menu/menu-files/menu-defs</code></p>
+<p>There is a separate directory /library/www/html/js-menu/local in
+which locally modified versions of these files may be stored so that
+they will not be overwritten when cp-menus is run, but will instead be
+merged in.</p>
+<p><strong>Please note</strong> that this is a work in progress with new
+menu definitions being added as deployments need them.</p>
+<h2 id="html-fragments">HTML Fragments</h2>
+<p>The html fragments are mostly extracted from RACHEL and are all
+&lt;ul&gt;&lt;/ul&gt; structures, but they can be created manually as
+long as they don’t break Ajax. The php href code was replaced with
+##HREF-BASE## when the file was extracted from rachel-index.php and is
+dynamically rewritten with the appropriate href at run time.</p>
+<h2 id="menu-item-definition-fields">Menu Item Definition Fields</h2>
+<p>Earlier (2017-2019) <a
+href="https://github.com/iiab/iiab-menu/blob/master/samples/_menudef-template.json">_menudef-template.json</a>
+was used to explain these various fields.</p>
+<p>As of December 2023, Menu Item Definition files have the following
+fields:</p>
+<ul>
+<li><a
+href="https://github.com/iiab/iiab-admin-console/blob/39d00fd303a62efbd2fd1cf0432a825ad1eb575d/roles/js-menu/files/menu-files/js/js-menu.js#L389-L421">intended_use</a>
+- May be one of <a
+href="https://github.com/iiab/iiab-admin-console/pull/518">azuracast,</a>
+calibre, calibreweb, cups, download, external, html, info,
+internetarchive, kalite, kolibri, map, nodered, webroot, zim (<a
+href="https://github.com/iiab/iiab-admin-console/blob/39d00fd303a62efbd2fd1cf0432a825ad1eb575d/roles/console/files/htmlf/50-edit_menus.html#L201-L218">menu_item_type</a>
+can be set to any of these ~15 values)</li>
+<li>lang - 2 or 3 char code of the language of the menu item, not
+necessarily the target content</li>
+<li>logo_url - An image file in
+<code>/library/www/html/js-menu/menu-files/images</code></li>
+<li>moddir - The name of a directory under <webroot>/modules, for
+intended_use webroot or download it is relative to <webroot></li>
+<li>zim_name - The generic name of a Kiwix ZIM, such as
+wikipedia_en_all_novid</li>
+<li>start_url - Optional url for link to be added to the computed link,
+used mostly when a module has no index.html</li>
+<li>title - Localized title for link</li>
+<li>description - Expanded text for link</li>
+<li>extra_description - More expanded text for link</li>
+<li>extra_html - Nominally <menu_item_name>.html, an optional free form
+html for a submenu be careful of embedded quotes, brackets or other
+characters that will break json</li>
+<li>footnote - Catalog entry type information such as number of pdfs or
+size</li>
+<li>apk_file - This is no longer used; use the download type for
+downloading apks and other files</li>
+</ul>
+<p>You may also notice that there are menu definitions with additional
+properties. These have been taken from RACHEL catalog and are
+information only fields, not used by the IIAB menuing system. They will
+be removed over time.</p>
+<h2 id="config-file">Config File</h2>
+<p>As of December, 2017 the IIAB menuing system has a configuration
+file, &lt;docroot&gt;/js-menu/config.json , with the following
+properties that are used to compute URLs dynamically:</p>
+<ul>
+<li>kiwixPort - Port on which kiwix is listening</li>
+<li>en-kalitePort - Port on which kalite is listening<br />
+</li>
+<li>es-kalitePort - Alternate Port for kalite to serve content in
+Spanish</li>
+<li>fr-kalitePort - Alternate Port for kalite to serve content in
+French</li>
+</ul>
+<p>Multiple instances of KA Lite may be run to separate content by
+language (with the caveat that KA Lite itself uses a shared cookie, so a
+browser cannot log into these multiple instance at the same
+time)<!-- when not using registered users-->. For implementation tips,
+see: FAQ.html -&gt; “KA Lite Administration: What tips &amp;
+tricks exist?” -&gt; “Multilingual?” | “Monolingual in Spanish or French
+or similar?”</p>
+<ul>
+<li>calibrePort - Port on which calibre is listening<br />
+</li>
+<li>apkBaseUrl - URL where downloadable APKs are stored; used by
+download phrase in Medical Wikis</li>
+<li>apkLocalUrl - Not used, but serves to preserve the URL in the local
+server<br />
+</li>
+<li>apkLinkPhrase - An array with the phrase ‘Download the offline app’
+in various languages<br />
+</li>
+<li>mobilePortraitSize - Font size for mobile devices in portrait
+orientation</li>
+<li>poweroffPin - Not Used</li>
+<li>poweroffPinHash - Not Used</li>
+<li>kiwixUrl - Prefix to URL for ZIM files when running kiwix in proxy
+mode</li>
+</ul>
+<h2 id="additions">2019 Additions</h2>
+<p>Log in to IIAB’s Admin Console (http://box.lan/admin, default
+passwords are in FAQ.html) then click “Content Menus” on
+top:</p>
+<ol type="1">
+<li>Drag &amp; Drop your favorite Content Packs into position, to create
+the best visual menu for your school or medical clinic’s
+Internet-in-a-Box.</li>
+<li>Services installed are automatically added to the menu during
+Ansible run for Admin Console.</li>
+<li>Downloaded ZIM files and OER2Go modules are automatically added to
+the menu.</li>
+<li>Draft menu item definitions are generated if they don’t exist.</li>
+<li>Additional substitution variables are now available ##SIZE##,
+Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Tags; [##tags##],
+Language: ##language##, Date: ##zim_date##”</li>
+<li>Cross-ZIM search can be enabled for the menu.</li>
+<li>Menu supports filtering by language.</li>
+<li>Verbosity for desktop and mobile layouts can be configured.</li>
+<li>There is a choice of header font for desktop and mobile
+layouts.</li>
+<li>Individual Menu Item Definitions can be edited.</li>
+<li>New Menu Item Definitions can be created using the Clone
+button.</li>
+<li>There are two new check boxes to indicate if your changes should be
+uploaded to the central repository and if you want to receive changes
+from others.</li>
+</ol>
+<p>While using IIAB’s Admin Console (http://box.lan/admin) please also
+click on “Help” in the top-right, a copy of which is here:<br />
+https://github.com/iiab/iiab-admin-console/blob/master/roles/console/files/help/ContentMenus.rst</p>
+<h2 id="testing-or-non-production-use">Testing or Non-production
+Use</h2>
+<p>Please put the following in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+so edits do not go into the production repository:</p>
+<pre><code>menu_files_repo: iiab-share/js-menu-files-test/</code></pre>
+</body>
+</html>

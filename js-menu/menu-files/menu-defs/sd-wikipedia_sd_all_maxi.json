@@ -1,0 +1,16 @@
+{
+  "name": "sd-wikipedia_sd_all_maxi",
+  "lang": "sd",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_sd_all_maxi",
+  "title": "سنڌيءَ ۾ وڪيپيڊيا",
+  "logo_url": "Wikipedia-logo-v2-sd.png",
+  "description": "آفلائين ۽ ڳولا لائق فارميٽ ۾ سنڌي وڪيپيڊيا جي مضمونن جو مڪمل ميڙ. مواد کليل پھچ وارو آھي، مطلب تہ توھان ان کي مفت ۾ لاھي، ٻيھر استعمال ڪري، ۽ وڌائي سگھو ٿا. اسان سان جڙجي وڃو ۽ مٿين ورزين کي اڃا وڌيڪ ڀلو بڻايو",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "a42394604803f312b9326207a7a3a4d452c4ddcd",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-russian_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "russian.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Russian Language Stack Exchange",
+  "logo_url": "4.png",
+  "description": "Q&A for students, teachers, and linguists wanting to discuss the finer points of the Russian language",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "18d918380b76d3d645c62be1e50d915bf5bc2d15",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

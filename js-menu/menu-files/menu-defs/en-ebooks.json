@@ -1,0 +1,17 @@
+{
+  "name": "en-ebooks",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-ebooks",
+  "title": "Great Books of the World",
+  "logo_url": "en-ebooks.jpg",
+  "description": "Searchable library of great literature collected from Project Gutenberg.",
+  "extra_html": "en-ebooks.html",
+  "footnote": "Size: 904M, Books: 426, Date: November 2017",
+  "edit_status": "repo",
+  "commit_sha": "3ea4b7cd84a1ecd15ae6dbc1c86dd778e0f5e1f0",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-bookdash",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-bookdash",
+  "start_url": "",
+  "title": "Book Dash Books",
+  "logo_url": "book-dash-logo.png",
+  "description": "African story books for children, available for anyone to freely print, translate and distribute. Book Dash believes that every child should own a hundred books by the age of five",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "274afc95dec7bb3db0861360856e40adb325713d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

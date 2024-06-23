@@ -1,0 +1,19 @@
+{
+  "name": "en-ted_en_design",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "ted_en_design",
+  "start_url": "",
+  "title": "TED talks - Design",
+  "logo_url": "content.jpg",
+  "description": "Ideas worth spreading",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "790e969d61cb0605432eec9fd19803d0d5251bcd",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

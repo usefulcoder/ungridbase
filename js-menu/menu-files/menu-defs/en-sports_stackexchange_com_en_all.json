@@ -1,0 +1,19 @@
+{
+  "name": "en-sports_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "sports.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Sports Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for participants in team and individual sport activities",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "874acdb5c7a09875ada98e3c53c6da363bdc01d5",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

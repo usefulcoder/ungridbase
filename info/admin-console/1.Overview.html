@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>1.Overview</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="admin-console-overview">Admin Console Overview</h1>
+<h2 id="relation-to-iiab">Relation to IIAB</h2>
+<p>The Admin Console is intended primarily for use with Internet in a
+Box, though there is significant soft coding that would allow it to be
+rewritten for other environments. Its main purpose is to permit an
+authenticated and authorized user to perform operations on the IIAB
+server that require root permission and to report on the state of those
+operations and the server in general. The operations supported are
+related to server configuration, installation of content, and management
+of the menuing system for accessing installed content.</p>
+<h2 id="components">Components</h2>
+<p>The Admin Console has two main components, a Console which provides
+the user interface, and a Command Server that carries out the user’s
+wishes.</p>
+<p>The Console is a single-page application (SPA), which means that all
+html is loaded initially and various panels are displayed with
+javascript. All interaction with the Command Server is undertaken with
+ajax functions.</p>
+<p>The Command Server is a systemd service written in python3 along with
+attendant scripts and a wrapper for access via the web server.</p>
+<p>Both are further described in this documentation.</p>
+<h2 id="installation">Installation</h2>
+<p>To install the Admin Console clone the repo (below), cd to the
+iiab-admin-console directory, and run ./install.</p>
+<p>This will run ansible, which should have been installed when IIAB was
+installed, in order to install the components of Admin Console and
+download the current versions of several content catalogs.</p>
+<h2 id="file-locations">File Locations</h2>
+<p>After installation the Admin Console is in /opt/admin/, with
+subdirectories cmdsrv and console for the two main components.</p>
+<p>The menuing system files install to /library/www/html/js-menu/ and an
+initial home menu is in /library/www/html/home/.</p>
+<h2 id="repos">Repos</h2>
+<p>The code can be found in the git repo
+https://github.com/iiab/iiab-admin-console. This repo has a role
+directory for each of the Admin Console components.</p>
+<p>Globally shared menu definitions are in
+https://github.com/iiab-share/js-menu-files.</p>
+<p>Catalog information is in
+https://github.com/iiab-share/iiab-content.</p>
+<h2 id="document-version">Document Version</h2>
+<p>This document was last maintained on December 29, 2022.</p>
+</body>
+</html>

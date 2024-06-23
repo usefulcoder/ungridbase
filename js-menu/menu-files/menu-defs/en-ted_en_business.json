@@ -1,0 +1,19 @@
+{
+  "name": "en-ted_en_business",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "ted_en_business",
+  "start_url": "",
+  "title": "TED talks - Business",
+  "logo_url": "content.jpg",
+  "description": "Ideas worth spreading",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "801da055c2f5898aaeb61c2427954ef6b226c183",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Installation</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="installing-internet-in-a-box-iiab">Installing Internet-in-a-Box
+(IIAB)</h1>
+<h2 id="quick-links">Quick Links</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#expert-mode">Expert Mode</a></li>
+<li><a href="#install-the-software">Install the Software</a>
+<ul>
+<li><a href="#do-everything-from-scratch">Do Everything from
+Scratch</a></li>
+<li><a href="#take-a-short-cut">Take a Short Cut</a></li>
+</ul></li>
+<li><a href="#configure-the-server">Configure the Server</a>
+<ul>
+<li><a href="#server-security">Server Security</a></li>
+<li><a href="#configure-menu">Configure Menu</a></li>
+<li><a href="#supported-network-modes">Supported Network Modes</a></li>
+<li><a href="#enable-services">Enable Services</a></li>
+</ul></li>
+<li><a href="#add-content">Add Content</a>
+<ul>
+<li><a href="#zim-files">ZIM Files</a></li>
+<li><a href="#oer2go-rachel-modules">OER2Go (RACHEL) Modules</a></li>
+<li><a href="#ka-lite-for-khan-academy">KA Lite (for Khan
+Academy)</a></li>
+<li><a href="#copy-ka-lite-videos">Copy KA Lite Videos Manually</a></li>
+<li><a href="#openstreetmap">OpenStreetMap</a></li>
+<li><a href="#local-content">Local Content</a></li>
+<li><a href="#external-usbdrive-content">External USB/Drive
+Content</a></li>
+</ul></li>
+<li><a href="#remove-content">Remove Content</a></li>
+</ul>
+<h2 id="overview">Overview</h2>
+<h3
+id="our-1-line-installer-at-download.iiab.io-is-all-you-need-to-get-started">Our
+1-line installer at <a
+href="https://download.iiab.io">download.iiab.io</a> is all you need to
+get started!</h3>
+<p>Or, if you prefer to do a fully manual install, continue reading
+below. Either way, building an Internet-in-a-Box (IIAB) server involves
+these 3 steps:</p>
+<ol type="1">
+<li>Configure <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+(choose apps/services,
+etc)<!--the Server - Set Parameters and Enable Apps/Services--></li>
+<li><a
+href="IIAB-Installation.html#do-everything-from-scratch">Install
+the Software</a></li>
+<li><a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">Add
+Content</a></li>
+</ol>
+<p>We’ve come a long way since our <a
+href="https://youtu.be/FBIUpZzZsmg">installation video</a> from
+2019-02-14.
+<!--For more customized IIAB installs however, please watch our [installation video](https://youtu.be/FBIUpZzZsmg) from 2019-02-14, and continue reading below.--></p>
+<p><em>Building your own DIY Library of Alexandria is one of the most
+valuable gifts you can offer to your community!
+<!--is very much worth it in the end--> As you do this, we strongly
+encourage you to <a
+href="FAQ.html#What_are_the_best_places_for_community_support%3F">get
+in touch</a> with our global volunteer community network
+(http://OFF.NETWORK) such that the very best learning content is
+increasingly available to deserving minds of all ages, in ALL
+countries!</em></p>
+<p><em>Thank you for taking Digital Libraries seriously for one &amp;
+all!</em></p>
+<h2 id="expert-mode">Expert Mode</h2>
+<p>This is for people who already know how to do everything in these
+instructions and enjoy doing them multiple times by missing the nuances
+that make this install different from things they have done before.
+<strong>If you are an expert, at least read about <a
+href="IIAB-Platforms.html#disk-partitioning">PARTITIONING</a>
+as so many miss this part.</strong> Reading about <a
+href="IIAB-Networking.html">networking</a>
+will probably come in handy as well.</p>
+<h2 id="install-the-software">Install the Software</h2>
+<p>There are basically three ways to install IIAB software:</p>
+<ol type="1">
+<li><strong><em>Strongly Recommended in 2023: use our new <a
+href="https://download.iiab.io/">1-line installer script</a> which does
+essentially everything!</em></strong></li>
+<li>Do everything from scratch, manually, following the instructions
+below.</li>
+<li>Take a short cut if you have access to an <a
+href="Raspberry-Pi-Images-~-Summary.html#iiab-images-for-raspberry-pi">IIAB
+“image” file</a> from someone else who did everything from scratch, or
+at least some of the steps.
+<!-- Here are some [older suggestions](http://tinyurl.com/iiabimages) on how to create short cut image files, towards helping others. --></li>
+</ol>
+<p>The <em>advantage</em> of doing everything from scratch is that you
+will get exactly what you want, and learn about the inner workings of
+Internet-in-a-Box. (The <em>disadvantage</em> is that it’s more
+work!)</p>
+<h3 id="do-everything-from-scratch">Do Everything from Scratch</h3>
+<p>Here is the complete list of the steps required. Some may already be
+done.</p>
+<ol type="1">
+<li><p>Assemble your hardware with your chosen amount of <a
+href="FAQ.html#What_hardware_should_I_use%3F">RAM,
+storage, and network devices</a>. See <a
+href="IIAB-Platforms.html#disk-partitioning">IIAB
+Platforms</a> for the <strong>partitioning scheme</strong> and <a
+href="IIAB-Networking.html">IIAB
+Networking</a> overview.</p>
+<p><strong>Traditionally we use Standard partitioning, but increasingly
+since 2017 LVM partitioning is possible as well. In any case, the above
+“IIAB Platforms” document is the place to start for all partitioning
+tips.</strong></p></li>
+<li><p>Install a <strong>minimal</strong> version of <a
+href="IIAB-Platforms.html#operating-systems">your
+OS</a> (installing ssh is fine, but avoid installing Apache/NGINX or
+most anything else, as these will be installed for you later!)</p>
+<p><em>WARNING: OTHER LINUX DISTRIBUTIONS MAY NOT/YET
+WORK!</em></p></li>
+<li><p>While installing over Wi-Fi is possible, an Ethernet (live
+Internet) cable is <strong>strongly recommended</strong> during
+installation!</p>
+<p>If you have no choice but to install over Wi-Fi, you can run
+<code>sudo raspi-config</code> (on Raspberry Pi OS) <strong>&gt; Network
+Options &gt; Wi-Fi</strong> to set the SSID and passphrase that will get
+you on the Internet (this happens in
+/etc/wpa_supplicant/wpa_supplicant.conf). Then do
+<code>sudo reboot</code> and verify your Internet
+connection.<!--  REMEMBER: after you are completely done installing Internet-in-a-Box over Wi-Fi, you'll later need to run "sudo iiab-hotspot-on" to convert your Raspberry Pi's internal Wi-Fi to AP mode (i.e. Access Point, so it acts as a knowledge hotspot).  Of course if you do this prematurely, you'll need to run "iiab-hotspot-off" to recover your Wi-Fi connection to the Internet.--></p>
+<p><em>No matter what your OS, log into your machine with an attached
+monitor/keyboard or via ssh. Before proceeding, verify your Internet
+connection by typing:</em></p></li>
+</ol>
+<pre><code>   ping mit.edu</code></pre>
+<ol start="4" type="1">
+<li><p><strong>Verify you don’t have an old/troublesome version of
+Ansible installed!</strong></p>
+<p><em>Read <a
+href="FAQ.html#What_is_Ansible_and_what_version_should_I_use%3F">“What
+is Ansible and what version should I use?”</a> within <a
+href="FAQ.html">FAQ.IIAB.IO</a> (or suffer the
+consequences :-)</em></p></li>
+<li><p>Escalate to root using “sudo su -” or similar. If you prefer to
+use “sudo” with each of the commands below, that is OK too.</p></li>
+<li><p>Run these commands:</p></li>
+</ol>
+<pre><code>   apt update
+   apt -y dist-upgrade
+   apt -y autoremove
+
+   reboot
+
+   apt -y install git
+
+   mkdir -p /opt/iiab
+   cd /opt/iiab/
+   git clone https://github.com/iiab/iiab
+   git clone https://github.com/iiab/iiab-admin-console
+   git clone https://github.com/iiab/iiab-factory
+
+   mkdir -p /etc/iiab/
+   cd /opt/iiab/iiab/vars/
+   # cp local_vars_small.yml /etc/iiab/local_vars.yml
+   cp local_vars_medium.yml /etc/iiab/local_vars.yml
+   # cp local_vars_large.yml /etc/iiab/local_vars.yml
+
+   # PLEASE EXAMINE local_vars.yml CAREFULLY (AND MODIFY AS NEC) *BEFORE*
+   # RUNNING ./iiab-install (BELOW) AS THIS CAN TAKE A COUPLE HOURS!
+
+   # NOTE: you can change many/most settings after install too, using the
+   # Admin Console (http://box.lan/admin) as documented at: FAQ.html
+
+   cd /opt/iiab/iiab/scripts/
+   ./ansible
+   # Installs latest Ansible and ~4 Ansible Collections
+
+   cd /opt/iiab/iiab/
+   ./iiab-install
+   # TRY TO RERUN THE ABOVE LINE IF IT FAILS (if networking glitches etc?)
+
+   cd /opt/iiab/iiab-admin-console/
+   ./install
+   # Installs Admin Console; runs iiab-get-kiwix-cat to d/l Kiwix catalog
+   # Installs Dynamic Menuing for /library/www/html/home/index.html</code></pre>
+<p>STRONGLY RECOMMENDED: The above commands all happen automatically if
+you run our <a href="https://download.iiab.io/">1-line installer</a>,
+which allows you to choose a preset number of server apps: (<a
+href="https://github.com/iiab/iiab/blob/master/vars/local_vars_small.yml">~6
+server apps</a>, <a
+href="https://github.com/iiab/iiab/blob/master/vars/local_vars_medium.yml">~12
+server apps</a>, or <a
+href="https://github.com/iiab/iiab/blob/master/vars/local_vars_large.yml">~30
+server apps</a>)</p>
+<pre><code>   curl iiab.io/install.txt | bash</code></pre>
+<p><em>This 1-line installer <a
+href="IIAB-Platforms.html">requires</a> the
+latest Raspberry Pi OS (on Raspberry Pi 3, 3 B+, 4, 400 or 5) — or
+Ubuntu 22.04+, Mint 21+ or Debian 12+ (on x86_64 PC’s).</em> Note the
+above can take more than an hour on a Raspberry Pi (even with a fast
+Internet connection) so if you want to get moving faster, stick with a
+SMALL-sized or MEDIUM-sized install. Conversely a much larger but slower
+installation is possible (“LARGE-sized”) if you want to experiment with
+the more full suite of <a
+href="https://github.com/iiab/iiab/blob/master/vars/local_vars_large.yml">~30
+server apps</a>. Please review the <a
+href="FAQ.html#What_services_.28IIAB_apps.29_are_suggested_during_installation%3F">comparison
+table</a> to help you make your choice.</p>
+<p>Finally, please browse our <a
+href="https://github.com/iiab/iiab-factory/blob/master/iiab">install
+script</a> to inspect and learn from the automated steps of the
+bash-driven installation process, and please write to bugs @ iiab.io if
+you find issues, Thank You !</p>
+<p><strong>In general, beware ./iiab-install
+<!-- (formerly "./runansible") --> runs slowly (1) the 1st time you run
+it (2) if you permit your Raspberry Pi CPU to rise above 80C on a hot
+day without active ventilation (3) if you’re using a slower/older SD
+card and/or (4) if you have a slow Internet connection.</strong></p>
+<p>Whereas subsequent runs (e.g. via <strong>Admin Console &gt;
+Configure &gt; Install Configured Options</strong>) run quickly,
+sometimes completing in as little as 5-to-10 minutes on a modern
+Raspberry Pi.</p>
+<!-- Similarly, if you want to help test CentOS, you might consider [improving on](https://github.com/iiab/iiab/issues/89) these 2 older recipes from 2017:
+
+```
+   https://download.iiab.io/6.2/x86/centos-load.txt
+   https://github.com/iiab/iiab-factory/blob/master/curl-me
+``` -->
+<!-- As explained in the above "curl" script, -->
+<p><strong>A reboot is generally necessary before IIAB becomes fully
+functional, e.g. to put Hostname change into effect, etc.</strong></p>
+<!-- Please note that if you need to upgrade from a recent version, and it has been some time since you cloned IIAB, you may want to consider the following instead of a fresh install: _(upgrades are at your own risk)_
+
+```
+   cd /opt/iiab/iiab/
+   git pull
+   ./iiab-install --reinstall
+```
+
+Also At Your Own Risk: On Raspberry Pi OS, Ubuntu or Debian, download and install the latest security/package revisions by running `apt update` followed by `apt dist-upgrade` (might upgrade your kernel) and then rebooting &mdash; per the recommendations at https://wiki.iiab.io/go/Security (on CentOS, run `yum update` and on more recent versions of Fedora run `dnf upgrade`).
+
+_Please note that if SELinux was enabled it will be disabled and the server will reboot at the end of the install.  In that case the server may get a new IP address, usually one higher than the previous one.  The server may also disconnect during the install in which case you will need to reconnect in order to continue._ -->
+<p>You can see the log of the last install by typing:</p>
+<pre><code>   more /opt/iiab/iiab/iiab-install.log</code></pre>
+<p><strong>Proceed to: <a href="#configure-the-server">Configure the
+Server</a></strong></p>
+<h3 id="take-a-short-cut">Take a Short Cut</h3>
+<p>If you want to install a <a
+href="https://archive.org/search.php?query=iiab%20.img&amp;sort=-publicdate">pre-built
+disk image (ISO file, .img file or similar)</a> onto a Raspberry Pi
+microSD card, follow these instructions:
+Raspberry-Pi-Images-~-Summary.html</p>
+<!--This step applies if you've been given a [pre-built disk image (ISO file, .img file or similar)](https://archive.org/search.php?query=iiab%20.img&sort=-publicdate) for a particular configuration and even content i.e. if everything from the steps listed above has already been completed for you.
+
+In general the process of using one of these files ([summarized here](Raspberry-Pi-IIAB-Images.html)) is to download it to a separate computer and then write it to storage media for the target machine.  What happens next depends on the specific file downloaded.
+
+You will need tools to unpack or decompress these files and then burn/flash them to portable media.  On Windows you can download the graphical tools listed below.  On macOS and Linux you also have the option to use powerful command-line tools (like dd) that come with the OS.-->
+<h4 id="tools">Tools</h4>
+<p>For the latest, please also see “How do I back up, shrink &amp; copy
+IIAB microSD cards?” at <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<ul>
+<li>Windows
+<ul>
+<li><a href="https://www.raspberrypi.com/software/">Raspberry Pi
+Imager</a> — friendly way to burn/flash an image, directly from the
+Internet to your microSD card</li>
+<li><a href="https://www.balena.io/etcher/">Etcher</a> or <a
+href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk
+Imager</a> — burn/flash an image onto a microSD card</li>
+<li><a href="https://www.7-zip.org">7-Zip</a> — unpacks compressed files
+of almost any kind</li>
+<li><a href="https://filezilla-project.org">FileZilla</a> or <a
+href="https://winscp.net">WinSCP</a> — if {SCP, FTP, FTPS, SFTP} are
+needed to download/upload</li>
+</ul></li>
+<li>Linux and macOS
+<ul>
+<li><a href="https://www.raspberrypi.com/software/">Raspberry Pi
+Imager</a> — friendly way to burn/flash an image, directly from the
+Internet to your microSD card</li>
+<li><a href="https://www.balena.io/etcher/">Etcher</a> — burn/flash an
+image onto a microSD card</li>
+<li><a
+href="https://www.linuxnix.com/what-you-should-know-about-linux-dd-command/">dd</a>
+— command-line “data duplicator”</li>
+<li>tar, unzip, gunzip, bzip2, xz — unpack compressed files &amp;
+archives</li>
+</ul></li>
+</ul>
+<!--Naturally, while the ["Do Everything from Scratch"](IIAB-Installation.html#do-everything-from-scratch) steps (above) are generic and apply to any platform, short cuts apply only to specific platforms (below, when pre-built images exist).-->
+<h4 id="raspberry-pi-3-3-b-4-400-or-5">Raspberry Pi 3, 3 B+, 4, 400 or
+5</h4>
+<p>We recommend you install the latest version of <a
+href="https://www.raspberrypi.com/software/operating-systems/">Raspberry
+Pi OS</a> (Lite version, or with desktop — the 64-bit version if
+possible).</p>
+<p>WARNING: IIAB DOES NOT SUPPORT THE NOOBS OS!</p>
+<p>Since 2021, IIAB can also be installed (experimentally) on Ubuntu on
+Raspberry Pi.</p>
+<p><strong>Either way, please review the <a
+href="IIAB-Platforms.html#operating-systems">latest
+OS recommendations!</a></strong> Then, after you’ve installed your
+chosen OS, proceed to install IIAB from https://download.iiab.io</p>
+<h4 id="mini-pcs-like-intel-nuc-and-gigabyte-brix">Mini PC’s like Intel
+NUC and Gigabyte BRIX</h4>
+<p>Note that most Intel NUCs (Next Unit of Computing) shipping since
+2015, including the 5th and 6th generation Intel NUC’s, have a
+soldered-in Wi-Fi chip limited to 12 clients maximum. Its competitor the
+Gigabyte BRIX suffers from the same limitation out of the box (factory
+units arrive with an Intel Wi-Fi module) but thankfully this Wi-Fi
+module is removable! Specifically, the Gigabyte BRIX’s Wi-Fi socket has
+been tested to accept less-constrained Wi-Fi cards, such as Atheros
+modules available for less than $10.</p>
+<p>If you are given a pre-built x86 image, it should generally install
+via Clonezilla when booted on the target machine.</p>
+<p>The image (ending in .img) should be written to a USB stick using the
+same software as for Raspberry Pi and OLPC XO laptops.</p>
+<p>Note that these images will write two partitions to a USB stick
+(thumb drive). The first partition contains the Clonezilla tool, which
+uses the data from the second partition to initialize your hard
+disk.</p>
+<p>Finally, while these images have been developed on the Intel NUC,
+they may well work on other Intel machines too (do let us know!)</p>
+<!-- #### Installation on OLPC XO laptops is not fully supported with release-6.2+, due to lack of time to test the following general strategy:
+
+* Install [OLPC OS 13.2.11](https://wiki.laptop.org/go/Release_notes/13.2.11) or similar onto the XO laptop
+* In **My Settings > Power**, turn off **Automatic Power Management**
+* Connect all the network interfaces and reboot
+* Install git and Ansible: (for dependencies)
+
+         su -
+         git clone https://github.com/ansible/ansible --branch stable-2.2 --recursive
+         cd ansible
+         python setup.py install
+
+  Context: early in 2017 Ansible 2.2.0 had been required, avoiding 2.2.1 which had issues.
+
+  _As of January 2023, [ansible-core 2.14.1+ was recommended](FAQ.html#What_is_Ansible_and_what_version_should_I_use%3F) &mdash; please verify Ansible's version number by running:_
+
+         ansible --version
+
+* Clone the IIAB git repo, and cd into it:
+
+         mkdir -p /opt/iiab
+         cd /opt/iiab/
+         git clone --branch release-6.2 --depth 1 https://github.com/iiab/iiab
+         cd /opt/iiab/iiab/
+
+* Verify all the network interfaces are visible and have the correct interface label:
+
+         ip addr            (similar to legacy command "ifconfig")
+
+* Optionally, verify that all network interfaces are properly autodetected:
+
+         bash roles/common/library/iiab_facts
+
+* From the iiab directory, run initial setup.  The XO will automatically reboot early in the install and must be restarted with "./iiab-install (formerly "./runansible") to complete the install process: (increases size of /tmp so installs will complete successfully)
+
+        ./iiab-install        (try to rerun this if it fails!) -->
+<h2 id="configure-your-iiab-server">Configure Your IIAB Server</h2>
+<p>At this point you should be able to connect to <a
+href="http://box">http://box</a> from a browser. In certain cases
+http://box.lan, http://schoolserver.lan, http://localhost or
+http://10.10.10.10 may instead be needed.</p>
+<p>To begin configuring the server, connect to its Admin Console at <a
+href="http://box.lan/admin">http://box.lan/admin</a> (username:
+<strong>iiab-admin</strong> password: <strong>g0adm1n</strong> – note
+the numbers 0, 1). In general, all default/initial passwords are
+documented at “What are the default passwords?” within: <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<p>This permits selection of options, services, languages, etc to permit
+additional services, and educational resources to be enabled and
+selected for download.</p>
+<p>Please click on the <strong>Help</strong> link to get detailed
+information on configuration options.</p>
+<p><em>If you’re new to Admin Console, please read “What are the default
+passwords?” in <a
+href="FAQ.html">FAQ.IIAB.IO</a></em></p>
+<h3 id="server-security">Server Security</h3>
+<p>The first time you sign into the Admin Console would be the best time
+to change the password. Select the Utilities menu option and the first
+item, change password. Fill in the form and click Change Password.</p>
+<p><em>Please also read about and take seriously <a
+href="https://wiki.iiab.io/go/Security">Internet-in-a-Box security
+practices</a>.</em></p>
+<h3 id="configure-menu">Configure Menu</h3>
+<p>Once the password has been set you should start with the Configure
+menu item. The overall process is:</p>
+<ol type="1">
+<li>Select each sub-menu item and enter any desired parameters.
+<strong>Help</strong> is available for each screen and parameter.</li>
+<li>Click <strong>Save Configuration</strong></li>
+<li>Click <strong>Install Configured Options</strong></li>
+<li>Monitor the progress of the Configuration job in <strong>Utilities
+&gt; Display Job Status</strong>.</li>
+<li><strong><em>Note</em></strong> that after Display Job Status shows
+“Success”, it may be necessary to reboot, to enable all the selected
+changes.</li>
+</ol>
+<p>This job can take a substantial amount of time depending on the
+capacity of the platform involved and how much of the software was
+included in the initial image.</p>
+<p><strong>Proceed to: <a href="#add-content">Add
+Content</a></strong></p>
+<h3 id="supported-network-modes">Supported Network Modes</h3>
+<p>Operator can select one of <a
+href="IIAB-Networking.html">three modes of
+operation</a>:</p>
+<ul>
+<li><strong>Appliance</strong> - No firewall, no dhpcd, no DNS, just a
+contributor to an already existing network.</li>
+<li><strong>Gateway</strong> - Issues IP addresses (dhcpd or similar),
+name lookup (DNS), firewall, local web page cache for faster retrieval
+the second time, content filtering to reduce porn (DansGuardian), and
+site “whitelists” if wanted.</li>
+<li><strong>LAN Controller</strong> (Local Area Network) - In this mode,
+the server configures clients with IP addresses (e.g. dhcpd - dynamic
+host configuration protocol), name resolution (defines “box” and
+“schoolserver” for all clients, etc).</li>
+</ul>
+<p>Based upon selection of the above mode in the Admin Console, IIAB’s
+<a href="https://github.com/iiab/iiab/tree/master/roles/network">network
+role</a> will attempt to set up network connections. If “Appliance” mode
+is wanted, the network adapter will be set up. If “Gateway” is selected,
+and one of the adapters discovers that it is connected to a source of IP
+addresses, that adapter will be the internet, and the other the Wi-Fi
+connector. If “LAN Controller” is selected, any adapter found will be
+act as server to any clients that might ask to connect.</p>
+<p>The IIAB installation attempts to determine the network topology
+based on the number and types of connections it discovers. In general,
+it looks to see if there is a connection to a gateway and whether other
+wireless or wired connections are present.</p>
+<h3 id="enable-services">Enable Services</h3>
+<p>It’s best to choose your IIAB Apps (services) prior to installing
+IIAB, by configuring <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>,
+as the 1-line installer asks you to do.</p>
+<p>Some of these apps/service can also be enabled after IIAB software is
+installed, by checking boxes in <strong>Admin Console</strong>
+(http://box.lan/admin) <strong>&gt; Configure menu &gt; Enable
+Services</strong>.</p>
+<p>If you attempt this, remember to then click <strong>Save
+Configuration &gt; Install Configured Options</strong>.</p>
+<p>Finally, confirm that it has completed in the coming minutes, within
+<strong>Utilities &gt; Display Job Status &gt; Refresh
+Status</strong>.</p>
+<p><em>If you’re new to the Admin Console, please read “What are the
+default passwords?” in <a
+href="FAQ.html">FAQ.IIAB.IO</a></em></p>
+<h2 id="add-content">Add Content</h2>
+<p><strong>Please see “<a
+href="FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page%3F">How
+do I customize my Internet-in-a-Box home page?</a>” at <a
+href="FAQ.html">FAQ.IIAB.IO</a> and watch the HOW-TO
+videos on Internet-in-a-Box’s <a
+href="https://www.youtube.com/channel/UC0cBGCxr_WPBPa3IqPVEe3g">YouTube
+channel</a> (several available as <a
+href="https://iiab.io/content/videos">.mp4 and .webm</a>) to get moving
+downloading &amp; arranging content on your IIAB
+(Internet-in-a-Box).</strong></p>
+<p>Since IIAB/XSCE 6.0, many kinds of content can be downloaded and
+installed through your IIAB server’s Admin Console
+(http://box.lan/admin).</p>
+<p>WARNING: some of these Content Packs are quite large and you should
+pay attention to the space available and space required displayed on
+each screen. Note that space calculations may not reflect multiple types
+of downloads happening simultaneously.</p>
+<h3 id="add-with-admin-console">Add with Admin Console</h3>
+<p>To begin, <a
+href="FAQ.html#What_are_the_default_passwords%3F">log
+in</a> to your IIAB’s Admin Console (http://box.lan/admin), click
+<strong>Install Content</strong>, and view relevant
+<strong>Help</strong>.</p>
+<h4 id="zim-files">ZIM Files</h4>
+<p>ZIM files (ZIMs) are compressed and indexed (rapidly searchable)
+Content Packs, generally prepared by https://kiwix.org. They include
+Wikipedia, Wiktionary, TED Talks, and many other educational/reference
+materials in multiple languages. Download and install these as
+follows:</p>
+<ol type="1">
+<li><p>Within <strong>Admin Console &gt; Install Content</strong>, hit
+button <strong>Refresh Kiwix Catalog</strong> to update your list of
+available ZIM files with the very latest from Kiwix.org.</p></li>
+<li><p>Within <strong>Install Content</strong>, click <strong>Get ZIM
+Files from Kiwix</strong>. Before making your selection of ZIM files,
+use buttons <strong>Select Languages &gt; More Languages</strong> to be
+sure you’re viewing all relevant choices, in many more languages than
+just {English, Spanish, French, Portuguese, Arabic and Hindi}.</p></li>
+<li><p>Carefully finalize your selection of ZIM files, among the many
+choices. <em>Avoid downloading/installing more than 10 at
+once!</em></p></li>
+<li><p>Click button <strong>Install Selected ZIMs</strong> to begin
+downloading and installing them onto your server. <em>This can take a
+very long time, during which time your server may appear unresponsive
+(within the first hour especially) while it’s working!</em></p></li>
+<li><p>Monitor progress within <strong>Admin Console &gt; Utilities &gt;
+Display Job Status</strong>. Each ZIM file spawns 3 jobs which (1)
+download, (2) unzip, then (3) move the pieces into position within
+/library/zims/content and /library/zims/index. In the past, after
+installing ZIM files, you also needed to run “iiab-make-kiwix-lib;
+systemctl restart kiwix-serve” — but this is no longer necessary since
+IIAB/XSCE 6.2.</p></li>
+</ol>
+<p>WARNING: there are certain situations (particularly if you’ve removed
+a ZIM file from /library/zims/content, e.g. to clean house or when a
+malformed ZIM file failed to install its index) where you need to run
+<strong>Admin Console &gt; Install Content &gt; Restart Kiwix
+Server</strong>. This will fix the listing within the above “Get ZIM
+Files from Kiwix” downloader, so it correctly shows which ZIM files you
+truly have installed (and which others are truly downloadable!)</p>
+<p>Reminder: you can always click <strong>Help</strong> near the
+top-right on any page within IIAB’s Admin Console, then click on help
+section <strong>Install Content</strong>.</p>
+<h4 id="oer2go-rachel-modules">OER2Go (RACHEL) Modules</h4>
+<p>RACHEL maintains a large number of Content Packs at
+https://rachel.worldpossible.org/content. They include HTML, PDF, and
+other web materials in multiple languages. Download and install these as
+follows:</p>
+<ol type="1">
+<li><p>Within <strong>Admin Console &gt; Install Content</strong>, hit
+button <strong>Refresh OER2Go Catalog</strong> to update your list of
+available modules.</p></li>
+<li><p>Within <strong>Install Content</strong>, click <strong>Get
+OER2Go(RACHEL) Modules</strong>. Before making your selection of
+modules, use buttons <strong>Select Languages &gt; More
+Languages</strong> to be sure you’re viewing all relevant choices, in
+many more languages than just {English, Spanish, French, Portuguese,
+Arabic and Hindi}.</p></li>
+<li><p>Carefully finalize your selection of OER2Go modules, among the
+many choices. <em>Avoid downloading/installing more than 10 at
+once!</em></p></li>
+<li><p>Hit button <strong>Install Selected Modules</strong> to begin
+downloading and installing them onto your server. <em>This can take a
+very long time, during which time your server may appear unresponsive
+(within the first hour especially) while it’s working!</em></p></li>
+<li><p>Monitor progress within <strong>Admin Console &gt; Utilities &gt;
+Display Job Status</strong>. Each module spawns 2 jobs which (1)
+download, then (2) move the pieces into position within
+/library/www/html/modules.</p></li>
+</ol>
+<p>Reminder: you can always click <strong>Help</strong> near the
+top-right on any page within IIAB’s Admin Console, then click on help
+section <strong>Install Content</strong>.</p>
+<h4 id="ka-lite-for-khan-academy">KA Lite (for Khan Academy)</h4>
+<p>KA Lite is the most popular platform to experience Khan Academy
+videos, and a huge collection of associated exercises. Accounts may be
+created for students and teachers if you choose to use KA Lite’s LMS
+functionality as well, to track your own progress (or others’).</p>
+<p>To download the Khan Academy videos of your choosing, in various
+languages, use KA Lite’s downloader available in these places:</p>
+<ul>
+<li><strong>Admin Console &gt; Install Content &gt; Download Khan
+Academy Videos &gt; Launch KA Lite</strong></li>
+<li><a href="http://box:8008">http://box:8008</a> (or <a
+href="http://box.lan:8008">http://box.lan:8008</a> on non-standard
+devices/browsers)</li>
+<li><a href="http://10.10.10.10:8008">http://10.10.10.10:8008</a> on
+much older devices/browsers</li>
+</ul>
+<p>Username/password is Admin/changeme <a
+href="FAQ.html#What_are_the_default_passwords%3F">upon
+installation</a>.</p>
+<p>KA Lite’s English exercises and subtitles (about 1 GB) MUST be
+downloaded and installed, even if you are not using English videos,
+starting with KA Lite 0.17.0 early in 2017. Thankfully IIAB’s <a
+href="https://download.iiab.io/">1-line install script</a> installs this
+essential piece for you.</p>
+<p><em>See also <a
+href="FAQ.html#KA_Lite_Administration:_What_tips_.26_tricks_exist%3F">“KA
+Lite Administration: What tips &amp; tricks exist?”</a> within <a
+href="FAQ.html">FAQ.IIAB.IO</a>.</em></p>
+<h3 id="add-content-manually">Add Content Manually</h3>
+<h4 id="oer2go-rachel-modules-1">OER2Go (RACHEL) Modules</h4>
+<p>Download <a href="https://rachel.worldpossible.org/content">OER2Go
+(RACHEL) modules</a> manually using rsync, to
+<code>/library/www/html/modules</code></p>
+<p>After a module has been downloaded successfully (rerun rsync if there
+are connectivity issues) local/offline users can access it with URL:</p>
+<pre><code>   http://box.lan/modules/&lt;module-name&gt;</code></pre>
+<h4 id="copy-ka-lite-videos">Copy KA Lite Videos</h4>
+<p>If KA Lite videos have been obtained from another install or on some
+storage medium they can be copied directly to KA Lite without going
+through the admin interface.</p>
+<ol type="1">
+<li>Copy to /library/ka-lite/content/</li>
+<li>Issue the command <code>systemctl restart kalite-serve</code> to
+restart the server</li>
+</ol>
+<h4 id="openstreetmap">OpenStreetMap</h4>
+<p><a href="https://OpenStreetMap.org">OpenStreetMap.org</a> (OSM) is
+much like Google Maps, but more democratic and without advertising —
+anybody can change it, much like Wikipedia only for maps.</p>
+<p>Internet-in-a-Box enables OSM to be viewable, zoomable and searchable
+while offline.</p>
+<p>NEW WAY 2018: Please read “How do I add zoomable maps for my region?”
+at <a href="FAQ.html">FAQ.IIAB.IO</a> to install
+compact vector-based maps that include the full detail for your
+region.</p>
+<p>OLD WAY 2017 / SIMPLE ALTERNATIVE: Consider downloading the <a
+href="https://rachel.worldpossible.org/viewmod/en-worldmap-10">10-layer
+en-worldmap-10 (10.7GB)</a> to /library/www/html/modules in a pinch, if
+you’re running our of time, as the download is all you need to make
+basic maps happen. The Catch: this download can take hours, as it
+includes a huge number of small files.</p>
+<p>OLD WAY: 16 levels of zoom are possible, from level 0 to 15 using the
+bitmap (raster) tiles generating by IIAB starting in 2013. This is about
+110GB total, so you may need to <a
+href="FAQ.html#What_can_I_do_with_E-books_and_Internet-in-a-Box%3F">obtain
+a physical drive</a> by working with volunteers at <a
+href="https://unleashkids.org">unleashkids.org</a> e.g. if the levels
+posted to <a
+href="https://download.iiab.io/content">download.iiab.io/content</a> are
+insufficient for your needs.</p>
+<p>Either way, the following directories and their contents are
+needed:</p>
+<ul>
+<li>/library/knowledge/modules/geonames_index</li>
+<li>/library/knowledge/modules/openstreetmap</li>
+</ul>
+<p>Implementers can reduce OSM’s storage needs by eliminating high-zoom
+levels within directory openstreetmap, where each zoom level is
+contained within its own subdirectory.</p>
+<p>Example 1: newer install images typically include layers 0 to 8
+(140MB) fully working out-of-the-box, even prior to your customizing
+your own Internet-in-a-Box server.</p>
+<p>Example 2: osm12.tar.gz from <a
+href="https://download.iiab.io/content">download.iiab.io/content</a>
+includes layers 0 to 12 (8.2GB) showing many towns/rivers/parks
+worldwide, not just cities/countries/seas.</p>
+<p>As you can see, each increasing zoom level generally requires
+exponentially ever larger amounts of storage!</p>
+<p><em>ASIDE: there is a very dedicated group of people coming together
+to improve the quality, compactness, vividness, searchability (and UX)
+of OpenStreetMap for the entire developing world in 2017. Please do make
+contact with holt @ laptop.org if you too can help here.</em></p>
+<h4 id="local-content">Local Content</h4>
+<p>Schools/Clinics often have custom learning materials they want
+“permanently” shared with everyone on site. Such PDF’s, DOC files,
+videos, images, audio recordings and HTML (etc!) can be copied to
+<code>/library/www/html/local_content</code> so that users can browse
+it, with a URL like <a href="http://box/usb">http://box/usb</a> or <a
+href="http://box.lan/usb">http://box.lan/usb</a></p>
+<h4 id="external-usbdrive-content">External USB/Drive Content</h4>
+<p>For spontaneous (ad hoc) access to materials and teacher content
+(handouts, lessons, etc) these can be placed on a USB stick or drive,
+within a folder named:</p>
+<ul>
+<li>usb</li>
+</ul>
+<p>…which will appear under URL <a
+href="http://box/usb">http://box/usb</a> or <a
+href="http://box.lan/usb">http://box.lan/usb</a> when teachers’
+sticks/drives are plugged into the server’s USB ports. Warning: some
+older phones/devices may require you to type in <a
+href="http://box.lan/usb">http://box.lan/usb</a> or
+http://10.10.10.10/usb</p>
+<p>For legacy support of the LibraryBox and PirateBox communities,
+teachers may also place shareable content in folder names {share, Share,
+Pirateshare/Share} on their USB sticks/drives.</p>
+<p>Bonus: after the lesson, teachers should feel free to remove their
+USB sticks/drives without warning, as the IIAB server should unmount USB
+sticks/drives automagically.</p>
+<p>See “<a
+href="FAQ.html#Can_teachers_display_their_own_content%3F">Can
+teachers display their own content?</a>” within our Frequently Asked
+Questions (<a href="FAQ.html">FAQ.IIAB.IO</a>) and
+“<a
+href="https://github.com/iiab/iiab/blob/master/roles/usb_lib/README.rst">usb_lib
+README</a>” for more info.</p>
+<h2 id="remove-content">Remove Content</h2>
+<p>IIAB 6.5 introduced this curatorial productivity tool, to free up
+space on your Internet-in-a-Box, allowing you to select and remove stale
+content. This can be an absolute lifesaver prior to updating to new
+content.</p>
+<p>After you log into IIAB’s Admin Console (http://box.lan/admin) click
+<strong>Install Content</strong>, then <strong>Remove Content</strong>.
+A list will appear showing content packs / modules installed on your
+IIAB.</p>
+<p>Use the checkboxes to select those older-or-unneeded ZIM files and
+OER2Go (RACHEL) modules that you want to remove.</p>
+<p>Then click <strong>Delete Checked Files</strong> at the top of the
+page!</p>
+<p>Reminder: you can always click <strong>Help</strong> near the
+top-right on any page within IIAB’s Admin Console, then click on help
+section <strong>Install Content</strong>.</p>
+</body>
+</html>

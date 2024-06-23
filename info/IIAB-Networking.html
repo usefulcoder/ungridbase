@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Networking</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="internet-in-a-box-iiab-networking">Internet-in-a-Box (IIAB)
+Networking</h1>
+<h2 id="simple-option-learning-hotspot-inside">Simple Option: Learning
+Hotspot Inside</h2>
+<p><u>If your Internet-in-a-Box (IIAB) device contains Wi-Fi hardware
+capable of AP mode</u> (<a
+href="FAQ.html#Can_I_create_a_Wi-Fi_hotspot_using_an_old_laptop%3F">Access
+Point mode</a>, e.g. to broadcast to many students) it’s likely already
+working as a <a href="https://internet-in-a-box.org/"><strong>Learning
+Hotspot</strong></a> for your community (i.e. if you <a
+href="FAQ.html#Is_a_quick_installation_possible%3F">installed
+IIAB software</a>). You’ll want to get to know the
+<code>sudo iiab-hotspot-off</code> and <code>sudo iiab-hotspot-on</code>
+commands in the <a href="#common-customizations">common
+customizations</a> section below.</p>
+<!--CONTEXT: The above layout is by far the most popular — especially with Raspberry Pi's and refurbished laptops — also for example with Intel NUC Mini PC's containing Wi-Fi hardware capable of supporting 12 WiFi client [student] devices.
+
+<!--Optionally a few [common customizations](#common-customizations) are possible, in which case you may want to get to know the `sudo iiab-hotspot-off` and `sudo iiab-hotspot-on` commands.
+-->
+<p><u>If however your IIAB device does not contain Wi-Fi hardware
+capable of AP mode,</u> please read about the <a
+href="#three-network-modes">three network modes</a> below. You’ll want
+to get to know the <a
+href="https://github.com/iiab/iiab/tree/master/roles/network#readme"><code>sudo iiab-network</code></a>
+command (to finalize your networking configuration) as well as learning
+about common customizations:</p>
+<!-- 🍒 GURU TIP 🍒
+
+You might also want to [attach an external Wi-Fi Access Point or Ethernet Router](#optionally-attach-a-wi-fi-access-point-or-ethernet-router-lan-side) to your IIAB, e.g. to expand the number of Wi-Fi client [student] devices.  CAVEAT: Field/Operations communities generally dislike such spaghetti wiring/power/installation/configuration/maintenance complexities as compared to [KISS](https://en.wikipedia.org/wiki/KISS_principle) (e.g. underpaid teachers especially, who strongly prefer All-in-One self-contained Internet-in-a-Box devices, that are battle-tested!)
+-->
+<ul>
+<li><a href="#three-network-modes">Three Network Modes</a>
+<ul>
+<li><a href="#know-your-topology-and-ip-addresses">Know Your Topology
+(and IP Addresses)</a></li>
+<li><a href="#how-is-the-bridge-br0-created">How is the Bridge (br0)
+Created?</a></li>
+<li><a href="#bluetooth">Bluetooth</a></li>
+</ul></li>
+<li><a href="#networkmanager">NetworkManager</a><br></li>
+<li><a href="#common-customizations">Common Customizations</a><br>    <a
+href="#1-wi-fi-country-code">1. Wi-Fi Country Code</a><br>    <a
+href="#2-apsta-mode">2. AP+STA Mode</a><br>    <a
+href="#3-exclude-an-interface-from-br0">3. Exclude an Interface from
+br0</a><br>    <a href="#4-raspberry-pi-wi-fi-firmware">4. Raspberry Pi
+Wi-Fi Firmware</a><br>    <a href="#5-static-ip-address">5. Static IP
+Address</a><br>    <a href="#6-common-network-variables">6. Common
+Network Variables</a><br>    <a href="#7-other-network-variables">7.
+Other Network Variables</a><br>    <a
+href="#8-can-i-opt-out-of-networking">8. Can I Opt Out of
+Networking?</a><br>    <a
+href="#9-optionally-attach-a-wi-fi-access-point-or-ethernet-router-lan-side">9.
+Optionally, Attach a Wi-Fi Access Point or Ethernet Router (LAN
+Side)</a><br>    <a href="#10-netplan">10. Netplan</a></li>
+<li><a href="#dns">DNS</a></li>
+<li><a href="#list-of-ports--services">List of Ports / Services</a>
+<ul>
+<li><a href="#firewall-iptables">Firewall (iptables)</a></li>
+</ul></li>
+</ul>
+<h2 id="three-network-modes">Three Network Modes</h2>
+<p>IIAB supports <a
+href="IIAB-Installation.html#supported-network-modes">three
+possible network modes</a>:</p>
+<ul>
+<li><strong>Appliance</strong> - your IIAB server acts as any other
+computer on an already existing network, but exposes its IIAB content
+and apps/services to this network. Your IIAB can have a single network
+interface (we refer to this as the
+<strong>WAN</strong>).<!-- whether or not it can reach the Internet).-->
+This is the interface that you used to install IIAB.</li>
+<li><strong>LAN Controller</strong> - allows for creating a local area
+network, using <a
+href="https://thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a>. Your IIAB
+can have a single network interface (we refer to this as the
+<strong>LAN</strong>) once IIAB is fully installed and internet access
+in no longer required.</li>
+<li><strong>Gateway</strong> - allows for creating a local area network,
+using <a href="https://thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a>,
+optionally caching content using a web-caching proxy (e.g. <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/templates/squid/squid.conf.j2">Squid</a>)<!--and traffic shaping.-->.
+Your IIAB must have two or more network interfaces (<strong>WAN
+side</strong> and <strong>LAN side</strong>).</li>
+</ul>
+<!--🍒 GURU TIPS 🍒
+
+1. IIAB's installer (or the [sudo iiab-network](https://github.com/iiab/iiab/tree/master/roles/network#readme) command) first seeks out the WAN interface, as required for _Appliance_ mode.
+
+2. Then, if it finds other network interfaces (for the LAN), it sets your IIAB to _Gateway_ mode.  NOTE: If "student" client machines (on the LAN side) should have "passthrough" access to Internet (on the WAN side), you also need to set `iiab_gateway_enabled: True` a priori, within [/etc/iiab/local_vars.yml](FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F)
+
+3. Finally, to use _LAN Controller_ mode, you need to make some adjustments, so that all available [network interfaces](IIAB-Platforms.html#network-adapters) live under the LAN side "bridge" a.k.a. `br0` (e.g. August 2022 tips at [#3330](https://github.com/iiab/iiab/issues/3330#issuecomment-1206793172), for Ubuntu especially).  See also [common customizations (5) and (7)](#common-customizations).
+   - **DOES SIDE DOC IIAB-Platforms.html#network-adapters NEED OVERHAUL?** 
+-->
+<h3 id="know-your-topology-and-ip-addresses">Know Your Topology (and IP
+Addresses)</h3>
+<p>IIAB’s <strong>WAN side</strong> IP address is normally assigned by
+whatever DHCP device manages your building’s network (though it’s
+possible to <a
+href="FAQ.html#How_do_I_set_a_static_IP_address%3F">set
+a fixed IP address</a>). Of course there is no WAN side (and WAN side IP
+address) if your IIAB is set up in <em>LAN Controller</em> mode!</p>
+<p>IIAB’s <strong>LAN side</strong> (regardless whether in
+<em>Gateway</em> or <em>LAN Controller</em> mode) is a <a
+href="https://en.wikipedia.org/wiki/Network_bridge">bridge (br0)</a> to
+provide a constant virtual interface for dnsmasq’s DHCP server that
+requires a static IP address, without knowing network hardware interface
+names in advance. These hardware interface names were once known as
+“slaves” (e.g. wlan0, bnet0, eth1, enx0c37961e7ce1) and allow “student”
+devices (that connect to the <a href="#three-network-modes">LAN side</a>
+of IIAB) to function as DHCP clients for IP/routing/DNS purposes.</p>
+<p>Remember, as some are confused by this, that IIAB’s LAN side always
+has IP address <code>10.10.10.10</code> (also known as
+<code>box.lan</code>, or simply <code>box</code>). This IP address is
+not visible on the <a href="#three-network-modes">WAN side</a> — it’s
+only visible on the <a href="#three-network-modes">LAN side</a>. This IP
+address is used by all of the bridge’s interfaces (whether wireless or
+wired) and is often useful when testing browsers
+(e.g. http://10.10.10.10, http://box.lan, http://box).</p>
+<!-- 🍒 GURU TIP 🍒 
+
+IIAB uses a bridge br0 ([br0](https://unix.stackexchange.com/questions/458649/what-is-and-what-creates-br0-interface)) to provide a constant virtual interface for dnsmasq's DHCP server that requires a static IP address without knowing network hardware interface names in advance. These hardware interface names were once known as "slaves" (e.g. wlan0, bnet0, eth1, enx0c37961e7ce1) and allow "student" devices (that connect to the [LAN side](#three-network-modes) of IIAB) to function as DHCP clients for IP/routing/DNS purposes. -->
+<!--See [How is the Bridge (br0) Created](IIAB-Networking.html#how-is-the-bridge-br0-created) to learn more.-->
+<h3 id="how-is-the-bridge-br0-created">How is the Bridge (br0)
+Created?</h3>
+<p>IIAB’s <a href="#three-network-modes">LAN side</a> bridge (<a
+href="https://unix.stackexchange.com/questions/458649/what-is-and-what-creates-br0-interface">br0</a>)
+is created and configured in one of 3 ways:</p>
+<ol type="1">
+<li>Until October 2023, Raspberry Pi OS used <a
+href="https://roy.marples.name/projects/dhcpcd/">dhcpcd</a> to create
+<code>br0</code>. See <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/tasks/rpi_debian.yml">rpi_debian.yml</a>
+and related <a
+href="https://github.com/iiab/iiab/tree/master/roles/network/templates/network">templates</a>.</li>
+<li>On many OS’s (with <a
+href="https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html">systemd-networkd</a>)
+<a href="https://en.wikipedia.org/wiki/Systemd">systemd</a> creates
+<code>br0</code>. See <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/tasks/sysd-netd-debian.yml">sysd-netd-debian.yml</a>
+and related <a
+href="https://github.com/iiab/iiab/tree/master/roles/network/templates/network">templates</a>.</li>
+<li>On OS’s with <a
+href="https://en.wikipedia.org/wiki/NetworkManager">NetworkManager</a>
+(e.g. Raspberry Pi OS Bookworm, released 2023-10-11) <code>br0</code> is
+in fact created by systemd. See <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/tasks/NM-debian.yml">NM-debian.yml</a>
+and related <a
+href="https://github.com/iiab/iiab/tree/master/roles/network/templates/network">templates</a>.</li>
+</ol>
+<h3 id="bluetooth">Bluetooth</h3>
+<p>[ This can be made to work, but is not mainline as of April 2023.
+]</p>
+<h2 id="networkmanager">NetworkManager</h2>
+<p>Raspberry Pi OS adopted <a
+href="https://en.wikipedia.org/wiki/NetworkManager">NetworkManager</a>
+(<a href="https://networkmanager.dev/">technical docs</a>) as its new
+default (moving away from dhcpcd) on <a
+href="https://www.raspberrypi.com/news/bookworm-the-new-version-of-raspberry-pi-os/">2023-10-11</a>.</p>
+<p>As this is further refined in 2023/2024, please see <a
+href="#how-is-the-bridge-br0-created">How is the Bridge (br0)
+Created?</a>, <a href="#10-netplan">Netplan</a> and <a
+href="#dns">DNS</a> — while reviewing ongoing progress for Raspberry Pi
+OS at <a href="https://github.com/iiab/iiab/issues/3657">#3657</a>, <a
+href="https://github.com/iiab/iiab/pull/3658">PR #3658</a> and <a
+href="https://github.com/iiab/iiab/pull/3659">PR #3659</a>.</p>
+<h2 id="common-customizations">Common Customizations</h2>
+<h3 id="wi-fi-country-code">1. Wi-Fi Country Code</h3>
+<!-- 1. <a name="wi-fi-country-code"></a> -->
+<p>IIAB tries to set the legally-mandated Wi-Fi country code (regulatory
+domain) automatically, based on your OS settings, if your IIAB has an
+internal Wi-Fi hotspot.</p>
+<p>You can also change the Wi-Fi country code after IIAB’s installed, if
+necessary. To do this: 1. Set <code>host_country_code: XX</code> in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+(where <code>XX</code> is your actual country code / regulatory domain).
+2. Run <code>sudo iiab-network</code> — FYI if
+<code>wifi_up_down: True</code> is set (to attempt <a
+href="#2-apsta-mode">AP+STA mode</a>, as briefly explained around <a
+href="https://github.com/iiab/iiab/blob/ccc074ee73759d5f7c810648b75cc6ed75dac7ae/vars/local_vars_small.yml#L94-L95">Line
+94</a> of /etc/iiab/local_vars.yml)) then your IIAB will also attempt to
+generate a new unique BSSID/MAC address, for internal Wi-Fi interface
+<code>ap0</code>. The newly synthesized MAC address will always start
+with “02”. - FYI if <code>wifi_up_down: True</code>, then IIAB always
+uses <code>ap0</code> as the name of the downstream Wi-Fi interface
+(when cloning the hardware Wi-Fi interface name, that’s used to connect
+to Wi-Fi upstream). - FYI if <code>wifi_up_down: False</code>, then the
+name of your IIAB’s Wi-Fi interface will typically be <code>wlan0</code>
+(or whatever’s established by the OS). 3. WARNING: OS settings may <a
+href="https://github.com/iiab/iiab/pull/3537#issuecomment-1513919258">supersede
+your <code>host_country_code</code> setting</a> in some circumstances —
+see <a
+href="https://github.com/iiab/iiab/pull/3537#issuecomment-1513919258">PR
+#3537</a> for more detail.</p>
+<p>🍒 GURU TIPS 🍒</p>
+<ul>
+<li>Run <code>iw reg get</code> to see the detected Wi-Fi country code
+and its legal frequencies.</li>
+<li>Run <code>regdbdump /usr/lib/crda/regulatory.bin</code> to see the
+RF (radio frequency) bands associated with each country code (about 1200
+lines in total).</li>
+</ul>
+<h3 id="apsta-mode">2. AP+STA Mode</h3>
+<p>In addition to IIAB’s learning hotspot, you can
+<em>simultaneously</em> connect your IIAB to the Internet — using the
+very same Wi-Fi hardware inside your IIAB — if it supports <a
+href="https://docs.raspap.com/ap-sta/">AP+STA mode</a>. WARNING: <a
+href="FAQ.html#Can_I_create_a_Wi-Fi_hotspot_using_an_old_laptop%3F">Not
+all Wi-Fi firmware supports this</a>, and even if it does work,
+bandwidth/stability may suffer!</p>
+<p>If for example your IIAB is a Raspberry Pi (and
+<code>wifi_up_down: True</code> was set and enacted, as briefly
+explained around <a
+href="https://github.com/iiab/iiab/blob/ccc074ee73759d5f7c810648b75cc6ed75dac7ae/vars/local_vars_small.yml#L94-L95">Line
+94</a> of /etc/iiab/local_vars.yml) you can try these 3 commands at the
+Linux command-line:</p>
+<ol type="1">
+<li>After IIAB’s software is fully installed, run <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/templates/hostapd/iiab-hotspot-off"><code>sudo iiab-hotspot-off</code></a></li>
+<li>Connect your IIAB to the building’s Wi-Fi Internet — e.g. by running
+<code>sudo raspi-config</code> on Raspberry Pi OS, to enter the
+building’s 2.4 GHz SSID and its password (do not use 5.0 GHz!) Or do the
+same thing using IIAB’s <strong>Admin Console</strong> (box.lan/admin)
+<strong>&gt; Control &gt; Wifi Control</strong>. Or if you must, use the
+graphical widget in the top-right of your Linux OS’s desktop.</li>
+<li>Run <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/templates/hostapd/iiab-hotspot-on"><code>sudo iiab-hotspot-on</code></a>
+then Reboot, to verify that “student” Wi-Fi devices can once again
+connect to your IIAB! <em>Note: “student” Wi-Fi devices (i.e. your
+IIAB’s Wi-Fi client devices) are blocked from accessing the Internet <a
+href="https://github.com/iiab/iiab/blob/0dc7aeed33f082f419a11d92f3bf89ba60401b12/vars/local_vars_small.yml#L95-L97">by
+default</a>.</em></li>
+</ol>
+<p>🍒 GURU TIPS 🍒</p>
+<ul>
+<li>Your IIAB cannot set up the downstream Wi-Fi interface
+(i.e. <code>ap0</code>, the machine’s internal hotspot) until you’ve
+associated your IIAB’s upstream Wi-Fi interface (e.g. <code>wlan0</code>
+or similar) with a WiFi Access Point.</li>
+<li><code>ap0</code> must use the same frequency and channel as the
+upstream Wi-Fi. Run <code>iw dev</code> or <code>iw wlan0 info</code> or
+<code>iw ap0 info</code> to see that frequency and channel.</li>
+<li>Your IIAB will synthesize a MAC address for network interface
+<code>ap0</code> — see also the <a href="#1-wi-fi-country-code">Wi-Fi
+Country Code</a> section just above.</li>
+<li>For more detail, see <a
+href="https://github.com/iiab/iiab/pull/3549">PR #3549</a>, <a
+href="https://github.com/iiab/iiab/pull/3555">PR #3555</a> and <a
+href="https://github.com/iiab/iiab-admin-console/pull/551">PR
+iiab-admin-console#551</a>.</li>
+</ul>
+<h3 id="exclude-an-interface-from-br0">3. Exclude an Interface from
+br0</h3>
+<p>If your Internet-in-a-Box (IIAB) contains multiple Wi-Fi interfaces,
+put the following into <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+to ask IIAB not to create a <a href="#three-network-modes">LAN side</a>
+access point on the (for example) <code>wlan0</code> interface:</p>
+<pre><code>reserved_device: wlan0</code></pre>
+<p>This is used to exclude the listed device during network detection,
+and for calculation of <code>br0</code>’s (i.e. LAN side) member/slave
+devices. See also: <a
+href="https://github.com/iiab/iiab/issues/2610#issuecomment-781888138">#2610</a>,
+PR <a href="https://github.com/iiab/iiab/pull/2682">#2682</a>, PR <a
+href="https://github.com/iiab/iiab/pull/3334">#3334</a>.</p>
+<p>CONTEXT: IIAB code defaults to the highest numbered when setting up a
+Wi-Fi hotspot, e.g. IIAB would normally use wlan1 anyway, if it found
+both {wlan0, wlan1}. So in this case <code>reserved_device: wlan0</code>
+just avoids ambiguity, explicitly confirming that wlan0 should remain
+unused by IIAB. You’d typically do this to force wlan0 onto the <a
+href="#three-network-modes">WAN side</a> (e.g. for possible Internet
+access, or other purposes) of your IIAB. Guaranteeing that your wlan1
+becomes the “learning hotspot” Wi-Fi access point on the LAN side —
+i.e. under the bridge (<code>br0</code>) — as shown by running
+<code>bridge -d link</code>. Background at: <a
+href="https://github.com/iiab/iiab/pull/531#issuecomment-344963643">#531</a></p>
+<h3 id="raspberry-pi-wi-fi-firmware">4. Raspberry Pi Wi-Fi Firmware</h3>
+<p>IIAB provides you <a
+href="https://github.com/iiab/iiab/blob/25d8d6a0c8357624829d391d6dc19fcaf913fe20/vars/local_vars_small.yml#L75-L92">WiFi
+firmware alternatives</a> for most Raspberry Pi’s, which can allow you
+to expand the number of Wi-Fi client (student) devices. If you change
+this in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+after installing IIAB, you also need to run
+<code>cd /opt/iiab/iiab</code> then
+<code>sudo ./runrole --reinstall firmware</code></p>
+<h3 id="static-ip-address">5. Static IP Address</h3>
+<p>If you want to hard-code a Fixed IP Address on the <a
+href="#three-network-modes">WAN side</a> of your IIAB, see <a
+href="FAQ.html#How_do_I_set_a_static_IP_address%3F">“How
+do I set a static IP address?”</a> at <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<h3 id="common-network-variables">6. Common Network Variables</h3>
+<p>These 2 lines are important defaults in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+originating from mid-2017: * <code>ports_externally_visible: 3</code>  
+    (read <a href="#firewall-iptables">below</a> to modify your firewall
+settings for different kinds of campuses/SOHO/families) *
+<code>iiab_gateway_enabled: False</code>       (blocks <a
+href="#three-network-modes">LAN side</a> users from reaching the
+Internet, while permitting them access to IIAB/local content)</p>
+<p>April 2021 FYI: With iptables v1.8.5+ (<a
+href="https://en.wikipedia.org/wiki/Nftables">nftables</a>) evolving, <a
+href="https://github.com/iiab/iiab/pull/2728">PR #2728</a> introduced
+several improvements. For example, two commands now allow you to quickly
+enable or disable Internet for student/client devices: (IIAB’s gateway
+behavior) * <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/templates/gateway/iiab-internet-on"><code>sudo iiab-internet-on</code></a>
+* <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/templates/gateway/iiab-internet-off"><code>sudo iiab-internet-off</code></a></p>
+<p>WARNING: The change will persist (as part of iptables’ firewall rule
+set) through IIAB reboots until (1) the opposite command is run, or
+until (2) an Ansible command like <code>sudo iiab-network</code> is run,
+using the <code>iiab-gateway-enabled</code> variable’s value. RECAP: If
+you want this changed more permanently (so Ansible doesn’t wipe out your
+setting) change variable <code>iiab-gateway-enabled</code> in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+and then run: <code>sudo iiab-network</code></p>
+<h3 id="other-network-variables">7. Other Network Variables</h3>
+<p>Please see Jerry Vonau’s 2021-07-21 summary of <a
+href="https://github.com/iiab/iiab/issues/815#issuecomment-884497515">7
+networking topology variables</a>, that you can set in: <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+<!-- If `./iiab-install` has already completed,  To (re)configure networking after IIAB is installed, run:
+```
+sudo iiab-network
+```
+Or if necessary:
+```
+cd /opt/iiab/iiab
+sudo ./runrole --reinstall network
+```
+--></p>
+<h3 id="can-i-opt-out-of-networking">8. Can I Opt Out of
+Networking?</h3>
+<p>Sometimes when installing IIAB on a VM (Virtual Machine) or VPS
+(Virtual Private Server), you might prefer to avoid running <a
+href="https://github.com/iiab/iiab/tree/master/roles/network#readme">IIAB’s
+network role</a>.</p>
+<!-- Attempts to install outside the usual basic network layout, where one would have to resort to [commenting out the network role](https://github.com/iiab/iiab/blob/0dc7aeed33f082f419a11d92f3bf89ba60401b12/iiab-stages.yml#L63-L65) or [#3004](https://github.com/iiab/iiab/pull/3004) prior to [#3302](https://github.com/iiab/iiab/pull/3302). -->
+<p>One way to do this is to add <code>network_enabled: False</code> to
+<a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+to skip the network configuration step, while still installing all the
+prerequisites should you later need to run: <a
+href="https://github.com/iiab/iiab/tree/master/roles/network#readme"><code>sudo iiab-network</code></a></p>
+<p>One can also skip installing these prerequisites entirely, by adding
+<code>network_install: False</code> to <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a></p>
+<p>(Either way, remember that it’s <em>ALWAYS</em> a good idea to
+customize /etc/iiab/local_vars.yml <em>PRIOR</em> to installing IIAB!)
+<!-- **_before you begin installing IIAB or stop the install to edit local_vars.yml when asked if you want to edit local_vars.yml_**. --></p>
+<!-- In either case, there is just enough of the network role remaining to record what is detected, but no network configuration takes place. -->
+<h3
+id="optionally-attach-a-wi-fi-access-point-or-ethernet-router-lan-side">9.
+Optionally, Attach a Wi-Fi Access Point or Ethernet Router (LAN
+Side)</h3>
+<p>Schools tell us they are very unhappy with the Wi-Fi limit built into
+many Intel NUC Mini PC’s, that prevents 12+ simultaneous Wi-Fi client
+[student] devices from connecting. So what options do they have?</p>
+<p>Attaching external Wi-Fi Access Points, Routers or Switches using an
+Ethernet cable is one way to expand this number — e.g. in a community
+library where a large number of laptops, tablets and/or smartphones are
+in use. The Access Points, Routers or Switches will become part of the
+<a href="#three-network-modes">LAN side</a> bridge (br0) of your
+IIAB.</p>
+<p>In Most Cases: It’s best to disable the DHCP service within your
+Wi-Fi Access Point or Wi-Fi Router, instead allowing IIAB’s own DHCP
+service (<a
+href="https://thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a>) to assign
+<a
+href="https://en.wikipedia.org/wiki/Private_network#Private_IPv4_addresses">10.x.x.x
+IP addresses</a> to each Wi-Fi client [student] device. Do this within
+your Wi-Fi device’s own control panel (read the manufacturer’s
+instructions if necessary!)</p>
+<p>In Other Cases: Some choose to leave the Wi-Fi device’s DHCP service
+enabled. If so, just be careful to think through carefully whether (1)
+your IIAB will assign a DHCP IP address to your Wi-Fi device
+(recommended!) or (2) the other way around, i.e. your Wi-Fi device will
+assign a DHCP IP address to your IIAB (not recommended or
+supported!)</p>
+<p>FINALLY: Before running <a
+href="https://github.com/iiab/iiab/tree/master/roles/network#readme"><code>sudo iiab-network</code></a>
+to finalize your network configuration, you need to connect your Wi-Fi
+Access Point(s), Wi-Fi Router(s) and/or Switches to your IIAB, per the
+final “in-field” layout, and ensure they’re all turned on! EXAMPLE: If
+you’re going to use a wired Ethernet on the <a
+href="#three-network-modes">LAN side</a> (i.e. as a “slave” interface
+within bridge <code>br0</code>, for wired and/or wireless client
+[student] devices) connect all cables and turn everything on, before
+running <code>sudo iiab-network</code>. ADDITIONAL WARNING: if your
+wired Ethernet LAN is not connected during boot, you may experience a
+2-minute delay similar to <a
+href="https://github.com/iiab/iiab/pull/1634">PR #1634</a>.
+<!-- after IIAB software is installed. --></p>
+<p>🍒 GURU TIPS 🍒</p>
+<ul>
+<li><p>Many Raspberry Pi’s support up to 32 simultaneous Wi-Fi client
+[student] devices (IIAB provides you <a
+href="https://github.com/iiab/iiab/blob/25d8d6a0c8357624829d391d6dc19fcaf913fe20/vars/local_vars_small.yml#L75-L92">WiFi
+firmware alternatives</a>; if you change this after installing IIAB, you
+also need to run <code>cd /opt/iiab/iiab</code> then
+<code>sudo ./runrole firmware</code>).</p></li>
+<li><p>IIAB intentionally does not support attaching Wi-Fi Access Points
+or Ethernet Routers to Raspberry Pi OS. The reason is that field
+implementers prefer hassle-free Internet using ad hoc Ethernet cables
+(e.g. from the Raspberry Pi IIAB to any nearby/live cablemodem). If you
+must attach a Wi-Fi device to your Raspberry Pi IIAB using an Ethernet
+cable, consider installing <a
+href="https://ubuntu.com/download/raspberry-pi">64-bit Ubuntu Server</a>
+instead of Raspberry Pi OS from the beginning, <em>before you <a
+href="https://download.iiab.io">install IIAB</a>.</em></p></li>
+<li><p>If you’re expanding your IIAB’s <a
+href="#three-network-modes">LAN side</a> via an Ethernet cable with
+Netplan in the mix (e.g. any recent version of Ubuntu), then see also:
+<a href="https://github.com/iiab/iiab/pull/1634">PR #1634</a>, <a
+href="https://github.com/iiab/iiab/pull/2380">PR #2380</a>, <a
+href="https://github.com/iiab/iiab/pull/3319">PR #3319</a>, <a
+href="https://github.com/iiab/iiab/issues/3330">#3330</a>, <strong><a
+href="https://github.com/iiab/iiab/issues/3385#issuecomment-1263791330">#3385
+(comment)</a></strong></p></li>
+</ul>
+<h3 id="netplan">10. Netplan</h3>
+<p><a href="https://netplan.io">Netplan</a> allows pre-configuring of
+network interfaces during Ubuntu installation — and every subsequent
+boot. (Netplan was originally designed for the cloud, was mainlined by
+Ubuntu 18.04 in 2018, and made authoritative starting with Ubuntu 20.04
+in 2020. Netplan should generally work with Linux Mint too.)</p>
+<ul>
+<li>Supports <a
+href="https://manpages.ubuntu.com/manpages/jammy/man5/systemd.network.5.html">systemd-networkd</a><!-- https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html -->
+and/or <a
+href="https://en.wikipedia.org/wiki/NetworkManager">NetworkManager</a><!-- https://help.ubuntu.com/community/NetworkManager -->.</li>
+<li>Please see IIAB’s <code>/etc/netplan</code> examples within <a
+href="IIAB-Platforms.html#ubuntu-2204">IIAB
+Platforms &gt; Operating Systems</a>.
+<ul>
+<li>During every boot (or running of <code>sudo netplan apply</code>),
+<code>/etc/netplan/*.yaml</code> files take precedence over pre-existing
+networking files (e.g. specifying what will end up in
+/run/systemd/network).</li>
+<li>If you’re expanding your IIAB’s <a href="#three-network-modes">LAN
+side</a> via an Ethernet cable with Netplan in the mix, see also: <a
+href="https://github.com/iiab/iiab/pull/1634">PR #1634</a>, <a
+href="https://github.com/iiab/iiab/issues/2379#issuecomment-630512598">#2379
+(comment)</a>, <a href="https://github.com/iiab/iiab/pull/2380">PR
+#2380</a>, <a href="https://github.com/iiab/iiab/pull/3319">PR
+#3319</a>, <a href="https://github.com/iiab/iiab/issues/3330">#3330</a>,
+<strong><a
+href="https://github.com/iiab/iiab/issues/3385#issuecomment-1263791330">#3385
+(comment)</a></strong>, <a
+href="https://github.com/iiab/iiab/pull/3537">PR #3537</a>
+<ul>
+<li>NOTE: <a href="#how-is-the-bridge-br0-created">br0</a> (i.e. IIAB’s
+LAN-side bridge) doesn’t get defined in <code>/etc/netplan</code>, but
+the underlying systemd files are still used (<a
+href="https://github.com/iiab/iiab/pull/3537#issuecomment-1514791824">PR
+#3537</a>).</li>
+</ul></li>
+</ul></li>
+<li>You can learn a lot from <a
+href="https://ubuntu.com/server/docs/network-configuration">Ubuntu’s
+Network Configuration</a> doc, by looking over their <a
+href="https://netplan.io/examples">Netplan examples</a>, and reading
+their <a href="https://netplan.io/faq">Netplan FAQ</a>.
+<ul>
+<li>Netplan is <a
+href="https://discourse.ubuntu.com/t/ubuntu-desktop-charting-a-course-for-the-future/38092">officially
+coming</a> to Ubuntu Desktop 23.10+ — see “The future of Netplan desktop
+integration” within 2023-07-18’s <a
+href="https://ubuntu.com/blog/a-declarative-approach-to-linux-networking-with-netplan">“A
+declarative approach to Linux networking with Netplan”</a>.</li>
+<li>Ubuntu Desktop 23.10 <a
+href="https://discourse.ubuntu.com/t/mantic-minotaur-release-notes/35534">FYI</a>:
+“The configuration file /etc/netplan/01-network-manager-all.yaml (which
+specifies Network Manager as the netplan renderer) has been moved to
+<code>/lib/netplan/00-network-manager-all.yaml</code> to reflect the
+fact that it should not be edited.”</li>
+</ul></li>
+</ul>
+<h2 id="dns">DNS</h2>
+<p>DNS (name resolution) for <a href="#three-network-modes">LAN side</a>
+clients is provided by <a
+href="https://thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a>.
+<!-- service, unless you override that in favor of named (BIND) in [/etc/iiab/local_vars.yml](FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F)--></p>
+<p>However some Linux distributions do not function well with dnsmasq’s
+default service (several of these ship with systemd unit files that have
+a timing problem). As a result, IIAB instead uses its own <a
+href="https://github.com/iiab/iiab/blob/d082e8136239851bfc711b28b43a37cadd86af2f/roles/network/tasks/enable_services.yml#L1-L65">iiab-dnsmasq</a>
+service — to start dnsmasq at the correct time during boot and IIAB
+disables the OS’s stock dnsmasq unit file across all distros, to be
+safe. Finally, <em>after</em> your IIAB install is complete, you can
+monitor dnsmasq as follows: systemctl status dnsmasq</p>
+<p>🍒 GURU TIPS 🍒</p>
+<p>IN <a
+href="IIAB-Networking.html#three-network-modes">APPLIANCE
+MODE</a>:</p>
+<p>    (1a) <a
+href="https://thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a> provides a
+caching name server, just for the IIAB box itself (on Raspberry Pi OS
+only).</p>
+<p>    (1b) Ubuntu 18.04+ <a
+href="https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html">systemd-resolved</a>
+runs on 127.0.0.53 providing DNS lookups (as seen in
+/etc/resolv.conf).</p>
+<!--
+<strike>dnsmasq is _disabled_ when IIAB is in Appliance mode.  _[No longer true as of mid-2019?]</strike>_
+-->
+<p>OUTSIDE OF <a
+href="IIAB-Networking.html#three-network-modes">APPLIANCE
+MODE</a>:</p>
+<p>    (2a) <a
+href="https://thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a> provides
+<em>both DHCP and DNS server functionality</em> for the <a
+href="#three-network-modes">LAN side</a> clients. On Raspberry Pi OS,
+dnsmasq provides DNS lookups for the box itself.</p>
+<p>    (2b) Ubuntu 18.04+ <a
+href="https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html">systemd-resolved</a>
+runs on 127.0.0.53 providing DNS lookups (as seen in /etc/resolv.conf).
+But all LAN side clients use dnsmasq. <!--
+<strike>dnsmasq provides _both DHCP and DNS server functionality_ when IIAB isn't in Appliance mode.</strike>
+
+<strike>3) While LAN side clients use dnsmasq, IIAB boxes use one of the following to get their own DNS from upstream:</strike>
+
+<strike>`systemctl status dhcpcd              # Raspbian`</strike><br>
+<strike>`systemctl status systemd-networkd    # Debian 9 Stretch`</strike><br>
+<strike>`systemctl status  ? ? ?              # Debian 10 Buster`</strike><br>
+<strike>`systemctl status systemd-resolved    # Ubuntu 18.04 (see netplan.io, replacing ifupdown)`</strike>
+--></p>
+<p>    (3) On Raspberry Pi OS, note that (a) systemd service <a
+href="https://en.wikipedia.org/wiki/Wpa_supplicant">wpa_supplicant</a>
+[was, up until Raspberry Pi OS Bullseye] started by the <a
+href="https://roy.marples.name/projects/dhcpcd/">dhcpcd</a> service
+[however since Raspberry Pi OS Bookworm was released 2023-10-11,
+wpa-supplicant appears to instead now be started by NetworkManager] (b)
+your building’s Wi-Fi SSID and password can be put into
+/etc/wpa_supplicant/wpa_supplicant.conf by running the
+<code>sudo raspi-config</code> command.</p>
+<h2 id="list-of-ports-services">List of Ports / Services</h2>
+<p>Many of the port numbers below can be changed when installing IIAB.
+If you need to do this, look over the default ports in <a
+href="https://github.com/iiab/iiab/blob/master/vars/default_vars.yml">default_vars.yml</a>,
+and then override those that are necessary within <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a></p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 37%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Protocol</th>
+<th style="text-align: center;">Port</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">22</td>
+<td>sshd</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">80</td>
+<td><a
+href="https://github.com/iiab/iiab/tree/master/roles/nginx#readme">nginx
+(was apache2)</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">83, 5060, 5160, 5161, 10000-20000</td>
+<td>pbx (Asterisk &amp; FreePBX)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">UDP</td>
+<td style="text-align: center;">137, 138</td>
+<td>samba</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">139, 445</td>
+<td>samba</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">631</td>
+<td>cups (printing)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">873</td>
+<td>xinetd (xs-rsync, for legacy XOs) <a
+href="https://github.com/iiab/iiab/tree/master/roles/0-DEPRECATED-ROLES/idmgr">[DEPRECATED]</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">UDP</td>
+<td style="text-align: center;">1194</td>
+<td>openvpn outgoing and not in iptables</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">1705</td>
+<td>openvpn outgoing handle announcements</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">1880</td>
+<td>nodered</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">1883</td>
+<td>mosquitto</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">3000</td>
+<td>kiwix-serve</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">3128, 3129</td>
+<td>squid</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">3130</td>
+<td>squid / dansguardian <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/tasks/dansguardian.yml.unused">[DEPRECATED]</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">4244</td>
+<td>internetarchive</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">4369, 5222, 5223, 5280, 47893</td>
+<td>ejabberd OR ejabberd-xs <a
+href="https://github.com/iiab/iiab/tree/master/roles/0-DEPRECATED-ROLES/ejabberd">[DEPRECATED]</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">UDP</td>
+<td style="text-align: center;">5353</td>
+<td>avahi, mDNS, bonjour</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">UDP</td>
+<td style="text-align: center;">5959-5970</td>
+<td>remoteit (outbound traffic)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8000</td>
+<td>jupyterhub</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8006</td>
+<td>kalite-serve-fr</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8007</td>
+<td>kalite-serve-es</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8008</td>
+<td>kalite-serve (English &amp; others)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8009</td>
+<td>kolibri</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8010</td>
+<td>calibre-serve (if avoiding idmgr/8080)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8080</td>
+<td>calibre-serve OR idmgr (for legacy XOs)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">1935, 8081</td>
+<td>cham video streaming server (nginx,rtmp) <a
+href="https://github.com/iiab/iiab/pull/1743">[PROPOSED]</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8083</td>
+<td>calibre-web</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8089</td>
+<td>sugarizer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">8090</td>
+<td>apache2 (NGINX proxying to legacy svcs) <a
+href="https://github.com/iiab/iiab/tree/master/roles/nginx#readme">[DEPRECATED]</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">9090</td>
+<td>captiveportal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">9091, 51413</td>
+<td>transmission (BitTorrent downloader)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">10000-10499, 12080 (main), 12443</td>
+<td>azuracast</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TCP</td>
+<td style="text-align: center;">27017 (formerly 27018)</td>
+<td>mongodb (if used by Sugarizer)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">UDP</td>
+<td style="text-align: center;">30000</td>
+<td>minetest (Minecraft, but open source!)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="firewall-iptables">Firewall (iptables)</h3>
+<p>On the <a href="#three-network-modes">LAN side</a>, all ports except
+for <a
+href="https://github.com/iiab/iiab/blob/60763fab8e41ee126a21af250cb6639203cbaed3/roles/network/templates/gateway/iiab-gen-iptables#L127-L139">databases
+ports</a> are generally open.</p>
+<p>On the <a href="#three-network-modes">WAN side</a>, “campus access”
+to <a
+href="https://github.com/iiab/iiab/blob/60763fab8e41ee126a21af250cb6639203cbaed3/roles/network/templates/gateway/iiab-gen-iptables#L163-L190">10+
+common IIAB services</a> like Kiwix (3000), KA Lite (8008) and Calibre
+(8010 or 8080) is enabled by default. Override this default by
+uncommenting <strong>just one</strong> of the following lines in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>:</p>
+<pre><code>#ports_externally_visible: 0 # none
+#ports_externally_visible: 1 # ssh only
+#ports_externally_visible: 2 # ssh + http-or-https (for Admin Console&#39;s box.lan/admin too)
+ports_externally_visible: 3  # ssh + http-or-https + common IIAB services  &lt;--  DEFAULT
+#ports_externally_visible: 4 # ssh + http-or-https + common IIAB services + Samba
+#ports_externally_visible: 5 # all but databases</code></pre>
+<p>If your IIAB is already installed, run <a
+href="https://github.com/iiab/iiab/blob/master/iiab-network">sudo
+iiab-network</a> to put this firewall change into effect.</p>
+<p>If necessary, you can further customize your iptables firewall by
+modifying <a
+href="https://github.com/iiab/iiab/blob/master/roles/network/templates/gateway/iiab-gen-iptables">/opt/iiab/iiab/roles/network/templates/gateway/iiab-gen-iptables</a>
+(part of Ansible’s <a
+href="https://github.com/iiab/iiab/tree/master/roles/network#readme">network</a>
+role, this is the template for the
+<code>/usr/bin/iiab-gen-iptables</code> command). As above, you’d then
+need to run <code>sudo iiab-network</code> to put your firewall changes
+into effect.</p>
+<p>To see your current firewall rules, run <code>iptables-save</code>
+(which is more reliable than looking at
+<code>/etc/iptables/rules.v4</code>). Use commands like
+<code>iptables -L -n</code> — also running
+<code>iptables -L -v -t nat</code> and <code>lsmod</code> can be useful,
+e.g. if verifying that ‘MASQUERADING’ is on (for IIAB’s gateway
+behavior, summarized further above).</p>
+<p>And if you really want to get rid of all iptables firewall rules,
+running <code>iptables -F</code> is the most important of <a
+href="https://github.com/iiab/iiab/blob/60763fab8e41ee126a21af250cb6639203cbaed3/roles/network/templates/gateway/iiab-gen-iptables#L115-L118">3
+commands</a>.</p>
+<p><strong><em>Please also read <a
+href="FAQ.html#Any_other_networking_tips%3F">“Any
+other networking tips?”</a> within <a
+href="FAQ.html">FAQ.IIAB.IO</a></em></strong></p>
+<!--
+## DOC REFINEMENT IDEAS: (JV/AH 2022-10-24 DRAFT)
+- Simplify high-level explanations
+  - Scope & audience
+  - Paint the landscape, as simply as possible
+## DOC REFINEMENT IDEAS: (JV/AH 2022-10-24 DRAFT)
+  - Outline [NetworkManager](https://en.wikipedia.org/wiki/NetworkManager), [systemd](https://en.wikipedia.org/wiki/Systemd), [netplan](https://netplan.io) configuration tips from IIAB-Platforms.html &mdash; which other [key concepts](https://ubuntu.com/server/docs/network-configuration) ?
+  - For the ["Common Customizations"](#common-customizations) section especially?
+  - Mention past/future trends on Raspberry Pi & mainline OS's
+- Contextualize or mention associated mini-docs like:
+  - https://github.com/iiab/iiab/tree/master/roles/network#readme
+  - FAQ.IIAB.IO -> [18 How do I provide Wi-Fi (wireless) to all my kids?](FAQ.html#How_do_I_provide_Wi-Fi_(wireless)_to_all_my_kids%3F)
+  - FAQ.IIAB.IO -> [19 Can I create a Wi-Fi hotspot using an old laptop?](FAQ.html#Can_I_create_a_Wi-Fi_hotspot_using_an_old_laptop%3F)
+  - FAQ.IIAB.IO -> [20 How do I change the wireless network name?](FAQ.html#How_do_I_change_the_wireless_network_name%3F)
+  - FAQ.IIAB.IO -> [21 Can I name my server something other than http://BOX.LAN ?](FAQ.html#Can_I_name_my_server_something_other_than_http://BOX.LAN_%3F)
+  - FAQ.IIAB.IO -> [22 How do I set a static IP address?](FAQ.html#How_do_I_set_a_static_IP_address%3F)
+  - FAQ.IIAB.IO -> [23 Any other networking tips?](FAQ.html#Any_other_networking_tips%3F)
+- Delineate advanced (lesser supported) networking options
+  - Make 100% clear these are AT YOUR OWN RISK
+  - Provide tips to lead people in the right direction
+- Delineate UNSUPPORTED options!
+-->
+</body>
+</html>

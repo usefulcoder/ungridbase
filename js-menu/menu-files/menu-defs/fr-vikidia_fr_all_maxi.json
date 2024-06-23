@@ -1,0 +1,19 @@
+{
+  "name": "fr-vikidia_fr_all_maxi",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "vikidia_fr_all_maxi",
+  "start_url": "",
+  "title": "Vikidia",
+  "logo_url": "vikidia.gif",
+  "description": "L’encyclopédie des 8-13 ans.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "8ca42ab3fe8ef7be3351605e84904035b66379c5",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

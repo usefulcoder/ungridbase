@@ -1,0 +1,19 @@
+{
+  "name": "fr-bouquineux_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "bouquineux_fr_all",
+  "start_url": "",
+  "title": "Bouquineux",
+  "logo_url": "bouquineux.png",
+  "description": "2500 livres numériques gratuits et libres de droits.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "c030e019b261cada8d20fa37594fad7f0f3a0e94",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

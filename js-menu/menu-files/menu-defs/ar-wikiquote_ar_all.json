@@ -1,0 +1,16 @@
+{
+  "name": "ar-wikiquote_ar_all",
+  "lang": "ar",
+  "intended_use": "zim",
+  "zim_name": "wikiquote_ar_all",
+  "title": "ويكي الاقتباس",
+  "logo_url": "Ncwikiquote2.png",
+  "description": "هذا المشروع متعدد اللغات يهدف لصنع موسوعة للاقتباسات والأقوال المشهورة بحيث تكون هذه الموسوعة متكاملة ومتنوعة ومفتوحة حيث يمكن للجميع المشاركة في الإضافة إلى هذه الموسوعة، بدأت النسخة العربية في 30 سبتمبر 2004 ويوجد الآن أكثر من 300 اقتباس",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "6aab8dff49ee219b572872d1f2263972290a05b5",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

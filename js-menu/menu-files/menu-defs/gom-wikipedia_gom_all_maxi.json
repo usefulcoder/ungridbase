@@ -1,0 +1,16 @@
+{
+  "name": "gom-wikipedia_gom_all_maxi",
+  "lang": "gom",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_gom_all_maxi",
+  "title": "Konknnint Wikipedia",
+  "logo_url": "Wikipedia-logo-v2-gom.png",
+  "description": "Konknni Wikipediacheo soglleo lekh interneta vinnem ani sodunk zata toslem rupan. Mozkur open access asa, mhonnge khors nastanam download korunk, porot vaprunk, vantunk ani tacher anink zodunk zata. Mellun fudlem avrutti anik-ui borem korum-ia.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "0c6200e0894678f4503b4ff1d08aaebbac16a32c",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

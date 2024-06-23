@@ -1,0 +1,19 @@
+{
+  "name": "en-vegetarianism_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "vegetarianism.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Veganism & Vegetarianism Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for those committed to a vegan or vegetarian lifestyle and anyone interested in learning more",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "98d00c45166df6cff42cd611301f7d8827dc1db9",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

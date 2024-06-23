@@ -1,0 +1,18 @@
+{
+  "name": "en-pngexams",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-pngexams",
+  "title": "Papua New Guinea Exams",
+  "logo_url": "en-pngexams_PNGImage.png",
+  "description": "National exam papers for grades 8, 10 & 12.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 257M, Files: 154, Age: children",
+  "edit_status": "repo",
+  "commit_sha": "7068e1259b1f7d156fc6033dab47b5f5f29855e4",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

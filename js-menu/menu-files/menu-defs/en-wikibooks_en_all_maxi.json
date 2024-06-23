@@ -1,0 +1,17 @@
+{
+  "name": "en-wikibooks_en_all_maxi",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikibooks_en_all_maxi",
+  "title": "Wikibooks",
+  "logo_url": "en-wikibooks.png",
+  "description": "Open books for an open world: e-book textbooks from Wikipedia, that anyone can edit.",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "2f39f6fc22bd4f55349f58046b23c206d164f274",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

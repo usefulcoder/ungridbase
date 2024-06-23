@@ -1,0 +1,17 @@
+{
+  "name": "ml-healthphone_ml",
+  "lang": "ml",
+  "intended_use": "html",
+  "moddir": "ml-healthphone",
+  "start_url": "videos",
+  "title": "മലയാളം (Malayalam): HealthPhone ആരോഗ്യവും ന്യൂട്രിഷൻ വീഡിയോ കളക്ഷൻ & ആപ്സ്",
+  "logo_url": "healthphone.jpg",
+  "description": "ഒരു വീഡിയോ റഫറൻസ് ലൈബ്രറി; കുടുംബങ്ങൾക്കും സമൂഹങ്ങൾക്കും മികച്ച മാതൃശിശുവും ശിശു ആരോഗ്യവും പോഷകാഹാര രീതികളും നയിക്കുക.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "1d12ef9700cbbdf90ab17fe7b9c15f5c4b4e5c42",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

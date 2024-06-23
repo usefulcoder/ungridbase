@@ -1,0 +1,19 @@
+{
+  "name": "en-economics_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "economics.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Economics Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for those who study, teach, research and apply economics and econometrics",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "b9b7590c0719e194e5ab12c5b47f7fa369e1d292",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

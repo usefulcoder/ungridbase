@@ -1,0 +1,20 @@
+{
+  "name": "en-ifixit_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "ifixit_en_all",
+  "start_url": "",
+  "title": "iFixit: The Free Repair Manual",
+  "logo_url": "ifixit.jpg",
+  "description": "iFixit is a global community of people helping each other repair things. Let's fix the world, one device at a time. Troubleshoot with experts in the Answers forum—and build your own how-to guides to share with the world. Fix your Apple and Android devices—and buy all the parts and tools needed for your DIY repair projects.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "255807e9325889f32a959406bf06a0e97965065a",
+  "previous_commit_sha": "219c6115f68bd55a10cd4abdb98c5c6c3f67c662",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

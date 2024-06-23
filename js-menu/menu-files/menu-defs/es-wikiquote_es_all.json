@@ -1,0 +1,16 @@
+{
+  "name": "es-wikiquote_es_all",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikiquote_es_all",
+  "title": "Wikiquote en Español",
+  "logo_url": "Ncwikiquote2.png",
+  "description": "La colección de citas donde tú puedes colaborar.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "07c11edbb94198ffdbb6c43a2941d88e0ae70e80",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

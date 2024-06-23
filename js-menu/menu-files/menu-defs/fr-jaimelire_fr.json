@@ -1,0 +1,19 @@
+{
+  "name": "fr-jaimelire_fr",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "jaimelire_fr",
+  "start_url": "",
+  "title": "J'aime lire + Planète J'aime lire (Bayard)",
+  "logo_url": "content.jpg",
+  "description": "12 histoires à lire et/ou écouter depuis les collections J'aime lire et Planète J'aime lire.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "86ceb005008bfee6be7d41c718f83a1c15f05fc8",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

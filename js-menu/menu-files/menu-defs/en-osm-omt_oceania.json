@@ -1,0 +1,17 @@
+{
+  "name": "en-osm-omt_oceania",
+  "lang": "en",
+  "intended_use": "map",
+  "map_name": "en-osm-omt_oceania",
+  "title": "OpenStreetMap: Oceania & Earth",
+  "logo_url": "osm.jpg",
+  "description": "19 levels of zoom (~1 m details) for Oceania, illustrating human geography.<p>10 levels of zoom (~1 km details) for satellite photos, covering the whole world.",
+  "extra_description": "Search for cities/towns with more than 1000 people.  There are about 127,654 worldwide.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "e6c5500717bd4ffe442894d39638ce73c9e5c391",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

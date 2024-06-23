@@ -1,0 +1,19 @@
+{
+  "name": "en-productivity_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "productivity.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Personal Productivity Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for people wanting to improve their personal productivity",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "8f918b1f4cbe0385c374e7523c0d49dcbca7dd1d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

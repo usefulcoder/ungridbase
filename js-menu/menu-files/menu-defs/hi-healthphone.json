@@ -1,0 +1,16 @@
+{
+  "name": "hi-healthphone",
+  "lang": "hi",
+  "intended_use": "html",
+  "moddir": "hi-healthphone",
+  "title": "HealthPhone Medical Video Collection in Hindi",
+  "logo_url": "healthphone.jpg",
+  "description": "विभिन्न स्वास्थ्य विषयों पर शैक्षिक वीडियो का एक संग्रह।",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "1bc850fe4cb25df44611f3c12aa5e74fe6d40024",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "de-wikibooks_de_all_maxi",
+  "lang": "de",
+  "intended_use": "zim",
+  "zim_name": "wikibooks_de_all_maxi",
+  "start_url": "",
+  "title": "Wikibooks in German",
+  "logo_url": "en-wikibooks.png",
+  "description": "Aus Wikibooks.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "f0d27bab2a6950d70b36c8b74e2317818b4ed9ac",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-wikem",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-wikem",
+  "start_url": "",
+  "title": "The Global Emergency Medicine Wiki",
+  "logo_url": "WikEM-Logo-m.png",
+  "description": "WikEM, The Global Emergency Medicine Wiki, is the world's largest emergency medicine open-access reference resource.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 1.4G, PDFs: 14,098, Images: 17,340, Date: May 2017",
+  "edit_status": "repo",
+  "commit_sha": "84fe09f7648ab19ac1a45bd6dddc6f500efc0004",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

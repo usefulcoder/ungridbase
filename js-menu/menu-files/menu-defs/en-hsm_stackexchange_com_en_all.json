@@ -1,0 +1,19 @@
+{
+  "name": "en-hsm_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "hsm.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "History of Science and Mathematics Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for people interested in the history and origins of science and mathematics",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "fde334ed0ed9841d6c5999563cd4110c0872c6b3",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

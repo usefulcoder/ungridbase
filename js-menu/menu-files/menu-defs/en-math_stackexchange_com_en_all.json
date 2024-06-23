@@ -1,0 +1,19 @@
+{
+  "name": "en-math_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "math.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Mathematics Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for people studying math at any level and professionals in related fields",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "d052869bf2f81ab3174e02927dc8fe2bb8c45f41",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

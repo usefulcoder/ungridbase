@@ -1,0 +1,19 @@
+{
+  "name": "es-GCF2021",
+  "lang": "es",
+  "intended_use": "html",
+  "moddir": "es-GCF2021",
+  "start_url": "",
+  "title": "Habilidades Digitales y Profesionales",
+  "logo_url": "es-GCF2015.jpg",
+  "description": "Artículos ilustrados y videos de aprendizaje que se enfocan en tecnología, capacitación laboral, matemáticas y vida.",
+  "extra_description": "Desarrolla tus habilidades, proyectar tus sueños y construye tu futuro.  La misión de GCFAprendeLibre es crear y proveer educación y oportunidades para enriquecer a quienes desean mejorar su calidad de vida.",
+  "extra_html": "",
+  "footnote": "Tamaño: 11G, Temas: 17; Lecciones: 86, Videos: 632, Paginas: 2371, Fecha: abril 2021",
+  "edit_status": "repo",
+  "commit_sha": "fc01e704cb4e02cc0657f228621969bb3311ed79",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

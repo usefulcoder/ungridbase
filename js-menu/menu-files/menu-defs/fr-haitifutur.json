@@ -1,0 +1,16 @@
+{
+  "name": "fr-haitifutur",
+  "lang": "fr",
+  "intended_use": "html",
+  "moddir": "fr-haitifutur",
+  "start_url": "www.haitifutur.com/ressources/videos/",
+  "title": "Haiti Future",
+  "logo_url": "fr-haitifutur.jpg",
+  "description": "A small collection of science experiment videos in French.",
+  "edit_status": "repo",
+  "commit_sha": "b5b5cc89c10e239411face0f2b3e09998db1490a",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

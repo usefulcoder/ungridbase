@@ -1,0 +1,16 @@
+{
+  "name": "en-wikipedia_en_for_schools",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_en_for_schools_opt",
+  "title": "Wikipedia for Schools",
+  "logo_url": "wikipedia4schools.jpg",
+  "description": "Encyclopedia contains 6000 of the best articles for children, from the English Wikipedia:",
+  "extra_html": "en-wikipedia_for_schools.html",
+  "edit_status": "repo",
+  "commit_sha": "c8cd19e4c7f304c85424fa5595e5a2f54b62976c",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

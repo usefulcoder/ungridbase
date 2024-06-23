@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-8.0-Release-Notes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<!-- TBA: Expected in Q1 2021.
+
+For now, please see the [IIAB 7.2 Release Notes](IIAB-7.2-Release-Notes.html).
+
+### _DRAFT_ -->
+<p><a href="https://internet-in-a-box.org">Internet-in-a-Box (IIAB)</a>
+8.0 was released December 31, 2022 (<a
+href="https://github.com/iiab/iiab/releases/tag/release-8.0">changelog</a>).
+<em>NOTE: As of March 2023, <a
+href="IIAB-8.1-Release-Notes.html">IIAB 8.1
+preview releases</a> are a much better option.</em>
+<!-- building on [IIAB 7.2](IIAB-7.2-Release-Notes.html) ([changelog](https://github.com/iiab/iiab/releases/tag/release-8.0)) for DIY digital libraries in schools, clinics and communities across all corners of the planet. --></p>
+<p>Use it to “steal” the <a
+href="https://internet-in-a-box.org/#quality-content">Internet’s crown
+jewels</a> and craft your own LIBRARY OF ALEXANDRIA with a $35 Raspberry
+Pi computer, or an old laptop.</p>
+<p>Install Internet-in-a-Box (IIAB) 8.0 using its <a
+href="https://download.iiab.io/8.0/">1-line installer</a> to transform
+an old PC/laptop into a “learning palace” for a developing world school,
+that urgently needs this today! Learn how easy it is to DIY (Frequently
+Asked Questions at <a
+href="FAQ.html">FAQ.IIAB.IO</a>) an amazing digital
+library for any school, clinic or community on this planet:</p>
+<h1 id="download.iiab.io">  🍓
+<a href=https://download.iiab.io>download.iiab.io</a> 🍓</h1>
+<p><strong>Drag-and-drop</strong> the very best of the World’s Free
+Knowledge (Wikipedia in any language, thousands of Khan Academy videos,
+zoomable OpenStreetMap, E-Books, WordPress journaling, the new Sugarizer
+1.5, Toys from Trash electronics projects, RACHEL Content Packs,
+Kolibri, Nextcloud, ETC) for those who are burning for learning — but
+just happen to be offline.</p>
+<p><em>The crown jewels are all free, liberated — and open source too!
+Internet-in-a-Box is now used in schools, libraries and medical clinics
+in more than 20 countries. Why not DIY your own LIBRARY OF ALEXANDRIA
+with a $35 Raspberry Pi computer, starting today?</em></p>
+<!-- ### About
+
+Internet-in-a-Box brings the [Internet's crown jewels](https://internet-in-a-box.org/#quality-content) and the very best of the World’s Free Knowledge (Wikipedia, Khan Academy, OpenStreetMap, E-Books, etc) to those who are burning for learning — but just happen to be offline.
+
+Use <b>drag-and-drop</b> to customize this "Learning Hotspot" with local gems too — tailored to the needs of your school, your library, your prison, your region and/or your very own family!
+
+**_Why not build your own [LIBRARY OF ALEXANDRIA](https://internet-in-a-box.org/) with a $35 Raspberry Pi 4 computer, starting today?_** -->
+<h3 id="whats-new">What’s New?</h3>
+<ul>
+<li>Use the <a
+href="https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/">64-bit
+OS Raspberry Pi OS</a> (<a
+href="https://downloads.raspberrypi.org/raspios_lite_arm64/images/">Lite</a>
+or <a
+href="https://downloads.raspberrypi.org/raspios_arm64/images/">with
+desktop</a>) which benchmarks <a
+href="https://www.phoronix.com/scan.php?page=article&amp;item=raspberrypi-32bit-64bit&amp;num=1">“~48%
+faster”</a> and allows schools to build up thoughtful e-book
+collections, e.g. if you run <code>sudo apt install calibre</code> (to
+install useful tools like <a
+href="https://manual.calibre-ebook.com/generated/en/calibredb.html">calibredb</a>
+and <a
+href="https://manual.calibre-ebook.com/generated/en/ebook-convert.html">ebook-convert</a>).
+<ul>
+<li>BONUS: Your 64-bit Internet-in-a-Box microSD card will work in $15
+Zero 2 W computers (if you don’t overstress its 512MB RAM!)</li>
+<li>Or use the original <a
+href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-32-bit">32-bit
+Raspberry Pi OS</a>, if you need your Internet-in-a-Box microSD card(s)
+to work in the older $10 Raspberry Pi Zero W.</li>
+</ul></li>
+<li>Support for <a href="https://releases.ubuntu.com/22.04/">Ubuntu
+22.04 LTS</a>, <a href="https://releases.ubuntu.com/22.10/">Ubuntu
+22.10</a> and <a href="https://itsfoss.com/linux-mint-21-features/">Mint
+21</a>. <sub><sub><a href="https://github.com/iiab/iiab/pull/3189">PR
+#3189</a></sub></sub> <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3307">#3307</a></sub></sub>
+<ul>
+<li>Preliminary support for <a
+href="https://release.debian.org/bookworm/freeze_policy.html">Debian 12
+Bookworm</a> and <a
+href="https://www.omgubuntu.co.uk/2022/11/download-ubuntu-23-04-daily-builds">Ubuntu
+23.04</a> pre-releases, if you read Section 2. of <a
+href="IIAB-Platforms.html">IIAB
+Platforms</a>. <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3399">#3399</a></sub></sub></li>
+<li>Preliminary support for WSL 1.0.0 <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3377">#3377</a></sub></sub></li>
+</ul></li>
+<li><a href="IIAB-Maps.html">IIAB Maps</a>
+for each continent/region are updated — and downloads are now
+dramatically faster! You can also now <a
+href="IIAB-Maps.html#customizations">customize
+the highlighting</a> of OpenStreetMap and Satellite Photo areas of
+interest. <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3077">#3077</a></sub></sub></li>
+<li>Install (or disable!) IIAB Apps a.k.a. services on-the-fly, using
+IIAB’s Admin Console <a
+href="https://github.com/iiab/iiab-admin-console/blob/master/roles/console/files/help/Config.rst">Configure</a>
+menu. Then click <code>Save Configuration</code> followed by
+<code>Install Configured Options</code>. <sub><sub><a
+href="https://github.com/iiab/iiab-admin-console/pull/475">PR
+iiab-admin-console#475</a></sub></sub>
+<ul>
+<li>App install speed is faster! <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3272">PR
+#3272</a></sub></sub></li>
+<li>Uses <code>skip_role_on_error: True</code> to help you install any
+large set IIAB Apps without interruption. <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3262">PR
+#3262</a></sub></sub></li>
+</ul></li>
+<li>Learning Hotspot configuration magic:
+<ul>
+<li>http://10.10.10.10 = http://box = http://box.lan by popular demand —
+super-easy to type into every smartphone/tablet/laptop browser!
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3299">PR
+#3299</a></sub></sub></li>
+<li>How many student Wi-Fi connections do you want your Raspberry Pi’s
+internal hotspot to offer? You can now set
+<code>rpizerow_rpi3_wifi_firmware</code> and/or
+<code>rpi3bplus_rpi4_wifi_firmware</code> in your IIAB’s <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F">/etc/iiab/local_vars.yml</a>
+depending on your scalability-versus-features needs. <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3103">PR
+#3103</a></sub></sub></li>
+<li><a
+href="FAQ.html#Can_I_create_a_Wi-Fi_hotspot_using_an_old_laptop%3F">Hotspot
+(AP mode) capability detection</a>, to help <a
+href="https://en.wikipedia.org/wiki/Upcycling">upcycle</a> old laptops
+into brand new IIAB’s! <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3222">PR
+#3222</a></sub></sub></li>
+<li>Honor country code if already set by Raspberry Pi OS. <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3179">PR
+#3179</a></sub></sub></li>
+</ul></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/matomo#readme">Matomo
+4.13.0+</a> (<a href="https://matomo.org/changelog/">changelog</a>) is
+like Google Analytics, but emphasizes privacy and data ownership, with
+URL <em>box/matomo</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3304">PR #3304</a></sub></sub>
+<ul>
+<li>If you just want a quick statistical dashboard, also try <a
+href="https://awstats.sourceforge.io/">AWStats</a>, with URL
+<em>box/awstats</em></li>
+</ul></li>
+<li>It’s now super easy to <a
+href="https://github.com/iiab/iiab/tree/master/roles/remoteit#readme">remotely
+support your IIAB</a> using https://remote.it — see also <a
+href="FAQ.html#How_can_I_remotely_manage_my_Internet-in-a-Box%3F">“How
+can I remotely manage my Internet-in-a-Box?”</a> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3161">PR
+#3161</a></sub></sub></li>
+<li>If you clone your IIAB onto a larger microSD, disk, SSD or USB
+stick, you can make use of the entire space on the new media (if you
+create a file named <code>/.expand-rootfs</code> and then reboot the new
+IIAB, which will auto-expand its root filesystem). This also now works
+with external USB boot drives. Raspberry Pi OS is supported, with other
+OS’s possible later. <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3137">PR #3137</a></sub></sub>
+<sub><sub><a
+href="https://github.com/iiab/iiab/issues/3325">#3325</a></sub></sub>
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3336">PR
+#3336</a></sub></sub> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3337">PR #3337</a></sub></sub>
+<sub><sub><a
+href="https://github.com/iiab/iiab/issues/3362">#3362</a></sub></sub></li>
+<li>Similar to the <a
+href="https://github.com/iiab/iiab/blob/master/scripts/iiab-diagnostics.README.md#objective">iiab-diagnostics</a>
+command but far more concise: you can also now run <a
+href="https://github.com/iiab/iiab/blob/master/scripts/iiab-summary">iiab-summary</a>
+to see a 20-25 line overview of your IIAB installation. <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3267">PR
+#3267</a></sub></sub></li>
+</ul>
+<h3 id="whats-upgraded">What’s Upgraded?</h3>
+<ul>
+<li><a href="https://github.com/janeczku/calibre-web#about">Calibre-Web
+0.6.19+</a> (<a
+href="https://github.com/janeczku/calibre-web/releases">changelog</a>,
+<a
+href="https://github.com/iiab/iiab/tree/master/roles/calibre-web#readme">docs</a>)
+with customizable URL’s <em>box/books, box/libros, box/livres</em></li>
+<li><a href="https://en.wikipedia.org/wiki/Kiwix">Kiwix 3.4.0</a> (<a
+href="https://github.com/kiwix/kiwix-tools/blob/master/Changelog">changelog</a>),
+based on libzim 8.1.0 (<a
+href="https://github.com/openzim/libzim/blob/master/ChangeLog">changelog</a>)
+and libkiwix 12.0.0 (<a
+href="https://github.com/kiwix/libkiwix/blob/master/ChangeLog">changelog</a>),
+with URL <em>box/kiwix</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3391">PR
+#3391</a></sub></sub></li>
+<li><a
+href="https://github.com/learningequality/kolibri/releases/">Kolibri
+0.15.9+</a> fixes peer importing of channels from “Local network or
+internet” (<a
+href="https://github.com/learningequality/kolibri/releases">changelog</a>,
+<a href="https://blog.learningequality.org/">blog</a>). And IIAB now
+installs Kolibri with the PPA method, making it <a
+href="https://kolibri.readthedocs.io/en/latest/install/ubuntu-debian.html#id2">easy
+to upgrade</a> using <code>apt update</code> etc. Use Kolibri with URL
+<em>box/kolibri</em> <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3227">#3227</a></sub></sub>
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3327">PR
+#3327</a></sub></sub></li>
+<li><a href="https://mediawiki.org/wiki/MediaWiki_1.39">MediaWiki 1.39.0
+LTS</a> <!--https://www.mediawiki.org/wiki/Release_notes/1.38--> (<a
+href="https://phabricator.wikimedia.org/source/mediawiki/browse/REL1_39/RELEASE-NOTES-1.39">changelog</a>),
+with URL <em>box/wiki</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3431">PR
+#3431</a></sub></sub></li>
+<li><a href="https://moodle.com/news/announcing-moodle-lms-4-1/">Moodle
+4.1 LTS</a> (<a
+href="https://moodle.org/mod/forum/discuss.php?d=441029#p1774448">announcement</a>,
+<!-- https://docs.moodle.org/dev/Moodle_4.1_release_notes --> <a
+href="https://moodledev.io/general/releases/4.1/">release notes /
+changelog</a>, <a href="https://docs.moodle.org/">docs</a>) with URL
+<em>box/moodle</em> (NOTE that IIAB attempts to install the <a
+href="https://download.moodle.org/releases/development/">latest weekly
+pre-release</a> of <a href="https://moodle.org/mod/forum/">Moodle
+4.2</a> <em>if</em> a bleeding-edge OS with PHP &gt;= 8.2 is detected.)
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3430">PR
+#3430</a></sub></sub></li>
+<li><a href="https://nextcloud.com/blog/">Nextcloud 25.0.2+</a> (<a
+href="https://nextcloud.com/changelog/#latest25">changelog</a>, <a
+href="https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Schedule">schedule</a>)
+with URL <em>box/nextcloud</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3208">PR
+#3208</a></sub></sub></li>
+<li><a href="https://wordpress.org/news/2022/11/misha/">WordPress
+6.1.1+</a> (<a
+href="https://make.wordpress.org/core/2022/10/12/wordpress-6-1-field-guide/">6.1
+field guide</a>, <a
+href="https://make.wordpress.org/core/2022/05/03/wordpress-6-0-field-guide/">6.0
+field guide</a>, <a
+href="https://make.wordpress.org/core/2022/01/10/wordpress-5-9-field-guide/">5.9
+field guide</a>, <a
+href="https://make.wordpress.org/core/2021/07/03/wordpress-5-8-field-guide/">5.8
+field guide</a>, <a
+href="https://make.wordpress.org/core/2021/02/23/wordpress-5-7-field-guide/">5.7
+field guide</a>, <a
+href="https://make.wordpress.org/core/2020/11/20/wordpress-5-6-field-guide/">5.6
+field guide</a>) with URL <em>box/wordpress</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3210">PR
+#3210</a></sub></sub></li>
+<li><a
+href="https://groups.google.com/g/unleashkids/c/G0IEe5DIPHw">Sugarizer
+1.6.0</a> (<a
+href="https://github.com/llaske/sugarizer/blob/master/CHANGELOG.md#160---2022-01-04">changelog</a>)
+using <a href="https://github.com/llaske/sugarizer-server/">Sugarizer
+Server 1.4.0</a> (<a
+href="https://github.com/llaske/sugarizer-server/blob/master/CHANGELOG.md#140---2021-11-21">changelog</a>)
+with URL <em>box/sugarizer</em> (using MongoDB 3.0 or 4.4 for older
+CPU’s, and optionally MongoDB 5.0/6.0 for modern CPU’s)
+<!-- https://www.mongodb.com/collateral/mongodb-5-whats-new -->
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3099">PR
+#3099</a></sub></sub> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3241">PR #3241</a></sub></sub>
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3380">PR
+#3380</a></sub></sub></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/minetest#readme">Minetest
+5.3.0+</a> is like Minecraft, but open source! <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3426">PR
+#3426</a></sub></sub></li>
+<li><a
+href="https://nodered.org/blog/2022/07/14/version-3-0-released">Node-RED
+3.0.2+</a> (<a
+href="https://github.com/node-red/node-red/blob/master/CHANGELOG.md">changelog</a>,
+<a href="https://nodered.org/docs/">docs</a>) with URL
+<em>box/nodered</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3248">PR
+#3248</a></sub></sub></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/azuracast#readme">AzuraCast
+0.17.6+</a> (<a
+href="https://github.com/AzuraCast/AzuraCast/blob/main/CHANGELOG.md">changelog</a>,
+<a href="https://github.com/AzuraCast/AzuraCast/releases/">releases</a>,
+<a href="https://docs.azuracast.com/">docs</a>) for radio-style MP3
+streaming, with URL <em>box:12080</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/2946">PR #2946</a></sub></sub>
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3384">PR
+#3384</a></sub></sub></li>
+<li><a
+href="https://github.com/iiab/iiab/tree/master/roles/gitea#gitea-readme">Gitea
+1.18.0+</a> (<a
+href="https://github.com/go-gitea/gitea/releases">changelog</a>, <a
+href="https://blog.gitea.io/">blog</a>), lightweight self-hosted
+“GitHub” version control system, to learn to code collaboratively, with
+URL <em>box/gitea</em> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3451">PR
+#3451</a></sub></sub></li>
+<li><a
+href="https://www.sangoma.com/press-releases/sangoma-announces-asterisk-19-and-freepbx-16/">Asterisk
+19</a> and <a
+href="https://www.freepbx.org/freepbx-16-is-now-released-for-general-availability/">FreePBX
+16</a> telephony server (<a
+href="https://github.com/iiab/iiab/tree/master/roles/pbx#readme">IIAB
+doc</a>) with URL <em>box/freepbx</em> (NGINX) or
+<em>box:83/freepbox</em> (Apache) <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3229">PR
+#3229</a></sub></sub></li>
+<li><a
+href="https://github.com/ascoderu/lokole/releases/tag/0.8.2">Lokole
+0.8.2</a> for rural/community email, with URL <em>box/lokole</em>
+<sub><sub><a href="https://github.com/ascoderu/lokole/pull/593">PR
+ascoderu/lokole#593</a></sub></sub> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3276">PR
+#3276</a></sub></sub></li>
+<li><a
+href="https://nodejs.org/en/blog/announcements/v18-release-announce/">Node.js
+18</a> (<a href="https://nodejs.org/en/blog/">changelog</a>)
+<!-- https://nodejs.org/en/blog/release/ --> across all apps
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3186">PR
+#3186</a></sub></sub></li>
+<li><a href="https://www.php.net/releases/8.1/en.php">PHP 8.1</a>
+support, for OS’s like Ubuntu 22.04, Ubuntu 22.10, Mint 21 and Debian 12
+<sub><sub><a href="https://github.com/iiab/iiab/pull/2832">PR
+#2832</a></sub></sub> <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3382">PR
+#3382</a></sub></sub></li>
+<li><a href="https://www.phpmyadmin.net/news/">phpMyAdmin 5.2.0</a> (<a
+href="https://github.com/phpmyadmin/phpmyadmin/releases">changelog</a>)
+for remote administration of MySQL <sub><sub><a
+href="https://github.com/iiab/iiab/pull/3218">PR #3218</a></li>
+<li><a
+href="https://github.com/ansible/ansible/blob/stable-2.14/changelogs/CHANGELOG-v2.14.rst#ansible-core-214-cmon-everybody-release-notes">ansible-core
+2.14</a> as implemented by <a
+href="FAQ.html#What_is_Ansible_and_what_version_should_I_use%3F">scripts/ansible</a>
+<sub><sub><a href="https://github.com/iiab/iiab/pull/3432">PR
+#3432</a></li>
+<li>“Power Off” button is properly concealed for schools that do not
+want disruption <sub><sub><a
+href="https://github.com/iiab/iiab/issues/3109">#3109</a></sub></sub></li>
+</ul>
+<h3 id="what-might-future-versions-bring">What might future versions
+bring?</h3>
+<ul>
+<li>“Fieldback” Community Analytics
+<ul>
+<li><ol type="1">
+<li>Friendly for village librarians, (2) Actionable for IT implementers,
+(3) Thorough for education/medical researchers <sub><sub><a
+href="https://github.com/iiab/iiab/issues/1268">#1268</a></sub></sub></li>
+</ol></li>
+<li>Charts showing usage hourly/daily/weekly/monthly <sub><sub><a
+href="https://github.com/iiab/iiab/pull/2511">PR
+#2511</a></sub></sub></li>
+<li><a href="https://matomo.org/">Matomo</a> for usage analytics,
+alongside some careful re-thinking of how IIAB teachers and content
+contributors can learn from users’ needs. <sub><sub><a
+href="https://github.com/iiab/iiab/issues/1762">#1762</a></sub></sub></li>
+</ul></li>
+<li>IIAB out-of-box guided discovery
+<ul>
+<li>Automatic installation of “Learning Bouquets” during IIAB
+installation (up to 64 GB or 128 GB typically, “I want what she has!”)
+so new implementers can pick a language — <em>then hit the ground
+running.</em> <sub><sub><a
+href="https://github.com/iiab/iiab/issues/1958">#1958</a></sub></sub></li>
+<li>Updating &amp; Versioning Infra for:
+<ol type="1">
+<li>Learning Bouquets, Content Packs, Kolibri Channels (and Student
+Portfolios?). Peer catalogs, relating to torrenting/mirroring below?
+<sub><sub><a
+href="https://github.com/iiab/iiab/issues/857">#857</a></sub></sub>
+<sub><sub><a
+href="https://github.com/iiab/iiab/issues/2553">#2553</a></sub></sub></li>
+<li>IIAB Apps “Registry” (might coordinate with point releases?)
+<sub><sub><a href="https://github.com/iiab/iiab/pull/2533">PR
+#2533</a></sub></sub></li>
+<li>IIAB software (effectively point releases like 7.2.1?)</li>
+</ol></li>
+<li>Torrent-like content interchange between IIAB’s (“Maps might be
+enough for starters…possibly also including Satellite Photos?”) as the
+Sneakernet-of-Alexandria grows more real! <sub><sub><a
+href="https://github.com/iiab/iiab/pull/2572">PR
+#2572</a></sub></sub><br />
+</li>
+<li>Better support for <a
+href="https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility/">Raspberry
+Pi Imager</a> for effortless installs of prefab IIAB images <sub><sub><a
+href="https://github.com/iiab/iiab/issues/2338">#2338</a></sub></sub></li>
+<li>Enhanced <a href="http://iiab.net/videos/">HOW-TO Videos</a> (<a
+href="http://iiab.net/info/videos/">old view</a>) for enterprising
+implementers, teachers and students, with actionable subtitles in common
+languages. Building upon <a
+href="https://www.youtube.com/channel/UC0cBGCxr_WPBPa3IqPVEe3g">IIAB’s
+YouTube channel</a>. <sub><sub><a
+href="https://github.com/iiab/iiab/issues/1975">#1975</a></sub></sub></li>
+<li>Out-of-box experience/guidance on our most popular OS (Raspberry Pi
+OS With Desktop) ? <sub><sub><a
+href="https://github.com/iiab/iiab/issues/1979">#1979</a></sub></sub></li>
+</ul></li>
+<li>Local Search Engine across most/all IIAB Content <sub><sub><a
+href="https://github.com/iiab/iiab/issues/2429">#2429</a></sub></sub></li>
+<li>See also the <a
+href="https://github.com/iiab/iiab/milestone/9">Internet-in-a-Box (IIAB)
+8.1 Milestone</a></li>
+</ul>
+<h3 id="credits">Credits</h3>
+<p>Thank you e-v-e-r-y-o-n-e for building your own DIY Library of
+Alexandria. To serve One &amp; All.</p>
+<p>Building on this software and designs contributed by Mohamad
+Abu-ElHaggag, Carl Wivagg, Nzolantima Swasisa, Nathan Koops, Shanti
+Bhardwa, Mir Rodríguez Lombardo, Mitra Ardron, Kurt Maier, T.K. Kang,
+Eric Nitschke, César López-Natarén, Joshua Kanani, Josh Dennis, Arky R.,
+Matt Johnson, James Heilman, Sam Zidovetzki, Reno McKenzie, Anish
+Mangal, Mikko Kotila, Avni Khatri, Blondel Mondésir, Evelyn Fitzgerald,
+Denis Lafontant, George Hunt, Tim Moody, Jerry Vonau, Adam Holt — among
+many other contributors !</p>
+<p><em>Not just in your own community — but by keeping in touch with our
+<a href="https://internet-in-a-box.org/contributing.html">global
+volunteer community network</a> (<a
+href="http://OFF.NETWORK">http://OFF.NETWORK</a>) each of you are
+providing the lifeblood “fieldback” — that keeps us motivated enabling
+Internet-in-a-Box’s quality content collaborations across ALL
+communities!</em></p>
+<p>Frequently Asked Questions: <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<h3 id="known-issues">Known Issues</h3>
+<ul>
+<li>JupyterHub and Calibre-Web require wheels / cryptography (and Rust
+&gt;=1.48.0) which are currently missing from 32-bit Raspberry Pi OS, as
+of 2022-11-10: <a href="https://github.com/iiab/iiab/pull/3421">PR
+#3421</a> <a href="https://github.com/iiab/iiab/pull/3422">PR
+#3422</a></li>
+<li>The <a
+href="https://github.com/iiab/iiab/tree/master/roles/network#readme">sudo
+iiab-network</a> command doesn’t cleanly recognize Wi-Fi routers (or
+Access Points) that you attach to IIAB with an Ethernet cable, with
+recent OS’s like <a
+href="IIAB-Platforms.html">Ubuntu
+22.04</a>. Manual workarounds can help: <a
+href="https://github.com/iiab/iiab/issues/3330">#3330</a> <a
+href="https://github.com/iiab/iiab/issues/3385#issuecomment-1263791330">#3385
+(comment)</a></li>
+<li>Lokole (rural/offline email) needs to be installed “twice” as
+explained at: <a
+href="https://github.com/iiab/iiab/issues/2833#issuecomment-931559600">#2833
+(comment)</a>. Lokole’s requirements.txt file needs to be updated
+upstream (<a
+href="https://github.com/ascoderu/lokole/issues/585">ascoderu/lokole#585</a>),
+so in the meantime IIAB has implemented a temporary workaround patch (<a
+href="https://github.com/iiab/iiab/pull/3149">PR #3149</a>). Progress is
+coming, likely in Q4 2022: <a
+href="https://github.com/ascoderu/lokole/pull/593">PR
+ascoderu/lokole#593</a> <a
+href="https://github.com/iiab/iiab/pull/3276">PR #3276</a></li>
+<li>A few residual issues may remain at:
+https://github.com/iiab/iiab/milestone/8</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "en-mathematica_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "mathematica.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Mathematica Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for users of Wolfram Mathematica",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "d4c7006cf836a2473c50b5f6e8899c659c266a4c",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

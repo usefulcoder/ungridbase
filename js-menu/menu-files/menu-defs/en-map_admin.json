@@ -1,0 +1,18 @@
+{
+  "name": "en-map_admin",
+  "lang": "en",
+  "intended_use": "webroot",
+  "start_url": "admin",
+  "title": "Install IIAB Maps",
+  "logo_url": "osm.jpg",
+  "description": "Download an IIAB Map Pack for your continent, and Hi-Res Satellite Photos for your local region(s) using the <p>Admin Console <b>Install Content -> <b>Get Map Regions</b></b></p>",
+  "extra_description": "You can remove this stub from your IIAB home page using Admin Console <b>Content Menus</b> -> <b>Content Item List</b>.<p>See also the <a href=https://github.com/iiab/iiab/wiki/IIAB-Maps>full instructions</a> for IIAB Maps.",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "f37f0a3963aa9ed5a3bbc2fca77d4ed25591a12b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

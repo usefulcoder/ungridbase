@@ -1,0 +1,16 @@
+{
+  "name": "fa-wikipedia_fa_medicine_maxi",
+  "lang": "fa",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_fa_medicine_maxi",
+  "title": "فرهنگنامه پزشکی به فارسی",
+  "logo_url": "medwiki.png",
+  "description": "مجموعه کاملی از مطالب و موضوعات مربوط به بهداشت، پزشکی، کالبد‌شناسی (آناتومی)، و داروها برگرفته شده از دانشنامه آزاد ویکیپدیا. <BR>تمام مطالب این فرهنگنامه همچون ویکیپدیا، به‌صورت آزاد و به‌شکل ‘آفلاین’ قابل دسترسی است و می‌توان آن‌ها را به‌طور رایگان استفاده کرد، دانلود کرد، همرسانی کرد، یا مطالب جدیدی را به آن افزود.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "05f4529aae9f91e02a1d0e310d6ca619514aef02",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

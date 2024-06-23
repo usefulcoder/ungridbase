@@ -1,0 +1,19 @@
+{
+  "name": "en-ted_en_entertainment",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "ted_en_entertainment",
+  "start_url": "",
+  "title": "TED talks - Entertainment",
+  "logo_url": "content.jpg",
+  "description": "Ideas worth spreading",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "8d53332cc2361762668900b797e12bc47ece4913",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "en-practical_action",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-practical_action",
+  "title": "Practical Action",
+  "logo_url": "en-practical_action.png",
+  "description": "Illustrated info on a wide range of agricultural, environmental, and health topics.",
+  "extra_html": "en-practical_action.html",
+  "footnote": "Size: 1.1G, PDFs: 446 (in HTML too), August 2017",
+  "edit_status": "repo",
+  "commit_sha": "a95aba42ab01bd72822a073676995c4f89cc6ab7",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

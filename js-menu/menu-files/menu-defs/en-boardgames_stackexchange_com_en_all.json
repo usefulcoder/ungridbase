@@ -1,0 +1,19 @@
+{
+  "name": "en-boardgames_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "boardgames.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Board & Card Games Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for people who like playing board games, designing board games or modifying the rules of existing board games",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "d5916a4d68e5d8adf106abac726d1cc7eb2987f2",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

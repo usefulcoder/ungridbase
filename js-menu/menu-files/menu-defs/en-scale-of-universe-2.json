@@ -1,0 +1,19 @@
+{
+  "name": "en-scale-of-universe-2",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-scale-of-universe-2",
+  "start_url": "",
+  "title": "Scale of the Universe",
+  "logo_url": "en-scale-of-universe.jpg",
+  "description": "Interactive exploration of size — from quarks to galaxy clusters.<p>On a mobile device, use your browser settings (e.g. touch <b>&vellip;</b> in the top-right) to check the box for &quot;Desktop site&quot;.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 19M, Orders of Magnitude: 62, Date: 2020-11-10",
+  "edit_status": "repo",
+  "commit_sha": "0767b13283f80404233ea248664f1cd9ffc0bf1a",
+  "change_date": "2024-06-21",
+  "change_ref": "copy from repo",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "en-understanding_algebra",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-understanding_algebra",
+  "start_url": "",
+  "title": "Understanding Algebra",
+  "logo_url": "en-understanding_algebra.png",
+  "description": "An illustrated introductory algebra textbook.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 2.4M, Chapters: 9, Topics: 46, Date: August 2017",
+  "edit_status": "repo",
+  "commit_sha": "59d2a7284432735d2a9758b58f75aeb0b356894d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

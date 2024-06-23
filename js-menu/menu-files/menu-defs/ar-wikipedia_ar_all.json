@@ -1,0 +1,16 @@
+{
+  "name": "ar-wikipedia_ar_all",
+  "lang": "ar",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_ar_all",
+  "title": "ويكيبيديا باللغة العربية",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "الموسوعة الحرة التي يستطيع الجميع تحريرها. توجد الآن أكثر من 300,000 مقالة بالعربية",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "5f178cecd3be94a2c151d56fec10832d1cbe52b3",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

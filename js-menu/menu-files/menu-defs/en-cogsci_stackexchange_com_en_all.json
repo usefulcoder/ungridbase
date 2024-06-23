@@ -1,0 +1,19 @@
+{
+  "name": "en-cogsci_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "cogsci.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Psychology & Neuroscience Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for practitioners, researchers, and students in cognitive science, psychology, neuroscience, and psychiatry.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "3cd1f352d9bff74632fe4e240070a01215f40fd4",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

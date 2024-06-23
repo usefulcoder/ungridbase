@@ -1,0 +1,19 @@
+{
+  "name": "hi-arvind",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "hi-arvind",
+  "start_url": "",
+  "title": "Do It Yourself Toys from Trash",
+  "logo_url": "arvind.jpg",
+  "description": "A world famous toy maker and populariser of science, Arvind Gupta needs no introduction. The man has one mission: Make science as interesting, accessible, cost effective and creative for as many children in the world as possible.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "a4c21f70430e2fa12ef5cba599ed79f7f3e0d3eb",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

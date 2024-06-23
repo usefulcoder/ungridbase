@@ -1,0 +1,19 @@
+{
+  "name": "es-360",
+  "lang": "es",
+  "intended_use": "html",
+  "moddir": "es-360",
+  "start_url": "index.html",
+  "title": "Experiencia 360",
+  "logo_url": "es-360.png",
+  "description": "Videos y contenido para vivir una experiencia en 360 grados. Usa los lentes y descarga la app para navegar.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Tamaño: 742M, Videos: 22, Fecha: mayo 2021",
+  "edit_status": "repo",
+  "commit_sha": "eb383c76243feb642d989289e9abb29104447ed7",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

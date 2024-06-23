@@ -1,0 +1,19 @@
+{
+  "name": "en-gcf_learn_2021",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-gcf_learn_2021",
+  "start_url": "edu.gcfglobal.org/en/topics/",
+  "title": "GCF LearnFree Digital & Career Skills",
+  "logo_url": "en-GCF2015.png",
+  "description": "Illustrated articles and videos focusing on technology, job training, reading, and math skills.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 6.52G, Topics: More than 1000, Date: April 2021",
+  "edit_status": "repo",
+  "commit_sha": "c7a438908f0f49f79a43ac488777835d7771bbbb",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

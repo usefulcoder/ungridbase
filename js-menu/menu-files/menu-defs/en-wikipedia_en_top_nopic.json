@@ -1,0 +1,19 @@
+{
+  "name": "en-wikipedia_en_top_nopic",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_en_top_nopic",
+  "start_url": "",
+  "title": "Best of Wikipedia",
+  "logo_url": "en-wikipedia.png",
+  "description": "A selection of the best 50,000 Wikipedia articles in English",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "f7d770e794e30e4be24f2b92e31b297ecf61a6cb",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

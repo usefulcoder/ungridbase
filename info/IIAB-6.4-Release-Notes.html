@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-6.4-Release-Notes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>Internet-in-a-Box (IIAB) 6.4 (<a
+href="http://wiki.laptop.org/go/IIAB/6.4">Wiki</a>, <a
+href="https://github.com/iiab/iiab/milestone/1?closed=1">GitHub</a>) was
+released on October 5th 2017.</p>
+<h3 id="whats-new">What’s New?</h3>
+<ul>
+<li>Search across all your offline (ZIM) content files with an entirely
+new <a href="http://www.kiwix.org/">Kiwix</a> engine under the hood,
+<em>watch out Google here we come :-)</em></li>
+<li>1-line installers for different server app suites — pick small,
+medium or large immediately at the moment you <a
+href="http://download.iiab.io/6.4/rpi/README.html">start
+downloading</a>. Would you like your IIAB with… <a
+href="http://wiki.laptop.org/go/IIAB/local_vars_min.yml">~6</a>, <a
+href="http://wiki.laptop.orglocal_vars.yml">~12</a> or <a
+href="http://wiki.laptop.org/go/IIAB/local_vars_big.yml">~20</a> server
+apps? After you pick your favorite 1-line installer, Internet-in-a-Box
+will fully install itself!</li>
+<li>Support for <a
+href="https://www.raspberrypi.org/blog/raspbian-stretch/">Raspbian
+Stretch</a> and <a
+href="https://www.debian.org/News/2017/20171007">Debian 9.2</a>
+anchoring a solid LTS (long-term support) foundation for years to come,
+in addition to support for <a
+href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS</a> and the
+new <a
+href="https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7.1708">CentOS
+7.4</a>, which shares the same code base as Red Hat Enterprise Linux
+7.4.</li>
+<li>A major house cleaning deprecating unmaintained server apps, so IIAB
+installs faster and is more understandable, introducing a tighter <a
+href="https://github.com/iiab/iiab/blob/master/vars/default_vars.yml">default_vars.yml</a>
+for system-wide defaults.</li>
+<li>A brand new <a
+href="IIAB-Contributors-Guide.html">Contributors
+Guide</a> for software developers especially, and our new Jenkins and
+Travis CI test automation systems thanks to <a
+href="https://github.com/arky">Arky</a> and <a
+href="https://github.com/georgejhunt/">George Hunt</a>, that you’ll be
+hearing a lot more about soon!</li>
+</ul>
+<h3 id="whats-upgraded">What’s Upgraded?</h3>
+<ul>
+<li><a
+href="http://ka-lite.readthedocs.io/en/latest/installguide/release_notes.html">KA
+Lite</a> (LMS for Khan Academy videos &amp; exercises) is upgraded to <a
+href="https://github.com/learningequality/ka-lite/releases">0.17.3</a>
+including easy subtitles very popular in developing countries.</li>
+<li>WordPress is upgraded to <a
+href="https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/">4.8.2+</a>
+and now auto-upgrades when your Internet-in-a-Box is online!</li>
+<li>Nextcloud is upgraded to <a
+href="https://nextcloud.com/changelog/">12.0.3</a>.</li>
+<li>Sugarizer is upgraded to <a
+href="http://lists.sugarlabs.org/archive/iaep/2017-September/020080.html">0.9</a>.</li>
+<li>Offline Social Network <a
+href="http://learn.elgg.org/en/2.3/">Elgg</a> is upgraded to <a
+href="https://github.com/Elgg/Elgg/blob/2.3.4/CHANGELOG.md">2.3.4</a>.</li>
+<li>Moodle is upgraded to <a
+href="https://docs.moodle.org/dev/Category:Moodle_3.1">3.1.8</a>
+LTS.</li>
+<li>Internet-in-a-Box’s own Admin Console (http://box/admin) has been
+made more resilient.</li>
+<li><a
+href="https://en.wikipedia.org/wiki/Ansible_(software)">Ansible</a> <a
+href="http://docs.ansible.com/ansible/latest/roadmap/ROADMAP_2_4.html">2.4.x</a>
+(pre-built PPA or rpm) helps future-proof Internet-in-a-Box
+configuration management.</li>
+<li>Extraneous red warnings during bootup and 1st run of Ansible
+are…gone at last!</li>
+<li>Important <a
+href="IIAB-6.3-Release-Notes.html#known-issues">Known
+Issues in IIAB 6.3</a> now fixed!</li>
+</ul>
+<h3 id="how-do-i-try-it">How do I try it?</h3>
+<p>TL;DR! Try our 1-line installer for Raspberry Pi 3:</p>
+<pre><code> curl download.iiab.io/6.4/rpi/load.txt | sudo bash</code></pre>
+<p>Be sure your Raspberry Pi 3 is running a recent <a
+href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian
+Stretch</a> OS, has a microSD card large enough for content, and is
+connected to the Internet with an actual Ethernet cable. Installation
+usually completes within two hours, if your Internet speed is very fast.
+See <a
+href="http://download.iiab.io/6.4/rpi/README.html">download.iiab.io/6.4/rpi</a>
+for other/faster options!</p>
+<p>Finally to install onto Ubuntu, Debian or CentOS, use our <a
+href="IIAB-Installation.html#do-everything-from-scratch">Do
+Everything from Scratch</a> install instructions — which quickly get you
+to the most important part — <em>where you can <a
+href="IIAB-Installation.html#add-content">add
+content!</a></em></p>
+<h3 id="people-who-busted-their-ass">People Who Busted Their Ass</h3>
+<p>Thank you e-v-e-r-y-o-n-e for building your own DIY Library of
+Alexandria. To serve One &amp; All.</p>
+<p><em>Not just in your own community — but by keeping in touch with our
+global volunteer community network (<a
+href="http://OFF.NETWORK">http://OFF.NETWORK</a>) each of you are
+providing the lifeblood “fieldback” — that keeps us motivated enabling
+Internet-in-a-Box’s <a href="http://boxing.team">quality content
+collaborations</a> across ALL communities!</em></p>
+<p>IIAB Development Team: <a
+href="https://github.com/georgejhunt/">George Hunt</a>, <a
+href="https://www.youtube.com/watch?v=kHdMC8lhpjM&amp;t=2036s">Tim
+Moody</a>, <a href="https://github.com/jvonau">Jerry Vonau</a>, <a
+href="http://100schools.org/">Josh Dennis</a>, <a
+href="http://renomckenzie.com/">Reno McKenzie</a>, <a
+href="https://github.com/arky">Arky</a>, <a
+href="https://bhagmalpur.wordpress.com/author/anishmangal2002/">Anish
+Mangal</a>, <a
+href="https://www.linkedin.com/in/joshua-kanani-32536a12a">Joshua
+Kanani</a>, <a href="https://twitter.com/germanrs">German Ruiz</a>, <a
+href="https://www.linkedin.com/in/nataren">César Natarén</a>, <a
+href="https://www.linkedin.com/in/curt-thompson-1935a165">Curt
+Thompson</a>, <a href="https://github.com/deldesir">Blondel
+Mondésir</a>, <a href="https://www.seedsforprogress.org/">Rick
+Castorani</a>, <a
+href="http://www.mountsinai.org/profiles/samuel-zidovetzki">Samuel
+Zidovetzki</a>, <a
+href="https://sipa.columbia.edu/news/project-examines-value-new-information-resource-medical-providers-rural-latin-america">María
+González</a>, <a
+href="https://www.socallinuxexpo.org/scale/15x/presentations/internet-box">Adam
+Holt</a>.</p>
+<p>Join our Monday/Thursday calls if you want to meet any of the people
+above: <a href="http://MINUTES.IIAB.IO">MINUTES.IIAB.IO</a></p>
+<p>Frequently Asked Questions: <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<h3 id="known-issues">Known Issues</h3>
+<ul>
+<li>IIAB 6.4 does not install on Raspbian Stretch With Desktop. Please
+instead install on Raspbian Stretch Lite, or try one of our <a
+href="http://download.iiab.io/6.5/rpi/">IIAB 6.5 pre-releases</a> which
+include fix <a
+href="https://github.com/iiab/iiab/pull/399">#399</a>.</li>
+<li>OpenStreetMap does not work until you apply <a
+href="https://github.com/iiab/iiab/pull/453">#453</a>. Or please try one
+of our <a href="http://download.iiab.io/6.5/rpi/">IIAB 6.5
+pre-releases</a>.</li>
+<li>Sugarizer will occasionally fail to install (blocking the
+installation of Internet-in-a-Box) as explained in <a
+href="https://github.com/iiab/iiab/issues/193">#193</a>. The workaround
+is generally to restart “./runansible” — or safer yet: restart a
+hands-free installation using one of our <a
+href="http://download.iiab.io/6.4/rpi/README.html">1-line installer
+scripts</a> on a clean OS.</li>
+<li>Be sure to set “calibre_install: False” and “calibre_enabled: False”
+within <a
+href="http://wiki.laptop.orglocal_vars.yml">local_vars.yml</a>
+before installing IIAB 6.4 on CentOS 7.4.</li>
+<li>Nextcloud (<a href="http://box/nextcloud">http://box/nextcloud</a>)
+sometimes takes far too long to login/logout on Raspberry Pi 3 (more
+than a minute, instead of the usual couple seconds). If this affects you
+(typically during the first hours after installation, speeding up later)
+please help everyone isolate the pattern and root cause, by reviewing
+&amp; posting to <a
+href="https://github.com/iiab/iiab/issues/401">#401</a> so an upstream
+bug might be filed.</li>
+<li>USB memory sticks sometimes need to be <a
+href="https://github.com/iiab/iiab/issues/329#issuecomment-333330362">removed
+and re-inserted</a> into your Internet-in-a-Box before <a
+href="FAQ.html#Can_teachers_display_their_own_content.3F">Teacher
+Content</a> appears at http://box/usb (if stick was inserted just prior
+to a cold boot).</li>
+</ul>
+</body>
+</html>

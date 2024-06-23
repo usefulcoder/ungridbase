@@ -1,0 +1,16 @@
+{
+  "name": "fr-wikipedia_fr_all_nopic",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_fr_all_nopic",
+  "moddir": "fr-wikipedia",
+  "title": "Wikipédia en Français",
+  "logo_url": "fr-wikipedia.png",
+  "description": "Le projet d’encyclopédie libre que vous pouvez améliorer.",
+  "edit_status": "repo",
+  "commit_sha": "7db19ccf74955f6316cca13f6e90f75560f357b6",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

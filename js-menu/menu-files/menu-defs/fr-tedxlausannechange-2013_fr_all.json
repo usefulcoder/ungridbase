@@ -1,0 +1,16 @@
+{
+  "name": "fr-tedxlausannechange-2013_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "tedxlausannechange-2013_fr_all",
+  "moddir": "",
+  "title": "Tedx de Lausanne en français",
+  "logo_url": "ted-talks-logo.jpg",
+  "description": "Tedx de Lausanne de 2013",
+  "edit_status": "repo",
+  "commit_sha": "1f595718ce18831d80aaf197c6780e2e7a62599d",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

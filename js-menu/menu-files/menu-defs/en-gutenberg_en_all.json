@@ -1,0 +1,19 @@
+{
+  "name": "en-gutenberg_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "gutenberg_en_all",
+  "start_url": "",
+  "title": "Project Gutenberg Library in English",
+  "logo_url": "Project_Gutenberg_logo.png",
+  "description": "The first producer of free ebooks.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "fda4e65541c738d28984b9c069b548746c44b2d7",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

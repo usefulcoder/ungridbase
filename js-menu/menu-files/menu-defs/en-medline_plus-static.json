@@ -1,0 +1,15 @@
+{
+  "name": "en-medline_plus-static",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-medline_plus-static",
+  "title": "MedlinePlus (Static)",
+  "logo_url": "en-medline_plus-static.png",
+  "description": "For use only on the USB version of RACHEL",
+  "edit_status": "repo",
+  "commit_sha": "344efa6e8d2600b087ba4ff6b8b064cbb1f2114e",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

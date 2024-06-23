@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Contributors-Guide</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1
+id="as-of-december-2021-please-see-internet-in-a-boxs-new-technical-contributors-guide"><em>As
+of December 2021, please see Internet-in-a-Box’s NEW <a
+href="Technical-Contributors-Guide.html">Technical
+Contributors Guide</a> !</em></h1>
+<p><br></p>
+<h2
+id="a-small-compassionate-act-enlarges-the-scope-of-community---mary-anne-radmacher--">“A
+small compassionate act enlarges the scope of community” - <em>Mary Anne
+Radmacher</em> -</h2>
+<h2 id="about-iiab">About IIAB</h2>
+<p><a href="http://internet-in-a-box.org">Internet-in-a-Box (IIAB)</a>
+runs on various GNU/Linux operating systems such as <a
+href="IIAB-Platforms.html#operating-systems">Raspberry
+Pi OS, Ubuntu, Debian, Linux Mint</a> — and possibly also on CentOS,
+Fedora, Ubermix and DietPi if you <a
+href="IIAB-Platforms.html#operating-systems">invest
+the effort</a>!</p>
+<p>You can install Internet-in-a-Box on x86_64 PCs/laptops and Raspberry
+Pi 3, 3 B+, 4 or 400. Example PCs include Intel NUC and Gigabyte BRIX. A
+VirtualBox VM can also be used for testing purposes. Partial support is
+also available on OLPC laptops like the XO-1.5, XO-1.75 and XO-4. Using
+Docker containers however is not recommended as our <a
+href="https://www.ansible.com/">Ansible</a> provisioning system requires
+low-level access to the operating system.</p>
+<p>Finally, running Internet-in-a-Box on the Raspberry Pi Zero W is also
+possible, if you transfer a working IIAB (microSD card) built in a
+Raspberry Pi 3, 3 B+ or 4.</p>
+<p>Please see <a
+href="http://wiki.laptop.orgFAQ.html#What_hardware_should_I_use.3F">“What
+hardware should I use?”</a> at <a
+href="FAQ.html">FAQ.IIAB.IO</a> and the HOW-TO videos on
+Internet-in-a-Box’s <a
+href="https://www.youtube.com/channel/UC0cBGCxr_WPBPa3IqPVEe3g">YouTube
+channel</a>. You might also want to review Internet-in-a-Box’s <a
+href="https://github.com/iiab/iiab/milestones">upcoming milestones</a>
+on GitHub.</p>
+<h2 id="installation">Installation</h2>
+<p>Before you install IIAB, please refer to the <a
+href="FAQ.html#What_hardware_should_I_use.3F">hardware section
+of our FAQ</a> page for memory, storage and network requirements for
+your platform. Also note that downloading content might take a long time
+on slower Internet connections.</p>
+<p>Most all implementers should use IIAB’s 1-line installer at
+http://download.iiab.io
+<!--where you can click on the version number, e.g. [7.0](http://download.iiab.io/7.0/).--></p>
+<p>If you are a developer, consider <a
+href="IIAB-Installation.html#do-everything-from-scratch">building
+Internet-in-a-Box from scratch</a>.</p>
+<p><em>For more info, see also the HOW-TO videos on Internet-in-a-Box’s
+<a
+href="https://www.youtube.com/channel/UC0cBGCxr_WPBPa3IqPVEe3g">YouTube
+channel</a> (several available as <a
+href="http://d.iiab.io/content/videos">.mp4 and .webm</a>).</em></p>
+<h2 id="setting-up-a-development-environment">Setting up a development
+environment</h2>
+<p>(This section uses an experimental development environment for
+Internet-in-a-Box. It was formerly being developed in the <a
+href="https://github.com/arky/iiab-dev-mode">iiab-dev-mode
+repository</a>.)</p>
+<p>This section provide a quick setup of Internet-in-a-Box (IIAB)
+development environment using <a
+href="https://www.vagrantup.com/">Vagrant</a>. You will need a computer
+with <a
+href="https://www.virtualbox.org/manual/UserManual.html">virtualization
+enabled</a> and git, Vagrant (2.0 or later) and <a
+href="https://www.virtualbox.org/">VirtualBox</a> installed.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>git</li>
+<li><a
+href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+<li>Editor (<a href="https://www.atom.io">Atom</a>, Emacs, vi, etc)</li>
+</ul>
+<h2 id="setup-instructions">Setup Instructions</h2>
+<ol type="1">
+<li><p>Check out the repository and its submodules onto your development
+machine.
+<code>git clone --recursive https://github.com/arky/iiab-dev-mode.git</code></p></li>
+<li><p>Change directory into ‘iiab-dev-mode’ with
+<code>cd iiab-dev-mode</code>. You can update all the submodules to the
+latest master using
+<code>git submodule foreach git pull origin master</code></p></li>
+<li><p>Set up a vagrant machine with <code>vagrant up</code> and
+provision it with <code>vagrant provision</code>. Please select the
+available bridge network interface (wlan0 or eth0) that connects your
+host machine to the Internet.</p></li>
+<li><p>Connect to your vagrant machine with <code>vagrant ssh</code>.
+All your local development files available as shared folder in
+<code>/opt/iiab</code> directory.</p></li>
+<li><p>Install IIAB itself from the Ansible playbooks by following <a
+href="IIAB-Installation.html#do-everything-from-scratch">IIAB
+Installation</a> instructions:</p></li>
+</ol>
+<pre><code>   cd /opt/iiab/iiab/scripts/
+   ./ansible
+
+   cd /opt/iiab/iiab/
+   ./iiab-install
+
+   cd /opt/iiab/iiab-admin-console/
+   ./install</code></pre>
+<ol start="6" type="1">
+<li><p>Hack away!</p></li>
+<li><p>You can commit your local changes to your personal forks of
+(either above) Internet-in-a-Box repository and then a send pull request
+to the IIAB project. Once you’ve forked a repository, you change
+directory into that repository and set a default git remote push setting
+with the following command:</p>
+<p><code>cd &lt;repo&gt; &amp;&amp; git remote set-url --push origin git@github.com:&lt;your_username&gt;/&lt;your_forked_iiab_repo_name&gt;.git</code></p>
+<p>Learn more by reading the blog post <a
+href="http://blog.yuriy.tymch.uk/2012/05/different-git-push-pullfetch-urls.html">Different
+git Push &amp; Pull(fetch) URLs</a> and the <a
+href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes">Git
+Basics - Working with Remotes</a> chapter of Scott Chacon and Ben
+Straub’s “Git Pro” book.</p></li>
+<li><p>Once you are done, you can stop your vagrant machine with
+<code>vagrant halt</code> or remove it completely with
+<code>vagrant destroy</code>.</p></li>
+</ol>
+<h3 id="ansible">Ansible</h3>
+<p>Internet-in-a-Box uses <a
+href="http://wiki.laptop.orgFAQ.html#What_is_Ansible_and_what_version_should_I_use.3F">Ansible</a>
+(similar to Puppet, but acquired by Red Hat in October 2015) to install
+and configure all software packages. Ansible uses <a
+href="https://docs.ansible.com/ansible/latest/user_guide/playbooks.html">playbooks</a>
+as human-readable instruction files in <a
+href="http://www.yaml.org/start.html">YAML</a> format. Playbooks are
+divided into hosts, roles and tasks.</p>
+<pre><code>├── roles
+│   ├── 1-prep
+│   │   ├── defaults
+│   │   │   └── main.yml (variables defined at /opt/iiab/iiab/vars/default_vars.yml can be overridden by /etc/iiab/iiab/local_vars.yml)
+│   │   ├── README.rst
+│   │   ├── tasks
+│   │   │   └── main.yml (actions that install this role)
+│   │   └── templates
+│   │       └── &lt;text files where Ansible variables are substituted, using jinja2 templating e.g. {% &lt;variable&gt; %}&gt;
+│   ├── 2-common
+│   │   ├── README.rst
+│   │   ├── tasks
+│   │   └── templates</code></pre>
+<p>Specifically, Ansible installs Internet-in-a-Box starting with
+0-init, followed by Stages 1 to 9, and finally runs the network stage: -
+<a
+href="https://github.com/iiab/iiab/tree/master/roles/0-init">0-init</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/1-prep">1-prep</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/2-common">2-common</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/3-base-server">3-base-server</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/4-server-options">4-server-options</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/5-xo-services">5-xo-services</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/6-generic-apps">6-generic-apps</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/7-edu-apps">7-edu-apps</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/8-mgmt-tools">8-mgmt-tools</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/9-local-addons">9-local-addons</a>
+- <a
+href="https://github.com/iiab/iiab/tree/master/roles/network">network</a></p>
+<p>Click on Stages 1 to 9 above for descriptions of their specific
+purposes.</p>
+<p>At runtime (to build up your Internet-in-a-Box server) Ansible
+gathers system information making it available (as ‘facts’) and combines
+this with Ansible ‘variables’ to guide the installation process. The
+execution follows a sequence of cascading steps:</p>
+<ol type="1">
+<li><p>Bash script <code>./iiab-install</code> uses Ansible to run
+<code>/opt/iiab/iiab/iiab-stages.yml</code></p></li>
+<li><p><code>iiab-stages.yml</code> calls 9+ aggregate roles (AKA
+stages, these are the numbered directories above, in
+/opt/iiab/iiab/roles) and then the network role. It avoids repeating any
+of these 9 core install stages (in case of Internet glitches etc) by
+keeping a counter (“STAGE”) in <code>/etc/iiab/iiab.env</code> (Aside:
+the network role can also later be run using
+<code>./iiab-network</code>)</p></li>
+<li><p>Each aggregate role AKA stage has a
+<code>&lt;role&gt;/tasks/main.yml</code> (formerly
+<code>&lt;role&gt;/meta/main.yml</code>) to invoke all needed roles and
+tasks.</p></li>
+</ol>
+<p>Please refer to the <a
+href="IIAB-Architecture.html">IIAB
+Architecture</a> and <a
+href="IIAB-Variables.html">IIAB
+Variables</a> pages for more detail.</p>
+<p>Please also review “What is Ansible and what version should I use?”
+at FAQ.html</p>
+<p>Take a look inside IIAB’s script that installs the very latest
+Ansible release:
+https://github.com/iiab/iiab/blob/master/scripts/ansible</p>
+<h2 id="debugging">Debugging</h2>
+<p>Here are few strategies for debugging problems during the
+Internet-in-a-Box installation.</p>
+<ul>
+<li>When a installation task fails, Ansible halts printing out a
+descriptive error message to the screen. This error information is also
+written to <code>iiab-install.log</code> file within
+<code>/opt/iiab/iiab</code>. (Look through logs to check if any
+preceding line contains the error).</li>
+<li>When an installation succeeds, the last lines printed on the screen
+will look like the following (failed=0):</li>
+</ul>
+<pre><code>   PLAY RECAP *********************************************************************
+   127.0.0.1                  : ok=405  changed=125  unreachable=0    failed=0</code></pre>
+<ul>
+<li>Search through the Ansible playbooks using
+<code>egrep -rn &lt;string from the failing step&gt; /opt/iiab/iiab/roles</code>
+to find the failed task.</li>
+<li>You can add additional <a
+href="http://docs.ansible.com/ansible/latest/debug_module.html">debug
+print statements</a> to Ansible playbooks for debugging the
+problem.</li>
+<li>Talk to us or report a bug using the information below.</li>
+</ul>
+<p>Please refer to <a
+href="http://docs.ansible.com/ansible/latest/playbooks.html">Ansible
+playbook documentation</a> for more information.</p>
+<h2 id="reporting-bugs">Reporting Bugs</h2>
+<p>You can file bug reports on <a
+href="https://github.com/">GitHub</a>:</p>
+<ul>
+<li>Sign up for a <a href="https://github.com/">GitHub</a> account</li>
+<li>Go to IIAB’s <a href="https://github.com/iiab/iiab/issues">issue
+tracker on GitHub</a></li>
+<li>Search for existing issues using the search field</li>
+<li>If you don’t find any similar issues, file a new issue!</li>
+</ul>
+<p>Please consider providing a descriptive title, your operating system
+information, error messages and steps to reproduce the issue.</p>
+<h2 id="get-in-touch">Get in touch</h2>
+<ul>
+<li>Join our <a
+href="http://lists.laptop.org/listinfo/server-devel">technology</a> and
+<a
+href="https://groups.google.com/group/unleashkids">learning/design</a>
+mailing lists</li>
+<li>Join our <a href="http://minutes.iiab.io">weekly calls</a> which are
+typically held 10AM to Noon NYC Time, most every
+Thursday<!--* Join us on IRC live chat: [#schoolserver](https://webchat.freenode.net/?channels=#schoolserver) on [freenode]( https://www.freenode.net/)--><!--* Post an idea or question to our [community forums](http://iiab.io/)--></li>
+<li>Read “<a
+href="FAQ.html#What_are_the_best_places_for_community_support.3F">What
+are the best places for community support?</a>” and “<a
+href="http://wiki.laptop.orgFAQ.html#How_can_I_help.3F">How can I
+help?</a>” within our Frequently Asked Questions (<a
+href="FAQ.html">FAQ.IIAB.IO</a>)</li>
+</ul>
+<p><strong><em>For more information on how to contribute, please see “<a
+href="http://wiki.laptop.orgFAQ.html#How_can_I_help.3F">How can I
+help?</a>” at FAQ.html and consider <a
+href="http://wiki.laptop.orgFAQ.html#What_are_the_best_places_for_community_support.3F">contacting
+us</a> directly, Thanks!</em></strong></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "en-hardwarerecs_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "hardwarerecs.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Hardware Recommendations Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for people seeking specific hardware recommendations",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "30bc5fa7f8a29a7b6d948f1c0927ab2dfd57c5f8",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,16 @@
+{
+  "name": "es-wikinews_es_all_maxi",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikinews_es_all_maxi",
+  "title": "Wikinoticias",
+  "logo_url": "wikinews-logo.png",
+  "description": "La fuente de noticias libres en la que todos pueden ser reporteros.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "4d6752664af0866d64583f4ac457656e8202078f",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

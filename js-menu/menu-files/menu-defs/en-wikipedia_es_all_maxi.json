@@ -1,0 +1,19 @@
+{
+  "name": "en-wikipedia_es_all_maxi",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_es_all_maxi",
+  "start_url": "A/Mar_Caribe",
+  "title": "Wikipedia in Spanish",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "Wikipedia is the world's largest encyclopedia, created, moderated, and edited by users for users.",
+  "extra_description": "The Spanish-language edition has more than 1.6 Million articles, with more than 1.8 Million illustrations and photographs.",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "31d4a8b333c405adb41a5534de78652300ed7474",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

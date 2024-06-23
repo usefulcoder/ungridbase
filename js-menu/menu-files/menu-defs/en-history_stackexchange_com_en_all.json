@@ -1,0 +1,19 @@
+{
+  "name": "en-history_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "history.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "History Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for historians and history buffs",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "6d678daf3ca7bb245ed42ef9bb05fd2157a43ebe",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

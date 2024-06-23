@@ -1,0 +1,19 @@
+{
+  "name": "en-wikihow",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "en-wikihow",
+  "start_url": "",
+  "title": "WikiHow- How to do anything",
+  "logo_url": "es-wikihow.png",
+  "description": "We're trying to help everyone on the planet learn how to do anything.<BR><BR>",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "d148e13a25af692bae27213db15f1c09f056d088",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

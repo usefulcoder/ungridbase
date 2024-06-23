@@ -1,0 +1,19 @@
+{
+  "name": "fr-wikihow_fr_maxi",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikihow_fr_maxi",
+  "start_url": "",
+  "title": "wikiHow : tutoriels fiables",
+  "logo_url": "en-wikihow.png",
+  "description": "wikiHow est un projet d'écriture collaboratif basé sur la technologie wiki afin de construire le plus grand manuel d'instruction de qualité au monde. Notre manuel multilingue est une source gratuite de d'instructions étape-par-étape sur comment faire toute sorte de choses.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "df703784835f0bb6d42146f6d3c0115e50fe0c0f",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

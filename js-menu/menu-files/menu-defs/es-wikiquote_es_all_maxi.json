@@ -1,0 +1,18 @@
+{
+  "name": "es-wikiquote_es_all_maxi",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikiquote_es_all_maxi",
+  "title": "Wikiquote",
+  "logo_url": "Ncwikiquote2.png",
+  "description": "La colección de citas donde tú puedes colaborar.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Tamaño: ##SIZE##, Artículos: ##ARTICLE_COUNT##, Medios: ##MEDIA_COUNT##, Fecha: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "5b726d7ae968fd2c3f780b8502c30f21b68b39d7",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

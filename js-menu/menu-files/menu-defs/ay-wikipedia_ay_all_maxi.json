@@ -1,0 +1,15 @@
+{
+  "name": "ay-wikipedia_ay_all_maxi",
+  "lang": "ay",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_ay_all_maxi",
+  "title": "Wikipedia en Aymara (Tantachata Yatiña Jalaqtata)",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "Wikipedia es la enciclopedia más grande del mundo, creado, moderado, y editado por los usuarios para los usuarios. Esta enciclopedia en Aymara tiene más de 4 448 de artículos con ilustraciones y está libremente disponible para cualquier persona, en cualquier lugar.",
+  "edit_status": "repo",
+  "commit_sha": "488cf0d01bee1a23531ab93083dd27e7756ccd8c",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-Architecture</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1
+id="this-docs-currently-being-rewritten-in-2023-suggestions-appreciated"><em><strong>[THIS
+DOC’S CURRENTLY BEING REWRITTEN IN 2023! SUGGESTIONS
+APPRECIATED!]</strong></em></h1>
+<h1 id="internet-in-a-box-iiab-architecture">Internet-in-a-Box (IIAB)
+Architecture</h1>
+<h2
+id="anatomy-101-critical-server-internals-configuration-overview">Anatomy
+101: Critical Server Internals &amp; Configuration Overview</h2>
+<p>Installing and configuring <a
+href="https://internet-in-a-box.org/">Internet-in-a-Box (IIAB)</a>
+software, apps/services (and finally content) usually involves 3
+steps:</p>
+<ol type="1">
+<li><p>Choice of OS (operating system) and <!-- keyboard layout, -->
+disk layout, in keeping with IIAB’s <a
+href="IIAB-Platforms.html#disk-partitioning">partitioning
+requirements</a>.</p></li>
+<li><p>IIAB takes over after the OS is functioning on the target
+hardware. This step is usually done at a terminal console or via an ssh
+connection to the newly installed OS. (If requirements are in place,
+this step can be as simple as typing <code>cd /opt/iiab/iiab</code> then
+<code>./iiab-install</code>).</p>
+<p>There is some automatic configuration built into IIAB, during this
+text mode phase. There will almost always be a network connection to the
+internet left over from the first step. If a second Ethernet or Wi-Fi
+adapter is discovered, “Gateway” mode will be chosen. If not, the mode
+selected will be “Appliance”. See the <a
+href="IIAB-Networking.html">IIAB
+Networking</a> doc which reviews IIAB’s <a
+href="IIAB-Networking.html#three-network-modes">three
+network modes</a>.</p>
+<p>There is also the option of setting a large array of variables that
+govern the detailed installation process. In most cases, the supplied
+defaults will be sufficient. Any changes should be placed in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F"><code>/etc/iiab/local_vars.yml</code></a>
+(see details of <a href="#variable-precedence">variable precedence</a>
+below).</p></li>
+<li><p>The Admin Console is the Graphical User Interface (when you log
+in to <a href="http://box/admin">http://box/admin</a>) for making most
+configuration changes. There is also a HELP menu system in the Admin
+Console itself, reproduced in full here:</p>
+<ol type="1">
+<li><a
+href="https://github.com/iiab/iiab-admin/blob/master/roles/console/files/help/Overview.rst">Overview</a></li>
+<li><a
+href="https://github.com/iiab/iiab-admin/blob/master/roles/console/files/help/Control.rst">Control</a></li>
+<li><a
+href="https://github.com/iiab/iiab-admin/blob/master/roles/console/files/help/Config.rst">Configuration</a></li>
+<li><a
+href="https://github.com/iiab/iiab-admin/blob/master/roles/console/files/help/InstContent.rst">Install
+Content</a></li>
+<li><a
+href="https://github.com/iiab/iiab-admin/blob/master/roles/console/files/help/Utilities.rst">Utilities</a></li>
+</ol></li>
+</ol>
+<p>(In the past, most IIAB Apps/Services were installed during Step 2.,
+to be enabled on demand later as needed, e.g. during Step 3. In more
+recent years, IIAB Apps/Services tend to be installed and enabled at the
+very same time, regardless whether during Step 2. of Step 3.)</p>
+<h3 id="ansible-variables">Ansible Variables</h3>
+<p>See <a href="IIAB-Variables.html">IIAB
+Variables</a> for a more detailed explanation. Quick summary:</p>
+<ul>
+<li><a
+href="https://github.com/iiab/iiab/blob/master/vars/default_vars.yml"><code>/opt/iiab/iiab/vars/default_vars.yml</code></a>
+(DO NOT CHANGE THIS)</li>
+<li><a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F"><code>/etc/iiab/local_vars.yml</code></a>
+(CUSTOMIZE IIAB HERE, TO OVERRIDE THE ABOVE — PREFERABLY DO THIS BEFORE
+BEGINNING YOUR IIAB INSTALL)</li>
+</ul>
+<p>In general, each role has a <code>&lt;role name&gt;_install</code>
+and a <code>&lt;role name&gt;_enabled</code> variable. (All <a
+href="https://github.com/iiab/iiab/tree/master/roles">roles</a> can be
+found in /opt/iiab/iiab/roles/).</p>
+<p>In the past, IIAB installs set most <code>_install</code> variables
+to <code>True</code>, and most <code>_enabled</code> variables to
+<code>False</code>. In more recent years, both of a role’s variable are
+generally set to <code>True</code> at the very same time.</p>
+<h4 id="variable-precedence">Variable Precedence</h4>
+<p>In order of execution, here’s the summary: (<a
+href="IIAB-Variables.html#order-of-execution-and-precedence">more
+detailed version</a>)</p>
+<ol type="1">
+<li>Ansible explores hardware and OS, setting a <a
+href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html#ansible-facts">large
+number of variables</a> with prefix <code>ansible_</code> (aside:
+Ansible’s <a
+href="https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html">special,
+magic and connection variables</a> are similar).</li>
+<li>Variable defaults can be set in each role, with the existence of a
+<code>&lt;role name&gt;/defaults/main.yml</code> file.</li>
+<li><a
+href="https://github.com/iiab/iiab/blob/master/vars/default_vars.yml"><code>/opt/iiab/iiab/vars/default_vars.yml</code></a>
+gives initial values for IIAB-wide settings, and also many role specific
+ones. <strong>Note:</strong> this file may be overwritten by later
+releases, and should not be modified by the end user.</li>
+<li>Implementers should place changes in <a
+href="FAQ.html#What_is_local_vars.yml_and_how_do_I_customize_it%3F"><code>/etc/iiab/local_vars.yml</code></a>
+using a text editor such as vi, nano, or emacs. It’s best to make all
+such changes prior to installing IIAB. Or if that’s not possible,
+remember to then enact your changes, e.g. by running
+<code>cd /opt/iiab/iiab</code> then <a
+href="https://github.com/iiab/iiab/blob/master/runrole"><code>sudo ./runrole &lt;role&gt;</code></a>
+<ul>
+<li>Alternatively, the more important IIAB Apps/Services can be
+installed and enabled using IIAB’s Admin Console (<a
+href="http://box/admin">http://box/admin</a>), which will modify the
+appropriate variables within your <code>/etc/iiab/local_vars.yml</code>.
+Remember to enact those changes, using <a
+href="https://github.com/iiab/iiab-admin-console/blob/master/roles/console/files/help/Config.rst#actions"><strong>Configure
+&gt; Install Configured Options</strong></a> then monitor/confirm
+progress within <a
+href="https://github.com/iiab/iiab-admin-console/blob/master/roles/console/files/help/Utilities.rst#iiab-admin-console---utilities"><strong>Utilities
+&gt; Display Job Status</strong></a> (can take many minutes on a
+Raspberry Pi!)</li>
+</ul></li>
+</ol>
+<h3 id="documentation">Documentation</h3>
+<p>A growing collection of Internet-in-a-Box <a
+href="FAQ.html#What_technical_documentation_exists%3F">technical
+support docs</a> (and eventually videos) are being made available for
+offline users as well, at <a
+href="http://box/info">http://box/info</a></p>
+</body>
+</html>

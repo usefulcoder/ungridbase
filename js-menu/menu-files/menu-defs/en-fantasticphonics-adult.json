@@ -1,0 +1,19 @@
+{
+  "name": "en-fantasticphonics-adult",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-fantasticphonics-adult",
+  "start_url": "content",
+  "title": "Fantastic Phonics - Adult",
+  "logo_url": "en-fantasticphonics-adult.png",
+  "description": "A Reading Program for the World<BR><BR>Children, Teenagers and Adults",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "94d7f9259b5d92cf764549fdfe48167b5e7914a1",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

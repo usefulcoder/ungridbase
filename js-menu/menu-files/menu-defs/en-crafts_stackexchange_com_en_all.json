@@ -1,0 +1,19 @@
+{
+  "name": "en-crafts_stackexchange_com_en_all",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "crafts.stackexchange.com_en_all",
+  "start_url": "",
+  "title": "Arts & Crafts Stack Exchange",
+  "logo_url": "stackexchange.png",
+  "description": "Q&A for artists and crafters",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "6b5a17345f5f12a10f33fcc5613bff2ae94d2551",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

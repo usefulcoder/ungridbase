@@ -1,0 +1,19 @@
+{
+  "name": "en-algebra2go",
+  "lang": "en",
+  "intended_use": "html",
+  "moddir": "en-algebra2go",
+  "start_url": "pagefiles/",
+  "title": "Algebra2go",
+  "logo_url": "en-algebra2go.jpg",
+  "description": "Pre-algebra lessons with videos and notes from Saddleback College.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: 1.2G, Topics: 9, PDFs: 241, Date: August 2017",
+  "edit_status": "repo",
+  "commit_sha": "fedd7d62af407d4e53bceb88b4962fd2f98a9d13",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

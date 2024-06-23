@@ -1,0 +1,16 @@
+{
+  "name": "es-wikiversity_es_all",
+  "lang": "es",
+  "intended_use": "zim",
+  "zim_name": "wikiversity_es_all",
+  "title": "Wikiversidad",
+  "logo_url": "es-wikiversity.png",
+  "description": "Wikiversidad es un proyecto de la Fundación Wikimedia dedicado a los recursos de aprendizaje, proyectos de aprendizaje y la investigación para su uso en todos los niveles, tipos y estilos de la educación desde el preescolar hasta la universidad, incluida la formación profesional y el aprendizaje informal. Esta versión en línea fue proporcionado por Kiwix.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "54330b6c62a0b308b33d864bc03038b6a22ff313",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

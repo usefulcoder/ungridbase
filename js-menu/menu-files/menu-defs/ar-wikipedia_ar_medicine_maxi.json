@@ -1,0 +1,16 @@
+{
+  "name": "ar-wikipedia_ar_medicine_maxi",
+  "lang": "ar",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_ar_medicine_maxi",
+  "title": "وِيكيبيديا الطبية",
+  "logo_url": "ar-medwiki.png",
+  "description": "مَقالات عن الرعاية الصحية متوافرة بدون اتصال بالإنترنت في كل مكان وبشكل مجاني",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "edde12c73fbcf9656dde77cdda7efa8d0c2ae97b",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

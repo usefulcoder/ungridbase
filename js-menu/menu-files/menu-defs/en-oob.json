@@ -1,0 +1,15 @@
+{
+  "name": "en-oob",
+  "lang": "en",
+  "intended_use": "info",
+  "moddir": "",
+  "title": "Add content to this page + use drag-and-drop to re-order it",
+  "logo_url": "hamburger.png",
+  "description": "Please read '<a href='https://wiki.iiab.io/go/FAQ#How_do_I_customize_my_Internet-in-a-Box_home_page%3F'>How do I customize my Internet-in-a-Box home page?</a>' (<a href='/info/FAQ.html#How_do_I_customize_my_Internet-in-a-Box_home_page.3F'>offline version</a>) and watch our <a href='https://www.youtube.com/channel/UC0cBGCxr_WPBPa3IqPVEe3g'</a>latest HOW-TO videos</a>.<p>Then go to the <a href='/admin'>Admin Console</a> (see <a href='/info/FAQ.html#What_are_the_default_passwords.3F'>default passwords</a>) and click on the <b>Install Content</b> and <b>Content Menus</b> tabs.<hr>Raspberry Pi guides and Internet-in-a-Box tech docs are available to you even when offline: <a href='/info'>http://box/info</a>",
+  "edit_status": "repo",
+  "commit_sha": "7a004fd15f4dce856234f08a3021addc0b10c4f4",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

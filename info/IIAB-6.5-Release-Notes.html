@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IIAB-6.5-Release-Notes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>Internet-in-a-Box (IIAB) 6.5 was released on May 24th, 2018 and
+updated on June 10th and 28th, 2018 (<a
+href="http://wiki.laptop.org/go/IIAB/6.5">Wiki</a>, <a
+href="https://github.com/iiab/iiab/milestone/2">GitHub</a>).</p>
+<h3 id="whats-new">What’s New?</h3>
+<ul>
+<li><a href="http://download.iiab.io/6.5/">1-line installers</a> for
+Raspbian Stretch, Ubuntu 18.04 LTS and Debian 9 are now far more
+efficient — and can quickly recover if Internet is interrupted during
+installation. Pick your favorite suite of Internet-in-a-Box apps the
+very moment you begin downloading/installing: whether you want ~6, ~12
+or ~20 apps! Implementers check out the new “./iiab-install” and
+“./runrole” (formerly “./runtags”) commands in /opt/iiab/iiab — working
+off our re-organized <a
+href="http://wiki.laptop.orglocal_vars.yml">local_vars.yml</a>
+and <a
+href="https://github.com/iiab/iiab/blob/master/vars/default_vars.yml">default_vars.yml</a>.</li>
+<li>Anybody can now <a
+href="IIAB-Installation.html#do-everything-from-scratch">install
+Internet-in-a-Box over regular WiFi</a>. On Raspberry Pi, run
+<code>raspi-config</code> to connect to your home’s WiFi SSID and
+password prior to installing IIAB. Then run <code>iiab-hotspot-on</code>
+after IIAB installation is complete! Or: accelerate your install if you
+have an Ethernet cable to live Internet (physical cables are almost
+always more reliable than radio waves). IIAB 6.6 Preview: on Raspberry
+Pis, we hope to support WiFi-as-client <em>simultaneous</em> with
+WiFi-as-hotspot, streamlining updates! <a
+href="https://github.com/iiab/iiab/pull/697">#697</a> <a
+href="https://github.com/iiab/iiab/pull/748">#748</a></li>
+<li>Click to download and install <a
+href="IIAB-Installation.html#zim-files">ZIM
+files</a> or any <a
+href="IIAB-Installation.html#oer2go-rachel-modules">OER2GO
+(RACHEL)</a> module. Remove any of these using http://box/admin -&gt;
+Install Content -&gt; Remove Files to clear up space! Tooltips (small
+popup windows) now help you drill down and verify content details while
+<a
+href="IIAB-Installation.html#add-content">adding</a>
+or <a
+href="IIAB-Installation.html#remove-content">removing</a>
+such content packs. NEW: Works with the new ZIM files (these contain an
+integrated search index), traditional ZIM files that are accompanied by
+an external index, and also ZIM files that happen to have no index
+all.</li>
+<li>Completely overhauled Calibre E-Book server <a
+href="https://calibre-ebook.com/whats-new">3.26+</a>. Allows teachers to
+add and delete books using the web interface, as well as editing book
+metadata. <a
+href="https://github.com/iiab/iiab/issues/830">#830</a></li>
+<li>Automounting of larger USB memory sticks, SD cards and portable
+disks (these are typically exFAT-formatted or NTFS-formatted when
+purchased). Makes it easy to (1) install &amp; redistribute content
+while offline, and (2) <a
+href="FAQ.html#Can_teachers_display_their_own_content.3F">empowers
+teachers to instantly display their own USB stick content</a> to
+students via http://box/usb</li>
+<li>Usage statistics of ZIM files (for teachers especially) are viewable
+with AWStats on your IIAB server at http://box/awstats/awstats.pl (<a
+href="FAQ.html#How_do_I_view_usage_statistics.3F">instructions</a>).
+We do this using an Apache proxy (http://box/kiwix/ instead of the usual
+http://box:3000) hoping to empower teachers to understand their own
+student community analytics.</li>
+<li>Wikipedia’s own MediaWiki 1.30.0 is now part of IIAB, if you enable
+it in <a
+href="http://wiki.laptop.orglocal_vars.yml">local_vars.yml</a>
+(typically on Lines 143 and 144) for doc collaboration.</li>
+<li>Experimental Captive Portal based on nodogsplash, reducing users’
+URL frustrations for non-Latin communities especially. <a
+href="https://github.com/iiab/iiab/issues/608">#608</a></li>
+<li>Code is dramatically more approachable by developers and
+implementers. Preview: Test your IIAB code contributions and Ansible
+playbooks with <a
+href="IIAB-Contributors-Guide.html#testing-your-code-with-travis-ci">Travis
+CI</a> continuous integration.</li>
+</ul>
+<h3 id="whats-upgraded">What’s Upgraded?</h3>
+<ul>
+<li>Far more comprehensive Offline Docs, onboard your Internet-in-a-Box
+and available to all in the field, at <a
+href="http://box/info">http://box/info</a> — including instructions on
+<a
+href="FAQ.html#Can_I_upgrade_or_reinstall_server_apps.3F">how
+to upgrade (or reinstall while offline) your IIAB server apps</a> a.k.a.
+IIAB services.</li>
+<li>Media-rich and searchable offline (ZIM) content thanks to an even
+far better <a href="http://www.kiwix.org/">Kiwix</a> engine 0.5.0+
+(2018-05-24) under the hood, <em>watch out Google here we come
+:-)</em></li>
+<li><a
+href="http://ka-lite.readthedocs.io/en/latest/installguide/release_notes.html">KA
+Lite</a> (LMS for Khan Academy videos &amp; exercises) is upgraded to <a
+href="https://github.com/learningequality/ka-lite/releases/tag/v0.17.4">0.17.4</a>
+with installation greatly streamlined.</li>
+<li>Sugarizer <a
+href="https://groups.google.com/forum/m/#!topic/unleashkids/YzXPMgp28vY">0.9</a>
+installs faster, uses less space, and is more reliable across all OS’s.
+Preview: Sugarizer <a
+href="https://groups.google.com/forum/m/#!topic/unleashkids/jnJHfjbhPPA">1.0</a>
+is a major forthcoming upgrade. <a
+href="https://github.com/iiab/iiab/pull/814">#814</a></li>
+<li>Nextcloud is upgraded to <a
+href="https://nextcloud.com/blog/nextcloud-13.0.3-and-12.0.8-available/">13.0.3+</a>
+based on <a
+href="https://nextcloud.com/blog/nextcloud-13-brings-secure-file-sync-and-collaboration-to-the-next-level/">Nextcloud
+13</a>.</li>
+<li>WordPress is upgraded to <a
+href="https://wordpress.org/news/2018/05/wordpress-4-9-6-privacy-and-maintenance-release/">4.9.6</a>
+bringing <a
+href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a>
+privacy compliance, based on <a
+href="https://wordpress.org/news/2017/11/tipton/">4.9</a>.</li>
+<li>Moodle is upgraded to <a
+href="https://docs.moodle.org/dev/Moodle_3.5_release_notes">3.5 LTS</a>
+for privacy, better quizzes, speed, messaging integration and modern
+usability (<a
+href="https://www.moodlenews.com/2018/privacy-better-quizzes-faster-and-modern-the-latest-scoop-on-moodle-3-5/">preview</a>,
+<a href="https://docs.moodle.org/35/en/New_features">new
+features</a>).</li>
+<li>Offline Social Network <a
+href="http://learn.elgg.org/en/2.3/">Elgg</a> is upgraded to <a
+href="https://github.com/Elgg/Elgg/blob/2.3.7/CHANGELOG.md">2.3.7</a>.</li>
+<li>DokuWiki is upgraded to <a
+href="https://www.dokuwiki.org/changes#release_2018-04-22_release_greebo">2018-04-22a
+“Greebo”</a>.</li>
+<li>phpMyAdmin is upgraded to <a
+href="https://www.phpmyadmin.net/news/">4.8.1</a>.</li>
+<li>Extensive Fixes, just to name a few: Admin Console -&gt; Configure
+-&gt; Services Enabled’s checkboxes (<a
+href="https://github.com/iiab/iiab/issues/193">#378</a>). Fixed: the
+ability to toggle your IIAB home page to WordPress etc, under Admin
+Console -&gt; Configure -&gt; Server Portal (<a
+href="https://github.com/iiab/iiab/issues/384">#384</a>, <a
+href="https://github.com/iiab/iiab/issues/458">#458</a>). See our <a
+href="https://github.com/iiab/iiab/milestone/2?closed=1">changelog</a>
+of accomplishments!</li>
+</ul>
+<h3 id="how-do-i-try-it">How do I try it?</h3>
+<p>TL;DR! Try our 1-line installer for Raspberry Pi 3 (or 3 B+), Ubuntu
+18.04 LTS or Debian 9:</p>
+<pre><code> curl download.iiab.io/6.5/load.txt | sudo bash</code></pre>
+<p>On Raspberry Pi, you’ll want the latest <a
+href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian
+Stretch</a> OS (2018-04-18 or higher) installed onto a microSD card
+large enough for content. Installation usually completes within two
+hours, if your Internet speed is very fast. An actual Ethernet cable
+helps avoid WiFi glitches! See <a
+href="http://download.iiab.io/6.5/README.html">download.iiab.io/6.5</a>
+for other/faster options.</p>
+<p>Finally try installing onto CentOS, using our <a
+href="IIAB-Installation.html#do-everything-from-scratch">Do
+Everything from Scratch</a> install instructions — getting you to the
+most important step — <em>where you can <a
+href="IIAB-Installation.html#add-content">add
+content!</a></em></p>
+<h3 id="credits">Credits</h3>
+<p>Thank you e-v-e-r-y-o-n-e for building your own DIY Library of
+Alexandria. To serve One &amp; All. Building on this software and
+designs contributed by Jerry Vonau, Tim Moody, George Hunt, Adam Holt,
+Josh Dennis, Joshua Kanani, Reno McKenzie, Blondel Mondésir, Avni
+Khatri, Arky R., Anish Mangal, Carlos Garcia — among many others!</p>
+<p><em>Not just in your own community — but by keeping in touch with our
+global volunteer community network (<a
+href="http://OFF.NETWORK">http://OFF.NETWORK</a>) each of you are
+providing the lifeblood “fieldback” — that keeps us motivated enabling
+Internet-in-a-Box’s <a href="http://boxing.team">quality content
+collaborations</a> across ALL communities!</em></p>
+<p>Join our Monday/Thursday calls if you too can help: <a
+href="http://MINUTES.IIAB.IO">MINUTES.IIAB.IO</a></p>
+<p>Frequently Asked Questions: <a
+href="FAQ.html">FAQ.IIAB.IO</a></p>
+<h3 id="known-issues">Known Issues</h3>
+<ul>
+<li>USB memory sticks may need to be <a
+href="https://github.com/iiab/iiab/issues/329#issuecomment-333330362">removed
+and re-inserted</a> into your Internet-in-a-Box before <a
+href="FAQ.html#Can_teachers_display_their_own_content.3F">Teacher
+Content</a> appears at http://box/usb e.g. if stick was inserted just
+prior to a cold boot. <a
+href="https://github.com/iiab/iiab/issues/329">#329</a></li>
+<li>Nextcloud (<a href="http://box/nextcloud">http://box/nextcloud</a>)
+logins/logouts are much faster but remain slow. <a
+href="https://github.com/iiab/iiab/issues/401">#401</a></li>
+<li>Set a default locale in your OS in /etc/default/locale (also the
+“locale” command should show the same, e.g. “C.UTF-8” or “en_US.UTF-8”)
+to avoid language restrictions upon re-installing WordPress.</li>
+</ul>
+</body>
+</html>

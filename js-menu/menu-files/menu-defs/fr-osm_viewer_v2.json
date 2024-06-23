@@ -1,0 +1,19 @@
+{
+  "name": "fr-osm_viewer_v2",
+  "lang": "fr",
+  "intended_use": "map",
+  "map_name": "",
+  "start_url": "viewer",
+  "title": "Cartes du monde et photos satellites",
+  "logo_url": "osm.jpg",
+  "description": "Cartes du monde, cartes locales et photos satellites à différents niveaux de zoom. Merci à OpenStreetMap.",
+  "extra_description": "Recherchez des villes/communes avec plus de 1000 personnes. Il y en a environ 127 654 dans le monde.",
+  "extra_html": "",
+  "footnote": "Date: 2019-09-30",
+  "edit_status": "repo",
+  "commit_sha": "14262bfae543ea6c8798ae05c11de0b6becfe431",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

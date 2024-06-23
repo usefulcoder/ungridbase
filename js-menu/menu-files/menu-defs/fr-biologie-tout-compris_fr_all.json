@@ -1,0 +1,19 @@
+{
+  "name": "fr-biologie-tout-compris_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "biologie-tout-compris_fr_all",
+  "start_url": "",
+  "title": "Biologie Tout Compris",
+  "logo_url": "biologie-tout-compris.jpg",
+  "description": "Beaucoup de biologie, plein de petites expériences avec du matériel que vous avez déjà chez vous...et d'autres vidéos de science.",
+  "extra_description": "Par Tania Louis, médiatrice scientifique et Docteure en biologie.",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "1d67af4e341c838df6bf95192f240354fcb6bd5f",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

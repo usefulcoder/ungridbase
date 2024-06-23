@@ -1,0 +1,19 @@
+{
+  "name": "en-sugarizer",
+  "lang": "en",
+  "intended_use": "webroot",
+  "start_url": "sugarizer",
+  "title": "Sugarizer",
+  "logo_url": "sugarizer.png",
+  "description": "Program or be programmed!  Explore creativity puzzles originally from MIT's One Laptop Per Child global project.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "c9b41ba007e3d031ee9f927f7b0afea59d535938",
+  "previous_commit_sha": "02b1ff474c29513ce7b2f555913802748ddb3125",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

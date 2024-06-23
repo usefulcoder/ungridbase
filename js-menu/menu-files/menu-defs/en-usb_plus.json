@@ -1,0 +1,17 @@
+{
+  "name": "en-usb_plus",
+  "lang": "en",
+  "intended_use": "webroot",
+  "moddir": "",
+  "start_url": "usb",
+  "title": "Insert a USB Stick/Drive to Publish Files Here",
+  "logo_url": "content.jpg",
+  "description": "",
+  "extra_html": "en-usb_plus.html",
+  "edit_status": "repo",
+  "commit_sha": "7643adfa79eabe1efee4f0a4a33891cdbdd7eca2",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

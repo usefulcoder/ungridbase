@@ -1,0 +1,16 @@
+{
+  "name": "en-kalite_health",
+  "lang": "en",
+  "intended_use": "kalite",
+  "start_url": "learn/khan/science/health-and-medicine/",
+  "title": "Khan Academy Lite: Health and Medicine",
+  "logo_url": "khan-logo-vertical-transparent.png",
+  "description": "1949 total video lessons.  And associated exercises.",
+  "extra_html": "en-kalite_health.html",
+  "edit_status": "repo",
+  "commit_sha": "72b139aacd4b389a845c97495ac4bfca78484491",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

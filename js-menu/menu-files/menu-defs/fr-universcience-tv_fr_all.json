@@ -1,0 +1,19 @@
+{
+  "name": "fr-universcience-tv_fr_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "universcience-tv_fr_all",
+  "start_url": "",
+  "title": "Universcience.tv",
+  "logo_url": "universcience-tv.jpg",
+  "description": "Plusieurs milliers de vidéos d’actualité scientifique et des enquêtes sur les grands sujets contemporains.",
+  "extra_description": "Par la Cité des sciences et de l’industrie et le Palais de la découverte.",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "90fb610ca48138f7554028a4ee163078984aa381",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

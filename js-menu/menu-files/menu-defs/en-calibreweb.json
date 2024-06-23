@@ -1,0 +1,18 @@
+{
+  "name": "en-calibreweb",
+  "lang": "en",
+  "intended_use": "webroot",
+  "start_url": "books",
+  "title": "Calibre-Web: Electronic Books",
+  "logo_url": "calibreweb.png",
+  "description": "Build your own local community library.",
+  "extra_description": "Teachers and Librarians can add new books, organize &quot;bookshelf&quot; collections — and delete books if Internet-in-a-Box is getting full.",
+  "extra_html": "",
+  "footnote": "",
+  "edit_status": "repo",
+  "commit_sha": "76cbf6ae6178a2204b257ca86df139e1ca587cc7",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

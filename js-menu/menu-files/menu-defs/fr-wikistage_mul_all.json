@@ -1,0 +1,19 @@
+{
+  "name": "fr-wikistage_mul_all",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikistage_mul_all",
+  "start_url": "",
+  "title": "WikiStage",
+  "logo_url": "wikistage.png",
+  "description": "Les vidéos WikiStage sont des courtes présentations académiques intéressantes similaires aux Conférences TED.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "4cc1c3428eff5deb83338f6376479eaab02805bd",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

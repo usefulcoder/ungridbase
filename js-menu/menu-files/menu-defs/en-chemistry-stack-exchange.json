@@ -1,0 +1,16 @@
+{
+  "name": "en-chemistry-stack-exchange",
+  "lang": "en",
+  "intended_use": "zim",
+  "zim_name": "chemistry.stackexchange.com_eng_all",
+  "title": "Chemistry Stack Exchange",
+  "logo_url": "stackoverflow3.png",
+  "description": "Q&A for scientists, academics, teachers, and students in the field of chemistry.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "778f32c0123980d0c855db4f715d09ed8345c072",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

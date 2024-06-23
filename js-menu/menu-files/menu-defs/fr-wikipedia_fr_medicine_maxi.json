@@ -1,0 +1,19 @@
+{
+  "name": "fr-wikipedia_fr_medicine_maxi",
+  "lang": "fr",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_fr_medicine_maxi",
+  "start_url": "",
+  "title": "Encyclopédie médicale hors ligne de Wikipedia",
+  "logo_url": "medwiki.png",
+  "description": "Une collection complète de tous les sujets liés aux soins de santé, à l'anatomie et aux médicaments de Wikipedia dans un format hors ligne.",
+  "extra_description": "Comme tout le contenu de Wikipédia est un accès libre, ce qui signifie qu'il est gratuit à télécharger, réutiliser, partager et exploiter.",
+  "extra_html": "",
+  "footnote": "Taille: ##SIZE##, Articles: ##ARTICLE_COUNT##, Médias: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "8104d16faeb7b21d3864beb97239ead6f639a134",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

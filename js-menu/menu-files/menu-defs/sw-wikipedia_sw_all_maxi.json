@@ -1,0 +1,19 @@
+{
+  "name": "sw-wikipedia_sw_all_maxi",
+  "lang": "sw",
+  "intended_use": "zim",
+  "zim_name": "wikipedia_sw_all_maxi",
+  "start_url": "",
+  "title": "Wikipedia in Swahili",
+  "logo_url": "220px-Wikipedia-logo-v2.svg.png",
+  "description": "Kutoka Wikipedia, kamusi elezo huru.",
+  "extra_description": "",
+  "extra_html": "",
+  "footnote": "Size: ##SIZE##, Articles: ##ARTICLE_COUNT##, Media: ##MEDIA_COUNT##, Date: ##zim_date##",
+  "edit_status": "repo",
+  "commit_sha": "c1ba2d3a72735bbab19bc57742f50aa1e0460ad8",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "en-healthphone_all",
+  "lang": "en",
+  "intended_use": "webroot",
+  "moddir": "",
+  "start_url": "healthphone",
+  "title": "HealthPhone Health and Nutrition Collection",
+  "logo_url": "healthphone.jpg",
+  "description": "Knowledge in the hands of those who need it most. What every health worker, family and community has a right to know. Complete list of languages for the HealthPhone video reference library and an overview of how to use it.",
+  "extra_html": "",
+  "edit_status": "repo",
+  "commit_sha": "e99c5b70737410827fcb1ad539dd71a0f08b31ba",
+  "change_ref": "copy from repo",
+  "change_date": "2024-06-21",
+  "upload_flag": false,
+  "download_flag": true
+}
