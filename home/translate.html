@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <div class="nav"></div>
+    <div class="nav">
+        <a href="./index.html">Zims</a>
+        <a href="translate.html">Translate</a>
+    </div>
     <div class="wrapper-translate">
         <div class="translate-wrap">
             <div class="left translate">
@@ -30,6 +33,25 @@
 
 </body>
 <style>
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px dashed;
+        padding: 0 0 5px 0;
+    }
+    
+    .nav a {
+        padding: 0px 15px;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+    
+    .nav a:hover {
+        text-decoration: underline;
+    }
+    
     .wrapper-translate {
         display: flex;
         align-items: center;
