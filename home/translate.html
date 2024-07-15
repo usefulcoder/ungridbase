@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav"></div>
+    <div class="wrapper-translate">
+        <div class="translate-wrap">
+            <div class="left translate">
+                <textarea class="textToTranslate" placeholder="enter text to translate"></textarea>
+                <select aria-labelledby="sourceLangLabel" class="from_lang" style="width: 114px;"><option value="en" selected="">English</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="az">Azerbaijani</option><option value="bn">Bengali</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh">Chinese</option><option value="zt">Chinese (traditional)</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="fi">Finnish</option><option value="fr">French</option><option value="de">German</option><option value="el">Greek</option><option value="he">Hebrew</option><option value="hi">Hindi</option><option value="hu">Hungarian</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="ms">Malay</option><option value="nb">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es">Spanish</option><option value="sv">Swedish</option><option value="tl">Tagalog</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="vi">Vietnamese</option></select>
+
+
+            </div>
+            <div class="right translate">
+                <textarea class="translatedText"></textarea>
+                <select aria-labelledby="sourceLangLabel" class="to_lang" style="width: 114px;"><option value="en">English</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="az">Azerbaijani</option><option value="bn">Bengali</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh">Chinese</option><option value="zt">Chinese (traditional)</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="fi">Finnish</option><option value="fr">French</option><option value="de">German</option><option value="el">Greek</option><option value="he">Hebrew</option><option value="hi">Hindi</option><option value="hu">Hungarian</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="ms">Malay</option><option value="nb">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es" selected="">Spanish</option><option value="sv">Swedish</option><option value="tl">Tagalog</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="vi">Vietnamese</option></select>
+
+            </div>
+        </div>
+        <button class="translate-btn">Translate</button>
+        <span class="loader" style="visibility: hidden;"></span>
+        <p style="color: red; visibility: hidden;">Translation Failed. server error</p>
+    </div>
+
+</body>
+<style>
+    .wrapper-translate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 97.8vh;
+    }
+    
+    .translate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .translate-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    textarea {
+        width: 35vw;
+        height: 50vh;
+    }
+    
+    select {
+        margin-top: 10px;
+    }
+    
+    .translate-btn {
+        padding: 7px;
+        border: 1px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .translate-btn:active {
+        background-color: #0e62ab;
+        color: white;
+    }
+    /* Loader 1 */
+    
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 3px solid gray;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        margin: 10px 0;
+    }
+    
+    .loader::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid;
+        border-color: #0e62ab transparent;
+    }
+    
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<script>
+    document.querySelector(".translate-btn").addEventListener("click", e => {
+        document.querySelector(".loader").style.visibility = "visible"
+        from_lang = document.querySelector(".from_lang").selectedOptions[0].value
+        to_lang = document.querySelector(".to_lang").selectedOptions[0].value
+        textToTranslate = document.querySelector(".textToTranslate").value
+
+        fetch("http://localhost:5000/translate", {
+            method: "post",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                to_lang: to_lang,
+                from_lang: from_lang,
+                text: textToTranslate
+
+            })
+        }).then((res) => {
+            return res.json()
+        }).then(data => {
+            console.log(data)
+            document.querySelector(".translatedText").value = data.translation
+            document.querySelector(".loader").style.visibility = "hidden"
+        })
+    })
+</script>
+
+</html>

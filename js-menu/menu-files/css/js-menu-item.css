@@ -10,6 +10,10 @@
     min-width: 300px;
 }
 
+.content-item:hover {
+    border: 1px solid black;
+}
+
 .content-icon {
     padding: 0 10px 0 10px;
     visibility: hidden;
